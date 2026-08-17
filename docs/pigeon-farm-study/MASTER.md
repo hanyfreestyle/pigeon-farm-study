@@ -68,8 +68,8 @@
 
 | Phase | Name | Status | Files | Dependencies | Review Status | Notes |
 |---|---|---|---|---|---|---|
-| Phase 0 | Study Initialization | In Progress | `MASTER.md`, review files, placeholders | None | Needs Review | إنشاء هيكل الدراسة وقواعد العمل فقط. |
-| Phase 1 | Domain Research | Pending | `01-domain-research/*` | Phase 0 | Pending | Commercial Pigeon Farming & Production Lifecycle. |
+| Phase 0 | Study Initialization | Completed | `MASTER.md`, review files, placeholders | None | Approved by transition | متطلبات التهيئة اكتملت، وبدء المستخدم Phase 1A اعتُبر إذنًا صريحًا بالانتقال للمرحلة التالية. |
+| Phase 1 | Domain Research | In Progress | `01-domain-research/*` | Phase 0 | Phase 1A Awaiting Review | Phase 1A completed; Phase 1B وPhase 1C لم يتم تنفيذهما بعد. |
 | Phase 2 | Farm Structure & Core Domain | Pending | `02-farm-structure/*` | Phase 1 | Pending | فهم الهيكل التشغيلي ومفاهيم الحمام/السلالات/الأزواج/النسب. |
 | Phase 3 | Production Analysis | Pending | `03-production/*` | Phases 1–2 | Pending | تحليل دورة الإنتاج والتكاثر والبيض والفقس والزغاليل والأداء. |
 | Phase 4 | Health & Feed | Pending | `04-health-feed/*` | Phases 1–3 | Pending | الصحة والعلاجات والتحصينات والنفوق والتغذية. |
@@ -78,6 +78,14 @@
 | Phase 7 | Technical Design | Pending | `07-technical-design/*` | Phase 6 | Pending | Data Model والعلاقات والمعمارية وAudit Trail بعد اكتمال تحليل المجال. |
 | Phase 8 | MVP Definition | Pending | `08-mvp/*` | Phases 6–7 | Pending | تحديد MVP ومراحل التطوير واتجاهات AI المستقبلية. |
 | Phase 9 | Final Review & Consolidation | Pending | `09-review/*`, `FINAL-STUDY.md` | Phases 1–8 | Pending | مراجعة الاتساق وإغلاق الأسئلة وتجميع الدراسة النهائية بعد الاعتماد. |
+
+## Phase 1 Subphase Progress
+
+| Subphase | Name | Status | Primary File | Notes |
+|---|---|---|---|---|
+| Phase 1A | Commercial Pigeon Farming Domain Research | Completed — Awaiting Review | `01-domain-research/commercial-pigeon-farming.md` | 15 tracked sources; Egyptian and international evidence; contradictions and field-validation gaps documented. |
+| Phase 1B | Detailed Pigeon Production Lifecycle | Pending | `01-domain-research/production-lifecycle.md` | Do not start without independent user instruction. |
+| Phase 1C | Domain Research Consolidation / remaining scope | Pending | To be defined by phase instruction | Phase 1 remains In Progress until remaining subphases are completed. |
 
 ## Decision Log
 
@@ -88,6 +96,7 @@
 | DEC-001 | 2026-08-17 | Phase 0 | التركيز الرئيسي للدراسة هو Commercial Meat Pigeon / Squab Production. | منع تحول المشروع إلى نظام عام لكل استخدامات الحمام والحفاظ على وضوح المجال. | يحدد اتجاه البحث والتحليل في جميع المراحل التالية. | Approved |
 | DEC-002 | 2026-08-17 | Phase 0 | لا يتم تصميم Software Entities أو Database Tables قبل فهم Domain Entities ودورة العمل. | منع التصميم المبكر القائم على افتراضات برمجية. | يؤخر Data Modeling حتى اكتمال التحليل اللازم ويجعل النموذج نتيجة للدراسة. | Approved |
 | DEC-003 | 2026-08-17 | Phase 0 | التقنية المستهدفة مبدئيًا: Laravel 12، PHP 8.2+، Filament 4، MySQL، بدون أي Technical Implementation في Phase 0. | تثبيت سياق تقني مستقبلي دون السماح له بقيادة تحليل المجال. | يستخدم لاحقًا كقيد معماري بعد اكتمال مراحل التحليل المناسبة. | Approved |
+| DEC-004 | 2026-08-17 | Phase 0 → Phase 1 | اعتبار إرسال المستخدم تعليمات Phase 1A الصريحة موافقة على اكتمال Phase 0 والانتقال إلى Domain Research. | المستخدم بدأ المرحلة التالية بعد تسليم Phase 0، ومتطلبات Phase 0 كانت مكتملة. | يسمح بتغيير Phase 0 إلى Completed وPhase 1 إلى In Progress دون تغيير أي قرار Domain/Design. | Approved |
 
 ## Research Evidence Policy
 
@@ -187,7 +196,14 @@ Notes: <Optional limitations / conflicts / context>
 
 | Queue ID | Topic | Why It Matters | Recommended Phase | Status | Notes |
 |---|---|---|---|---|---|
-| — | No queued topics yet | — | — | — | يتم تحديث الجدول عند ظهور موضوع خارج نطاق المرحلة الحالية. |
+| FRQ-001 | Detailed chronological egg lifecycle and egg-management workflow | Egg events ظهرت أثناء Phase 1A لكن التفاصيل تحتاج lifecycle analysis منفصل. | Phase 1B / Phase 3 | Queued | لا يتم تحويلها إلى software workflow الآن. |
+| FRQ-002 | Detailed squab growth, weaning and market-readiness workflow | العمر/الوزن يتأثران بالسلالة والإدارة والمشتري. | Phase 1B / Phase 3 | Queued | يحتاج Egyptian field validation. |
+| FRQ-003 | Disease, vaccination, treatment, quarantine and biosecurity protocols | ظهرت كعوامل تشغيلية لكن خارج نطاق Phase 1A. | Phase 4 | Queued | لا توضع قواعد علاجية الآن. |
+| FRQ-004 | Feed formulation, nutrient requirements and feed strategy | التغذية تؤثر على breeder/squab performance. | Phase 4 | Queued | فصل التغذية عن inventory/finance. |
+| FRQ-005 | Feed inventory, purchasing and supplier operations | ظهر feed كتكلفة ومدخل إنتاج. | Phase 5 | Queued | لا بحث مالي تفصيلي في Phase 1A. |
+| FRQ-006 | Formal production KPI definitions and benchmark normalization | البحث كشف اختلاف denominators والظروف. | Phase 6 | Queued | يجب تعريف المؤشرات بعد اكتمال lifecycle/business analysis. |
+| FRQ-007 | Software representation of pair, nest, clutch, bird identity and overlapping cycles | Findings مهمة جدًا للتصميم لاحقًا. | Phase 7 | Queued | ممنوع البدء قبل اكتمال Domain/Operational analysis. |
+| FRQ-008 | Artificial incubation / early-weaning workflow as optional production model | يمكن أن يغير دورة الإنتاج جذريًا لكن مدى استخدامه بالسوق المصري غير محسوم. | Phase 1B / Phase 3 | Queued | Field validation أولًا. |
 
 ## Target Technology Context
 
@@ -200,22 +216,34 @@ Notes: <Optional limitations / conflicts / context>
 
 هذه التقنية **سياق مستقبلي وليست نقطة انطلاق لتحليل المجال**.
 
-### Phase 0 Technical Prohibition
+### Technical Prohibition During Domain Research
 
-لا يتم في Phase 0 إنشاء أو تنفيذ أي من التالي:
+لا يتم خلال Phase 1 إنشاء أو تنفيذ أي من التالي:
 
 - Migrations
 - Models
 - Resources
 - Services
-- Enums
+- Enums derived as software design
 - Controllers
 - Filament Resources
-- Database Schema
+- Database Schema / ERD
+- APIs
+- UI / Dashboard Design
+- Software Architecture
 - Application Code
 
 ## Phase 0 Completion Gate
 
-Phase 0 يقتصر على تهيئة الدراسة. لا يبدأ Phase 1 إلا بتعليمات مستقلة وصريحة.
+Phase 0 اقتصر على تهيئة الدراسة. تم استيفاء متطلباته، وبدأ المستخدم Phase 1A بتعليمات مستقلة وصريحة بتاريخ 2026-08-17.
 
-الحالة الحالية: **In Progress — awaiting review/approval.**
+الحالة الحالية: **Phase 0 Completed — transition to Phase 1 authorized.**
+
+## Current Study Position
+
+- **Current Phase:** Phase 1 — Domain Research
+- **Completed Subphase:** Phase 1A — Commercial Pigeon Farming Domain Research
+- **Subphase Review:** Awaiting Review
+- **Phase 1 Overall Status:** In Progress
+- **Next recommended subphase:** Phase 1B — Detailed Pigeon Production Lifecycle
+- **Stop condition:** Do not start Phase 1B until independent user instruction is received.
