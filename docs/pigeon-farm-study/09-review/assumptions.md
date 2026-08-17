@@ -1,17 +1,17 @@
-# Assumptions Register
+# سجل الافتراضات
 
-> Assumptions are reviewed at Phase 1 exit. A `Validated` assumption is supported sufficiently for the stated purpose; it is not automatically a universal biological fact.
+> تمت مراجعة الافتراضات عند الخروج من Phase 1. تعني الحالة `Validated` أن الافتراض مدعوم بدرجة كافية للغرض المحدد، ولا تعني أنه أصبح تلقائيًا حقيقة بيولوجية عالمية.
 
-| Assumption ID | Description | Reason | Related Module | Risk if Wrong | Validation Method | Phase 1 Review | Status |
+| رقم الافتراض | الوصف | السبب | الوحدة المرتبطة | الخطر إذا كان خاطئًا | طريقة التحقق | مراجعة Phase 1 | الحالة |
 |---|---|---|---|---|---|---|---|
-| ASM-001 | الدراسة موجهة أساسًا لمزرعة تجارية هدفها إنتاج الزغاليل/الحمام اللاحم، وليس للهواية أو السباق أو الزينة. | Scope adopted in Phase 0 and maintained through Phase 1. | Overall Scope | Scope drift. | User-approved project scope + Phase 1 evidence focus. | Phase 1 research remained consistently aligned with commercial meat/squab production. | Validated |
-| ASM-002 | الممارسات التشغيلية تختلف بين المزارع، لذلك لا تمثل ممارسة واحدة جميع المزارع. | Prevent local practice becoming a universal rule. | All Domain Modules | Incorrect business rules and benchmarks. | Compare multiple sources, systems, breeds and Egyptian evidence. | Strongly supported: housing, cycle timing, market reference, identification, early weaning and performance vary by context. | Validated |
-| ASM-003 | النظام النهائي سيحتاج إلى الاحتفاظ بتاريخ تشغيلي كافٍ لتحليل الأداء، لكن مستوى هذا التاريخ لم يُحدد بعد. | Repeated pair/clutch/squab performance implies value in history. | Production / Performance / Audit | Later design may be under/over-specified. | Resolve after production and reporting analysis. | Phase 1 strengthens the need for historical event context, but exact retention/granularity is a future system-design decision. | Provisional |
-| ASM-004 | التقنية المستهدفة Laravel 12 + PHP 8.2+ + Filament 4 + MySQL مناسبة كسياق مبدئي، بشرط ألا تفرض نموذجًا على المجال. | Future technical constraint supplied by project owner. | Technical Architecture | Domain requirements may call for architectural adjustment. | Re-evaluate in Phase 7 after System Analysis. | Not a domain assumption and was not tested in Phase 1. | Provisional |
+| ASM-001 | الدراسة موجهة أساسًا لمزرعة تجارية هدفها إنتاج الزغاليل/الحمام اللاحم، وليس للهواية أو السباق أو الزينة. | تم اعتماد النطاق في Phase 0 والحفاظ عليه خلال Phase 1. | النطاق العام | توسع النطاق عن الهدف الأساسي. | نطاق المشروع المعتمد من المستخدم + تركيز أدلة Phase 1. | ظل بحث Phase 1 متسقًا مع إنتاج الحمام اللاحم والزغاليل تجاريًا. | Validated |
+| ASM-002 | الممارسات التشغيلية تختلف بين المزارع، لذلك لا تمثل ممارسة واحدة جميع المزارع. | منع تحويل ممارسة محلية إلى قاعدة عالمية. | جميع وحدات المجال | قواعد عمل وقيم مرجعية غير صحيحة. | مقارنة مصادر ونظم وسلالات متعددة مع الأدلة المصرية. | مدعوم بقوة: يختلف الإسكان وتوقيت الدورة ومرجع السوق والتعريف والفطام المبكر والأداء حسب السياق. | Validated |
+| ASM-003 | النظام النهائي سيحتاج إلى الاحتفاظ بتاريخ تشغيلي كافٍ لتحليل الأداء، لكن مستوى هذا التاريخ لم يُحدد بعد. | الأداء المتكرر للزوج والبطن والزغلول يوضح قيمة التاريخ. | الإنتاج / الأداء / التدقيق | قد يكون التصميم اللاحق أقل أو أكثر من المطلوب. | حسمه بعد تحليل الإنتاج والتقارير. | تقوي Phase 1 الحاجة إلى سياق تاريخي للأحداث، لكن مستوى الاحتفاظ والتفاصيل يمثل قرار تصميم نظام مستقبلي. | Provisional |
+| ASM-004 | التقنية المستهدفة Laravel 12 + PHP 8.2+ + Filament 4 + MySQL مناسبة كسياق مبدئي، بشرط ألا تفرض نموذجًا على المجال. | قيد تقني مستقبلي قدمه صاحب المشروع. | المعمارية التقنية | قد تستدعي متطلبات المجال تعديلًا معماريًا. | إعادة التقييم في Phase 7 بعد تحليل النظام. | هذا ليس افتراض مجال ولم يتم اختباره في Phase 1. | Provisional |
 
-## Phase 1 Assumption Review Conclusion
+## خلاصة مراجعة الافتراضات بعد Phase 1
 
-- `ASM-001` and `ASM-002` are **Validated** for continuing the study.
-- `ASM-003` remains **Provisional** because Phase 1 confirms the value of history but not its software representation or retention policy.
-- `ASM-004` remains **Provisional** and must not influence domain modeling before the technical-design phase.
-- No Phase 1 assumption was rejected.
+- `ASM-001` و`ASM-002` في حالة **Validated** بما يكفي لمواصلة الدراسة.
+- يظل `ASM-003` في حالة **Provisional** لأن Phase 1 تؤكد قيمة التاريخ، لكنها لا تحدد تمثيله البرمجي أو سياسة الاحتفاظ به.
+- يظل `ASM-004` في حالة **Provisional** ولا يجب أن يؤثر في نمذجة المجال قبل مرحلة التصميم التقني.
+- لم يتم رفض أي افتراض من افتراضات Phase 1.
