@@ -1,106 +1,106 @@
-# Pigeon Farm Management System — Study Log
+# نظام إدارة مزارع الحمام — سجل الدراسة
 
-> سجل زمني مختصر لما تم تنفيذه في كل مرحلة/مهمة. يضاف Entry جديد بعد كل مهمة رئيسية مع النطاق، الملفات، النتائج، الأسئلة، المخاطر، والحالة التالية.
-
----
-
-## LOG-001 — Phase 1A: Commercial Pigeon Farming Domain Research
-
-- **Date:** 2026-08-17
-- **Status:** Completed
-- **Scope:** Commercial Meat Pigeon / Squab Production Domain Research
-
-### Work Completed
-- Commercial squab farming overview.
-- Production/housing models.
-- Population structure.
-- Breeding pair and pair bond.
-- Nest management and double nest.
-- Overlapping production cycles.
-- Daily/periodic/event-driven operations.
-- Record keeping and identification.
-- Replacement/culling.
-- Environment/seasonality.
-- Production benchmarks and Egyptian context.
-
-### Evidence
-- 15 tracked sources, including peer-reviewed, university/official and Egyptian evidence.
-
-### Key Findings
-- Pair is a central production unit.
-- Squab depends on parents/crop milk.
-- Two eggs and ~18–20 d incubation are strong baseline patterns.
-- Natural market/weaning reference often ~3–4 weeks but not universal.
-- Production cycles can overlap.
-- Double nest supports overlap.
-- Housing and benchmarks are context-dependent.
-- Heat stress can depress production without implying mandatory summer reproductive shutdown.
-
-### Review Outputs
-- Added OQ-014 → OQ-021.
-- Added RSK-007 → RSK-011.
-- No new assumptions.
-
-### Next Step at Time of Completion
-Phase 1B — Detailed Pigeon Production Lifecycle.
+> سجل زمني مختصر لما تم تنفيذه في كل مرحلة أو مهمة. يضاف إدخال جديد بعد كل مهمة رئيسية، ويتضمن النطاق والملفات والنتائج والأسئلة والمخاطر والحالة التالية.
 
 ---
 
-## LOG-002 — Phase 1B: Detailed Pigeon Production Lifecycle
+## LOG-001 — Phase 1A: بحث مجال تربية الحمام التجاري
 
-- **Date:** 2026-08-17
-- **Status:** Completed
-- **Scope:** Real-world reproductive and squab-production lifecycle.
+- **التاريخ:** 2026-08-17
+- **الحالة:** Completed
+- **النطاق:** بحث مجال إنتاج الحمام اللاحم والزغاليل تجاريًا (Commercial Meat Pigeon / Squab Production)
 
-### Work Completed
-- Sexual maturity vs operational breeding readiness.
-- Pair formation/stability/re-pairing.
-- Courtship, mating and nesting.
-- Egg 1 / Egg 2 / clutch completion / incubation start distinction.
-- Clutch domain definition.
-- Incubation and candling.
-- Egg outcomes and hatch failure.
-- Crop milk and squab growth.
-- Weaning vs early separation vs market readiness.
-- Parent loss and fostering.
-- Next clutch and deep overlapping-cycle analysis.
-- Failed-cycle restart.
-- Molt/reproductive interruptions.
-- Reference timeline, observable farm events and exceptions.
-- Egyptian lifecycle comparison.
+### العمل المنجز
+- نظرة عامة على تربية الزغاليل التجارية.
+- نماذج الإنتاج والإسكان.
+- تركيب قطيع المزرعة.
+- زوج التربية (Breeding Pair) ورابطة الزوج (Pair Bond).
+- إدارة الأعشاش ونظام العشين (Double Nest System).
+- تداخل دورات الإنتاج (Overlapping Production Cycles).
+- العمليات اليومية والدورية والمدفوعة بالأحداث.
+- حفظ السجلات وطرق التعريف.
+- الإحلال والاستبعاد.
+- البيئة والموسمية.
+- القيم المرجعية للإنتاج والسياق المصري.
 
-### Sources
-- Reused SRC-001 → SRC-015.
-- Added/expanded SRC-016 → SRC-021.
+### الأدلة
+- تم تتبع 15 مصدرًا، شملت أبحاثًا محكمة ومصادر جامعية/رسمية وأدلة مصرية.
 
-### Key Findings
-- Sexual maturity ≠ commercial breeding readiness.
-- Egg laid ≠ clutch complete ≠ incubation started.
-- Within-clutch egg interval commonly ~2 days.
-- Incubation commonly ~17–20 days but start anchor is not universal.
-- Weaning, early separation and market readiness are distinct.
-- Hatch-to-next-lay varies strongly by strain/management.
-- Same pair can rear Cycle A while beginning/incubating Cycle B.
-- Failed attempts can restart faster than full successful rearing.
-- “Production Cycle” has multiple valid meanings and must be explicitly anchored.
+### أهم النتائج
+- الزوج وحدة إنتاج مركزية.
+- يعتمد الزغلول على الأبوين ولبن الحوصلة (Crop Milk).
+- يمثل نمط البيضتين وحضانة نحو 18–20 يومًا خط أساس قويًا.
+- يقع المرجع الطبيعي للسوق/الفطام غالبًا حول 3–4 أسابيع لكنه ليس قاعدة عالمية.
+- يمكن أن تتداخل دورات الإنتاج.
+- يدعم نظام العشين هذا التداخل.
+- يعتمد الإسكان والقيم المرجعية على السياق.
+- يمكن للإجهاد الحراري خفض الإنتاج دون أن يعني توقفًا تناسليًا صيفيًا إلزاميًا.
 
-### Review Outputs
-- Terminology expanded to TERM-030.
-- Consistency register expanded to 9 issues.
-- No duplicate open questions, assumptions or risk IDs were added.
+### نواتج المراجعة
+- تمت إضافة OQ-014 → OQ-021.
+- تمت إضافة RSK-007 → RSK-011.
+- لم تتم إضافة افتراضات جديدة.
 
-### Next Step at Time of Completion
-Phase 1C — Domain Terminology, Evidence Consolidation & Validation Review.
+### الخطوة التالية وقت الإكمال
+Phase 1B — دورة إنتاج الحمام بالتفصيل (Detailed Pigeon Production Lifecycle).
 
 ---
 
-## LOG-003 — Phase 1C: Domain Consolidation & Validation Review
+## LOG-002 — Phase 1B: دورة إنتاج الحمام بالتفصيل
 
-- **Date:** 2026-08-17
-- **Status:** Completed — Awaiting Review
-- **Scope:** Consolidate, validate, normalize, classify and prepare the Phase 1 Domain Baseline for user approval.
+- **التاريخ:** 2026-08-17
+- **الحالة:** Completed
+- **النطاق:** دورة التكاثر وإنتاج الزغاليل الفعلية في المزرعة.
 
-### Files Reviewed
+### العمل المنجز
+- الفصل بين النضج الجنسي والجاهزية التشغيلية للتربية.
+- تكوين الزوج واستقراره وإعادة تكوينه.
+- المغازلة والتزاوج والتعشيش.
+- الفصل بين البيضة الأولى والبيضة الثانية واكتمال البطن وبدء الحضانة.
+- تعريف بطن البيض (Clutch) على مستوى المجال.
+- الحضانة وفحص البيض بالضوء (Candling).
+- نتائج البيض وفشل الفقس.
+- لبن الحوصلة ونمو الزغاليل.
+- الفصل بين الفطام والفصل المبكر وجاهزية التسويق.
+- فقد الأبوين والتحضين البديل (Fostering).
+- البطن التالية والتحليل المتعمق لتداخل الدورات.
+- إعادة بدء الإنتاج بعد فشل الدورة.
+- القلش وانقطاعات التكاثر.
+- الخط الزمني المرجعي، وأحداث المزرعة القابلة للملاحظة، والحالات الاستثنائية.
+- مقارنة دورة الإنتاج المصرية بالأدلة الدولية.
+
+### المصادر
+- أعيد استخدام SRC-001 → SRC-015.
+- أضيفت أو وُسعت SRC-016 → SRC-021.
+
+### أهم النتائج
+- النضج الجنسي لا يساوي تلقائيًا الجاهزية التجارية للتربية.
+- وضع البيضة لا يساوي اكتمال البطن ولا يساوي بدء الحضانة.
+- الفاصل داخل البطن غالبًا نحو يومين.
+- الحضانة عادة نحو 17–20 يومًا، لكن مرساة البداية ليست عالمية.
+- الفطام والفصل المبكر وجاهزية التسويق مفاهيم منفصلة.
+- تختلف الفترة من الفقس إلى الوضع التالي بدرجة كبيرة حسب السلالة والإدارة.
+- يمكن لنفس الزوج تربية الدورة A بينما يبدأ/يحضن الدورة B.
+- قد تبدأ المحاولات الفاشلة من جديد أسرع من دورة تربية ناجحة كاملة.
+- لمصطلح دورة الإنتاج (Production Cycle) عدة معانٍ صحيحة ويجب تحديد مرساة القياس صراحة.
+
+### نواتج المراجعة
+- تم توسيع القاموس حتى TERM-030.
+- تم توسيع سجل الاتساق إلى 9 قضايا.
+- لم تتم إضافة أسئلة أو افتراضات أو أرقام مخاطر مكررة.
+
+### الخطوة التالية وقت الإكمال
+Phase 1C — توحيد مصطلحات المجال وتجميع الأدلة ومراجعة التحقق (Domain Terminology, Evidence Consolidation & Validation Review).
+
+---
+
+## LOG-003 — Phase 1C: تجميع المجال ومراجعة التحقق
+
+- **التاريخ:** 2026-08-17
+- **الحالة:** Completed — Awaiting Review
+- **النطاق:** تجميع نتائج Phase 1 والتحقق منها وتوحيدها وتصنيفها وتجهيز خط أساس المجال لاعتماد المستخدم.
+
+### الملفات التي تمت مراجعتها
 - `MASTER.md`
 - `01-domain-research/commercial-pigeon-farming.md`
 - `01-domain-research/production-lifecycle.md`
@@ -111,80 +111,80 @@ Phase 1C — Domain Terminology, Evidence Consolidation & Validation Review.
 - `09-review/consistency-review.md`
 - `STUDY-LOG.md`
 
-### Files Modified / Created
-- **Created:** `01-domain-research/DOMAIN-BASELINE.md`
-- **Updated:** `01-domain-research/terminology.md`
-- **Updated:** `09-review/open-questions.md`
-- **Updated:** `09-review/assumptions.md`
-- **Updated:** `09-review/risks.md`
-- **Updated:** `09-review/consistency-review.md`
-- **Updated:** `MASTER.md`
-- **Updated:** `STUDY-LOG.md`
+### الملفات التي تم تعديلها / إنشاؤها
+- **تم الإنشاء:** `01-domain-research/DOMAIN-BASELINE.md`
+- **تم التحديث:** `01-domain-research/terminology.md`
+- **تم التحديث:** `09-review/open-questions.md`
+- **تم التحديث:** `09-review/assumptions.md`
+- **تم التحديث:** `09-review/risks.md`
+- **تم التحديث:** `09-review/consistency-review.md`
+- **تم التحديث:** `MASTER.md`
+- **تم التحديث:** `STUDY-LOG.md`
 
-### Consolidation Findings
-1. Phase 1A and 1B are materially consistent; no core finding required rejection.
-2. Strong baseline: biparental care, crop milk, pair-centered production, two-egg clutch pattern, ~17–20 d incubation and overlapping cycles.
-3. Housing model, market specification, breeder-entry criteria, pair rules, cycle timing and performance benchmarks remain context-dependent.
-4. `Production Cycle` cannot be treated as one universal linear biological sequence.
-5. Early Separation, Weaning and Market Readiness are separate concepts.
-6. Fertility and Hatchability require explicit calculation definitions.
-7. Egyptian evidence shapes the baseline but does not standardize all current national commercial practice.
-8. Remaining uncertainty is mainly field-validation uncertainty rather than fundamental biological uncertainty.
+### نتائج التجميع
+1. نتائج Phase 1A و1B متسقة جوهريًا، ولم تحتج أي نتيجة أساسية إلى الرفض.
+2. خط الأساس الأقوى يشمل الرعاية بواسطة الأبوين، ولبن الحوصلة، والإنتاج المتمركز حول الزوج، ونمط البيضتين، وحضانة نحو 17–20 يومًا، وتداخل الدورات.
+3. يظل نموذج الإسكان ومواصفات السوق ومعايير دخول طيور التربية وقواعد الأزواج وتوقيت الدورة والقيم المرجعية للأداء معتمدًا على السياق.
+4. لا يجوز التعامل مع دورة الإنتاج (Production Cycle) كتسلسل بيولوجي خطي عالمي واحد.
+5. الفصل المبكر (Early Separation) والفطام (Weaning) وجاهزية التسويق (Market Readiness) مفاهيم منفصلة.
+6. تحتاج الخصوبة (Fertility) ونسبة الفقس (Hatchability) إلى تعريفات حساب صريحة.
+7. تؤثر الأدلة المصرية في تشكيل خط الأساس، لكنها لا توحد كل الممارسات التجارية الحالية على المستوى الوطني.
+8. يتمثل معظم عدم اليقين المتبقي في الحاجة إلى تحقق ميداني، وليس في عدم وضوح الأساس البيولوجي.
 
-### Terminology Review
-- Rebuilt terminology as a normalized index.
-- Extended terms through `TERM-039`.
-- Added missing concepts including Pigeon, Breeding Bird, Pairing, Egg, Brooding, Production Cycle, Colony System and Individual Pair Cage.
-- Added `Ambiguous Domain Terms` section.
+### مراجعة المصطلحات
+- أعيد بناء القاموس كفهرس موحد.
+- تم توسيع المصطلحات حتى `TERM-039`.
+- أضيفت مفاهيم كانت ناقصة مثل Pigeon وBreeding Bird وPairing وEgg وBrooding وProduction Cycle وColony System وIndividual Pair Cage.
+- أضيف قسم للمصطلحات الملتبسة (Ambiguous Domain Terms).
 
-### Evidence / Benchmark Review
-- Created Evidence Quality Review for SRC-001 → SRC-021.
-- Benchmarks classified into Stable Biological Range, Context-dependent Benchmark, Research-specific Observation, and Requires Egyptian Field Validation.
-- No universal market age, market weight, production-cycle duration, fertility target or hatchability target was approved.
+### مراجعة الأدلة والقيم المرجعية
+- تم إنشاء مراجعة جودة للأدلة SRC-001 → SRC-021.
+- صنفت القيم المرجعية إلى نطاق بيولوجي مستقر، وقيمة تعتمد على السياق، وملاحظة خاصة بدراسة، وما يحتاج تحققًا ميدانيًا مصريًا.
+- لم يتم اعتماد عمر سوق أو وزن سوق أو مدة دورة إنتاج أو هدف خصوبة أو هدف فقس عالمي واحد.
 
-### Open Questions Review
-- No duplicate questions were added.
-- `open-questions.md` now includes a decision horizon for every current question.
-- **Must Answer Before Farm Structure:** OQ-001, OQ-002, OQ-014, OQ-016.
-- **Must Answer Before Data Model:** OQ-003, OQ-007, OQ-008, OQ-017, OQ-018, OQ-020, OQ-021.
-- **Must Answer Before MVP:** OQ-004, OQ-006, OQ-009, OQ-010, OQ-015, OQ-019.
-- **Can Defer:** OQ-005.
-- **Optional:** OQ-011, OQ-012, OQ-013.
+### مراجعة الأسئلة المفتوحة
+- لم تتم إضافة أسئلة مكررة.
+- أصبح لكل سؤال حالي أفق قرار داخل `open-questions.md`.
+- **يجب الإجابة قبل تحليل هيكل المزرعة:** OQ-001, OQ-002, OQ-014, OQ-016.
+- **يجب الإجابة قبل نموذج البيانات:** OQ-003, OQ-007, OQ-008, OQ-017, OQ-018, OQ-020, OQ-021.
+- **يجب الإجابة قبل MVP:** OQ-004, OQ-006, OQ-009, OQ-010, OQ-015, OQ-019.
+- **يمكن تأجيله:** OQ-005.
+- **اختياري:** OQ-011, OQ-012, OQ-013.
 
-### Assumptions Review
+### مراجعة الافتراضات
 - `ASM-001`: Validated.
 - `ASM-002`: Validated.
 - `ASM-003`: Provisional.
 - `ASM-004`: Provisional.
-- Rejected assumptions: 0.
+- الافتراضات المرفوضة: 0.
 
-### Risks Review
-- Reduced knowledge-structure risks: premature modeling, terminology ambiguity, linear-cycle assumptions and benchmark universalization.
-- Field-dependent risks remain active: housing prevalence, identification, market requirements, pair/replacement rules and operational thresholds.
+### مراجعة المخاطر
+- انخفضت مخاطر بنية المعرفة: التصميم المبكر، وغموض المصطلحات، وافتراض خطية الدورة، وتعميم القيم المرجعية.
+- تظل المخاطر المعتمدة على الميدان نشطة: انتشار نظم الإسكان، والتعريف، ومتطلبات السوق، وقواعد الزوج والإحلال، والحدود التشغيلية.
 
-### Consistency Review
-- 9 conflict/variability items reviewed.
-- Irreconcilable domain conflicts: 0.
-- Remaining issues are contextual, definition-dependent or require field validation.
+### مراجعة الاتساق
+- تمت مراجعة 9 قضايا اختلاف/تباين.
+- التعارضات غير القابلة للتوفيق في المجال: 0.
+- القضايا المتبقية تعتمد على السياق أو التعريف أو تحتاج تحققًا ميدانيًا.
 
-### Decision
-`DEC-005`: Phase 1 Domain Baseline meets exit criteria and is ready for user review; remaining local uncertainties are explicitly tracked rather than blocking consolidation.
+### القرار
+`DEC-005`: استوفى خط أساس مجال Phase 1 معايير الخروج وأصبح جاهزًا لمراجعة المستخدم، مع تتبع نقاط عدم اليقين المحلية صراحة بدل تعطيل التجميع.
 
-### Phase 1 Exit Criteria
-- Terminology reviewed: Yes.
-- Domain facts classified: Yes.
-- Major contradictions documented: Yes.
-- Lifecycle consolidated: Yes.
-- Overlapping cycles documented: Yes.
-- Egyptian context separated: Yes.
-- Benchmarks classified: Yes.
-- Open Questions prioritized: Yes.
-- Assumptions reviewed: Yes.
-- Risks reviewed: Yes.
-- DOMAIN-BASELINE created: Yes.
-- Consistency review completed: Yes.
+### معايير الخروج من Phase 1
+- تمت مراجعة المصطلحات: نعم.
+- تم تصنيف حقائق المجال: نعم.
+- تم توثيق التناقضات الرئيسية: نعم.
+- تم تجميع دورة الحياة: نعم.
+- تم توثيق الدورات المتداخلة: نعم.
+- تم فصل السياق المصري: نعم.
+- تم تصنيف القيم المرجعية: نعم.
+- تم ترتيب أولويات الأسئلة المفتوحة: نعم.
+- تمت مراجعة الافتراضات: نعم.
+- تمت مراجعة المخاطر: نعم.
+- تم إنشاء DOMAIN-BASELINE: نعم.
+- اكتملت مراجعة الاتساق: نعم.
 
-### Current Master Status
+### حالة MASTER الحالية وقت الإكمال
 - Phase 0: Completed.
 - Phase 1A: Completed.
 - Phase 1B: Completed.
@@ -192,11 +192,105 @@ Phase 1C — Domain Terminology, Evidence Consolidation & Validation Review.
 - Phase 1: Completed — Awaiting Review.
 - Phase 2: Pending.
 
-### Recommended Decision
-**Phase 1 is ready for user approval.**
+### القرار الموصى به
+**Phase 1 جاهزة لاعتماد المستخدم.**
 
-### Next Recommended Phase — after approval only
-**Phase 2 — Farm Structure & Pigeon Management Domain Analysis**
+### المرحلة التالية الموصى بها — بعد الاعتماد فقط
+**Phase 2 — تحليل هيكل المزرعة وإدارة الحمام (Farm Structure & Pigeon Management Domain Analysis)**
 
-### Stop Condition
-No Phase 2 work, Farm Structure Analysis, Database Design, ERD, Software Architecture, MVP, or Coding has been started.
+### شرط التوقف
+لم يبدأ أي عمل في Phase 2 أو تحليل هيكل المزرعة أو تصميم قاعدة البيانات أو ERD أو المعمارية البرمجية أو MVP أو البرمجة.
+
+---
+
+## LOG-004 — توحيد الدراسة إلى اللغة العربية (Arabic Language Normalization)
+
+- **التاريخ:** 2026-08-17
+- **الحالة:** Completed — Awaiting User Review
+- **النطاق:** مراجعة وتوحيد اللغة لكل الملفات الموجودة داخل `docs/pigeon-farm-study/` قبل بدء أي مرحلة جديدة.
+
+### الهدف
+جعل العربية اللغة الأساسية والافتراضية لكل الشروحات والتحليلات والجداول والملاحظات والقرارات والمخاطر والافتراضات والأسئلة والتقارير في الدراسة، مع الحفاظ على المصطلحات الإنجليزية الفنية عند الحاجة إلى الدقة.
+
+### الملفات التي تمت مراجعتها
+تمت مراجعة جميع الملفات الحالية داخل `docs/pigeon-farm-study/`، وعددها **42 ملفًا**، وتشمل:
+
+- `MASTER.md`
+- `STUDY-LOG.md`
+- `FINAL-STUDY.md`
+- جميع ملفات `01-domain-research/`
+- جميع ملفات `02-farm-structure/`
+- جميع ملفات `03-production/`
+- جميع ملفات `04-health-feed/`
+- جميع ملفات `05-operations-finance/`
+- جميع ملفات `06-system-analysis/`
+- جميع ملفات `07-technical-design/`
+- جميع ملفات `08-mvp/`
+- جميع ملفات `09-review/`
+
+### الملفات التي احتاجت ترجمة أو توحيدًا لغويًا
+- ملفات البحث والتجميع في `01-domain-research/`.
+- ملفات الحوكمة `MASTER.md` و`STUDY-LOG.md`.
+- ملفات `09-review/`.
+- جميع placeholders للمراحل التالية التي كانت عناوينها أو تعليماتها بالإنجليزية.
+- `FINAL-STUDY.md` إذا احتوى على عنوان تحريري إنجليزي.
+
+### قواعد الترجمة المعتمدة
+- العربية أولًا في المحتوى التحريري.
+- المصطلح الإنجليزي بين قوسين عند أول ظهور أو عند الحاجة لمنع الغموض.
+- عدم ترجمة أسماء الملفات والمسارات والـ IDs والـ Codes والـ URLs.
+- عدم ترجمة أسماء الأبحاث والمجلات والجامعات والمؤلفين والمؤسسات أو أسماء السلالات المعروفة بصيغتها الأصلية.
+- الإبقاء على قيم Status الموحدة بالإنجليزية عند استخدامها كVocabulary ثابتة.
+- عرض تصنيفات الأدلة بالعربية مع الإنجليزية عند الحاجة.
+
+### المصطلحات التي احتاجت قرار ترجمة
+تم توحيد القاموس حتى `TERM-039`. ومن أهم الصياغات المعتمدة:
+
+- زوج إنتاج / زوج تربية (Breeding Pair)
+- رابطة الزوج (Pair Bond)
+- بطن بيض (Clutch)
+- نظام العشين (Double Nest System)
+- حضانة البيض (Incubation)
+- الفقس (Hatching)
+- لبن الحوصلة (Crop Milk)
+- الفطام (Weaning)
+- الجاهزية للتسويق (Market Readiness)
+- الاستبعاد من قطيع الإنتاج (Culling)
+- القلش (Molt / Moulting)
+- تداخل دورات الإنتاج (Overlapping Production Cycle)
+- الجاهزية لدخول قطيع الإنتاج (Operational Breeding Readiness)
+- فحص البيض بالضوء (Candling)
+
+### محتوى أُبقي بالإنجليزية وسبب ذلك
+- أسماء الدراسات والمجلات والجامعات والمؤلفين والمؤسسات: للحفاظ على المرجع الأصلي.
+- أسماء السلالات/الخطوط مثل White Mirthys وZagel وLocal Egyptian: لأنها أسماء معروفة في المصادر.
+- Laravel وPHP وFilament وMySQL: أسماء تقنية ثابتة.
+- أسماء الملفات والمسارات مثل `DOMAIN-BASELINE.md`: لمنع كسر الروابط.
+- IDs مثل `TERM-001`, `OQ-014`, `RSK-007`, `ASM-001`, `DEC-006`: لأنها معرفات ثابتة.
+- URLs: للحفاظ على صلاحيتها.
+- Status Vocabulary مثل `Pending`, `Completed`, `Approved`: لأنها قيم موحدة في المشروع.
+
+### سياسة اللغة
+تمت إضافة قسم **سياسة اللغة والتوثيق** إلى `MASTER.md`، وأصبحت العربية اللغة الافتراضية لكل الملفات والمراحل المستقبلية.
+
+### القرار
+تم تسجيل `DEC-006`: **العربية هي لغة التوثيق الأساسية للدراسة بالكامل، مع الاحتفاظ بالمصطلحات الإنجليزية الفنية والعناصر الثابتة عند الحاجة.**
+
+### الأثر على المحتوى
+- لم يتم تغيير معنى علمي.
+- لم يتم اختصار نتائج البحث.
+- لم يتم تغيير مستوى الثقة في الأدلة.
+- لم تُحذف تناقضات.
+- لم تُغير الأسئلة المفتوحة أو المخاطر أو الافتراضات إلا من حيث اللغة.
+- لم تتحول أي نقطة `Requires Field Validation` إلى حقيقة.
+
+### حالة الدراسة بعد المهمة
+- Phase 1: Completed — Awaiting Review.
+- Language Normalization: Completed — Awaiting User Review.
+- Phase 2: Pending.
+
+### الخطوة التالية
+**مراجعة المستخدم ثم بدء Phase 2 — تحليل هيكل المزرعة وإدارة الحمام (Farm Structure & Pigeon Management Domain Analysis).**
+
+### شرط التوقف
+لم تبدأ Phase 2، ولم يبدأ تحليل هيكل المزرعة أو إدارة الحمام أو تصميم قاعدة البيانات أو المعمارية أو MVP أو البرمجة.
