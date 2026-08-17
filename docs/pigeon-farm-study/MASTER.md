@@ -1,207 +1,234 @@
-# Pigeon Farm Management System — Master Study File
+# نظام إدارة مزارع الحمام — الملف الرئيسي للدراسة
 
-> Central source of truth for study status, decisions, evidence policy, scope, risks, assumptions, open questions, and phase transitions.
+> المصدر المركزي المعتمد لحالة الدراسة والقرارات وسياسة الأدلة والنطاق والمخاطر والافتراضات والأسئلة المفتوحة والانتقال بين المراحل.
 
-## Project Vision
+## رؤية المشروع
 
-دراسة وتحليل وتصميم نظام متكامل لإدارة مزارع الحمام التجاري مع التركيز على **Commercial Meat Pigeon / Squab Production**. يبدأ المشروع بفهم المجال والعمليات الفعلية ثم ينتقل لاحقًا إلى Business Analysis وData Modeling وSystem Design وMVP وTechnical Architecture.
+دراسة وتحليل وتصميم نظام متكامل لإدارة مزارع الحمام التجاري، مع التركيز على **إنتاج الحمام اللاحم والزغاليل تجاريًا (Commercial Meat Pigeon / Squab Production)**. يبدأ المشروع بفهم المجال والعمليات الفعلية، ثم ينتقل لاحقًا إلى تحليل الأعمال (Business Analysis) ونمذجة البيانات (Data Modeling) وتصميم النظام (System Design) وتعريف MVP والمعمارية التقنية (Technical Architecture).
 
-## Study Objectives
+## أهداف الدراسة
 
 - فهم مجال إنتاج الزغاليل التجاري بصورة موثقة.
 - توثيق دورة الإنتاج والعمليات والقرارات التشغيلية.
-- فصل الحقائق البيولوجية عن الممارسات التشغيلية المتغيرة.
-- فهم Domain Entities قبل أي Software Entities.
-- استخراج Business Rules لاحقًا من التحليل لا من الافتراضات.
-- الوصول إلى Data Model وSystem Design مبنيين على الواقع التشغيلي.
+- الفصل بين الحقائق البيولوجية والممارسات التشغيلية المتغيرة.
+- فهم كيانات المجال (Domain Entities) قبل أي كيانات برمجية (Software Entities).
+- استخراج قواعد العمل (Business Rules) لاحقًا من التحليل وليس من الافتراضات.
+- الوصول إلى نموذج بيانات (Data Model) وتصميم نظام مبنيين على الواقع التشغيلي.
 - تعريف MVP واضح بعد اكتمال التحليل السابق له.
 
-## Scope
+## النطاق
 
-### In Scope
+### داخل النطاق
 
-**Commercial Meat Pigeon / Squab Production** مع دراسة الجوانب المشتركة من أنماط تربية أخرى فقط عندما تكون لازمة لفهم المجال الأساسي.
+**إنتاج الحمام اللاحم والزغاليل تجاريًا (Commercial Meat Pigeon / Squab Production)**، مع دراسة الجوانب المشتركة من أنماط التربية الأخرى فقط عندما تكون ضرورية لفهم المجال الأساسي.
 
-### Out of Scope During Domain Research
+### خارج النطاق أثناء بحث المجال
 
-- Database Design / ERD.
-- Software Entities / Models.
+- تصميم قاعدة البيانات / ERD.
+- الكيانات أو النماذج البرمجية.
 - Migrations.
 - Status Enums.
 - APIs / UI / Filament.
-- MVP implementation.
-- Software Architecture.
-- Coding.
+- تنفيذ MVP.
+- المعمارية البرمجية.
+- كتابة الكود.
 
-## Study Methodology
+## منهجية الدراسة
 
-**Research → Domain Understanding → Operational Analysis → Business Analysis → Business Rules → Data Modeling → System Design → MVP Definition → Technical Architecture → Final Review**
+**البحث (Research) → فهم المجال (Domain Understanding) → التحليل التشغيلي (Operational Analysis) → تحليل الأعمال (Business Analysis) → قواعد العمل (Business Rules) → نمذجة البيانات (Data Modeling) → تصميم النظام (System Design) → تعريف MVP → المعمارية التقنية (Technical Architecture) → المراجعة النهائية (Final Review)**
 
 المبدأ الحاكم: **التحليل يولّد التصميم، وليس العكس.**
 
-## Study Phases
+## سياسة اللغة والتوثيق
 
-| Phase | Name | Status | Files | Dependencies | Review Status | Notes |
+**اللغة الأساسية لجميع ملفات الدراسة هي العربية.**
+
+وتطبق القواعد التالية:
+
+1. جميع الشروحات والتحليلات والتقارير تكتب بالعربية.
+2. يستخدم المصطلح الإنجليزي بين قوسين عند الحاجة، خاصة عند أول ظهور أو عندما يمنع الغموض.
+3. يحتفظ بالمصطلحات الفنية الإنجليزية المهمة لضمان الدقة وعدم فقدان المعنى العلمي.
+4. لا تكتب فقرات كاملة بالإنجليزية إلا عند نقل اسم أو عنوان مصدر أصلي أو عنصر ثابت يجب الاحتفاظ به كما هو.
+5. جميع المراحل المستقبلية يجب أن تلتزم بهذه السياسة.
+6. عند إنشاء أي ملف جديد، تكون العربية هي اللغة الافتراضية.
+7. أي محتوى بحثي يتم جمعه من مصادر إنجليزية يجب فهمه وتحليله وتلخيصه بالعربية، وليس نسخه كفقرات إنجليزية.
+8. لا تترجم أسماء الملفات أو المسارات أو IDs أو Codes أو URLs أو أسماء المصادر والأبحاث والمؤلفين والمؤسسات أو أسماء السلالات العلمية/التجارية المعروفة بها.
+9. يمكن الاحتفاظ بقيم الحالة الموحدة مثل `Pending`, `In Progress`, `Completed`, `Needs Review`, `Approved` كما هي.
+10. تعرض تصنيفات الأدلة بصيغة عربية مع الإنجليزية عند الحاجة، مثل: حقيقة موثقة (Verified Fact)، دليل قوي (Strong Evidence)، يحتاج تحققًا ميدانيًا (Requires Field Validation).
+
+### سير العمل اللغوي للمراحل القادمة
+
+**البحث بأي لغة → فهم الأدلة → تحليلها → كتابة الاستنتاجات بالعربية.**
+
+هذه السياسة لغوية وتوثيقية فقط، ولا تغير أي نتيجة علمية أو قرار أو مستوى ثقة في الأدلة.
+
+## مراحل الدراسة
+
+| المرحلة | الاسم | الحالة | الملفات | الاعتماديات | حالة المراجعة | الملاحظات |
 |---|---|---|---|---|---|---|
-| Phase 0 | Study Initialization | Completed | `MASTER.md`, review files, placeholders | None | Approved by transition | Initialization complete. |
-| Phase 1 | Domain Research | Completed — Awaiting Review | `01-domain-research/*`, review files, `DOMAIN-BASELINE.md` | Phase 0 | User Review Required | Exit criteria met; not Approved yet. |
-| Phase 2 | Farm Structure & Core Domain | Pending | `02-farm-structure/*` | Phase 1 approval | Pending | Do not start before user approval. |
-| Phase 3 | Production Analysis | Pending | `03-production/*` | Phases 1–2 | Pending | Egg, hatch, squab and performance analysis. |
-| Phase 4 | Health & Feed | Pending | `04-health-feed/*` | Phases 1–3 | Pending | Health, treatments, mortality, feed. |
-| Phase 5 | Operations & Finance | Pending | `05-operations-finance/*` | Phases 1–4 | Pending | Inventory, purchasing, sales, financials. |
-| Phase 6 | System Analysis | Pending | `06-system-analysis/*` | Phases 1–5 | Pending | KPIs, reports, alerts, roles, rules, domain events. |
-| Phase 7 | Technical Design | Pending | `07-technical-design/*` | Phase 6 | Pending | Data model, relationships, architecture, audit. |
-| Phase 8 | MVP Definition | Pending | `08-mvp/*` | Phases 6–7 | Pending | MVP and future AI. |
-| Phase 9 | Final Review & Consolidation | Pending | `09-review/*`, `FINAL-STUDY.md` | Phases 1–8 | Pending | Final consolidation after approvals. |
+| Phase 0 | تهيئة الدراسة | Completed | `MASTER.md`، ملفات المراجعة، placeholders | لا يوجد | تم اعتماد الانتقال | اكتملت التهيئة. |
+| Phase 1 | بحث المجال | Completed — Awaiting Review | `01-domain-research/*`، ملفات المراجعة، `DOMAIN-BASELINE.md` | Phase 0 | تتطلب مراجعة المستخدم | تحققت معايير الخروج، ولم تصبح `Approved` بعد. |
+| Phase 2 | هيكل المزرعة والمجال الأساسي | Pending | `02-farm-structure/*` | اعتماد Phase 1 | Pending | لا تبدأ قبل اعتماد المستخدم. |
+| Phase 3 | تحليل الإنتاج | Pending | `03-production/*` | Phases 1–2 | Pending | تحليل البيض والفقس والزغاليل والأداء. |
+| Phase 4 | الصحة والتغذية | Pending | `04-health-feed/*` | Phases 1–3 | Pending | الصحة والعلاجات والنفوق والتغذية. |
+| Phase 5 | العمليات والمالية | Pending | `05-operations-finance/*` | Phases 1–4 | Pending | المخزون والمشتريات والمبيعات والماليات. |
+| Phase 6 | تحليل النظام | Pending | `06-system-analysis/*` | Phases 1–5 | Pending | مؤشرات الأداء والتقارير والتنبيهات والأدوار والقواعد وأحداث المجال. |
+| Phase 7 | التصميم التقني | Pending | `07-technical-design/*` | Phase 6 | Pending | نموذج البيانات والعلاقات والمعمارية وسجل التدقيق. |
+| Phase 8 | تعريف MVP | Pending | `08-mvp/*` | Phases 6–7 | Pending | MVP والذكاء الاصطناعي المستقبلي. |
+| Phase 9 | المراجعة والتجميع النهائي | Pending | `09-review/*`, `FINAL-STUDY.md` | Phases 1–8 | Pending | التجميع النهائي بعد الاعتمادات. |
 
-## Phase 1 Subphase Progress
+## تقدم المراحل الفرعية في Phase 1
 
-| Subphase | Name | Status | Primary File | Notes |
+| المرحلة الفرعية | الاسم | الحالة | الملف الأساسي | الملاحظات |
 |---|---|---|---|---|
-| Phase 1A | Commercial Pigeon Farming Domain Research | Completed | `01-domain-research/commercial-pigeon-farming.md` | Commercial models, pair, nests, records, benchmarks, Egypt. |
-| Phase 1B | Detailed Pigeon Production Lifecycle | Completed | `01-domain-research/production-lifecycle.md` | Detailed timeline, overlap, failures, events, Egyptian timing evidence. |
-| Phase 1C | Domain Terminology, Evidence Consolidation & Validation Review | Completed — Awaiting Review | `01-domain-research/DOMAIN-BASELINE.md` | Baseline created; terminology/evidence/risks/assumptions/consistency reviewed. |
+| Phase 1A | بحث مجال تربية الحمام التجاري | Completed | `01-domain-research/commercial-pigeon-farming.md` | نماذج الإنتاج، الزوج، الأعشاش، السجلات، القيم المرجعية، والسياق المصري. |
+| Phase 1B | دورة إنتاج الحمام بالتفصيل | Completed | `01-domain-research/production-lifecycle.md` | الخط الزمني التفصيلي والتداخل والفشل والأحداث وأدلة التوقيت المصرية. |
+| Phase 1C | توحيد مصطلحات المجال وتجميع الأدلة ومراجعة التحقق | Completed — Awaiting Review | `01-domain-research/DOMAIN-BASELINE.md` | تم إنشاء خط الأساس ومراجعة المصطلحات والأدلة والمخاطر والافتراضات والاتساق. |
 
-## Decision Log
+## سجل القرارات (Decision Log)
 
-| Decision ID | Date | Phase | Decision | Reason | Impact | Status |
+| رقم القرار | التاريخ | المرحلة | القرار | السبب | التأثير | الحالة |
 |---|---|---|---|---|---|---|
-| DEC-001 | 2026-08-17 | Phase 0 | Primary scope is Commercial Meat Pigeon / Squab Production. | Prevent scope drift. | Guides research and analysis. | Approved |
-| DEC-002 | 2026-08-17 | Phase 0 | Do not design Software Entities or Database Tables before understanding Domain Entities and workflows. | Prevent premature design. | Data design becomes an output of analysis. | Approved |
-| DEC-003 | 2026-08-17 | Phase 0 | Target technical context is Laravel 12 + PHP 8.2+ + Filament 4 + MySQL, without early implementation. | Preserve future technical context without driving domain analysis. | Re-evaluate in Phase 7. | Approved |
-| DEC-004 | 2026-08-17 | Phase 0 → 1 | Explicit Phase 1A instruction authorized Phase 0 completion and transition to Phase 1. | Phase 0 requirements were complete. | Phase 1 began formally. | Approved |
-| DEC-005 | 2026-08-17 | Phase 1C | Phase 1 Domain Baseline is complete enough for user review; remaining local uncertainties are preserved as Field Validation rather than blocking consolidation. | Core biology/lifecycle is coherent, while local operational choices remain intentionally open. | Phase 1 can be marked Completed — Awaiting Review, but not Approved. | Approved |
+| DEC-001 | 2026-08-17 | Phase 0 | النطاق الأساسي هو إنتاج الحمام اللاحم والزغاليل تجاريًا (Commercial Meat Pigeon / Squab Production). | منع توسع النطاق غير المنضبط. | يوجه البحث والتحليل. | Approved |
+| DEC-002 | 2026-08-17 | Phase 0 | لا يتم تصميم Software Entities أو Database Tables قبل فهم Domain Entities ومسارات العمل. | منع التصميم المبكر. | يصبح تصميم البيانات نتيجة للتحليل. | Approved |
+| DEC-003 | 2026-08-17 | Phase 0 | السياق التقني المستهدف هو Laravel 12 + PHP 8.2+ + Filament 4 + MySQL دون تنفيذ تقني مبكر. | الحفاظ على السياق التقني المستقبلي دون أن يقود تحليل المجال. | يعاد تقييمه في Phase 7. | Approved |
+| DEC-004 | 2026-08-17 | Phase 0 → 1 | تعليمات Phase 1A الصريحة سمحت بإكمال Phase 0 والانتقال إلى Phase 1. | كانت متطلبات Phase 0 مكتملة. | بدأت Phase 1 رسميًا. | Approved |
+| DEC-005 | 2026-08-17 | Phase 1C | خط أساس المجال في Phase 1 مكتمل بما يكفي لمراجعة المستخدم، مع إبقاء نقاط عدم اليقين المحلية كعناصر تحقق ميداني بدل تعطيل التجميع. | الأساس البيولوجي ودورة الحياة متسقان بينما تظل الخيارات التشغيلية المحلية مفتوحة عمدًا. | يمكن وضع Phase 1 كـ Completed — Awaiting Review دون اعتبارها `Approved`. | Approved |
+| DEC-006 | 2026-08-17 | Language Normalization | العربية هي لغة التوثيق الأساسية لجميع ملفات الدراسة حتى نهاية المشروع، مع استخدام المصطلحات الإنجليزية الفنية عند الحاجة وعدم تغيير أسماء الملفات والمصادر والـ IDs والـ URLs. | توحيد لغة الدراسة وجعلها قابلة للمراجعة والاستخدام عربيًا دون فقد الدقة الفنية. | كل الملفات الحالية والمستقبلية تكتب بالعربية افتراضيًا؛ تبقى العناصر الثابتة والمراجع الأصلية بلغتها الأصلية. | Approved |
 
-## Research Evidence Policy
+## سياسة أدلة البحث
 
-Important information is classified as:
+تصنف المعلومات المهمة إلى:
 
-- **Verified Fact**
-- **Strong Evidence**
-- **Moderate Evidence**
-- **Industry Practice**
-- **Expert/Producer Practice**
-- **Assumption**
-- **Design Decision**
-- **Open Question / Requires Field Validation**
+- **حقيقة موثقة (Verified Fact)**
+- **دليل قوي (Strong Evidence)**
+- **دليل متوسط (Moderate Evidence)**
+- **ممارسة شائعة في الصناعة (Industry Practice)**
+- **ممارسة خبير / مربي (Expert / Producer Practice)**
+- **افتراض (Assumption)**
+- **قرار تصميم (Design Decision)**
+- **سؤال مفتوح / يحتاج تحققًا ميدانيًا (Open Question / Requires Field Validation)**
 
-Rules:
+القواعد:
 
-- Never convert an assumption into a fact without evidence.
-- Record meaningful source conflicts rather than hiding them.
-- Preserve context when numbers vary by breed, housing, management, climate, feeding, market or measurement definition.
-- Prefer peer-reviewed, university, government, veterinary, agricultural and recognized professional sources.
-- Blogs/forums may supplement practice discovery but not serve as the only evidence for critical facts.
+- لا يتحول الافتراض إلى حقيقة دون دليل.
+- تسجل اختلافات المصادر المهمة بدل إخفائها.
+- يُحفظ السياق عندما تختلف الأرقام حسب السلالة أو الإسكان أو الإدارة أو المناخ أو التغذية أو السوق أو تعريف القياس.
+- تعطى الأولوية للمصادر المحكمة والجامعية والحكومية والبيطرية والزراعية والمهنية الموثوقة.
+- يمكن للمدونات والمنتديات المساعدة في اكتشاف الممارسات، لكنها لا تكون الدليل الوحيد على معلومة حرجة.
 
-## Source Tracking
+## تتبع المصادر
 
 ```text
 Source ID: SRC-XXX
-Source: <Title>
+Source: <العنوان الأصلي للمصدر>
 URL: <URL>
-Organization / Author: <Organization / Author>
-Publication Date: <Date or Unknown>
-Access Date: <Date>
+Organization / Author: <المؤسسة / المؤلف>
+Publication Date: <التاريخ أو Unknown>
+Access Date: <التاريخ>
 Reliability: High | Medium | Low
-Information Used: <Specific use>
-Notes: <Limitations/context>
+Information Used: <المعلومة المستخدمة>
+Notes: <القيود / السياق>
 ```
 
-## Working Rules for Future Phases
+> تبقى عناوين الدراسات وأسماء المجلات والجامعات والمؤلفين والمؤسسات بصيغتها الأصلية، بينما تكتب أوصاف الاستخدام والموثوقية والقيود بالعربية.
 
-1. Read `MASTER.md`.
-2. Read related prior phase files.
-3. Review `09-review/open-questions.md`.
-4. Review `09-review/assumptions.md`.
-5. Do not repeat approved research without a reason.
-6. Do not change an Approved decision without a new Decision Log entry.
-7. Record source contradictions.
-8. Record new assumptions.
-9. Record new open questions.
-10. Update phase status and `STUDY-LOG.md` after every major task.
+## قواعد العمل للمراحل القادمة
 
-## Domain-First Design Rule
+1. قراءة `MASTER.md`.
+2. قراءة ملفات المراحل السابقة ذات الصلة.
+3. مراجعة `09-review/open-questions.md`.
+4. مراجعة `09-review/assumptions.md`.
+5. عدم تكرار بحث معتمد دون سبب.
+6. عدم تغيير قرار حالته `Approved` دون إدخال قرار جديد في Decision Log.
+7. تسجيل تعارضات المصادر.
+8. تسجيل الافتراضات الجديدة.
+9. تسجيل الأسئلة المفتوحة الجديدة.
+10. تحديث حالة المرحلة و`STUDY-LOG.md` بعد كل مهمة رئيسية.
+11. الالتزام بسياسة اللغة والتوثيق: العربية هي اللغة الافتراضية لكل محتوى جديد.
 
-**Do not design Software Entities before understanding Domain Entities. Do not design Database Tables before the relevant workflows are analyzed.**
+## قاعدة التصميم: المجال أولًا (Domain-First Design Rule)
 
-Examples such as `Pigeon = table` or `Pair = table` are prohibited assumptions until the appropriate technical-design phase.
+**لا تصمم Software Entities قبل فهم Domain Entities. ولا تصمم Database Tables قبل تحليل مسارات العمل ذات الصلة.**
 
-## Phase 1 Domain Baseline — Approved for Review, Not Yet User-Approved
+تُعد افتراضات مثل `Pigeon = table` أو `Pair = table` ممنوعة حتى مرحلة التصميم التقني المناسبة.
 
-Primary consolidation file:
+## خط أساس Phase 1 — جاهز للمراجعة وليس معتمدًا من المستخدم بعد
+
+ملف التجميع الأساسي:
 
 `docs/pigeon-farm-study/01-domain-research/DOMAIN-BASELINE.md`
 
-Core Phase 1 conclusions:
+أهم استنتاجات Phase 1:
 
-1. Squab production is dependent on biparental reproduction and care.
-2. Breeding pair is a central operational unit.
-3. Two eggs is the dominant clutch pattern.
-4. Egg laid, clutch completion, incubation start and hatch are distinct events.
-5. Incubation is broadly stable around 17–20 days, while exact calculation anchor requires explicit definition.
-6. Natural market/weaning references cluster around 3–4 weeks, but market readiness is contextual.
-7. Production cycles can overlap: previous squabs may still be reared while the next clutch begins.
-8. Double nest is a documented mechanism supporting overlap.
-9. Failed cycles can restart differently from successful full rearing cycles.
-10. Housing, identification, market specification, replacement rules, pair rules and benchmarks vary by context and require local validation.
-11. Egyptian evidence is substantial enough to inform the baseline but not sufficient to standardize all current commercial practice nationally.
+1. يعتمد إنتاج الزغاليل على تكاثر ورعاية بواسطة الأبوين.
+2. زوج التربية وحدة تشغيلية مركزية.
+3. بيضتان هما النمط الغالب للبطن.
+4. وضع البيضة واكتمال البطن وبدء الحضانة والفقس أحداث مختلفة.
+5. الحضانة مستقرة بصورة عامة حول 17–20 يومًا، لكن مرساة الحساب الدقيقة تحتاج تعريفًا صريحًا.
+6. تتجمع المراجع الطبيعية للسوق/الفطام حول 3–4 أسابيع، لكن جاهزية التسويق تعتمد على السياق.
+7. يمكن أن تتداخل دورات الإنتاج: قد تظل الزغاليل السابقة تحت الرعاية بينما تبدأ البطن التالية.
+8. نظام العشين آلية موثقة لدعم التداخل.
+9. قد تعود الدورات الفاشلة بصورة مختلفة زمنيًا عن دورة ناجحة كاملة.
+10. الإسكان والتعريف ومواصفات السوق وقواعد الإحلال وقواعد الأزواج والقيم المرجعية تختلف حسب السياق وتحتاج تحققًا محليًا.
+11. الأدلة المصرية كافية لتوجيه خط الأساس لكنها ليست كافية لتوحيد جميع الممارسات التجارية الحالية على المستوى الوطني.
 
-## Future Research Queue
+## قائمة البحث المستقبلي
 
-| Queue ID | Topic | Recommended Phase | Status | Notes |
+| رقم القائمة | الموضوع | المرحلة الموصى بها | الحالة | الملاحظات |
 |---|---|---|---|---|
-| FRQ-001 | Detailed egg-management workflow | Phase 3 | Partially Researched | Lifecycle basis exists; management detail later. |
-| FRQ-002 | Detailed squab growth/weaning/market workflow | Phase 3 | Partially Researched | Requires market validation. |
-| FRQ-003 | Disease, vaccination, treatment, quarantine, biosecurity | Phase 4 | Queued | No medical protocol defined yet. |
-| FRQ-004 | Feed formulation and nutritional strategy | Phase 4 | Queued | Context-dependent. |
-| FRQ-005 | Feed inventory/purchasing/supplier operations | Phase 5 | Queued | Operational/financial scope later. |
-| FRQ-006 | Formal KPI definitions and benchmark normalization | Phase 6 | Queued | Must preserve formulas/context. |
-| FRQ-007 | Software representation of bird/pair/nest/clutch/overlap | Phase 7 | Queued | Explicitly prohibited before domain/system analysis. |
-| FRQ-008 | Artificial incubation / early-separation optional pathway | Phase 3 | Partially Researched | Adoption in target Egyptian farms requires validation. |
+| FRQ-001 | مسار إدارة البيض بالتفصيل | Phase 3 | Partially Researched | أساس دورة الحياة موجود؛ تفاصيل الإدارة لاحقًا. |
+| FRQ-002 | نمو الزغاليل والفطام والتسويق بالتفصيل | Phase 3 | Partially Researched | يحتاج تحققًا من السوق. |
+| FRQ-003 | الأمراض والتحصينات والعلاج والحجر والأمن الحيوي | Phase 4 | Queued | لم يُحدد بروتوكول طبي بعد. |
+| FRQ-004 | تركيب العلف والاستراتيجية الغذائية | Phase 4 | Queued | تعتمد على السياق. |
+| FRQ-005 | مخزون العلف والمشتريات والموردون | Phase 5 | Queued | نطاق تشغيلي/مالي لاحق. |
+| FRQ-006 | التعريف الرسمي لمؤشرات الأداء وتوحيد القيم المرجعية | Phase 6 | Queued | يجب الحفاظ على المعادلات والسياق. |
+| FRQ-007 | التمثيل البرمجي للطائر/الزوج/العش/البطن/التداخل | Phase 7 | Queued | ممنوع صراحة قبل اكتمال تحليل المجال والنظام. |
+| FRQ-008 | المسار الاختياري للحضانة الصناعية / الفصل المبكر | Phase 3 | Partially Researched | يحتاج مدى استخدامه في المزارع المصرية المستهدفة إلى تحقق. |
 
-## Assumptions Summary after Phase 1
+## ملخص الافتراضات بعد Phase 1
 
 - ASM-001: Validated.
 - ASM-002: Validated.
 - ASM-003: Provisional.
 - ASM-004: Provisional.
 
-See `09-review/assumptions.md`.
+راجع `09-review/assumptions.md`.
 
-## Risk Summary after Phase 1
+## ملخص المخاطر بعد Phase 1
 
-The largest knowledge risks were reduced through consolidation, especially premature modeling, terminology ambiguity, linear-cycle assumptions and benchmark universalization. Field-dependent risks remain active around Egyptian production practice, housing, identification, market requirements, and operational thresholds.
+تم خفض أكبر مخاطر المعرفة من خلال التجميع، خصوصًا التصميم المبكر وغموض المصطلحات وافتراض خطية الدورة وتعميم القيم المرجعية. وتظل المخاطر المعتمدة على الميدان نشطة حول الممارسات المصرية والإسكان والتعريف ومتطلبات السوق والحدود التشغيلية.
 
-See `09-review/risks.md`.
+راجع `09-review/risks.md`.
 
-## Open Questions Priority
+## أولوية الأسئلة المفتوحة
 
-- **Must answer before Farm Structure:** OQ-001, OQ-002, OQ-014, OQ-016.
-- **Must answer before Data Model:** OQ-003, OQ-007, OQ-008, OQ-017, OQ-018, OQ-020, OQ-021.
-- **Must answer before MVP:** OQ-004, OQ-006, OQ-009, OQ-010, OQ-015, OQ-019.
-- **Can defer:** OQ-005.
-- **Optional:** OQ-011, OQ-012, OQ-013.
+- **يجب الإجابة قبل تحليل هيكل المزرعة:** OQ-001, OQ-002, OQ-014, OQ-016.
+- **يجب الإجابة قبل نموذج البيانات:** OQ-003, OQ-007, OQ-008, OQ-017, OQ-018, OQ-020, OQ-021.
+- **يجب الإجابة قبل MVP:** OQ-004, OQ-006, OQ-009, OQ-010, OQ-015, OQ-019.
+- **يمكن تأجيله:** OQ-005.
+- **اختياري:** OQ-011, OQ-012, OQ-013.
 
-## Phase 1 Exit Criteria
+## معايير الخروج من Phase 1
 
-- [x] Terminology reviewed.
-- [x] Domain facts classified.
-- [x] Major contradictions documented.
-- [x] Production Lifecycle consolidated.
-- [x] Overlapping cycles documented.
-- [x] Egyptian context separated from international evidence.
-- [x] Benchmarks classified.
-- [x] Open Questions prioritized.
-- [x] Assumptions reviewed.
-- [x] Risks reviewed.
-- [x] `DOMAIN-BASELINE.md` created.
-- [x] Consistency Review completed.
+- [x] تمت مراجعة المصطلحات.
+- [x] تم تصنيف حقائق المجال.
+- [x] تم توثيق التناقضات الرئيسية.
+- [x] تم تجميع دورة الإنتاج.
+- [x] تم توثيق تداخل الدورات.
+- [x] تم فصل السياق المصري عن الأدلة الدولية.
+- [x] تم تصنيف القيم المرجعية.
+- [x] تم ترتيب أولويات الأسئلة المفتوحة.
+- [x] تمت مراجعة الافتراضات.
+- [x] تمت مراجعة المخاطر.
+- [x] تم إنشاء `DOMAIN-BASELINE.md`.
+- [x] اكتملت مراجعة الاتساق.
 
-## Current Study Position
+## موضع الدراسة الحالي
 
-- **Current phase:** Phase 1 — Domain Research.
-- **Current status:** **Completed — Awaiting Review**.
-- **Phase 1 approval status:** **Not Approved yet**.
-- **Required next action:** User reviews/approves Phase 1 baseline.
-- **Next recommended phase after approval:** **Phase 2 — Farm Structure & Pigeon Management Domain Analysis**.
-- **STOP CONDITION:** Do not start Phase 2, Farm Structure Analysis, Database Design, Architecture, MVP or Coding until explicit user approval/instruction.
+- **المرحلة الحالية:** Phase 1 — بحث المجال.
+- **الحالة الحالية:** **Completed — Awaiting Review**.
+- **حالة اعتماد Phase 1:** **لم تعتمد بعد (`Not Approved`)**.
+- **الإجراء المطلوب التالي:** مراجعة المستخدم واعتماد خط أساس Phase 1.
+- **المرحلة الموصى بها بعد الاعتماد:** **Phase 2 — تحليل هيكل المزرعة وإدارة الحمام (Farm Structure & Pigeon Management Domain Analysis)**.
+- **شرط التوقف:** لا تبدأ Phase 2 أو تحليل هيكل المزرعة أو تصميم قاعدة البيانات أو المعمارية أو MVP أو البرمجة قبل اعتماد/تعليمات صريحة من المستخدم.
