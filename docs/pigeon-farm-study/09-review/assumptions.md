@@ -1,10 +1,17 @@
 # Assumptions Register
 
-> الافتراضات هنا مؤقتة فقط لتحديد اتجاه الدراسة. لا تعتبر Facts، ويجب التحقق منها في المراحل المناسبة.
+> Assumptions are reviewed at Phase 1 exit. A `Validated` assumption is supported sufficiently for the stated purpose; it is not automatically a universal biological fact.
 
-| Assumption ID | Description | Reason | Related Module | Risk if Wrong | Validation Method | Status |
-|---|---|---|---|---|---|---|
-| ASM-001 | الدراسة موجهة أساسًا لمزرعة تجارية هدفها إنتاج الزغاليل/الحمام اللاحم، وليس للهواية أو السباق أو الزينة. | هذا هو نطاق المشروع المعتمد في Phase 0. | Overall Scope | Scope drift أو تحليل عمليات غير ذات أولوية. | مراجعة واعتماد نطاق الدراسة مع صاحب المشروع، ثم التحقق منه أثناء Phase 1. | Confirmed |
-| ASM-002 | قد تختلف الممارسات التشغيلية بين المزارع، لذلك لن نفترض أن ممارسة واحدة تمثل جميع المزارع. | منع تحويل ممارسة محلية إلى قاعدة عامة. | All Domain Modules | Business Rules غير صحيحة أو صعبة التبني. | مقارنة مصادر متعددة ومقابلات/تحقق مع ممارسين عند الحاجة. | Provisional |
-| ASM-003 | النظام النهائي سيحتاج إلى الاحتفاظ بتاريخ تشغيلي كافٍ لتحليل الأداء، لكن مستوى هذا التاريخ لم يُحدد بعد. | طبيعة نظام الإدارة والتحليل توحي بالحاجة إلى التاريخ، دون افتراض شكله أو بنيته. | Production / Performance / Audit | تصميم لاحق غير كافٍ للتحليل أو مبالغ فيه. | حسمه بعد دراسة دورة العمل والتقارير في Phases 3 و6 و7. | Provisional |
-| ASM-004 | التقنية المستهدفة Laravel 12 + PHP 8.2+ + Filament 4 + MySQL مناسبة كسياق مبدئي، بشرط ألا تفرض نموذجًا على المجال. | قيد تقني مستقبلي مقدم من صاحب المشروع. | Technical Architecture | قد تظهر متطلبات تستدعي تعديلًا معماريًا أو تقنيًا. | إعادة التقييم في Phase 7 بعد اكتمال System Analysis. | Provisional |
+| Assumption ID | Description | Reason | Related Module | Risk if Wrong | Validation Method | Phase 1 Review | Status |
+|---|---|---|---|---|---|---|---|
+| ASM-001 | الدراسة موجهة أساسًا لمزرعة تجارية هدفها إنتاج الزغاليل/الحمام اللاحم، وليس للهواية أو السباق أو الزينة. | Scope adopted in Phase 0 and maintained through Phase 1. | Overall Scope | Scope drift. | User-approved project scope + Phase 1 evidence focus. | Phase 1 research remained consistently aligned with commercial meat/squab production. | Validated |
+| ASM-002 | الممارسات التشغيلية تختلف بين المزارع، لذلك لا تمثل ممارسة واحدة جميع المزارع. | Prevent local practice becoming a universal rule. | All Domain Modules | Incorrect business rules and benchmarks. | Compare multiple sources, systems, breeds and Egyptian evidence. | Strongly supported: housing, cycle timing, market reference, identification, early weaning and performance vary by context. | Validated |
+| ASM-003 | النظام النهائي سيحتاج إلى الاحتفاظ بتاريخ تشغيلي كافٍ لتحليل الأداء، لكن مستوى هذا التاريخ لم يُحدد بعد. | Repeated pair/clutch/squab performance implies value in history. | Production / Performance / Audit | Later design may be under/over-specified. | Resolve after production and reporting analysis. | Phase 1 strengthens the need for historical event context, but exact retention/granularity is a future system-design decision. | Provisional |
+| ASM-004 | التقنية المستهدفة Laravel 12 + PHP 8.2+ + Filament 4 + MySQL مناسبة كسياق مبدئي، بشرط ألا تفرض نموذجًا على المجال. | Future technical constraint supplied by project owner. | Technical Architecture | Domain requirements may call for architectural adjustment. | Re-evaluate in Phase 7 after System Analysis. | Not a domain assumption and was not tested in Phase 1. | Provisional |
+
+## Phase 1 Assumption Review Conclusion
+
+- `ASM-001` and `ASM-002` are **Validated** for continuing the study.
+- `ASM-003` remains **Provisional** because Phase 1 confirms the value of history but not its software representation or retention policy.
+- `ASM-004` remains **Provisional** and must not influence domain modeling before the technical-design phase.
+- No Phase 1 assumption was rejected.
