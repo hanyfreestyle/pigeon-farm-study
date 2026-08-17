@@ -1,610 +1,610 @@
-# Domain Baseline
+# خط الأساس للمجال (Domain Baseline)
 
-> **Project:** Pigeon Farm Management System  
-> **Scope:** Commercial Meat Pigeon / Squab Production  
-> **Phase:** Phase 1 — Domain Research  
-> **Status:** Consolidated in Phase 1C — Awaiting User Review  
-> **Date:** 2026-08-17  
-> **Boundary:** This is a domain reference. It is not a database model, software entity model, workflow implementation, status enum specification, or architecture document.
-
----
-
-## 1. Commercial Production Model
-
-Commercial squab production is a repeated breeding-and-rearing operation whose primary output is the young pigeon produced for meat. The commercial system is fundamentally different from broiler production because squabs are highly dependent on parental care during early life and both parents participate in incubation and feeding.
-
-### Established Domain Facts
-
-- Squabs are altricial/dependent during early life.
-- Both male and female pigeons participate in incubation and parental care.
-- Both parents can produce crop milk.
-- The breeding pair is a central operational production unit.
-- Two eggs per clutch is the dominant domestic-pigeon pattern.
-- Natural incubation is commonly around 17–20 days.
-- Production can overlap: a pair may rear one brood while beginning/incubating the next clutch.
-
-### Context-dependent Findings
-
-Commercial production can operate through communal loft/dovecote/colony housing, controlled pair cages, or more intensive variants involving artificial incubation, early separation, artificial feeding, or fostering. None of these should be assumed to be the universal target production model.
+> **المشروع:** نظام إدارة مزارع الحمام (Pigeon Farm Management System)  
+> **النطاق:** إنتاج الحمام اللاحم والزغاليل تجاريًا (Commercial Meat Pigeon / Squab Production)  
+> **المرحلة:** Phase 1 — بحث المجال (Domain Research)  
+> **الحالة:** تم توحيده في Phase 1C — بانتظار مراجعة المستخدم  
+> **التاريخ:** 2026-08-17  
+> **الحدود:** هذا الملف مرجع للمجال. وهو ليس نموذج قاعدة بيانات، ولا نموذج كيانات برمجية، ولا تنفيذًا لمسار عمل، ولا مواصفة لقيم حالات برمجية، ولا وثيقة معمارية.
 
 ---
 
-## 2. Farm Population
+## 1. نموذج الإنتاج التجاري (Commercial Production Model)
 
-The commercial population is operationally heterogeneous and may include:
+إنتاج الزغاليل التجاري هو عملية متكررة من التكاثر والتربية يكون ناتجها الأساسي الحمام الصغير المنتج للحوم. ويختلف هذا النظام جوهريًا عن إنتاج دجاج التسمين، لأن الزغاليل تعتمد بدرجة كبيرة على رعاية الأبوين في بداية حياتها، كما يشارك كلا الأبوين في حضانة البيض وتغذية الصغار.
 
-- breeding males,
-- breeding females,
-- active breeding pairs,
-- replacement/pre-breeding birds,
-- dependent squabs,
-- growing birds retained beyond market age,
-- isolated/sick/quarantine birds,
-- birds removed by sale, culling, retirement, or mortality.
+### حقائق المجال الراسخة
 
-A useful domain trajectory is:
+- الزغاليل كائنات غير مكتملة النمو ومعتمدة على الأبوين في بداية الحياة.
+- يشارك كل من الذكر والأنثى في حضانة البيض والرعاية الأبوية.
+- يستطيع كلا الأبوين إنتاج لبن الحوصلة (Crop Milk).
+- زوج التربية (Breeding Pair) وحدة تشغيلية مركزية في الإنتاج.
+- النمط الغالب في الحمام الداجن هو بيضتان في البطن الواحدة (Clutch).
+- مدة الحضانة الطبيعية (Incubation) تقع غالبًا في نطاق 17–20 يومًا.
+- يمكن أن تتداخل أنشطة الإنتاج: فقد يرعى الزوج زغاليل من بطن سابقة بينما يبدأ أو يحضن البطن التالية.
 
-**Hatch → dependent squab → market bird OR retained young bird → replacement candidate → breeding-ready bird → breeding pair → repeated production → re-pair / remove / sell / cull / retire / mortality.**
+### نتائج تعتمد على السياق
 
-This is descriptive only and must not be copied into a software state machine.
-
----
-
-## 3. Breeding Pair
-
-A breeding pair normally consists of one male and one female functioning together reproductively. Both parents participate in the reproductive workload, making pair-level performance meaningful for production analysis.
-
-Important distinction:
-
-- **Biological Pair:** actual socially/reproductively bonded birds.
-- **Operational Breeding Pair:** the male and female currently managed by the farm as a productive unit.
-
-These usually align in controlled housing but can diverge through re-pairing, parent loss, fostering, uncertain parentage, or communal housing.
+يمكن أن يتم الإنتاج التجاري داخل مساكن جماعية مثل اللوفت/برج الحمام/المستعمرة (Loft / Dovecote / Colony)، أو في أقفاص أزواج متحكم فيها، أو في أنظمة أكثر كثافة تتضمن الحضانة الصناعية، أو الفصل المبكر، أو التغذية الصناعية، أو التحضين البديل (Fostering). ولا ينبغي افتراض أن أيًا من هذه النماذج هو نموذج الإنتاج المستهدف عالميًا.
 
 ---
 
-## 4. Pair Bond
+## 2. تركيب قطيع المزرعة (Farm Population)
 
-Domestic pigeons show persistent pair bonding and biparental cooperation. Pair membership is nevertheless not immutable. Re-pairing may follow mate loss, deliberate separation, infertility, poor performance, health removal, or culling.
+القطيع التجاري غير متجانس تشغيليًا، وقد يضم:
 
-No universal commercial rule was established for:
+- ذكور تربية،
+- إناث تربية،
+- أزواج تربية نشطة،
+- طيور إحلال أو طيور ما قبل دخول الإنتاج،
+- زغاليل معتمدة على الأبوين،
+- طيور نامية محتفظًا بها بعد عمر التسويق،
+- طيور معزولة أو مريضة أو في الحجر،
+- طيور خرجت بسبب البيع أو الاستبعاد أو التقاعد أو النفوق.
 
-- how long pairing should take,
-- when a pairing attempt has failed,
-- how long to wait after mate loss,
-- how many failed clutches justify re-pairing,
-- whether the male, female, or both should be replaced.
+ويمكن وصف مسار مجال مفيد على النحو التالي:
 
-These are field-validation items.
+**فقس → زغلول معتمد → طائر للتسويق أو طائر صغير محتفظ به → مرشح للإحلال → طائر جاهز للتربية → زوج تربية → إنتاج متكرر → إعادة تكوين زوج / إخراج / بيع / استبعاد / تقاعد / نفوق.**
 
----
-
-## 5. Nesting
-
-Nesting is production infrastructure because the nest supports laying, incubation, and squab rearing.
-
-A **Double Nest System** is well supported in controlled/intensive pigeon production and enables one nest to contain older squabs while another is used for a subsequent clutch.
-
-Nest ownership differs by housing model:
-
-- individual pair cages provide clearer pair–nest attribution;
-- communal systems may involve competition, intrusion, nest switching, or uncertain parentage.
-
-The relationship between pair and nest must therefore remain context-dependent.
+هذا الوصف توضيحي فقط، ولا يجوز نسخه مباشرة إلى آلة حالات برمجية (Software State Machine).
 
 ---
 
-## 6. Eggs & Clutches
+## 3. زوج التربية (Breeding Pair)
 
-### Domain definition — Clutch
+يتكون زوج التربية عادة من ذكر وأنثى يعملان معًا كوحدة تناسلية. ويشارك كلا الأبوين في العبء التناسلي، مما يجعل قياس الأداء على مستوى الزوج ذا معنى في تحليل الإنتاج.
 
-A **clutch** is the eggs produced by one female as one discrete laying episode before the next reproductive laying interval.
+تمييز مهم:
 
-Important distinctions:
+- **الزوج البيولوجي (Biological Pair):** الطائران المرتبطان اجتماعيًا وتناسليًا فعليًا.
+- **زوج التربية التشغيلي (Operational Breeding Pair):** الذكر والأنثى اللذان تديرهما المزرعة حاليًا كوحدة إنتاجية.
 
-- Egg laid ≠ clutch complete.
-- Clutch complete ≠ sustained incubation started.
-- An egg belongs to a clutch from the time it is laid.
-- A completed one-egg laying episode can still be a one-egg clutch.
-- Individual egg outcomes and overall clutch outcome are separate concepts.
-
-The dominant pattern is two eggs, commonly laid about two days apart, but exceptions must remain possible.
+يتطابق المفهومان غالبًا في أنظمة الإسكان المتحكم فيها، لكن قد ينفصلان في حالات إعادة التزاوج، أو فقد أحد الأبوين، أو التحضين البديل، أو عدم اليقين في النسب، أو الإسكان الجماعي.
 
 ---
 
-## 7. Incubation
+## 4. رابطة الزوج (Pair Bond)
 
-Natural incubation is biparental and commonly falls around **17–20 days**, with approximately 18 days repeatedly reported.
+يُظهر الحمام الداجن رابطة زوجية مستمرة وتعاونًا بين الأبوين. ومع ذلك، فإن عضوية الزوج ليست ثابتة إلى الأبد. فقد تتم إعادة تكوين الزوج (Re-pairing) بعد فقد الشريك، أو الفصل المتعمد، أو العقم، أو ضعف الأداء، أو الإخراج الصحي، أو الاستبعاد.
 
-The exact incubation **start anchor** is not globally standardized in the reviewed sources. First egg, second egg/clutch completion, and sustained incubation are related but distinct events.
+لم تثبت Phase 1 قاعدة تجارية عالمية تحدد:
 
-Future analysis should preserve observed egg dates and hatch dates rather than assume one universal calculation anchor.
+- المدة التي يجب أن يستغرقها تكوين الزوج،
+- متى تعتبر محاولة التزاوج فاشلة،
+- مدة الانتظار بعد فقد الشريك،
+- عدد البطون الفاشلة الذي يبرر إعادة تكوين الزوج،
+- هل يُستبدل الذكر أو الأنثى أو كلاهما.
 
-Candling is a real fertility/development-checking method; useful visible information is commonly available around incubation days 5–7 where candling is practiced. Routine adoption in Egyptian commercial farms remains unverified.
-
----
-
-## 8. Hatching
-
-Hatching occurs near the end of effective incubation. Eggs within a clutch need not hatch at exactly the same moment.
-
-Possible outcomes include:
-
-- successful hatch,
-- infertility/no development,
-- embryonic death,
-- dead-in-shell/failure to complete hatch,
-- cracked/broken egg,
-- missing/displaced egg,
-- abandonment/inadequate incubation,
-- transferred/fostered egg,
-- unknown outcome.
-
-These are domain outcomes, not approved software enums.
+وتبقى هذه نقاطًا تتطلب تحققًا ميدانيًا (Requires Field Validation).
 
 ---
 
-## 9. Squab Rearing
+## 5. التعشيش (Nesting)
 
-Newly hatched squabs are strongly dependent on parents for food and warmth. Crop milk is central in the earliest period, followed progressively by mixed regurgitated feed.
+يمثل التعشيش جزءًا من البنية التحتية للإنتاج، لأن العش يدعم وضع البيض والحضانة وتربية الزغاليل.
 
-A practical evidence-based age map is:
+يحظى **نظام العشين (Double Nest System)** بدعم جيد في نظم إنتاج الحمام المتحكم فيها أو المكثفة، إذ يسمح بوجود الزغاليل الأكبر في عش، بينما يستخدم عش آخر للبطن التالية.
 
-- **Day 0:** highly dependent hatchling.
-- **Days 1–7:** crop milk central; very rapid growth.
-- **Days 7–14:** rapid growth continues; mixed parental feed increases.
-- **Days 14–21:** feathering and body mass advance; still parent-dependent.
-- **Days 21–28:** common pre-weaning/market region in many meat systems.
-- **~28 days onward:** increasing feeding independence in traditional systems.
+ويختلف ارتباط الزوج بالعش حسب نظام الإسكان:
 
-Age-stage labels are descriptive; no universal commercial status vocabulary was found.
+- في أقفاص الأزواج الفردية يكون ربط الزوج بالعش أكثر وضوحًا؛
+- في الأنظمة الجماعية قد تحدث منافسة أو دخول طيور أخرى أو تبديل أعشاش أو عدم يقين في النسب.
+
+لذلك يجب أن تظل علاقة الزوج بالعش معتمدة على سياق نظام التربية.
 
 ---
 
-## 10. Weaning & Market Readiness
+## 6. البيض والبطون (Eggs & Clutches)
 
-The following must remain distinct:
+### تعريف المجال — بطن البيض (Clutch)
 
-- **Early Separation:** management removal from parents before conventional natural rearing is complete.
-- **Weaning:** transition toward independent feeding; research sometimes uses the term for managed separation even when artificial feeding continues.
-- **Market Readiness:** commercial decision that the squab meets buyer/farm requirements.
+**بطن البيض (Clutch)** هي مجموعة البيض التي تضعها أنثى واحدة ضمن نوبة وضع واحدة منفصلة قبل فترة الوضع التالية.
 
-Therefore:
+تمييزات مهمة:
 
-**Early Separation ≠ Physiological Weaning ≠ Market Readiness.**
+- وضع البيضة لا يعني اكتمال البطن.
+- اكتمال البطن لا يعني بالضرورة بدء الحضانة المستمرة.
+- تصبح البيضة جزءًا من البطن منذ لحظة وضعها.
+- قد تمثل نوبة وضع مكتملة من بيضة واحدة بطنًا من بيضة واحدة.
+- نتيجة كل بيضة ونتيجة البطن ككل مفهومان منفصلان.
 
-The common 21–28 day region is a useful natural-production reference but is not an approved Egyptian market specification.
+النمط الغالب هو بيضتان، وغالبًا ما توضعان بفاصل يقارب يومين، لكن يجب أن تظل الحالات الاستثنائية ممكنة في التحليل.
 
 ---
 
-## 11. Overlapping Cycles
+## 7. الحضانة (Incubation)
 
-This is a core Phase 1 conclusion.
+الحضانة الطبيعية مشتركة بين الأبوين، وتقع غالبًا في نطاق **17–20 يومًا**، مع تكرار قيمة تقارب 18 يومًا في عدة مصادر.
 
-Pigeon reproductive activity is not safely described as one non-overlapping linear cycle.
+لكن **مرساة بداية الحضانة (Incubation Start Anchor)** ليست موحدة عالميًا في المصادر التي تمت مراجعتها. فوضع البيضة الأولى، ووضع البيضة الثانية/اكتمال البطن، وبدء الحضانة المستمرة أحداث مترابطة لكنها مختلفة.
 
-A pair may simultaneously have:
+يجب أن يحافظ التحليل المستقبلي على تواريخ وضع البيض وتواريخ الفقس الفعلية بدل افتراض مرساة حساب واحدة للجميع.
 
-- **Cycle A:** dependent squabs being reared;
-- **Cycle B:** nest preparation, egg laying, or incubation.
+ويُعد فحص البيض بالضوء (Candling) طريقة حقيقية لفحص الخصوبة أو نمو الجنين؛ وتظهر معلومات مفيدة بصريًا غالبًا حول اليوم 5–7 من الحضانة حيث تُمارس هذه الطريقة. ولا يزال مدى استخدامها الروتيني في المزارع التجارية المصرية غير مؤكد.
 
-A simplified domain view is:
+---
+
+## 8. الفقس (Hatching)
+
+يحدث الفقس قرب نهاية فترة الحضانة الفعلية، ولا يلزم أن تفقس البيضتان في البطن في اللحظة نفسها.
+
+تشمل النتائج المحتملة:
+
+- فقس ناجح،
+- عدم الخصوبة أو عدم بدء النمو،
+- نفوق جنيني (Embryonic Death)،
+- نفوق داخل القشرة أو فشل إتمام الفقس (Dead-in-shell)،
+- بيضة مشروخة أو مكسورة،
+- بيضة مفقودة أو مزاحة،
+- هجر البيضة أو عدم كفاية الحضانة،
+- نقل البيضة أو تحضينها بواسطة زوج بديل،
+- نتيجة غير معروفة.
+
+هذه نتائج على مستوى المجال وليست قيم حالات برمجية معتمدة.
+
+---
+
+## 9. تربية الزغاليل (Squab Rearing)
+
+تعتمد الزغاليل الحديثة الفقس بشدة على الأبوين في الغذاء والدفء. ويكون لبن الحوصلة (Crop Milk) عنصرًا أساسيًا في الفترة الأولى، ثم يختلط تدريجيًا بالغذاء الذي يرجعه الأبوان.
+
+خريطة عمرية عملية مبنية على الأدلة:
+
+- **اليوم 0:** زغلول شديد الاعتماد بعد الفقس.
+- **الأيام 1–7:** لبن الحوصلة أساسي؛ نمو سريع جدًا.
+- **الأيام 7–14:** استمرار النمو السريع مع زيادة الغذاء الأبوي المختلط.
+- **الأيام 14–21:** تقدم نمو الريش وكتلة الجسم مع استمرار الاعتماد على الأبوين.
+- **الأيام 21–28:** نطاق شائع لما قبل الفطام/التسويق في كثير من نظم اللحم.
+- **نحو 28 يومًا وما بعده:** زيادة القدرة على التغذية المستقلة في النظم التقليدية.
+
+هذه التسميات العمرية وصفية، ولم يتم العثور على قاموس حالات تجاري موحد عالميًا لهذه المراحل.
+
+---
+
+## 10. الفطام وجاهزية التسويق (Weaning & Market Readiness)
+
+يجب الإبقاء على المفاهيم التالية منفصلة:
+
+- **الفصل المبكر (Early Separation):** إزالة الزغلول من الأبوين إداريًا قبل اكتمال فترة التربية الطبيعية المعتادة.
+- **الفطام (Weaning):** الانتقال نحو التغذية المستقلة؛ وقد تستخدم بعض الدراسات المصطلح للدلالة على الفصل الإداري حتى مع استمرار التغذية الصناعية.
+- **جاهزية التسويق (Market Readiness):** قرار تجاري بأن الزغلول يطابق متطلبات المزرعة أو المشتري.
+
+لذلك:
+
+**الفصل المبكر ≠ الاستقلال الفسيولوجي في التغذية ≠ جاهزية التسويق.**
+
+ويُعد نطاق 21–28 يومًا مرجعًا مفيدًا للإنتاج الطبيعي، لكنه ليس مواصفة سوق مصرية معتمدة.
+
+---
+
+## 11. تداخل دورات الإنتاج (Overlapping Cycles)
+
+هذه من النتائج الأساسية في Phase 1.
+
+لا يمكن وصف النشاط التناسلي للحمام بأمان باعتباره دورة خطية واحدة غير متداخلة.
+
+فقد يكون لدى الزوج في الوقت نفسه:
+
+- **الدورة A:** زغاليل معتمدة يجري تربيتها؛
+- **الدورة B:** تجهيز عش أو وضع بيض أو حضانة بطن جديدة.
+
+عرض مبسط للمجال:
 
 ```mermaid
 flowchart LR
-    A[Breeding-ready birds] --> B[Pair formation / bond]
-    B --> C[Nest selection and mating]
-    C --> D[Egg 1 / Egg 2 / Clutch]
-    D --> E[Incubation]
-    E --> F[Hatch]
-    F --> G[Squab rearing]
-    G --> H[Market / retained replacement]
-    G -. overlapping .-> I[Next clutch]
+    A[طيور جاهزة للتربية] --> B[تكوين الزوج / رابطة الزوج]
+    B --> C[اختيار العش والتزاوج]
+    C --> D[البيضة 1 / البيضة 2 / بطن البيض]
+    D --> E[الحضانة]
+    E --> F[الفقس]
+    F --> G[تربية الزغاليل]
+    G --> H[التسويق / الاحتفاظ للإحلال]
+    G -. تداخل .-> I[البطن التالية]
     I --> E
 ```
 
-This diagram is descriptive and must not be interpreted as a future database or software state model.
+هذا الرسم وصفي للمجال، ولا يجوز تفسيره باعتباره نموذج قاعدة بيانات أو نموذج حالات برمجية مستقبلية.
 
 ---
 
-## 12. Replacement & Culling
+## 12. الإحلال والاستبعاد (Replacement & Culling)
 
-**Replacement Bird:** a bird retained for possible future entry into the breeding population.
+**طائر الإحلال (Replacement Bird):** طائر يُحتفظ به لاحتمال دخوله لاحقًا في قطيع التربية.
 
-**Culling:** intentional removal from active breeding/production because the bird or pair no longer meets farm criteria. Culling is not synonymous with mortality, sale, or retirement.
+**الاستبعاد (Culling):** إخراج متعمد من قطيع التربية أو الإنتاج لأن الطائر أو الزوج لم يعد يحقق معايير المزرعة. ولا يعني الاستبعاد تلقائيًا النفوق أو البيع أو التقاعد.
 
-Sexual maturity and operational breeding readiness are different. Biological maturity is commonly seen in the broad 5–7+ month region, but commercial admission depends on strain, growth, body condition, health, sex confirmation, mate availability, and farm strategy.
+النضج الجنسي (Sexual Maturity) والجاهزية التشغيلية للتربية (Operational Breeding Readiness) مفهومان مختلفان. يظهر النضج البيولوجي عادة في نطاق عام يقارب 5–7 أشهر أو أكثر، لكن قرار دخول الإنتاج يعتمد على السلالة والنمو وحالة الجسم والصحة والتأكد من الجنس وتوفر الشريك واستراتيجية المزرعة.
 
-No universal culling/replacement thresholds were established in Phase 1.
-
----
-
-## 13. Environment & Seasonality
-
-The evidence does not support a universal claim that pigeons must biologically stop reproduction during summer.
-
-However, Egyptian evidence supports a real **heat-stress effect** that can reduce reproductive performance such as egg output, fertility, and hatchability.
-
-Therefore:
-
-- non-seasonal breeding biology and summer production depression can coexist;
-- heat, humidity, ventilation, water, feed, housing, strain, and management must be considered together;
-- molt can overlap with breeding and should be treated as a production/physiological modifier rather than an automatic total shutdown.
+لم تثبت Phase 1 حدودًا عالمية موحدة للإحلال أو الاستبعاد.
 
 ---
 
-## 14. Egyptian Context
+## 13. البيئة والموسمية (Environment & Seasonality)
 
-### What We Know
+لا تدعم الأدلة ادعاءً عامًا بأن الحمام يجب أن يتوقف بيولوجيًا عن التكاثر خلال الصيف.
 
-Egyptian evidence reviewed in Phase 1 includes:
+لكن الأدلة المصرية تدعم وجود أثر حقيقي **للإجهاد الحراري (Heat Stress)** يمكن أن يخفض الأداء التناسلي، مثل إنتاج البيض والخصوبة ونسبة الفقس.
 
-- commercial mud dovecotes and wooden lofts in a Sharqia survey;
-- individual pair cages in Egyptian experimental/commercial contexts;
-- Egyptian Baladi/Local Egyptian pigeons;
-- Zagel;
-- White Mirthys;
-- incubation around 17.7–18.0 days in a comparative Egyptian strain study;
-- significant strain differences in 28-day growth;
-- substantially different hatch-to-next-lay intervals among strains;
-- a 2025 Egyptian commercial-farm early-separation study;
-- documented summer heat-stress effects on reproduction.
+وبالتالي:
 
-### What We Think We Know — Context-dependent
-
-- Double nesting is operationally important and used in Egyptian research systems, but its prevalence across target farms is unknown.
-- Individual identification is technically established, but actual Egyptian commercial practice may rely on bird, pair, nest, cage, or mixed identification.
-- Early separation/artificial feeding can increase parent reproductive throughput but is not established as common Egyptian commercial practice.
-
-### What We Still Need to Ask Egyptian Farms
-
-- dominant target housing models in 2026;
-- actual farm sizes and production organization;
-- actual market age and weight by customer/region;
-- how breeders and pairs are identified;
-- whether Egg 1 and Egg 2 are recorded separately;
-- hatch prediction convention;
-- candling use;
-- double-nest prevalence;
-- replacement and culling thresholds;
-- re-pairing practice;
-- fostering practice;
-- actual summer slowdown and mitigation;
-- current record-keeping tools and granularity.
+- يمكن أن تجتمع الطبيعة غير الموسمية للتكاثر مع انخفاض الإنتاج صيفًا؛
+- يجب النظر معًا إلى الحرارة والرطوبة والتهوية والمياه والعلف والمسكن والسلالة والإدارة؛
+- يمكن أن يتداخل القلش (Molt) مع التكاثر، ولذلك يُعامل كعامل إنتاجي/فسيولوجي مؤثر لا كتوقف كامل تلقائي للإنتاج.
 
 ---
 
-## 15. Key Benchmarks
+## 14. السياق المصري (Egyptian Context)
 
-| Benchmark | Phase 1 Classification | Reference Finding | Interpretation |
+### ما نعرفه
+
+تشمل الأدلة المصرية التي روجعت في Phase 1 ما يلي:
+
+- أبراج حمام طينية ومساكن خشبية تجارية في دراسة بمحافظة الشرقية؛
+- أقفاص أزواج فردية في سياقات بحثية/تجارية مصرية؛
+- الحمام البلدي المصري / Local Egyptian؛
+- Zagel؛
+- White Mirthys؛
+- فترة حضانة تقارب 17.7–18.0 يومًا في دراسة مقارنة لسلالات مصرية؛
+- اختلافات مهمة بين السلالات في وزن عمر 28 يومًا؛
+- اختلافات واضحة بين السلالات في الفترة من الفقس إلى وضع البيض التالي (Hatch-to-next-lay)؛
+- دراسة مصرية تجارية في 2025 عن الفصل المبكر؛
+- آثار موثقة للإجهاد الحراري الصيفي على التكاثر.
+
+### ما نعتقد أننا نعرفه — يعتمد على السياق
+
+- نظام العشين مهم تشغيليًا ومستخدم في نظم بحثية مصرية، لكن مدى انتشاره بين المزارع المستهدفة غير معروف.
+- التعريف الفردي للطيور مثبت تقنيًا، لكن الممارسة التجارية المصرية الفعلية قد تعتمد على الطائر أو الزوج أو العش أو القفص أو مزيج بينها.
+- يمكن للفصل المبكر والتغذية الصناعية أن يرفعا معدل العودة التناسلية للأبوين، لكن لم يثبت أنهما ممارسة تجارية مصرية شائعة.
+
+### ما زلنا بحاجة إلى سؤاله للمزارع المصرية
+
+- نظم الإسكان السائدة في الشريحة المستهدفة عام 2026؛
+- أحجام المزارع الفعلية وتنظيم الإنتاج؛
+- عمر ووزن التسويق الفعليان حسب العميل والمنطقة؛
+- كيفية تعريف طيور التربية والأزواج؛
+- هل تسجل البيضة الأولى والثانية منفصلتين؛
+- طريقة توقع موعد الفقس؛
+- مدى استخدام فحص البيض بالضوء؛
+- مدى انتشار نظام العشين؛
+- حدود الإحلال والاستبعاد؛
+- ممارسات إعادة تكوين الأزواج؛
+- ممارسات التحضين البديل؛
+- حجم تباطؤ الصيف وإجراءات التخفيف؛
+- أدوات التسجيل الحالية ومستوى التفاصيل فيها.
+
+---
+
+## 15. أهم القيم المرجعية (Key Benchmarks)
+
+| القيمة المرجعية | تصنيف Phase 1 | النتيجة المرجعية | التفسير |
 |---|---|---|---|
-| Clutch size | Stable Biological Range | usually ~2 eggs | Strong baseline; exceptions possible. |
-| Within-clutch egg interval | Stable Biological Range | ~2 days / ~48 h commonly | Strong; retain actual egg dates. |
-| Incubation duration | Stable Biological Range | ~17–20 days | Strong; anchor remains contextual. |
-| Candling timing | Research/Practice Reference | ~day 5–7 where practiced | Method established; farm adoption not universal. |
-| Sexual maturity | Context-dependent Benchmark | ~5–7+ months | Breed/growth/definition dependent. |
-| Breeding readiness | Requires Field Validation | no universal threshold | Must not equal sexual maturity automatically. |
-| Natural market/weaning region | Context-dependent Benchmark | ~21–28 days; some reports later nest departure | Buyer, strain and production system matter. |
-| Market weight | Requires Egyptian Field Validation | research weights vary strongly by strain | Research weight is not market specification. |
-| 28-day live weight | Research-specific Observation | Local Egyptian, Zagel, White Mirthys differed materially | Use only with source population context. |
-| Hatch-to-next-lay | Context-dependent Benchmark | ~19.5–31 d in cited Egyptian strain study; can be shorter with early separation | Strong variability. |
-| Reproductive/egg cycle length | Context-dependent Benchmark | widely variable across definitions/systems | Never use one universal duration. |
-| Squabs per pair/year | Context-dependent Benchmark | order-of-magnitude references exist | Management, mortality and definitions matter. |
-| Fertility | Context-dependent Benchmark | percentage varies by study | Preserve denominator and context. |
-| Hatchability | Context-dependent Benchmark | percentage varies by study | Preserve eggs-laid vs fertile-eggs denominator. |
-| Squab mortality/survival | Context-dependent Benchmark | strongly affected by rearing method | Must segment by age and pathway. |
-| Summer performance | Requires Egyptian Field Validation | heat stress lowers reproduction | No universal decline percentage. |
+| حجم بطن البيض | نطاق بيولوجي مستقر | غالبًا نحو بيضتين | خط أساس قوي مع احتمال وجود استثناءات. |
+| الفاصل بين بيضتي البطن | نطاق بيولوجي مستقر | غالبًا نحو يومين / 48 ساعة | دليل قوي؛ يجب الاحتفاظ بالتواريخ الفعلية للبيض. |
+| مدة الحضانة | نطاق بيولوجي مستقر | نحو 17–20 يومًا | دليل قوي؛ مرساة الحساب تظل معتمدة على السياق. |
+| توقيت فحص البيض بالضوء | مرجع بحثي/عملي | نحو اليوم 5–7 حيث يُستخدم | الطريقة مثبتة، لكن تطبيقها ليس عالميًا. |
+| النضج الجنسي | قيمة تعتمد على السياق | نحو 5–7 أشهر أو أكثر | تعتمد على السلالة والنمو والتعريف المستخدم. |
+| الجاهزية للتربية | تتطلب تحققًا ميدانيًا | لا يوجد حد عالمي | لا يجوز مساواتها تلقائيًا بالنضج الجنسي. |
+| نطاق الفطام/التسويق الطبيعي | قيمة تعتمد على السياق | نحو 21–28 يومًا، وبعض المصادر تذكر مغادرة العش لاحقًا | يتأثر بالمشتري والسلالة ونظام الإنتاج. |
+| وزن التسويق | يتطلب تحققًا ميدانيًا مصريًا | أوزان الدراسات تختلف بشدة حسب السلالة | وزن البحث ليس مواصفة السوق. |
+| الوزن الحي عند 28 يومًا | ملاحظة خاصة بدراسة | اختلف Local Egyptian وZagel وWhite Mirthys بدرجة واضحة | لا يستخدم إلا مع سياق مجموعة الدراسة. |
+| الفقس إلى وضع البيض التالي | قيمة تعتمد على السياق | نحو 19.5–31 يومًا في الدراسة المصرية المشار إليها، ويمكن أن تقصر مع الفصل المبكر | اختلاف قوي ومثبت. |
+| طول دورة التكاثر/وضع البيض | قيمة تعتمد على السياق | متغير بدرجة كبيرة حسب التعريف والنظام | لا تستخدم مدة واحدة عالمية. |
+| الزغاليل لكل زوج سنويًا | قيمة تعتمد على السياق | توجد مراجع تقريبية للحجم السنوي | تتأثر بالإدارة والنفوق والتعريفات. |
+| الخصوبة (Fertility) | قيمة تعتمد على السياق | تختلف النسبة حسب الدراسة | يجب حفظ المقام وسياق القياس. |
+| نسبة الفقس (Hatchability) | قيمة تعتمد على السياق | تختلف النسبة حسب الدراسة | يجب تحديد هل المقام كل البيض أم البيض المخصب. |
+| نفوق/بقاء الزغاليل | قيمة تعتمد على السياق | يتأثر بشدة بطريقة التربية | يجب تقسيمه حسب العمر ومسار التربية. |
+| الأداء الصيفي | يتطلب تحققًا ميدانيًا مصريًا | الإجهاد الحراري يخفض التكاثر | لا توجد نسبة انخفاض عالمية. |
 
 ---
 
-## 16. Exceptions
+## 16. الحالات الاستثنائية (Exceptions)
 
-| Exception / Non-standard Scenario | Evidence Level | Operational Impact | Field Validation? | Future Analysis Area |
+| الحالة الاستثنائية / غير القياسية | مستوى الدليل | التأثير التشغيلي | تحتاج تحققًا ميدانيًا؟ | مجال التحليل المستقبلي |
 |---|---|---|---|---|
-| One-egg clutch | Strong/biologically supported | clutch does not require two surviving eggs | No for existence; yes for frequency | Phase 3 |
-| Extra/uncommon clutch-size deviation | Moderate | affects expectation and attribution | Yes for frequency | Phase 3 |
-| Broken/cracked egg | Established | changes clutch outcome | No | Phase 3 |
-| Missing/displaced egg | Established operational scenario | uncertain outcome/parentage | Yes for local frequency | Phase 2/3 |
-| Egg outside intended nest | Moderate/industry practice | attribution/nest-control problem | Yes | Phase 2/3 |
-| Abandoned egg/nest | Established | hatch failure / restart possibility | Yes for response | Phase 3 |
-| Infertile egg/clutch | Established | reproductive failure | No | Phase 3 |
-| Embryonic death | Established | hatchability/reproductive diagnosis | No | Phase 3/4 |
-| Dead-in-shell | Established | late hatch failure | No | Phase 3/4 |
-| Asynchronous hatch | Established | sibling age/size difference | No | Phase 3 |
-| Squab mortality | Established | production loss and parent workload change | No | Phase 3/4 |
-| Mate death | Established | pair broken; dependent squabs affected | No | Phase 2/3/4 |
-| Pair separation / re-pairing | Established practice; thresholds variable | production interruption/history complexity | Yes for rules | Phase 2/3 |
-| Fostered egg | Established husbandry technique | biological parents and rearing parents differ | Yes for prevalence | Phase 2/3 |
-| Fostered squab | Established; Egyptian evidence | parental-care responsibility changes | Yes for prevalence | Phase 2/3 |
-| Nest switching/competition | Moderate; more relevant to communal systems | attribution and parentage uncertainty | Yes | Phase 2 |
-| Early artificial separation | Established specialized pathway | radically changes parent/squab timelines | Yes for prevalence | Phase 3 |
-| Artificial incubation/feeding | Established specialized pathway | decouples natural parental workflow | Yes for prevalence | Phase 3/4 |
+| بطن من بيضة واحدة | قوي/مدعوم بيولوجيًا | البطن لا تشترط وجود بيضتين باقـيتين | لا لوجودها؛ نعم لتكرارها | Phase 3 |
+| زيادة غير معتادة في حجم البطن | متوسط | تؤثر في التوقع وربط الناتج | نعم للتكرار | Phase 3 |
+| بيضة مكسورة/مشروخة | راسخ | تغير نتيجة البطن | لا | Phase 3 |
+| بيضة مفقودة/مزاحة | حالة تشغيلية راسخة | نتيجة أو نسب غير مؤكد | نعم للتكرار المحلي | Phase 2/3 |
+| بيضة خارج العش المقصود | متوسط/ممارسة صناعية | مشكلة في الربط والتحكم في العش | نعم | Phase 2/3 |
+| هجر البيضة/العش | راسخ | فشل فقس واحتمال بدء دورة جديدة | نعم لطريقة التعامل | Phase 3 |
+| بيضة/بطن غير مخصبة | راسخ | فشل تناسلي | لا | Phase 3 |
+| نفوق جنيني | راسخ | تشخيص تناسلي/تأثير في نسبة الفقس | لا | Phase 3/4 |
+| نفوق داخل القشرة (Dead-in-shell) | راسخ | فشل فقس متأخر | لا | Phase 3/4 |
+| فقس غير متزامن | راسخ | فرق عمر/حجم بين الزغلولين | لا | Phase 3 |
+| نفوق زغلول | راسخ | خسارة إنتاج وتغير حمل الرعاية على الأبوين | لا | Phase 3/4 |
+| وفاة الشريك | راسخ | تفكك الزوج وتأثر الزغاليل المعتمدة | لا | Phase 2/3/4 |
+| فصل الزوج / إعادة تكوينه | ممارسة راسخة مع اختلاف الحدود | توقف إنتاج وتعقيد التاريخ | نعم للقواعد | Phase 2/3 |
+| بيضة محضنة بواسطة زوج بديل | تقنية تربية راسخة | اختلاف الأبوين البيولوجيين عن أبوين الحضانة | نعم للانتشار | Phase 2/3 |
+| زغلول لدى أبوين بديلين | راسخ مع دليل مصري | تغير مسؤولية الرعاية الأبوية | نعم للانتشار | Phase 2/3 |
+| تبديل/منافسة الأعشاش | متوسط؛ أكثر صلة بالنظم الجماعية | عدم يقين في الربط والنسب | نعم | Phase 2 |
+| فصل صناعي مبكر | مسار متخصص مثبت | يغير مسار الأبوين والزغاليل جذريًا | نعم للانتشار | Phase 3 |
+| حضانة/تغذية صناعية | مسار متخصص مثبت | يفصل مسار الرعاية الطبيعية | نعم للانتشار | Phase 3/4 |
 
 ---
 
-## 17. Terms That Must Remain Flexible
+## 17. مصطلحات يجب أن تظل مرنة
 
-### Production Cycle
+### دورة الإنتاج (Production Cycle)
 
-Possible meanings include pairing cycle, laying-to-laying interval, clutch cycle, incubation period, hatch-to-next-lay interval, full reproductive cycle, or a farm-defined production interval.
+قد تعني دورة تكوين الزوج، أو الفترة بين وضعتين، أو دورة بطن البيض، أو فترة الحضانة، أو الفترة من الفقس إلى الوضع التالي، أو دورة تناسلية كاملة، أو فترة إنتاج تعرفها المزرعة داخليًا.
 
-**Required future wording:** always name the exact anchor, e.g. `first-egg-to-next-first-egg`, `hatch-to-next-lay`, or `clutch-to-clutch`, rather than using “production cycle” alone in a calculation.
+**الصياغة المطلوبة مستقبلًا:** يجب دائمًا تسمية مرساة القياس بدقة، مثل `first-egg-to-next-first-egg` أو `hatch-to-next-lay` أو `clutch-to-clutch`، بدل استخدام "دورة الإنتاج" وحدها في أي حساب.
 
-### Weaning
+### الفطام (Weaning)
 
-Can mean physiological feeding independence or management separation. Always state which meaning is intended.
+قد يعني الاستقلال الفسيولوجي في التغذية أو الفصل الإداري. ويجب دائمًا تحديد المعنى المقصود.
 
-### Market Readiness
+### جاهزية التسويق (Market Readiness)
 
-Buyer/farm criterion, not a biological age status. Keep age, weight, feathering, live/dressed sale and customer requirements explicit.
+معيار يحدده المشتري أو المزرعة، وليس حالة عمرية بيولوجية. ويجب إظهار العمر والوزن ونمو الريش وطريقة البيع حيًا/مذبوحًا ومتطلبات العميل بشكل صريح.
 
-### Hatchability
+### نسبة الفقس (Hatchability)
 
-Can use different denominators. Always state whether calculated from all eggs set/laid or fertile eggs.
+قد تستخدم مقامات حساب مختلفة. ويجب توضيح هل تُحسب من كل البيض الموضوع/المحضن أم من البيض المخصب.
 
-### Fertility
+### الخصوبة (Fertility)
 
-Requires explicit denominator and observation method.
+تحتاج إلى تعريف واضح للمقام وطريقة الملاحظة أو التأكيد.
 
-### Loft / Dovecote / Colony
+### اللوفت / برج الحمام / المستعمرة (Loft / Dovecote / Colony)
 
-These housing terms do not describe one standardized physical design. Future farm-structure work must capture actual physical/operational form.
+لا تصف هذه الكلمات تصميمًا ماديًا واحدًا موحدًا. ويجب في عمل Phase 2 توثيق الشكل المادي والتشغيلي الفعلي لكل مزرعة.
 
-### Breeding Readiness
+### الجاهزية للتربية (Breeding Readiness)
 
-A management evaluation distinct from biological sexual maturity.
+تقييم إداري يختلف عن النضج الجنسي البيولوجي.
 
 ---
 
-## 18. Field Validation Required
+## 18. خطة التحقق الميداني (Field Validation Required)
 
-### Farm Owner / Farm Manager — Highest Priority
+### مالك المزرعة / مدير المزرعة — أعلى أولوية
 
-| Question ID | Question | Why It Matters | Future Module | Priority |
+| رقم السؤال | السؤال | سبب الأهمية | الوحدة المستقبلية | الأولوية |
 |---|---|---|---|---|
-| OQ-001 | Which housing/production models represent the target commercial farms? | Determines real workflows. | Farm Structure | Critical |
-| OQ-002 | Is practical tracking individual, pair, group/location, or mixed? | Determines information granularity. | Pigeon/Pair Management | Critical |
-| OQ-003 | What does the farm call a production cycle and what dates does it record? | Prevents false cycle definition. | Production | Critical |
-| OQ-009 | What is recorded today on paper/Excel/apps? | Shows actual workflow and adoption needs. | System Analysis/MVP | High |
-| OQ-014 | Is Double Nest actually used and in which housing systems? | Affects nest and overlap workflow. | Farm Structure/Production | Critical |
-| OQ-016 | What identification method is actually used? | Affects traceability. | Pigeon/Pair Management | High |
-| OQ-017 | How are replacements chosen/admitted? | Defines population flow. | Pigeon Management | High |
-| OQ-018 | What makes a pair weak enough to review/re-pair/cull? | Defines production decisions. | Pair/Performance | High |
-| OQ-019 | How much does summer slow production and how is it managed? | Needed to interpret performance. | Environment/Performance | High |
-| OQ-021 | What happens after one parent dies with dependent squabs? | Defines emergency husbandry. | Pair/Squab/Health | High |
+| OQ-001 | ما نماذج الإسكان/الإنتاج التي تمثل المزارع التجارية المستهدفة؟ | تحدد مسارات العمل الحقيقية. | هيكل المزرعة | حرجة |
+| OQ-002 | هل التتبع العملي فردي أم على مستوى الزوج أم المجموعة/الموقع أم مزيج؟ | يحدد مستوى دقة المعلومات. | إدارة الحمام/الأزواج | حرجة |
+| OQ-003 | ماذا تسمي المزرعة دورة الإنتاج وما التواريخ التي تسجلها؟ | يمنع تعريف دورة غير حقيقي. | الإنتاج | حرجة |
+| OQ-009 | ماذا يُسجل حاليًا على الورق/Excel/التطبيقات؟ | يوضح مسار العمل الحالي واحتياجات التبني. | تحليل النظام/MVP | عالية |
+| OQ-014 | هل يُستخدم نظام العشين فعليًا، وفي أي نظم إسكان؟ | يؤثر في مسار العش والتداخل. | هيكل المزرعة/الإنتاج | حرجة |
+| OQ-016 | ما طريقة التعريف المستخدمة فعليًا؟ | تؤثر في قابلية التتبع. | إدارة الحمام/الأزواج | عالية |
+| OQ-017 | كيف يتم اختيار وإدخال طيور الإحلال؟ | يحدد حركة القطيع. | إدارة الحمام | عالية |
+| OQ-018 | ما الذي يجعل الزوج ضعيفًا بما يكفي للمراجعة/إعادة التزاوج/الاستبعاد؟ | يحدد قرارات الإنتاج. | الأزواج/الأداء | عالية |
+| OQ-019 | إلى أي مدى يتباطأ الإنتاج صيفًا وكيف تتم إدارته؟ | ضروري لتفسير الأداء. | البيئة/الأداء | عالية |
+| OQ-021 | ماذا يحدث عند وفاة أحد الأبوين مع وجود زغاليل معتمدة؟ | يحدد ممارسات الطوارئ. | الأزواج/الزغاليل/الصحة | عالية |
 
-### Experienced Pigeon Breeder
+### مربي حمام خبير
 
-- pairing acceptance/failure signs and normal practical timing;
-- re-pairing methods and delay;
-- candling habits;
-- fostering practices;
-- handling abnormal clutches and nest switching;
-- practical meaning of local Arabic terms.
+- علامات قبول/رفض تكوين الزوج والتوقيت العملي المعتاد؛
+- طرق إعادة تكوين الأزواج ومدة التوقف؛
+- عادات فحص البيض بالضوء؛
+- ممارسات التحضين البديل؛
+- التعامل مع البطون غير الطبيعية وتبديل الأعشاش؛
+- المعنى العملي للمصطلحات العربية المحلية.
 
-### Animal Production Specialist
+### متخصص إنتاج حيواني
 
-- breeder-entry criteria;
-- interpretation of strain/body-weight differences;
-- performance benchmark definitions;
-- environmental effects and valid comparison methods;
-- distinction between research observations and commercial thresholds.
+- معايير إدخال الطائر للتربية؛
+- تفسير اختلافات السلالة والوزن؛
+- تعريفات مؤشرات الأداء المرجعية؛
+- تأثيرات البيئة وطرق المقارنة الصحيحة؛
+- الفصل بين ملاحظات الأبحاث والحدود التجارية الفعلية.
 
-### Veterinarian
+### طبيب بيطري
 
-- health factors that interrupt reproduction;
-- interpretation of embryonic mortality/dead-in-shell where veterinary diagnosis is required;
-- quarantine/health isolation implications (details deferred to Phase 4).
+- العوامل الصحية التي تعطل التكاثر؛
+- تفسير النفوق الجنيني والنفوق داخل القشرة عندما يتطلب الأمر تشخيصًا بيطريًا؛
+- آثار العزل الصحي والحجر، مع تأجيل التفاصيل إلى Phase 4.
 
-### Market / Trader
+### السوق / التاجر
 
-| Question ID | Question | Why It Matters | Future Module | Priority |
+| رقم السؤال | السؤال | سبب الأهمية | الوحدة المستقبلية | الأولوية |
 |---|---|---|---|---|
-| OQ-015 | What age/weight/form defines a marketable squab by customer type and region? | Market readiness cannot be inferred from research age alone. | Production/Sales | Critical |
+| OQ-015 | ما العمر/الوزن/الشكل الذي يعرّف الزغلول القابل للتسويق حسب نوع العميل والمنطقة؟ | لا يمكن استنتاج جاهزية السوق من عمر البحث وحده. | الإنتاج/المبيعات | حرجة |
 
-### Specialist / Farm Owner — Intensive-path Validation
+### متخصص / مالك مزرعة — التحقق من المسار المكثف
 
-| Question ID | Question | Why It Matters | Future Module | Priority |
+| رقم السؤال | السؤال | سبب الأهمية | الوحدة المستقبلية | الأولوية |
 |---|---|---|---|---|
-| OQ-020 | Are artificial incubation, early separation, and artificial feeding commercially used in the target market? | Could create a materially different lifecycle. | Production | High |
+| OQ-020 | هل تُستخدم الحضانة الصناعية أو الفصل المبكر أو التغذية الصناعية تجاريًا في السوق المستهدف؟ | قد تنشئ دورة حياة مختلفة بدرجة جوهرية. | الإنتاج | عالية |
 
 ---
 
-## 19. Domain Conclusions
+## 19. استنتاجات المجال
 
-### A. Established Domain Facts
+### أ. حقائق مجال راسخة
 
-1. Squabs are dependent young and natural production relies heavily on biparental care.
-2. Both parents incubate and feed young; both can produce crop milk.
-3. The breeding pair is a central production unit.
-4. Two eggs is the dominant clutch pattern.
-5. Egg laying, clutch completion, sustained incubation and hatch are distinct events.
-6. Natural incubation is commonly about 17–20 days.
-7. Overlapping reproductive activity is real and can place squab rearing and a new clutch in parallel.
-8. Double nesting is a documented mechanism supporting overlap.
-9. Failed reproductive attempts do not necessarily consume the same time as successful full rearing.
-10. Parent loss can directly affect dependent squabs and may lead to fostering/hand rearing.
+1. الزغاليل صغار معتمدة، ويعتمد الإنتاج الطبيعي بدرجة كبيرة على رعاية الأبوين.
+2. يشارك الأبوان في الحضانة والتغذية، ويستطيع كلاهما إنتاج لبن الحوصلة.
+3. زوج التربية وحدة إنتاج مركزية.
+4. بيضتان هما النمط الغالب لبطن البيض.
+5. وضع البيض واكتمال البطن والحضانة المستمرة والفقس أحداث مختلفة.
+6. الحضانة الطبيعية غالبًا نحو 17–20 يومًا.
+7. تداخل النشاط التناسلي واقع مثبت، وقد تتزامن تربية الزغاليل مع بطن جديدة.
+8. نظام العشين آلية موثقة لدعم هذا التداخل.
+9. المحاولات التناسلية الفاشلة لا تستهلك بالضرورة نفس مدة دورة تربية ناجحة كاملة.
+10. فقد أحد الأبوين قد يؤثر مباشرة على الزغاليل المعتمدة وقد يؤدي إلى التحضين البديل أو التغذية اليدوية.
 
-### B. Context-dependent Facts
+### ب. حقائق تعتمد على السياق
 
-- age/weight of breeding readiness;
-- cycle length;
-- hatch-to-next-lay interval;
-- market age/weight;
-- growth curve;
-- fertility/hatchability percentages;
-- annual output per pair;
-- summer performance;
-- housing productivity;
-- early-weaning outcomes.
+- عمر/وزن الجاهزية للتربية؛
+- طول الدورة؛
+- الفترة من الفقس إلى الوضع التالي؛
+- عمر/وزن التسويق؛
+- منحنى النمو؛
+- نسب الخصوبة والفقس؛
+- الإنتاج السنوي لكل زوج؛
+- الأداء الصيفي؛
+- إنتاجية نظم الإسكان؛
+- نتائج الفطام المبكر.
 
-### C. Common Industry Practices
+### ج. ممارسات صناعية شائعة
 
-- controlled pair assignment in pair-cage systems;
-- double nests in many controlled production systems;
-- leg bands, pair/cage/nest identifiers;
-- candling where practiced;
-- fostering or transfer in selected circumstances;
-- record keeping at pair/egg/hatch/squab level in more controlled operations.
+- تكوين الأزواج بصورة متحكم فيها في نظم أقفاص الأزواج؛
+- استخدام عشين في كثير من نظم الإنتاج المتحكم فيها؛
+- استخدام حلقات تعريف أو أرقام زوج/قفص/عش؛
+- فحص البيض بالضوء حيث يُمارس؛
+- التحضين البديل أو النقل في ظروف مختارة؛
+- حفظ سجلات على مستوى الزوج والبيض والفقس والزغلول في العمليات الأكثر تحكمًا.
 
-### D. Egyptian-context Findings
+### د. نتائج خاصة بالسياق المصري
 
-Egyptian evidence supports the core biology while also demonstrating real variation by strain, housing, heat, parental load, and management intervention. Egypt therefore cannot safely inherit one foreign industrial benchmark as the system default.
+تدعم الأدلة المصرية البيولوجيا الأساسية، كما تثبت في الوقت نفسه اختلافات حقيقية حسب السلالة والمسكن والحرارة وحمل الرعاية الأبوية والتدخل الإداري. لذلك لا يمكن أن يعتمد النظام المصري على قيمة مرجعية صناعية أجنبية واحدة باعتبارها الافتراضية.
 
-### E. Requires Field Validation
+### هـ. ما يتطلب تحققًا ميدانيًا
 
-Housing prevalence, market specification, identification, local pairing/re-pairing rules, double-nest prevalence, breeder-entry rules, current records, summer slowdown, culling thresholds, candling, fostering, and early-weaning adoption.
+انتشار نظم الإسكان، مواصفات السوق، أساليب التعريف، قواعد التزاوج وإعادة تكوين الأزواج، انتشار نظام العشين، قواعد إدخال الطيور للتربية، السجلات الحالية، تباطؤ الصيف، حدود الاستبعاد، فحص البيض، التحضين البديل، ومدى انتشار الفطام المبكر.
 
-### F. Unresolved / Conflicting Evidence
+### و. الأدلة غير المحسومة أو المتعارضة
 
-Most apparent contradictions are now classified as **context-dependent**, not irreconcilable. Remaining unresolved items require either an explicit future metric definition or Egyptian field validation.
+تم تصنيف معظم الاختلافات الظاهرية الآن على أنها **تعتمد على السياق** وليست تعارضات غير قابلة للحل. أما النقاط الباقية فتحتاج إما تعريفًا صريحًا للمؤشر في مرحلة لاحقة أو تحققًا ميدانيًا مصريًا.
 
 ---
 
-# Domain Confidence Matrix
+# مصفوفة الثقة في المجال (Domain Confidence Matrix)
 
-| Topic | Conclusion | Evidence Level | Egyptian Evidence | Field Validation Needed | Impact on Future System |
+| الموضوع | النتيجة | مستوى الدليل | دليل مصري | هل يحتاج تحققًا ميدانيًا؟ | التأثير على النظام المستقبلي |
 |---|---|---|---|---|---|
-| Squab parental dependency | Core biological fact | High | Yes | No | High |
-| Biparental incubation/care | Core biological fact | High | Yes | No | High |
-| Pair as production unit | Strong operational fact | High | Yes | No for concept; yes for farm practice | High |
-| Pair bond | Strong biological fact | High | Partial | Yes for management rules | High |
-| Two-egg clutch | Dominant biological pattern | High | Yes/consistent | No for baseline | High |
-| Egg interval | ~2 days commonly | High | Compatible | Low | Medium |
-| Incubation duration | ~17–20 d | High | Strong | Low | High |
-| Incubation anchor | not universally defined | Moderate | Limited | Yes/definition needed | High |
-| Candling | valid method | Moderate-High | limited commercial evidence | Yes | Medium |
-| Crop milk | core early-life biology | High | Yes/compatible | No | High |
-| Market age | context-dependent | High evidence of variability | Partial | Yes | High |
-| Market weight | context-dependent | High evidence of variability | Research weights only | Yes | High |
-| Double nest | documented operational mechanism | High | Yes in research | Yes for prevalence | High |
-| Overlapping cycles | core production reality | High | Yes | No for existence | Very High |
-| Hatch-to-next-lay | strongly variable | High | Strong strain data | Yes for target farms | High |
-| Early separation | specialized alternate pathway | High | Yes, commercial experiment | Yes for prevalence | High |
-| Replacement criteria | farm-specific | Moderate | Limited | Yes | High |
-| Culling threshold | farm-specific | Moderate | Limited | Yes | High |
-| Heat stress | lowers reproduction | High | Strong | Yes for magnitude | High |
-| Mandatory summer shutdown | not supported | Moderate-High | evidence argues against simplistic rule | Yes for local operational pattern | Medium |
-| Housing model superiority | no universal answer | High evidence of context | Yes | Yes | Very High |
-| Individual identification practice | technically established | Moderate | limited current commercial data | Yes | High |
+| اعتماد الزغلول على الأبوين | حقيقة بيولوجية أساسية | مرتفع | نعم | لا | مرتفع |
+| الحضانة والرعاية بواسطة الأبوين | حقيقة بيولوجية أساسية | مرتفع | نعم | لا | مرتفع |
+| الزوج كوحدة إنتاج | حقيقة تشغيلية قوية | مرتفع | نعم | لا للمفهوم؛ نعم لممارسة المزرعة | مرتفع |
+| رابطة الزوج | حقيقة بيولوجية قوية | مرتفع | جزئي | نعم لقواعد الإدارة | مرتفع |
+| بطن من بيضتين | النمط البيولوجي الغالب | مرتفع | نعم/متوافق | لا لخط الأساس | مرتفع |
+| الفاصل بين البيض | نحو يومين غالبًا | مرتفع | متوافق | منخفض | متوسط |
+| مدة الحضانة | نحو 17–20 يومًا | مرتفع | قوي | منخفض | مرتفع |
+| مرساة بدء الحضانة | غير موحدة عالميًا | متوسط | محدود | نعم/تحتاج تعريفًا | مرتفع |
+| فحص البيض بالضوء | طريقة صحيحة | متوسط–مرتفع | دليل تجاري محدود | نعم | متوسط |
+| لبن الحوصلة | بيولوجيا أساسية لبداية الحياة | مرتفع | نعم/متوافق | لا | مرتفع |
+| عمر التسويق | يعتمد على السياق | دليل قوي على التباين | جزئي | نعم | مرتفع |
+| وزن التسويق | يعتمد على السياق | دليل قوي على التباين | أوزان بحثية فقط | نعم | مرتفع |
+| نظام العشين | آلية تشغيلية موثقة | مرتفع | نعم في الأبحاث | نعم للانتشار | مرتفع |
+| تداخل الدورات | حقيقة إنتاجية أساسية | مرتفع | نعم | لا لوجود الظاهرة | مرتفع جدًا |
+| الفقس إلى الوضع التالي | متغير بشدة | مرتفع | بيانات قوية للسلالات | نعم للمزارع المستهدفة | مرتفع |
+| الفصل المبكر | مسار بديل متخصص | مرتفع | نعم، تجربة تجارية | نعم للانتشار | مرتفع |
+| معايير الإحلال | خاصة بالمزرعة | متوسط | محدود | نعم | مرتفع |
+| حد الاستبعاد | خاص بالمزرعة | متوسط | محدود | نعم | مرتفع |
+| الإجهاد الحراري | يخفض التكاثر | مرتفع | قوي | نعم لحجم التأثير | مرتفع |
+| توقف صيفي إلزامي | غير مدعوم | متوسط–مرتفع | الأدلة تعارض الصياغة المبسطة | نعم للنمط التشغيلي المحلي | متوسط |
+| أفضلية نظام إسكان واحد | لا توجد إجابة عالمية | دليل قوي على اختلاف السياق | نعم | نعم | مرتفع جدًا |
+| ممارسة التعريف الفردي | مثبتة تقنيًا | متوسط | بيانات تجارية حالية محدودة | نعم | مرتفع |
 
 ---
 
-# Evidence Quality Review
+# مراجعة جودة الأدلة (Evidence Quality Review)
 
-| Source ID | Source Type | Country / Context | Population / System | Main Information Used | Reliability | Limitations | Relevance to Egyptian Commercial Farms |
+| رقم المصدر | نوع المصدر | الدولة / السياق | القطيع / النظام | المعلومات الرئيسية المستخدمة | الموثوقية | القيود | الصلة بالمزارع التجارية المصرية |
 |---|---|---|---|---|---|---|---|
-| SRC-001 | FAO technical husbandry reference | International | general pigeon keeping/production | clutch, incubation, crop milk, market region, double nest/overlap | High | broad/older; not Egypt-specific | High for biology; Moderate for practice |
-| SRC-002 | Peer-reviewed experiment | Egypt | White Mirthys commercial farm, pair cages | early separation, weights, mortality, cycle timing, two nests | High | one strain/system; experimental intervention | Very High |
-| SRC-003 | Peer-reviewed review | International | domestic pigeon | crop milk, dependency, maturity context | High | review/general biology | High |
-| SRC-004 | Peer-reviewed breeding-cycle review | International | domestic pigeon | pair bond, biparental care, two eggs, seasonality, intensive context | High | broad review, not market survey | High |
-| SRC-005 | Peer-reviewed experiment | Egypt | Egyptian Baladi | parent loss, fostering, housing, two nests, incubation | High | experimental conditions | Very High |
-| SRC-006 | Peer-reviewed production/nutrition research | Egypt/regional authors | breeding pigeons | production metrics, fertility, hatchability, growth/economics | High | treatment-specific | High for metric structure |
-| SRC-007 | Peer-reviewed socio-economic survey | Egypt — Sharqia | family, mud dovecote, wooden loft | housing models, commercial purpose/economics | Medium-High | regional and 2016; economics outdated | Very High structurally |
-| SRC-008 | Doctoral production study | Philippines | pair cages vs communal fly-pen | housing productivity, maturity, incubation | Medium | historical/non-Egyptian | Moderate |
-| SRC-009 | Indexed record-keeping report | research colony | pigeon breeding colony | bands, parent/hatch/location/health records | Medium-High | colony, not meat-farm study; historical | Moderate |
-| SRC-010 | Peer-reviewed experiment | Egypt | pigeons under summer heat stress | egg output, fertility, hatchability, heat effects | High | specific experimental conditions | Very High |
-| SRC-011 | Peer-reviewed experiment | China/controlled | White King | photoperiod and reproductive performance | High | specific strain/program | Moderate; principle relevant |
-| SRC-012 | Egyptian journal study | Egypt | Local Egyptian, Zagel, White Mirthys | growth, incubation, hatch-to-next-lay strain differences | Medium-High | study population; hosted copy | Very High |
-| SRC-013 | University repository research | Indonesia | intensive local pigeons | production interval, fertility, cage production | Medium | local/historical context | Moderate-Low for direct benchmark |
-| SRC-014 | Peer-reviewed production study | controlled/summer | breeding pigeons and squabs | practical performance measures | High | diet/condition-specific | High for measure definitions |
-| SRC-015 | Veterinary production study | Egypt | Baladi pairs | parent load, behavior/performance | Medium-High | experimental load treatments | High |
-| SRC-016 | Peer-reviewed study | 2026 controlled breeding | 900 breeding pairs | two-egg pattern, ~2-day oviposition interval, age effects | High | study population may differ from Egypt | High for egg rhythm |
-| SRC-017 | Peer-reviewed genetics/review | international domestic pigeon | domestic pigeon biology | maturity, incubation, biparental care, foster/egg removal context | High | not commercial-market focused | High for biology |
-| SRC-018 | Peer-reviewed engineering/reproduction study | pigeon eggs | incubation/candling | visual fertility detection around day 5–7 | High for method | technology study; routine farm use unknown | Moderate |
-| SRC-019 | Direct pigeon study | historical Japan archive | pigeons | molt/reproduction interaction | Medium | 1949; historical | Low-Moderate |
-| SRC-020 | Peer-reviewed field biology | feral rock pigeons | molt phenology | annual molt timing | High for molt | feral, not meat-farm context | Low-Moderate |
-| SRC-021 | Peer-reviewed biochemical study | domestic pigeon | crop milk/rearing period | early crop-milk dominance and feed transition | High | biochemical rather than farm-management study | High for biology |
+| SRC-001 | مرجع فني من FAO | دولي | تربية/إنتاج حمام عام | البطن، الحضانة، لبن الحوصلة، نطاق التسويق، العشان/التداخل | مرتفعة | عام/قديم نسبيًا؛ ليس خاصًا بمصر | مرتفعة للبيولوجيا؛ متوسطة للممارسة |
+| SRC-002 | تجربة محكمة | مصر | White Mirthys في مزرعة تجارية وأقفاص أزواج | الفصل المبكر، الأوزان، النفوق، توقيت الدورة، العشان | مرتفعة | سلالة ونظام واحد؛ تدخل تجريبي | مرتفعة جدًا |
+| SRC-003 | مراجعة علمية محكمة | دولي | حمام داجن | لبن الحوصلة، الاعتماد، سياق النضج | مرتفعة | مراجعة/بيولوجيا عامة | مرتفعة |
+| SRC-004 | مراجعة محكمة لدورة التكاثر | دولي | حمام داجن | رابطة الزوج، الرعاية الثنائية، بيضتان، الموسمية، سياق الإنتاج المكثف | مرتفعة | مراجعة عامة وليست مسح سوق | مرتفعة |
+| SRC-005 | تجربة محكمة | مصر | حمام بلدي مصري | فقد الأبوين، التحضين البديل، الإسكان، العشان، الحضانة | مرتفعة | ظروف تجريبية | مرتفعة جدًا |
+| SRC-006 | بحث محكم في الإنتاج/التغذية | مصر/باحثون إقليميون | حمام تربية | مؤشرات الإنتاج، الخصوبة، الفقس، النمو/الاقتصاد | مرتفعة | مرتبطة بمعاملات محددة | مرتفعة لبنية المؤشرات |
+| SRC-007 | مسح اجتماعي اقتصادي محكم | مصر — الشرقية | أسري، برج طيني، لوفت خشبي | نظم الإسكان، الغرض التجاري/الاقتصاد | متوسطة–مرتفعة | إقليمي ومن 2016؛ الاقتصاد قديم | مرتفعة جدًا هيكليًا |
+| SRC-008 | دراسة دكتوراه إنتاجية | الفلبين | أقفاص أزواج مقابل حظيرة جماعية | إنتاجية الإسكان، النضج، الحضانة | متوسطة | تاريخية وغير مصرية | متوسطة |
+| SRC-009 | تقرير مفهرس لحفظ السجلات | مستعمرة بحثية | مستعمرة تربية حمام | الحلقات، الأبوان، الفقس، الموقع، السجلات الصحية | متوسطة–مرتفعة | مستعمرة بحثية وليست مزرعة لحم؛ تاريخية | متوسطة |
+| SRC-010 | تجربة محكمة | مصر | حمام تحت إجهاد حراري صيفي | إنتاج البيض، الخصوبة، الفقس، أثر الحرارة | مرتفعة | ظروف تجريبية محددة | مرتفعة جدًا |
+| SRC-011 | تجربة محكمة | الصين/ظروف متحكم فيها | White King | الإضاءة والأداء التناسلي | مرتفعة | سلالة وبرنامج محددان | متوسطة؛ المبدأ ذو صلة |
+| SRC-012 | دراسة في مجلة مصرية | مصر | Local Egyptian وZagel وWhite Mirthys | النمو، الحضانة، اختلاف الفقس إلى الوضع التالي | متوسطة–مرتفعة | مجموعة دراسة ونسخة مستضافة | مرتفعة جدًا |
+| SRC-013 | بحث في مستودع جامعي | إندونيسيا | حمام محلي مكثف | فترة الإنتاج، الخصوبة، الإنتاج في الأقفاص | متوسطة | سياق محلي/تاريخي | متوسطة–منخفضة كقيمة مباشرة |
+| SRC-014 | دراسة إنتاجية محكمة | ظروف متحكم فيها/الصيف | حمام تربية وزغاليل | قياسات الأداء العملية | مرتفعة | مرتبطة بعليقة/ظروف محددة | مرتفعة لتعريف المؤشرات |
+| SRC-015 | دراسة إنتاج بيطرية | مصر | أزواج بلدي | حمل الرعاية الأبوية والسلوك/الأداء | متوسطة–مرتفعة | معاملات تجريبية لأحمال مختلفة | مرتفعة |
+| SRC-016 | دراسة محكمة | 2026، تربية متحكم فيها | 900 زوج تربية | نمط البيضتين، فاصل الوضع نحو يومين، أثر العمر | مرتفعة | قد تختلف المجموعة عن مصر | مرتفعة لإيقاع وضع البيض |
+| SRC-017 | مراجعة وراثية/محكمة | حمام داجن دولي | حمام داجن | النضج، الحضانة، الرعاية الثنائية، سياق نقل البيض/التحضين | مرتفعة | ليست موجهة للسوق التجاري | مرتفعة للبيولوجيا |
+| SRC-018 | دراسة هندسية/تناسلية محكمة | بيض حمام | الحضانة/فحص البيض | كشف الخصوبة بصريًا نحو اليوم 5–7 | مرتفعة للطريقة | دراسة تقنية؛ استخدام المزارع الروتيني غير معروف | متوسطة |
+| SRC-019 | دراسة مباشرة على الحمام | أرشيف ياباني تاريخي | حمام | علاقة القلش بالتكاثر | متوسطة | 1949؛ تاريخية | منخفضة–متوسطة |
+| SRC-020 | دراسة ميدانية محكمة | حمام صخري بري | إيقاع القلش | توقيت القلش السنوي | مرتفعة للقلش | بري وليس مزرعة لحم | منخفضة–متوسطة |
+| SRC-021 | دراسة كيميائية حيوية محكمة | حمام داجن | لبن الحوصلة/فترة التربية | سيادة لبن الحوصلة مبكرًا والانتقال الغذائي | مرتفعة | كيميائية حيوية أكثر من كونها إدارية | مرتفعة للبيولوجيا |
 
 ---
 
-# Biological vs Management Events
+# الأحداث البيولوجية مقابل الأحداث الإدارية
 
-## Biological Events
+## أحداث بيولوجية
 
-- courtship/mating behavior,
-- egg laid,
-- embryo development,
-- hatch,
-- crop-milk production/feeding,
-- squab growth,
-- sexual maturity,
-- molt,
-- illness/death.
+- سلوك المغازلة/التزاوج،
+- وضع البيضة،
+- تطور الجنين،
+- الفقس،
+- إنتاج/تغذية لبن الحوصلة،
+- نمو الزغلول،
+- النضج الجنسي،
+- القلش،
+- المرض/النفوق.
 
-## Management Events
+## أحداث إدارية
 
-- birds deliberately paired/separated,
-- bird transferred between locations,
-- nest assigned/provided,
-- egg checked/candled,
-- egg/squab fostered or transferred,
-- squab weighed,
-- squab separated/weaned,
-- squab marketed,
-- bird selected as replacement,
-- pair reviewed,
-- breeder culled/retired/sold.
+- تكوين زوج أو فصله عمدًا،
+- نقل طائر بين المواقع،
+- تخصيص/توفير عش،
+- فحص البيضة أو فحصها بالضوء،
+- نقل أو تحضين بيضة/زغلول بواسطة زوج بديل،
+- وزن الزغلول،
+- فصل/فطام الزغلول،
+- تسويق الزغلول،
+- اختيار طائر للإحلال،
+- مراجعة الزوج،
+- استبعاد/تقاعد/بيع طائر تربية.
 
-These remain real-world domain events, not software Domain Events.
-
----
-
-# Observable vs Inferred Information
-
-## Directly Observable
-
-Egg present, hatch observed, bird present/missing/dead, mating observed, nest occupied, egg broken, squab present/dead, pair aggression, feeding activity, new clutch observed.
-
-## Measured
-
-Weight, temperature, humidity, egg counts, time intervals, feed use, mortality counts, fertility/hatchability calculations when evidence is available.
-
-## Inferred / Evaluated
-
-Breeding readiness, pair compatibility, poor pair performance, probable infertility before confirmation, market readiness, body condition assessment, reason for production decline.
-
-## Laboratory / Veterinary Confirmation
-
-Some causes of embryonic death, disease, reproductive failure, mortality, or infertility require veterinary/laboratory confirmation and must not be inferred from production records alone.
+تظل هذه **أحداثًا حقيقية في المجال** وليست أحداث نطاق برمجية (Software Domain Events).
 
 ---
 
-# Open Question Priority Review
+# المعلومات المرصودة مقابل المستنتجة
 
-| Classification | Question IDs | Rationale |
+## يمكن ملاحظتها مباشرة
+
+وجود بيضة، ملاحظة الفقس، وجود/فقد/نفوق طائر، ملاحظة التزاوج، إشغال العش، كسر البيضة، وجود/نفوق الزغلول، عدوان الزوج، نشاط التغذية، ملاحظة بطن جديدة.
+
+## معلومات مقاسة
+
+الوزن، الحرارة، الرطوبة، أعداد البيض، الفترات الزمنية، استهلاك العلف، أعداد النفوق، وحسابات الخصوبة/الفقس عندما تتوفر الأدلة اللازمة.
+
+## معلومات مستنتجة / مقيمة
+
+الجاهزية للتربية، توافق الزوج، ضعف أداء الزوج، الاشتباه في عدم الخصوبة قبل التأكيد، جاهزية التسويق، تقييم حالة الجسم، سبب انخفاض الإنتاج.
+
+## تأكيد معملي / بيطري
+
+قد تتطلب بعض أسباب النفوق الجنيني أو المرض أو الفشل التناسلي أو النفوق أو العقم تأكيدًا بيطريًا/معمليًا، ولا يجب استنتاجها من سجلات الإنتاج وحدها.
+
+---
+
+# مراجعة أولوية الأسئلة المفتوحة
+
+| التصنيف | أرقام الأسئلة | المبرر |
 |---|---|---|
-| Must Answer Before Farm Structure | OQ-001, OQ-002, OQ-014, OQ-016 | Housing, tracking and nest/identification practice directly shape the next domain phase. |
-| Must Answer Before Data Model | OQ-003, OQ-007, OQ-008, OQ-017, OQ-018, OQ-020, OQ-021 | Cycle meaning, pair history, pedigree, replacement and alternate lifecycle paths affect later data semantics. |
-| Must Answer Before MVP | OQ-004, OQ-006, OQ-009, OQ-010, OQ-015, OQ-019 | Decision support, farm size, current workflow, profitability, market and seasonality affect MVP priority. |
-| Can Defer | OQ-005 | Regulatory/veterinary specifics are important but can be expanded in health/system-analysis phases. |
-| Optional | OQ-011, OQ-012, OQ-013 | Offline, sensors/RFID and AI are future-scope questions. |
+| يجب الإجابة قبل تحليل هيكل المزرعة | OQ-001, OQ-002, OQ-014, OQ-016 | الإسكان ومستوى التتبع وممارسة الأعشاش والتعريف تشكل المرحلة التالية مباشرة. |
+| يجب الإجابة قبل نموذج البيانات | OQ-003, OQ-007, OQ-008, OQ-017, OQ-018, OQ-020, OQ-021 | معنى الدورة وتاريخ الزوج والنسب والإحلال والمسارات البديلة تؤثر في دلالات البيانات لاحقًا. |
+| يجب الإجابة قبل MVP | OQ-004, OQ-006, OQ-009, OQ-010, OQ-015, OQ-019 | دعم القرار وحجم المزرعة ومسار العمل والربحية والسوق والموسمية تؤثر في أولويات MVP. |
+| يمكن تأجيله | OQ-005 | التفاصيل التنظيمية/البيطرية مهمة ويمكن توسيعها في مراحل الصحة وتحليل النظام. |
+| اختياري | OQ-011, OQ-012, OQ-013 | العمل دون اتصال والحساسات/RFID والذكاء الاصطناعي موضوعات مستقبلية. |
 
 ---
 
-# Phase 1 Exit Assessment
+# تقييم الخروج من Phase 1
 
-- [x] Terminology reviewed and normalized.
-- [x] Domain facts classified.
-- [x] Major contradictions documented.
-- [x] Production lifecycle consolidated.
-- [x] Overlapping cycles documented.
-- [x] Egyptian context separated from international evidence.
-- [x] Benchmarks classified.
-- [x] Open Questions prioritized.
-- [x] Assumptions reviewed.
-- [x] Risks reviewed.
-- [x] `DOMAIN-BASELINE.md` created.
-- [x] Consistency Review completed.
+- [x] تمت مراجعة المصطلحات وتوحيدها.
+- [x] تم تصنيف حقائق المجال.
+- [x] تم توثيق التناقضات الرئيسية.
+- [x] تم توحيد دورة الإنتاج.
+- [x] تم توثيق تداخل الدورات.
+- [x] تم فصل السياق المصري عن الأدلة الدولية.
+- [x] تم تصنيف القيم المرجعية.
+- [x] تم ترتيب أولويات الأسئلة المفتوحة.
+- [x] تمت مراجعة الافتراضات.
+- [x] تمت مراجعة المخاطر.
+- [x] تم إنشاء `DOMAIN-BASELINE.md`.
+- [x] اكتملت مراجعة الاتساق.
 
-## Recommended Decision
+## القرار الموصى به
 
-**Phase 1 is ready for user approval.**
+**Phase 1 جاهزة لاعتماد المستخدم.**
 
-The remaining field-validation questions do not invalidate the domain baseline; they are deliberately preserved as constraints for Phase 2 and later phases. Phase 1 should not be marked `Approved` until the user reviews and explicitly approves it.
+الأسئلة الميدانية المتبقية لا تبطل خط الأساس للمجال؛ بل تم الاحتفاظ بها عمدًا كقيود يجب التحقق منها في Phase 2 والمراحل اللاحقة. ولا يجب تغيير حالة Phase 1 إلى `Approved` قبل أن يراجعها المستخدم ويعتمدها صراحة.
 
-## Next Recommended Phase — after user approval only
+## المرحلة التالية الموصى بها — بعد اعتماد المستخدم فقط
 
-**Phase 2 — Farm Structure & Pigeon Management Domain Analysis**
+**Phase 2 — تحليل هيكل المزرعة وإدارة الحمام (Farm Structure & Pigeon Management Domain Analysis)**
 
-**STOP:** Do not start Phase 2 until explicit user approval/instruction is received.
+**توقف:** لا تبدأ Phase 2 قبل الحصول على اعتماد/تعليمات صريحة من المستخدم.
