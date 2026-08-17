@@ -1,5 +1,5 @@
-# Customers & Sales
+# العملاء والمبيعات (Customers & Sales)
 
-> Status: Pending — Reserved for Phase 5.
+> **الحالة:** Pending — محجوزة لـ Phase 5.
 
-_No analysis has been performed in Phase 0._
+_لم يبدأ التحليل في هذا الملف بعد._

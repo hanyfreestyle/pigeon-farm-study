@@ -1,5 +1,5 @@
-# Data Model
+# نموذج البيانات (Data Model)
 
-> Status: Pending — Reserved for Phase 7.
+> **الحالة:** Pending — محجوز لـ Phase 7.
 
-_No analysis has been performed in Phase 0._
+_لم يبدأ التحليل في هذا الملف بعد._

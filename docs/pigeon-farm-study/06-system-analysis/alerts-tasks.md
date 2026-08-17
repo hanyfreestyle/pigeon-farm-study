@@ -1,5 +1,5 @@
-# Alerts & Tasks
+# التنبيهات والمهام (Alerts & Tasks)
 
-> Status: Pending — Reserved for Phase 6.
+> **الحالة:** Pending — محجوزة لـ Phase 6.
 
-_No analysis has been performed in Phase 0._
+_لم يبدأ التحليل في هذا الملف بعد._

@@ -1,5 +1,5 @@
-# Pedigree Management
+# إدارة النسب (Pedigree Management)
 
-> Status: Pending — Reserved for Phase 2.
+> **الحالة:** Pending — محجوزة للمرحلة المناسبة لاحقًا.
 
-_No analysis has been performed in Phase 0._
+_لم يبدأ التحليل في هذا الملف بعد._

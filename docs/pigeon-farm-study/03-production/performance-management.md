@@ -1,5 +1,5 @@
-# Performance Management
+# إدارة الأداء (Performance Management)
 
-> Status: Pending — Reserved for Phase 3.
+> **الحالة:** Pending — محجوزة لـ Phase 3.
 
-_No analysis has been performed in Phase 0._
+_لم يبدأ التحليل في هذا الملف بعد._

@@ -1,5 +1,5 @@
-# Health Management
+# الإدارة الصحية (Health Management)
 
-> Status: Pending — Reserved for Phase 4.
+> **الحالة:** Pending — محجوزة لـ Phase 4.
 
-_No analysis has been performed in Phase 0._
+_لم يبدأ التحليل في هذا الملف بعد._

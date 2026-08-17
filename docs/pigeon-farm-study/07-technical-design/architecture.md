@@ -1,5 +1,5 @@
-# Architecture
+# المعمارية (Architecture)
 
-> Status: Pending — Reserved for Phase 7.
+> **الحالة:** Pending — محجوزة لـ Phase 7.
 
-_No analysis has been performed in Phase 0._
+_لم يبدأ التحليل في هذا الملف بعد._
