@@ -1,836 +1,836 @@
-# Commercial Pigeon Farming — Domain Research
+# تربية الحمام التجاري — بحث المجال (Commercial Pigeon Farming)
 
-> **Phase:** 1A — Commercial Pigeon Farming Domain Research  
-> **Status:** Completed — Awaiting Review  
-> **Scope:** Commercial Meat Pigeon / Squab Production  
-> **Research date:** 2026-08-17  
-> **Important:** This document describes the biological and operational domain. It intentionally does **not** define software entities, database tables, APIs, UI, or architecture.
-
----
-
-## 1. Executive Domain Summary
-
-Commercial squab production is a meat-production system built around **breeding pigeon pairs that repeatedly produce and rear young squabs**. It differs materially from conventional broiler production because the market bird is not normally produced as an independent chick placed into a grow-out flock and fed directly from a feeder from hatch. The young pigeon is an **altricial** bird and, under natural production, depends heavily on both parents for brooding and feeding, initially through crop milk and later through regurgitated feed [SRC-003, SRC-004].
-
-The dominant natural reproductive pattern is a male–female breeding pair, usually two eggs per clutch, about 18 days of incubation, followed by parental rearing of the squabs. The traditional market/weaning window is commonly around **3–4 weeks / approximately 21–28 days**, with several sources describing collection or market at about four weeks, often before full independent flight [SRC-001, SRC-002, SRC-005]. This is not a universal specification: market age and weight vary with breed, management, buyer specification, early-weaning technology, and production objective.
-
-A crucial operational characteristic is that pigeon production can have **overlapping reproductive activity**. A female may begin the next clutch while the pair is still caring for squabs from the previous one. This is why two-nest arrangements appear repeatedly in technical literature and intensive production descriptions [SRC-001, SRC-005]. For domain analysis, this means a “production cycle” is not safely assumed to be a simple non-overlapping block.
-
-The commercial unit can be organized in several ways: communal loft/dovecote systems, colony/fly-pen systems, or individually housed breeding pairs in numbered cages. Egyptian field research identified commercial systems based on **mud dovecotes** and **wooden lofts**, while experimental/commercial studies in Egypt and elsewhere also use individual pair cages [SRC-002, SRC-007, SRC-008]. These systems differ substantially in control of mating, identification, pedigree certainty, nest ownership, record accuracy, labor, welfare considerations, and output measurability.
-
-**Domain conclusion:** the management problem is not merely “count pigeons.” It is the management of a living breeding population in which pair bonds, nest access, eggs, parental care, overlapping cycles, replacement, environment, health, records, and market timing interact.
+> **المرحلة:** Phase 1A — بحث مجال تربية الحمام التجاري  
+> **الحالة:** Completed — بانتظار المراجعة  
+> **النطاق:** إنتاج الحمام اللاحم والزغاليل تجاريًا (Commercial Meat Pigeon / Squab Production)  
+> **تاريخ البحث:** 2026-08-17  
+> **مهم:** تصف هذه الوثيقة المجال البيولوجي والتشغيلي. وهي لا تعرف عمدًا كيانات برمجية أو جداول قاعدة بيانات أو APIs أو UI أو معمارية للنظام.
 
 ---
 
-# 2. Commercial Squab Farming Overview
+## 1. الملخص التنفيذي للمجال
 
-## 2.1 What is Commercial Squab Production?
+إنتاج الزغاليل التجاري هو نظام لإنتاج اللحم يتمحور حول **أزواج تربية الحمام التي تنتج الزغاليل وتربيها بصورة متكررة**. ويختلف هذا النظام بدرجة جوهرية عن إنتاج دجاج التسمين التقليدي؛ إذ إن طائر السوق لا يُنتج عادة ككتكوت مستقل يوضع منذ الفقس في قطيع تسمين ويتناول غذاءه مباشرة من المعالف. فالزغلول طائر **غير مكتمل النمو ومعتمد (Altricial)**، ويعتمد في الإنتاج الطبيعي بشدة على الأبوين في التدفئة والتغذية، أولًا عبر لبن الحوصلة (Crop Milk) ثم عبر الغذاء المرجع من الأبوين [SRC-003, SRC-004].
 
-Commercial squab production is the organized breeding and management of domestic pigeons primarily to produce young pigeons for meat. The commercial objective is repeatable saleable output from breeding stock rather than maintenance of birds for exhibition, racing, hobby, or ornamental traits.
+النمط التناسلي الطبيعي الغالب هو زوج من ذكر وأنثى، وبطن بيض (Clutch) غالبًا من بيضتين، ونحو 18 يومًا من الحضانة، ثم تربية الزغاليل بواسطة الأبوين. ويقع نطاق التسويق/الفطام التقليدي عادة حول **3–4 أسابيع / نحو 21–28 يومًا**، مع وصف عدة مصادر لجمع أو تسويق الزغاليل عند نحو أربعة أسابيع، وغالبًا قبل الوصول إلى الطيران المستقل الكامل [SRC-001, SRC-002, SRC-005]. ولا يمثل ذلك مواصفة عالمية ثابتة؛ فعمر ووزن التسويق يتغيران حسب السلالة والإدارة ومتطلبات المشتري وتقنيات الفطام المبكر وهدف الإنتاج.
 
-Egyptian socio-economic research separated pigeon production according to both **purpose** and **housing system**. In the surveyed Sharqia sample, family systems were primarily oriented toward household consumption with surplus sales, while most operators in the commercial mud-dovecote and wooden-loft groups reported income generation as the primary objective [SRC-007].
+ومن أهم خصائص التشغيل أن إنتاج الحمام يمكن أن يتضمن **نشاطًا تناسليًا متداخلًا**؛ فقد تبدأ الأنثى البطن التالية بينما ما زال الزوج يرعى زغاليل البطن السابقة. ولهذا يتكرر ظهور نظام العشين في المراجع الفنية ووصف الإنتاج المكثف [SRC-001, SRC-005]. ويعني ذلك في تحليل المجال أنه لا يجوز افتراض "دورة الإنتاج" كفترة خطية بسيطة لا تتداخل مع غيرها.
 
-**Evidence classification:** Verified Fact for the cited Egyptian survey; broader classification should be treated as a useful domain framing rather than a universal global taxonomy.
+يمكن تنظيم الوحدة التجارية بعدة صور، منها المساكن الجماعية مثل اللوفت/برج الحمام، وأنظمة المستعمرات أو الحظائر الجماعية، أو إسكان كل زوج تربية منفردًا داخل أقفاص مرقمة. وقد وثق بحث ميداني مصري نظمًا تجارية تعتمد على **أبراج حمام طينية (Mud Dovecotes)** و**مساكن خشبية (Wooden Lofts)**، بينما تستخدم دراسات وتجارب تجارية في مصر وخارجها أقفاص أزواج فردية [SRC-002, SRC-007, SRC-008]. وتختلف هذه النظم بدرجة كبيرة في التحكم في التزاوج، والتعريف، ودقة النسب، وملكية الأعشاش، ودقة السجلات، والعمالة، واعتبارات الرفق بالحيوان، وقابلية قياس الناتج.
 
-## 2.2 Commercial production vs hobby keeping
+**استنتاج المجال:** المشكلة الإدارية ليست مجرد "عد الحمام"، وإنما إدارة قطيع تربية حي تتفاعل فيه روابط الأزواج وإتاحة الأعشاش والبيض والرعاية الأبوية وتداخل الدورات والإحلال والبيئة والصحة والسجلات وتوقيت السوق.
 
-The biological bird is the same, but the management objective changes.
+---
 
-| Dimension | Commercial meat/squab production | Hobby / ornamental / racing context |
+# 2. نظرة عامة على إنتاج الزغاليل التجاري
+
+## 2.1 ما هو إنتاج الزغاليل التجاري؟
+
+إنتاج الزغاليل التجاري هو التربية والإدارة المنظمة للحمام الداجن بهدف أساسي هو إنتاج الحمام الصغير للحوم. والهدف التجاري هو تحقيق ناتج قابل للبيع بصورة متكررة من قطيع التربية، وليس الاحتفاظ بالطيور للعرض أو السباق أو الهواية أو الصفات الزخرفية.
+
+فرّقت دراسة اجتماعية اقتصادية مصرية بين نظم إنتاج الحمام بحسب **الغرض** و**نظام الإسكان**. ففي عينة محافظة الشرقية التي تمت دراستها، كان الإنتاج الأسري موجهًا أساسًا للاستهلاك المنزلي مع بيع الفائض، بينما أفاد معظم العاملين في مجموعات الأبراج الطينية والمساكن الخشبية التجارية بأن تحقيق الدخل هو الهدف الأساسي [SRC-007].
+
+**تصنيف الدليل:** حقيقة موثقة (Verified Fact) داخل حدود المسح المصري المشار إليه؛ أما التعميم الأوسع فيستخدم كإطار مفيد لفهم المجال ولا يُعامل كتصنيف عالمي ثابت.
+
+## 2.2 الإنتاج التجاري مقارنة بتربية الهواية
+
+الطائر البيولوجي هو نفسه، لكن الهدف الإداري يتغير.
+
+| البعد | الإنتاج التجاري للحمام اللاحم/الزغاليل | سياق الهواية / الزينة / السباق |
 |---|---|---|
-| Primary objective | Repeatable marketable squab output and economic return | Appearance, performance, companionship, breed preservation, racing, exhibition, etc. |
-| Breeding decisions | Productivity, fertility, hatchability, growth, parental ability, replacement value | May prioritize lineage, color, conformation, flight/racing traits, rarity, or personal preference |
-| Record pressure | Production and cost records become economically important | Record detail varies widely by hobby objective |
-| Housing | Selected for control, output, labor, hygiene, and economics | May prioritize flight access, aesthetics, tradition, or sport requirements |
-| Pair evaluation | Usually has a production/economic dimension | May emphasize genetic or exhibition goals instead of meat output |
-| Market bird | Squab / meat pigeon | Often not the primary output |
+| الهدف الأساسي | ناتج متكرر من الزغاليل القابلة للتسويق وعائد اقتصادي | الشكل، الأداء، الصحبة، حفظ السلالة، السباق، العرض، وغيرها |
+| قرارات التربية | الإنتاجية، الخصوبة، نسبة الفقس، النمو، القدرة الأبوية، قيمة الإحلال | قد تعطي الأولوية للنسب أو اللون أو التكوين أو صفات الطيران/السباق أو الندرة أو التفضيل الشخصي |
+| أهمية السجلات | تصبح سجلات الإنتاج والتكلفة ذات أهمية اقتصادية | يختلف مستوى التفاصيل بشدة حسب هدف الهواية |
+| الإسكان | يختار وفق التحكم والناتج والعمالة والنظافة والاقتصاد | قد يعطي أولوية للطيران أو الشكل أو التقليد أو متطلبات الرياضة |
+| تقييم الزوج | يتضمن عادة بعدًا إنتاجيًا/اقتصاديًا | قد يركز على أهداف وراثية أو عرضية بدل إنتاج اللحم |
+| طائر السوق | الزغلول / حمام اللحم | غالبًا ليس الناتج الأساسي |
 
-This distinction does **not** mean commercial farms are identical. Commercial production ranges from relatively traditional dovecote/loft systems to highly controlled pair-cage systems and industrial techniques including artificial incubation or early feeding [SRC-002, SRC-005, SRC-007].
+ولا يعني هذا التمييز أن المزارع التجارية متطابقة. فالإنتاج التجاري يمتد من نظم الأبراج والمساكن التقليدية نسبيًا إلى أقفاص الأزواج شديدة التحكم وتقنيات صناعية تتضمن الحضانة الصناعية أو التغذية المبكرة [SRC-002, SRC-005, SRC-007].
 
-## 2.3 Primary product
+## 2.3 المنتج الأساسي
 
-The primary product in the scope of this project is the **squab**: a young pigeon produced for meat before or around the time of weaning/independent flight, depending on the production system and market specification [SRC-001, SRC-003].
+المنتج الأساسي ضمن نطاق المشروع هو **الزغلول (Squab)**: حمام صغير يُنتج للحوم قبل أو حول وقت الفطام/الطيران المستقل، وفق نظام الإنتاج ومواصفة السوق [SRC-001, SRC-003].
 
-Breeding pigeons are the productive stock that generates this output. Eggs, culled breeders, manure, or breeding-stock sales may have value in some businesses, but they are not assumed to be the core product of this study without field validation.
+وتمثل طيور التربية المخزون المنتج الذي يولد هذا الناتج. وقد تكون للبيض أو طيور التربية المستبعدة أو السماد أو بيع طيور التربية قيمة في بعض المشروعات، لكنها لا تُفترض منتجات أساسية لهذه الدراسة دون تحقق ميداني.
 
-## 2.4 Typical market/weaning age
+## 2.4 العمر المعتاد للتسويق/الفطام
 
-The strongest recurring domain range in the reviewed sources is approximately **21–28 days**, with many commercial/natural-rearing studies evaluating squabs at 28 days. FAO describes collection at about four weeks, while a recent Egyptian commercial-farm study treats 28-day parent rearing as the conventional control and describes natural weaning as generally 21–28 days [SRC-001, SRC-002]. An Egyptian Baladi study describes squabs leaving the nest around 25–32 days [SRC-005].
+أقوى نطاق متكرر في المصادر التي تمت مراجعتها هو نحو **21–28 يومًا**، حيث تقيم كثير من دراسات الإنتاج التجاري أو التربية الطبيعية الزغاليل عند عمر 28 يومًا. تصف FAO جمع الزغاليل عند نحو أربعة أسابيع، بينما تعاملت دراسة حديثة في مزرعة تجارية مصرية مع التربية الأبوية حتى 28 يومًا باعتبارها مجموعة المقارنة التقليدية، ووصفت الفطام الطبيعي عمومًا بأنه يقع بين 21 و28 يومًا [SRC-001, SRC-002]. كما تصف دراسة مصرية على الحمام البلدي مغادرة الزغاليل للعش عند نحو 25–32 يومًا [SRC-005].
 
-### Why market around this stage?
+### لماذا يحدث التسويق حول هذه المرحلة؟
 
-The sources support several linked reasons:
+تدعم المصادر عدة أسباب مترابطة:
 
-1. Squabs grow very rapidly during the parental-feeding phase [SRC-003, SRC-004].
-2. Around this period they approach mature body weight in some production strains [SRC-003].
-3. Traditional squab production markets the bird while still young and tender and often before full independent flight [SRC-001].
-4. Continuing parental care longer can delay or interact with the parents’ next reproductive effort; intensive systems therefore experiment with earlier separation to increase breeder reproductive throughput [SRC-002].
+1. تنمو الزغاليل بسرعة كبيرة أثناء مرحلة التغذية الأبوية [SRC-003, SRC-004].
+2. تقترب بعض سلالات الإنتاج في هذه الفترة من وزن الجسم البالغ [SRC-003].
+3. يسوق الإنتاج التقليدي الزغلول وهو ما يزال صغيرًا وطري اللحم، وغالبًا قبل اكتمال الطيران المستقل [SRC-001].
+4. استمرار الرعاية الأبوية فترة أطول قد يؤخر أو يتداخل مع المحاولة التناسلية التالية؛ ولذلك تختبر الأنظمة المكثفة الفصل المبكر لزيادة معدل العودة التناسلية لطيور التربية [SRC-002].
 
-**Do not convert 28 days into a universal business rule.** Buyer specification, breed, body weight, welfare, hand-feeding practice, and market culture require validation.
+**لا تحول عمر 28 يومًا إلى قاعدة عمل عالمية.** فمواصفات المشتري والسلالة ووزن الجسم والرفق بالحيوان وممارسة التغذية اليدوية وثقافة السوق كلها تحتاج إلى تحقق.
 
-## 2.5 Why the production cycle differs from broiler production
+## 2.5 لماذا تختلف دورة إنتاج الحمام عن دجاج التسمين؟
 
-Pigeon production differs from a broiler flow in several biologically important ways:
+يختلف إنتاج الحمام عن مسار دجاج التسمين في عدة نقاط بيولوجية مهمة:
 
-- The squab is **altricial/superaltricial**, not independently feeding immediately after hatch [SRC-002, SRC-003].
-- Both parents produce crop milk and participate in feeding young [SRC-003, SRC-004].
-- Both parents share incubation [SRC-001, SRC-005].
-- The breeding pair remains an active production resource across repeated clutches, rather than being only the genetic source of a separately managed batch.
-- Parent reproductive condition and parental care directly influence squab performance.
-- New egg laying can overlap with care of the previous squabs [SRC-001, SRC-005].
-- Artificial incubation/early-weaning strategies can change reproductive throughput but also change growth, labor, mortality risk, and management complexity [SRC-002].
+- الزغلول **غير مكتمل النمو بدرجة كبيرة (Altricial / Superaltricial)** ولا يتغذى بصورة مستقلة مباشرة بعد الفقس [SRC-002, SRC-003].
+- ينتج كلا الأبوين لبن الحوصلة ويشاركان في تغذية الصغار [SRC-003, SRC-004].
+- يشترك الأبوان في حضانة البيض [SRC-001, SRC-005].
+- يظل زوج التربية موردًا إنتاجيًا نشطًا عبر بطون متكررة، بدل أن يكون مجرد مصدر وراثي لدفعة منفصلة يجري تسمينها بعيدًا عنه.
+- تؤثر الحالة التناسلية للأبوين وجودة الرعاية الأبوية مباشرة في أداء الزغاليل.
+- يمكن أن يتداخل وضع البيض الجديد مع رعاية زغاليل البطن السابقة [SRC-001, SRC-005].
+- يمكن لاستراتيجيات الحضانة الصناعية أو الفطام المبكر أن تغير معدل الإنتاج التناسلي، لكنها تغير أيضًا النمو والعمالة ومخاطر النفوق وتعقيد الإدارة [SRC-002].
 
-These biological facts are central to later analysis but are **not yet software design decisions**.
-
----
-
-# 3. Commercial Production Models
-
-No single source provides a universally accepted taxonomy covering every farm. The reviewed literature instead describes real systems by **housing**, **pair control**, **intensity**, and **rearing technology**.
-
-## 3.1 Communal loft / dovecote / colony systems
-
-Birds live and breed in a shared structure with multiple nesting sites. Egyptian field work identified mud dovecotes and wooden lofts as two commercial sub-systems in the studied Sharqia region [SRC-007]. Communal fly-pens are also documented in comparative production research [SRC-008].
-
-### Operational characteristics
-
-- Birds share a larger housing environment.
-- Pairing may arise naturally and may be less directly controlled than in individual pair cages.
-- Nest ownership and nest disputes require observation and suitable nest availability.
-- Individual parentage and production attribution can be more difficult if individual identification and nest control are weak.
-- Location-based management (loft, section, nest) can become operationally important.
-
-### Advantages
-
-- Can align with traditional/local management practices.
-- Potentially simpler housing per bird and more behavioral freedom depending on design.
-- Existing breeder knowledge and local materials may support adoption.
-
-### Disadvantages / management challenges
-
-- Harder attribution of eggs/squabs to specific pairs in poorly controlled colonies.
-- Greater risk of nest competition, mislaid eggs, or uncertain parentage where identification is weak.
-- Record keeping at individual-pair level can become labor-intensive.
-- Performance differences between pairs may be hidden by group averages.
-
-### Commercial suitability
-
-Potentially commercial, as demonstrated by Egyptian mud-dovecote and wooden-loft enterprises [SRC-007]. Suitability depends on market, labor, biosecurity, housing quality, ability to identify productive units, and required data precision.
-
-## 3.2 Individual breeding-pair cage system
-
-A known male and female are housed as a controlled breeding unit, usually with numbered cages and dedicated nests. Recent Egyptian research on a commercial farm used individual numbered metal cages for each pair, and an Egyptian Baladi study used pair-based cage units [SRC-002, SRC-005].
-
-### Operational characteristics
-
-- Pair identity is controlled.
-- Eggs and squabs can be attributed to a known pair with higher confidence.
-- Feed, production, fertility, hatchability, and squab output can be measured at pair level more easily.
-- Pair-specific culling or replacement decisions become easier to support with records.
-- The cage itself often functions as a location identifier.
-
-### Comparative evidence
-
-Older Philippine research comparing paired cages with communal fly-pens reported more eggs and more squabs from caged pairs, with better feed efficiency/profitability under the conditions studied [SRC-008]. This is useful evidence that housing/control can influence measurable performance, but it is **not sufficient to declare cages universally superior** across welfare, climate, breed, capital, labor, and market contexts.
-
-## 3.3 Intensive systems with artificial incubation / early rearing
-
-Modern intensive research describes systems where eggs may be artificially incubated or squabs separated early and hand-fed/artificially fed to shorten the parent reproductive interval [SRC-002, SRC-004]. Some industrial systems also transfer squabs among foster parents so one pair feeds more than the natural two [SRC-004, SRC-013].
-
-### Benefits under research conditions
-
-- Can increase egg output and reproductive throughput of breeding pairs.
-- Can decouple some parental-care time from the next laying cycle.
-
-### Costs and risks
-
-- Requires much more controlled management and labor/technology.
-- Early separation can reduce growth and increase mortality if feeding/brooding is not well managed. In the 2025 Egyptian commercial-farm experiment, separation at hatch had substantially worse squab mortality and lower 28-day weight than parent rearing, despite higher parent reproductive output [SRC-002].
-- Artificial feeding introduces new process-control and hygiene risks.
-
-**Phase 1A conclusion:** “intensive” should not be used as a single housing label. Intensity can refer to controlled pairs, artificial lighting, artificial incubation, early feeding, foster rearing, feed formulation, or combinations of these.
+هذه الحقائق البيولوجية محورية للتحليل اللاحق، لكنها **ليست قرارات تصميم برمجي حتى الآن**.
 
 ---
 
-# 4. Farm Population Structure
+# 3. نماذج الإنتاج التجاري
 
-The research supports a population that is operationally heterogeneous rather than a single undifferentiated flock.
+لا يقدم مصدر واحد تصنيفًا عالميًا مقبولًا يغطي كل المزارع. وبدلًا من ذلك تصف الأدبيات التي تمت مراجعتها النظم الفعلية وفق **الإسكان** و**التحكم في الأزواج** و**شدة الإنتاج** و**تقنية التربية**.
 
-## 4.1 Core categories observed or implied in real operations
+## 3.1 أنظمة اللوفت / برج الحمام / المستعمرة الجماعية
 
-### Breeding adults
+تعيش الطيور وتتزاوج داخل هيكل مشترك يحتوي على عدة مواقع تعشيش. وقد حدد العمل الميداني المصري الأبراج الطينية والمساكن الخشبية كنظامين فرعيين تجاريين في المنطقة التي تمت دراستها بمحافظة الشرقية [SRC-007]. كما وُثقت الحظائر الجماعية في دراسات مقارنة للإنتاج [SRC-008].
 
-Sexually mature males and females used for reproduction. In controlled systems they are commonly organized into breeding pairs [SRC-002, SRC-005].
+### الخصائص التشغيلية
 
-### Active breeding pairs
+- تشترك الطيور في بيئة إسكان أكبر.
+- قد يحدث تكوين الأزواج طبيعيًا ويكون أقل تحكمًا مباشرًا من أقفاص الأزواج الفردية.
+- تحتاج ملكية العش ومنازعات الأعشاش إلى ملاحظة وتوفر عدد مناسب من مواقع التعشيش.
+- قد يصعب تحديد النسب وربط الإنتاج بالأفراد إذا كان التعريف الفردي والتحكم في العش ضعيفين.
+- تصبح الإدارة المعتمدة على الموقع، مثل اللوفت أو القسم أو العش، ذات أهمية تشغيلية.
 
-Male–female pairs currently functioning as reproductive units. Pair performance can be observed through egg production, fertility, hatchability, squab output, and offspring growth [SRC-002, SRC-014].
+### المزايا
 
-### Replacement / pre-breeding birds
+- يمكن أن تتوافق مع الممارسات التقليدية والمحلية.
+- قد توفر إسكانًا أبسط لكل طائر وحرية سلوكية أكبر بحسب التصميم.
+- قد تساعد خبرة المربي القائمة والمواد المحلية على التطبيق.
 
-Young birds retained to become future breeding stock. Sexual maturity is commonly reported in the approximate 5–7 month region depending on source/breed; the reviewed literature includes about 156 days in one meat-breed study and around seven months in reviews/other studies [SRC-003, SRC-008]. The exact entry criterion into production must not be universalized.
+### العيوب / التحديات الإدارية
 
-### Squabs
+- صعوبة أكبر في ربط البيض والزغاليل بأزواج محددة في المستعمرات ضعيفة التحكم.
+- زيادة مخاطر المنافسة على الأعشاش أو وضع البيض في موقع غير مقصود أو عدم وضوح النسب عند ضعف التعريف.
+- قد تصبح السجلات على مستوى الفرد/الزوج كثيفة العمالة.
+- قد تختفي فروق الأداء بين الأزواج داخل متوسطات المجموعة.
 
-Dependent young birds from hatch through the rearing/weaning/market stage. They require parental or artificial feeding support [SRC-002, SRC-003].
+### الصلاحية للإنتاج التجاري
 
-### Growing / young birds retained beyond squab stage
+يمكن لهذه النظم أن تكون تجارية، كما تثبت منشآت الأبراج الطينية والمساكن الخشبية المصرية [SRC-007]. وتعتمد ملاءمتها على السوق والعمالة والأمن الحيوي وجودة المسكن والقدرة على تعريف الوحدات المنتجة ومستوى دقة البيانات المطلوب.
 
-Birds kept after normal meat-market age for replacement, breeding stock, research, or other purposes. Their management is distinct from market squabs because they move toward sexual maturity rather than immediate sale.
+## 3.2 نظام قفص زوج تربية منفرد
 
-### Sick / isolated / quarantine birds
+يُسكن ذكر وأنثى معروفان كوحدة تربية متحكم فيها، عادة داخل قفص مرقم مع أعشاش مخصصة. واستخدم بحث مصري حديث في مزرعة تجارية أقفاصًا معدنية فردية مرقمة لكل زوج، كما استخدمت دراسة مصرية على الحمام البلدي وحدات أقفاص على مستوى الزوج [SRC-002, SRC-005].
 
-Health literature and basic livestock practice make isolation and health-status separation relevant, but detailed health/quarantine workflows belong to Phase 4. Phase 1A only records that health state can remove birds from normal productive participation.
+### الخصائص التشغيلية
 
-### Culled / sold / retired / dead birds
+- تكون هوية الزوج تحت السيطرة.
+- يمكن ربط البيض والزغاليل بزوج معروف بدرجة ثقة أعلى.
+- يصبح قياس العلف والإنتاج والخصوبة ونسبة الفقس وعدد الزغاليل أسهل على مستوى الزوج.
+- يمكن دعم قرارات الاستبعاد أو الإحلال الخاصة بالزوج بالسجلات بصورة أفضل.
+- يعمل القفص نفسه غالبًا كمعرف للموقع.
 
-These are distinct outcomes and should not be conflated operationally. A bird may leave production because of economic culling, sale as live stock, age/retirement, health removal, or mortality. Detailed criteria require field validation.
+### الدليل المقارن
 
-## 4.2 Life movement — conceptual, not software statuses
+أبلغ بحث فلبيني قديم قارن بين أقفاص الأزواج والحظائر الجماعية عن عدد أكبر من البيض والزغاليل في الأزواج الموجودة بالأقفاص، مع كفاءة علف وربحية أفضل في ظروف الدراسة [SRC-008]. وهذا دليل مفيد على أن الإسكان والتحكم يمكن أن يؤثرا في الأداء القابل للقياس، لكنه **لا يكفي لإعلان الأقفاص أفضل عالميًا** عند اختلاف الرفق بالحيوان والمناخ والسلالة ورأس المال والعمالة والسوق.
 
-A simplified biological-operational trajectory can be described as:
+## 3.3 النظم المكثفة ذات الحضانة الصناعية / التربية المبكرة
 
-**Hatch → dependent squab → market bird OR retained young bird → replacement candidate → mature breeder → active breeding pair → continued production → re-pair / removal / sale / cull / retirement / mortality**
+تصف الأبحاث المكثفة الحديثة نظمًا يمكن فيها حضانة البيض صناعيًا أو فصل الزغاليل مبكرًا وتغذيتها يدويًا أو صناعيًا لتقصير الفترة التناسلية للأبوين [SRC-002, SRC-004]. كما تنقل بعض الأنظمة الصناعية الزغاليل بين أزواج بديلة بحيث يرعى زوج واحد عددًا أكبر من العدد الطبيعي [SRC-004, SRC-013].
 
-Real birds may leave or re-enter productive paths differently. This trajectory is a domain aid only and must not be copied directly into a software state machine.
+### الفوائد في ظروف البحث
 
----
+- يمكن زيادة إنتاج البيض ومعدل الناتج التناسلي لأزواج التربية.
+- يمكن فصل جزء من زمن الرعاية الأبوية عن دورة الوضع التالية.
 
-# 5. Breeding Pair as an Operational Unit
+### التكاليف والمخاطر
 
-## 5.1 Is the pair a basic production unit?
+- تتطلب قدرًا أكبر بكثير من التحكم الإداري والعمالة والتقنية.
+- يمكن أن يقلل الفصل المبكر النمو ويرفع النفوق إذا لم تتم التغذية والتدفئة جيدًا. ففي تجربة مصرية تجارية عام 2025، أدى الفصل عند الفقس إلى نفوق أعلى بكثير ووزن أقل عند 28 يومًا مقارنة بالتربية بواسطة الأبوين، رغم ارتفاع الناتج التناسلي للأبوين [SRC-002].
+- تضيف التغذية الصناعية مخاطر جديدة في التحكم في العملية والنظافة.
 
-The evidence strongly supports the **breeding pair** as a central operational unit in natural meat-pigeon production.
-
-Reasons include:
-
-- Pigeons form male–female pair bonds and both sexes participate in incubation [SRC-004, SRC-005].
-- Both parents produce crop milk and feed squabs [SRC-003].
-- Research routinely reports production as eggs, hatchability, feed, or squabs **per pair** [SRC-002, SRC-014].
-- Pair-controlled housing allows direct attribution of output to a specific sire–dam combination [SRC-002].
-
-This does **not** prove that every commercial metric or every bird must always be managed only at pair level. Individual identity, flock/location, nest, and squab group also matter.
-
-## 5.2 Pair bond and stability
-
-A 2023 review describes pigeons as non-seasonal breeders that pair as one female and one male with long-term pair bonds, alongside biparental incubation and rearing [SRC-004]. Operationally, this creates persistence: the same male–female combination may produce repeated clutches and can accumulate a meaningful production history.
-
-## 5.3 Biological Pair vs Operational Breeding Pair
-
-**Biological Pair:** the actual bonded male and female participating in courtship, mating, incubation, and/or parental care.
-
-**Operational Breeding Pair:** the male and female that the farm currently treats as a managed productive unit for housing, observation, records, and output evaluation.
-
-In a well-controlled pair-cage system these may normally coincide. In communal systems, re-pairing, uncertain identification, foster rearing, or management intervention may create situations where biological and operational responsibility are not perfectly identical.
-
-## 5.4 Loss of one or both parents
-
-An Egyptian experiment specifically examined parent loss. Squabs can be reared by one remaining parent, foster pigeons, or hand rearing, but performance/welfare differs by method. Both-parent rearing is a meaningful baseline because both parents normally provision young [SRC-005].
-
-Operational implication: parent loss is not simply a “bird missing” event; it can immediately affect dependent squabs and may require a fostering/hand-rearing decision.
-
-## 5.5 Re-pairing and weak pairs
-
-Scientific sources reviewed here establish pair persistence and pair-level production measurement, but they do **not** provide a single validated commercial rule for:
-
-- how long to wait before re-pairing after mate loss,
-- the exact production threshold for breaking a pair,
-- the number of failed clutches that defines a poor pair,
-- whether to replace the male, female, or both when performance is weak.
-
-These require producer/expert validation and later production analysis. They have therefore been added to the Open Questions register.
+**استنتاج Phase 1A:** لا ينبغي استخدام وصف "مكثف" كأنه اسم لنظام إسكان واحد. فقد تشير الكثافة إلى التحكم في الأزواج أو الإضاءة الصناعية أو الحضانة الصناعية أو التغذية المبكرة أو التربية البديلة أو تركيب العليقة أو خليط من هذه العناصر.
 
 ---
 
-# 6. Nest Management
+# 4. تركيب قطيع المزرعة
 
-## 6.1 Nest availability is production infrastructure
+تدعم الأبحاث وجود قطيع غير متجانس تشغيليًا، وليس مجموعة واحدة بلا تمييز.
 
-Nest management is not decorative. It directly supports courtship, egg laying, incubation, and squab rearing.
+## 4.1 الفئات الأساسية المرصودة أو المستنتجة من العمليات الحقيقية
 
-Sources describing natural/intensive production repeatedly note the use of **two nests per breeding pair** [SRC-001, SRC-005]. The recent Egyptian commercial-farm experiment used two nests in each individual breeding cage [SRC-002].
+### طيور التربية البالغة
 
-## 6.2 Double Nest System
+ذكور وإناث ناضجة جنسيًا وتستخدم للتكاثر. وفي النظم المتحكم فيها تُنظم عادة في أزواج تربية [SRC-002, SRC-005].
 
-FAO describes intensive females laying the next two eggs while squabs remain in the previous nest, requiring a two-nest structure [SRC-001]. Egyptian research also describes pigeons using two nests alternately for incubation and rearing [SRC-005].
+### أزواج التربية النشطة
 
-### Operational reason
+أزواج ذكر وأنثى تعمل حاليًا كوحدات تناسلية. ويمكن ملاحظة أداء الزوج من خلال إنتاج البيض والخصوبة ونسبة الفقس وعدد الزغاليل ونمو النسل [SRC-002, SRC-014].
 
-One nest can contain growing squabs while the second is prepared/used for the next clutch. This reduces direct conflict between the developmental needs of older squabs and new eggs.
+### طيور الإحلال / ما قبل التربية
 
-## 6.3 Shared or communal nesting challenges
+طيور صغيرة يُحتفظ بها لتصبح طيور تربية مستقبلية. ويظهر النضج الجنسي عادة في نطاق تقريبي 5–7 أشهر حسب المصدر والسلالة؛ وتشمل الأدبيات التي روجعت نحو 156 يومًا في دراسة لإحدى سلالات اللحم وحوالي سبعة أشهر في مراجعات ودراسات أخرى [SRC-003, SRC-008]. ولا يجوز تعميم معيار واحد لدخول الإنتاج.
 
-In a communal loft/dovecote, nest identification and ownership are more operationally complex than in a dedicated pair cage. Potential challenges include:
+### الزغاليل
 
-- competition for nest sites,
-- uncertain attribution of eggs or squabs if nests/pairs are not controlled,
-- disturbances and fights,
-- difficulty keeping production records at pair level.
+الطيور الصغيرة المعتمدة من الفقس خلال مرحلة التربية/الفطام/التسويق. وتحتاج إلى دعم تغذية بواسطة الأبوين أو بصورة صناعية [SRC-002, SRC-003].
 
-The prevalence and exact handling of these issues in Egyptian commercial wooden-loft and dovecote farms requires field validation.
+### الطيور النامية / الصغيرة المحتفظ بها بعد مرحلة الزغلول
 
----
+طيور يُحتفظ بها بعد عمر سوق اللحم المعتاد للإحلال أو التربية أو البحث أو أغراض أخرى. وتختلف إدارتها عن زغاليل السوق لأنها تتحرك نحو النضج الجنسي بدل البيع الفوري.
 
-# 7. Overlapping Breeding / Production Cycles
+### الطيور المريضة / المعزولة / في الحجر
 
-This is one of the most important findings of Phase 1A.
+تجعل الأدبيات الصحية وممارسات الإنتاج الحيواني الأساسية العزل والفصل حسب الحالة الصحية أمرًا ذا صلة، لكن تفاصيل مسارات الصحة والحجر تخص Phase 4. وتسجل Phase 1A فقط أن الحالة الصحية قد تخرج الطائر من المشاركة الإنتاجية الطبيعية.
 
-## 7.1 Can a pair rear squabs and begin another clutch?
+### الطيور المستبعدة / المباعة / المتقاعدة / النافقة
 
-**Yes.** Reliable sources describe the next egg laying beginning while squabs from the previous clutch are still being reared [SRC-001, SRC-008].
+هذه نتائج مختلفة ولا يجب دمجها تشغيليًا. فقد يخرج الطائر من الإنتاج بسبب الاستبعاد الاقتصادي، أو البيع كطائر حي، أو العمر/التقاعد، أو الإخراج الصحي، أو النفوق. وتحتاج المعايير التفصيلية إلى تحقق ميداني.
 
-The 1983 housing study reported an average interval of about 20.3 days from hatching of a brood to laying the next batch of eggs under its conditions [SRC-008]. Because squabs are commonly still dependent beyond 20 days, overlap is biologically and operationally plausible and documented.
+## 4.2 حركة الحياة — تصور مفاهيمي وليس حالات برمجية
 
-## 7.2 Role of the second nest
+يمكن وصف مسار بيولوجي/تشغيلي مبسط كالآتي:
 
-The second nest allows a pair to separate:
+**فقس → زغلول معتمد → طائر سوق أو طائر صغير محتفظ به → مرشح إحلال → طائر تربية ناضج → زوج تربية نشط → استمرار الإنتاج → إعادة تكوين زوج / إخراج / بيع / استبعاد / تقاعد / نفوق**
 
-- an older brood being fed/reared, and
-- the next clutch being laid/incubated.
-
-This is the practical basis of the double-nest concept [SRC-001, SRC-005].
-
-## 7.3 What does this mean for “Production Cycle”?
-
-The research shows that a simplistic definition such as:
-
-> cycle starts with egg laying and ends only when the squab leaves, then the next cycle starts
-
-may be wrong for many real systems.
-
-A pair can have reproductive responsibilities associated with more than one clutch at the same time. Phase 1A therefore leaves **OQ-003** open: the exact management definition of “production cycle” must be resolved in Phase 1B/Phase 3 based on events and measurement goals, not assumed now.
+قد تخرج الطيور من هذه المسارات أو تعود إليها بطرق مختلفة. وهذا المسار أداة لفهم المجال فقط، ولا يجوز نسخه مباشرة إلى آلة حالات برمجية.
 
 ---
 
-# 8. Daily Farm Operations
+# 5. زوج التربية كوحدة تشغيلية
 
-Published pigeon studies often describe husbandry procedures rather than a standardized commercial SOP. The following workflow is therefore separated into well-supported recurring husbandry tasks and field-validation items.
+## 5.1 هل الزوج وحدة إنتاج أساسية؟
 
-## 8.1 Daily operations — strong support
+تدعم الأدلة بقوة **زوج التربية (Breeding Pair)** كوحدة تشغيلية مركزية في إنتاج حمام اللحم الطبيعي.
 
-### Feed provision and intake observation
+وتشمل الأسباب:
 
-Breeding pigeons must be fed consistently because parental feed intake supports both adult maintenance and crop-milk/regurgitated feeding of squabs [SRC-003, SRC-006].
+- يكوّن الحمام روابط ذكر–أنثى ويشارك كلا الجنسين في الحضانة [SRC-004, SRC-005].
+- ينتج الأبوان لبن الحوصلة ويطعمان الزغاليل [SRC-003].
+- تعرض الأبحاث الإنتاج بصورة روتينية مثل البيض أو الفقس أو العلف أو الزغاليل **لكل زوج** [SRC-002, SRC-014].
+- يسمح الإسكان المتحكم في الأزواج بربط الناتج مباشرة بتركيبة أب وأم محددة [SRC-002].
 
-### Water provision
+ولا يثبت ذلك أن كل مقياس تجاري أو كل طائر يجب أن يدار دائمًا على مستوى الزوج وحده. فالهوية الفردية والقطيع/الموقع والعش ومجموعة الزغاليل لها أهمية أيضًا.
 
-Clean water provision is a routine husbandry requirement and is explicitly described in Egyptian experimental housing [SRC-005].
+## 5.2 رابطة الزوج واستقراره
 
-### Nest / egg / squab observation
+تصف مراجعة عام 2023 الحمام بأنه غير موسمي التكاثر، ويكوّن زوجًا من أنثى وذكر مع رابطة طويلة الأجل، إلى جانب حضانة ورعاية مشتركتين [SRC-004]. ويخلق ذلك تشغيليًا قدرًا من الاستمرارية: يمكن لنفس الذكر والأنثى إنتاج بطون متكررة وتكوين تاريخ إنتاجي ذي معنى.
 
-Because eggs, incubation, hatch, dependent squabs, and overlapping laying can coexist, nest inspection is a core operational observation point.
+## 5.3 الزوج البيولوجي مقابل زوج التربية التشغيلي
 
-### Health and mortality observation
+**الزوج البيولوجي (Biological Pair):** الذكر والأنثى المرتبطان فعليًا واللذان يشاركان في المغازلة والتزاوج والحضانة و/أو الرعاية الأبوية.
 
-Daily squab survival was recorded in intensive research; mortality and health records are also prominent in established pigeon colony record systems [SRC-006, SRC-009].
+**زوج التربية التشغيلي (Operational Breeding Pair):** الذكر والأنثى اللذان تعتبرهما المزرعة حاليًا وحدة إنتاجية مُدارة لأغراض الإسكان والملاحظة والسجلات وتقييم الناتج.
 
-### Cleaning / hygiene
+في نظام أقفاص أزواج متحكم فيه جيدًا يتطابق المفهومان عادة. أما في النظم الجماعية فقد تؤدي إعادة تكوين الأزواج أو عدم وضوح التعريف أو التربية البديلة أو التدخل الإداري إلى عدم التطابق الكامل بين المسؤولية البيولوجية والتشغيلية.
 
-Cleaning cages, drinkers, nests, and housing is repeatedly described or measured in Egyptian work [SRC-005, SRC-007]. Detailed sanitation protocols are reserved for Phase 4.
+## 5.4 فقد أحد الأبوين أو كليهما
 
-## 8.2 Periodic operations
+درست تجربة مصرية فقد الأبوين تحديدًا. ويمكن تربية الزغاليل بواسطة أحد الأبوين الباقي، أو حمام بديل، أو تغذية يدوية، لكن الأداء والرفاهية يختلفان حسب الطريقة. وتمثل التربية بواسطة الأبوين خط أساس مهمًا لأن كلا الأبوين يطعمان الصغار طبيعيًا [SRC-005].
 
-Examples supported by the domain include:
+الأثر التشغيلي: فقد أحد الأبوين ليس مجرد حدث "طائر مفقود"؛ إذ يمكن أن يؤثر فورًا في الزغاليل المعتمدة ويستدعي قرارًا بالتحضين البديل أو التغذية اليدوية.
 
-- banding/identifying offspring,
-- weighing squabs or selected breeders,
-- reviewing breeding performance,
-- replacing nest material,
-- parasite/health monitoring,
-- selecting replacements,
-- evaluating poor-performing pairs,
-- periodic selling/marketing.
+## 5.5 إعادة تكوين الزوج والأزواج ضعيفة الأداء
 
-Frequency is farm-specific and must be validated.
+تثبت المصادر العلمية التي روجعت استمرارية الزوج وإمكان قياس الإنتاج على مستواه، لكنها **لا تقدم قاعدة تجارية واحدة معتمدة** تحدد:
 
-## 8.3 Event-driven operations
+- مدة الانتظار قبل إعادة تكوين الزوج بعد فقد الشريك،
+- الحد الإنتاجي الدقيق الذي يبرر فك الزوج،
+- عدد البطون الفاشلة الذي يعرف الزوج ضعيف الأداء،
+- هل يتم استبدال الذكر أم الأنثى أم كليهما عند ضعف الأداء.
 
-Examples include:
-
-- first egg laid,
-- second egg laid,
-- fertility/egg check where practiced,
-- hatch,
-- squab death,
-- parent death,
-- fostering/hand-rearing decision,
-- new clutch while older squabs remain,
-- pair formation or pair break,
-- disease signs,
-- sale/market selection,
-- culling/removal.
-
-These are **domain events in the ordinary operational sense only**; they are not yet software Domain Events.
+تحتاج هذه النقاط إلى تحقق من المربين/الخبراء وتحليل إنتاجي لاحق. ولذلك تم تسجيلها ضمن سجل الأسئلة المفتوحة.
 
 ---
 
-# 9. Record Keeping in Real Farms
+# 6. إدارة الأعشاش
 
-## 9.1 Evidence of practical record categories
+## 6.1 إتاحة العش بنية تحتية للإنتاج
 
-A published pigeon breeding-colony record system maintained offspring, location, production, health, and mortality information. When offspring were banded, recorded fields included permanent leg-band number, hatch date, strain, pen, and parents’ band numbers. Individual pen records tracked occupants; health and death records were also maintained [SRC-009].
+إدارة العش ليست عنصرًا شكليًا؛ فهي تدعم مباشرة المغازلة ووضع البيض والحضانة وتربية الزغاليل.
 
-Modern production studies additionally measure:
+تذكر المصادر التي تصف الإنتاج الطبيعي والمكثف بصورة متكررة استخدام **عشين لكل زوج تربية** [SRC-001, SRC-005]. كما استخدمت التجربة الحديثة في مزرعة تجارية مصرية عشين داخل كل قفص تربية فردي [SRC-002].
 
-- egg cycle / laying interval,
-- eggs laid per pair,
-- egg weight,
-- fertility,
-- hatchability,
-- squabs produced per pair,
-- squab weight at multiple ages,
-- mortality/survival,
-- feed intake,
-- economic feed cost/return [SRC-002, SRC-006, SRC-014].
+## 6.2 نظام العشين (Double Nest System)
 
-## 9.2 Common Practice vs Recommended Management Practice
+تصف FAO الإناث في النظم المكثفة وهي تضع البيضتين التاليتين بينما ما تزال الزغاليل في العش السابق، وهو ما يتطلب بنية توفر عشين [SRC-001]. كما تصف الأبحاث المصرية استخدام الحمام لعشين بالتبادل للحضانة والتربية [SRC-005].
 
-### Common Practice
+### السبب التشغيلي
 
-Actual small and medium farms may use partial records, memory, nest/cage labels, notebooks, or no detailed individual records. The Egyptian socio-economic survey shows significant variation in management intensity and infrastructure among production systems, but Phase 1A did not find a strong source quantifying digital vs paper record adoption in Egyptian commercial pigeon farms [SRC-007].
+يمكن أن يحتوي أحد العشين على الزغاليل النامية بينما يُجهز العش الثاني أو يُستخدم للبطن التالية. ويقلل ذلك من التعارض المباشر بين احتياجات الزغاليل الأكبر سنًا واحتياجات البيض الجديد.
 
-### Recommended Management Practice — research-derived
+## 6.3 تحديات التعشيش المشترك أو الجماعي
 
-For meaningful production evaluation, records should be capable of relating at least:
+في اللوفت أو برج الحمام الجماعي تصبح هوية العش وملكيته أكثر تعقيدًا تشغيليًا من قفص الزوج المخصص. وتشمل التحديات المحتملة:
 
-- identity/location of breeding stock,
-- pair relationship,
-- laying/hatch outcome,
-- squab output/survival,
-- health/mortality,
-- feed/economic information where profitability is assessed.
+- المنافسة على مواقع التعشيش،
+- عدم وضوح ربط البيض أو الزغاليل بالزوج إذا لم يتم التحكم في الأزواج والأعشاش،
+- الإزعاج والمشاجرات،
+- صعوبة حفظ سجلات الإنتاج على مستوى الزوج.
 
-This recommendation follows what researchers and controlled colonies must measure to evaluate performance; it is not evidence that every commercial farm currently records all of it.
+ويحتاج مدى انتشار هذه المشكلات وطريقة التعامل معها في المساكن الخشبية والأبراج التجارية المصرية إلى تحقق ميداني.
 
 ---
 
-# 10. Identification Methods
+# 7. تداخل دورات التكاثر / الإنتاج
 
-## 10.1 Individual identification
+هذه إحدى أهم نتائج Phase 1A.
 
-**Leg/ring bands** are well-established for permanent individual identification. A research colony used permanent leg-band numbers linked to hatch date, strain, pen and parent identities [SRC-009]. Egyptian experimental work also used leg bands / colored identifiers for distinguishing birds [SRC-005].
+## 7.1 هل يمكن للزوج تربية زغاليل وبدء بطن أخرى؟
 
-### Permanent identification
+**نعم.** تصف مصادر موثوقة بدء وضع البيض التالي بينما لا تزال زغاليل البطن السابقة تحت الرعاية [SRC-001, SRC-008].
 
-- unique numbered leg ring/band,
-- potentially other durable identifiers if used by the farm.
+وقد أبلغت دراسة الإسكان عام 1983 عن متوسط يقارب 20.3 يومًا من فقس البطن حتى وضع دفعة البيض التالية في ظروف الدراسة [SRC-008]. وبما أن الزغاليل تظل عادة معتمدة بعد 20 يومًا، فإن التداخل ممكن بيولوجيًا وتشغيليًا وموثق بالفعل.
 
-### Temporary/visual identification
+## 7.2 دور العش الثاني
 
-- colored bands or markers,
-- temporary location association.
+يسمح العش الثاني للزوج بالفصل بين:
 
-## 10.2 Pair identification
+- بطن أقدم من الزغاليل يجري إطعامها وتربيتها، و
+- بطن جديدة يجري وضعها أو حضانتها.
 
-Pair identity can be represented operationally by the identities of the male and female and, in controlled farms, by a pair/cage number. Research frequently organizes records and output per pair [SRC-002].
+وهذا هو الأساس العملي لمفهوم نظام العشين [SRC-001, SRC-005].
 
-## 10.3 Location identification
+## 7.3 ماذا يعني ذلك لمصطلح "دورة الإنتاج"؟
 
-Numbered cages, pens, loft sections, and nest numbers can act as location identifiers. The recent Egyptian commercial study explicitly used numbered metal cages [SRC-002].
+يبين البحث أن تعريفًا مبسطًا مثل:
 
-## 10.4 Identification risks
+> تبدأ الدورة بوضع البيض ولا تنتهي إلا بخروج الزغلول، ثم تبدأ الدورة التالية
 
-- A location number is not necessarily a permanent bird identity.
-- A pair number is not necessarily an individual identity.
-- Colored markers may not be globally unique or permanent.
-- Communal systems may create more uncertainty about parentage if individual identification and nest assignment are weak.
-- Lost or unreadable bands can break historical continuity unless a farm has a replacement procedure.
+قد يكون غير صحيح في كثير من النظم الفعلية.
 
-The identification standard actually used in target Egyptian farms remains a field-validation question.
+يمكن أن يتحمل الزوج مسؤوليات تناسلية تخص أكثر من بطن في الوقت نفسه. ولذلك أبقت Phase 1A السؤال **OQ-003** مفتوحًا: يجب حسم التعريف الإداري الدقيق لـ"دورة الإنتاج" في Phase 1B/Phase 3 وفق الأحداث وأهداف القياس، لا بافتراض مسبق.
 
 ---
 
-# 11. Replacement, Culling, Selling, Retirement and Mortality
+# 8. العمليات اليومية في المزرعة
 
-These concepts must remain separate.
+غالبًا ما تصف الدراسات المنشورة إجراءات رعاية أكثر من كونها تقدم SOP تجاريًا موحدًا. ولذلك يقسم المسار التالي بين مهام رعاية متكررة مدعومة جيدًا ونقاط تتطلب تحققًا ميدانيًا.
 
-## 11.1 Replacement
+## 8.1 العمليات اليومية — دعم قوي
 
-Replacement birds are retained to enter the breeding population when mature and suitable. Scientific sources report sexual maturity in the broad region of approximately 5–7 months depending on breed/source and management [SRC-003, SRC-008]. Entry should therefore depend on more than calendar age alone; body development, sex, health, pair formation, and farm policy may matter.
+### توفير العلف وملاحظة الاستهلاك
 
-## 11.2 Culling
+يجب تغذية حمام التربية بصورة منتظمة، لأن استهلاك الأبوين للعلف يدعم صيانة أجسامهما وإنتاج لبن الحوصلة/الغذاء المرجع للزغاليل [SRC-003, SRC-006].
 
-For this study, **culling** means intentional removal from the breeding/production population because the bird or pair no longer meets the farm’s health, welfare, genetic, or productivity criteria. It does not automatically mean death; the eventual disposition may differ.
+### توفير المياه
 
-Potential reasons supported as production concerns include:
+يمثل توفير المياه النظيفة متطلب رعاية روتينيًا، وقد وُصف صراحة في نظم الإسكان التجريبية المصرية [SRC-005].
 
-- poor egg production,
-- repeated infertility,
-- low hatchability,
-- poor squab survival/growth,
-- poor parental care,
-- chronic health or physical problems,
-- age-related management strategy.
+### ملاحظة الأعشاش / البيض / الزغاليل
 
-The sources confirm these traits are economically measurable, but do **not** establish one universal culling threshold [SRC-002, SRC-006, SRC-014].
+نظرًا لإمكان تزامن البيض والحضانة والفقس والزغاليل المعتمدة ووضع البيض المتداخل، يمثل فحص العش نقطة ملاحظة تشغيلية مركزية.
 
-## 11.3 Selling
+### ملاحظة الصحة والنفوق
 
-Selling is a commercial disposition. A healthy bird may be sold as breeding stock or meat without being a “cull” in the poor-performance sense.
+تم تسجيل بقاء الزغاليل يوميًا في أبحاث مكثفة، كما تحتل سجلات النفوق والصحة أهمية في نظم حفظ السجلات المعروفة لمستعمرات الحمام [SRC-006, SRC-009].
 
-## 11.4 Retirement
+### التنظيف / النظافة
 
-Retirement means intentional withdrawal from active breeding while the bird may remain alive. Whether target farms actually use a retirement category instead of sale/cull requires validation.
+يتكرر وصف أو قياس تنظيف الأقفاص والمساقي والأعشاش والمساكن في أبحاث مصرية [SRC-005, SRC-007]. أما بروتوكولات التطهير التفصيلية فمؤجلة إلى Phase 4.
 
-## 11.5 Mortality
+## 8.2 العمليات الدورية
 
-Mortality is an unplanned biological outcome and must not be merged conceptually with culling, sale, or retirement. It can also create immediate operational consequences for a bonded mate and dependent squabs [SRC-005].
+تشمل أمثلة مدعومة من المجال:
+
+- تركيب حلقات/تعريف النسل،
+- وزن الزغاليل أو بعض طيور التربية،
+- مراجعة أداء الأزواج،
+- استبدال مواد العش،
+- مراقبة الطفيليات/الصحة،
+- اختيار طيور الإحلال،
+- تقييم الأزواج ضعيفة الأداء،
+- البيع/التسويق الدوري.
+
+ويختلف التكرار حسب المزرعة ويحتاج إلى تحقق.
+
+## 8.3 العمليات المدفوعة بحدث
+
+تشمل الأمثلة:
+
+- وضع البيضة الأولى،
+- وضع البيضة الثانية،
+- فحص الخصوبة/البيض حيث يُمارس،
+- الفقس،
+- نفوق زغلول،
+- نفوق أحد الأبوين،
+- قرار التحضين البديل/التغذية اليدوية،
+- بدء بطن جديدة مع بقاء زغاليل أكبر،
+- تكوين الزوج أو فكه،
+- ظهور علامات مرض،
+- اختيار طائر للبيع/التسويق،
+- الاستبعاد/الإخراج.
+
+هذه **أحداث في المجال بمعناها التشغيلي العادي فقط**، وليست أحداث نطاق برمجية (Software Domain Events) حتى الآن.
 
 ---
 
-# 12. Seasonality and Environment
+# 9. حفظ السجلات في المزارع الفعلية
 
-## 12.1 Are pigeons seasonal breeders?
+## 9.1 دليل على فئات سجلات عملية
 
-A major review describes pigeons as **non-seasonal breeders** [SRC-004]. Therefore the statement “pigeons naturally stop laying every summer” should **not** be accepted as a universal biological rule.
+احتفظ نظام منشور لسجلات مستعمرة تربية حمام بمعلومات عن النسل والموقع والإنتاج والصحة والنفوق. وعند تركيب حلقات للنسل كانت الحقول المسجلة تشمل رقم الحلقة الدائم وتاريخ الفقس والسلالة والحظيرة وأرقام حلقات الأبوين. كما تتبعت سجلات الحظائر الطيور الموجودة فيها، وحُفظت سجلات للصحة والنفوق [SRC-009].
 
-## 12.2 Heat stress and Egyptian summer
+وتقيس دراسات الإنتاج الحديثة كذلك:
 
-An Egyptian study conducted under summer heat-stress conditions found reduced egg production, egg weight, fertility, and hatchability, along with behavioral and physiological effects [SRC-010]. This supports a more precise interpretation:
+- دورة البيض / فاصل الوضع،
+- عدد البيض الموضوع لكل زوج،
+- وزن البيض،
+- الخصوبة،
+- نسبة الفقس،
+- عدد الزغاليل المنتجة لكل زوج،
+- وزن الزغاليل في أعمار متعددة،
+- النفوق/البقاء،
+- استهلاك العلف،
+- تكلفة العلف والعائد الاقتصادي [SRC-002, SRC-006, SRC-014].
 
-> Severe summer conditions can depress reproduction, but that is not equivalent to a mandatory species-wide seasonal reproductive shutdown.
+## 9.2 الممارسة الشائعة مقابل الممارسة الإدارية الموصى بها
 
-The magnitude of the decline likely depends on temperature, humidity, ventilation, housing, feeding, water availability, breed, acclimatization, and management.
+### الممارسة الشائعة (Common Practice)
 
-## 12.3 Photoperiod / lighting
+قد تستخدم المزارع الصغيرة والمتوسطة سجلات جزئية أو الذاكرة أو بطاقات الأعشاش/الأقفاص أو دفاتر ورقية أو لا تستخدم سجلات فردية تفصيلية. ويبين المسح الاجتماعي الاقتصادي المصري تباينًا كبيرًا في شدة الإدارة والبنية التحتية بين نظم الإنتاج، لكن Phase 1A لم تجد مصدرًا قويًا يقيس نسبة استخدام السجلات الرقمية مقارنة بالورقية في مزارع الحمام التجارية المصرية [SRC-007].
 
-Controlled White King research demonstrates that photoperiod program can materially affect reproductive performance and fertility [SRC-011]. A short rearing photoperiod followed by longer laying-period stimulation improved reproductive measures under the study conditions.
+### الممارسة الإدارية الموصى بها — مشتقة من البحث
 
-This is strong evidence that light management can influence production, but **the exact Chinese White King lighting program should not be copied directly into an Egyptian farm standard without validation**.
+حتى يكون تقييم الإنتاج ذا معنى، ينبغي أن تسمح السجلات بربط الحد الأدنى التالي:
 
-## 12.4 Ventilation, humidity and temperature
+- هوية/موقع طيور التربية،
+- علاقة الزوج،
+- نتيجة الوضع/الفقس،
+- عدد الزغاليل وبقاؤها،
+- الصحة/النفوق،
+- معلومات العلف/الاقتصاد حيث يتم قياس الربحية.
 
-Environmental control affects heat load, hygiene, air quality, feed/water behavior, and reproductive performance. Phase 1A confirms environment as a production driver but does not define engineering set points. Those belong to later husbandry/technical research and must account for local climate and housing style.
+وتستند هذه التوصية إلى ما يحتاج الباحثون والمستعمرات المتحكم فيها إلى قياسه لتقييم الأداء؛ ولا تمثل دليلًا على أن كل مزرعة تجارية تسجل هذه المعلومات حاليًا.
 
-## 12.5 Summer belief — evidence assessment
+---
 
-| Claim | Assessment |
+# 10. طرق التعريف (Identification Methods)
+
+## 10.1 التعريف الفردي
+
+تمثل **حلقات الأرجل (Leg/Ring Bands)** وسيلة راسخة للتعريف الفردي الدائم. فقد استخدمت مستعمرة بحثية أرقام حلقات دائمة مرتبطة بتاريخ الفقس والسلالة والحظيرة وهوية الأبوين [SRC-009]. كما استخدمت أعمال تجريبية مصرية حلقات أو علامات ملونة للتمييز بين الطيور [SRC-005].
+
+### التعريف الدائم
+
+- حلقة رجل مرقمة وفريدة،
+- وربما وسائل تعريف دائمة أخرى إذا استخدمتها المزرعة.
+
+### التعريف المؤقت/البصري
+
+- حلقات أو علامات ملونة،
+- ارتباط مؤقت بالموقع.
+
+## 10.2 تعريف الزوج
+
+يمكن تمثيل هوية الزوج تشغيليًا من خلال هوية الذكر والأنثى، وفي المزارع المتحكم فيها قد يضاف رقم الزوج/القفص. وتنظم الأبحاث السجلات والناتج كثيرًا على مستوى الزوج [SRC-002].
+
+## 10.3 تعريف الموقع
+
+يمكن أن تعمل الأقفاص والحظائر وأقسام اللوفت وأرقام الأعشاش كمعرفات للموقع. وقد استخدمت الدراسة التجارية المصرية الحديثة أقفاصًا معدنية مرقمة صراحة [SRC-002].
+
+## 10.4 مخاطر التعريف
+
+- رقم الموقع ليس بالضرورة هوية دائمة للطائر.
+- رقم الزوج ليس بالضرورة هوية فردية.
+- العلامات الملونة قد لا تكون فريدة أو دائمة.
+- قد تخلق النظم الجماعية عدم يقين أكبر في النسب عند ضعف التعريف الفردي وتخصيص الأعشاش.
+- فقد الحلقة أو عدم القدرة على قراءتها قد يقطع استمرارية التاريخ ما لم تكن لدى المزرعة إجراءات للاستبدال.
+
+ويبقى معيار التعريف المستخدم فعليًا في المزارع المصرية المستهدفة سؤالًا للتحقق الميداني.
+
+---
+
+# 11. الإحلال والاستبعاد والبيع والتقاعد والنفوق
+
+يجب إبقاء هذه المفاهيم منفصلة.
+
+## 11.1 الإحلال (Replacement)
+
+يُحتفظ بطيور الإحلال لدخول قطيع التربية عندما تصبح ناضجة ومناسبة. وتشير المصادر العلمية إلى النضج الجنسي في نطاق عام يقارب 5–7 أشهر حسب السلالة والمصدر والإدارة [SRC-003, SRC-008]. ولذلك يجب أن يعتمد دخول الإنتاج على أكثر من العمر الزمني وحده؛ فقد تهم درجة نمو الجسم والجنس والصحة وتكوين الزوج وسياسة المزرعة.
+
+## 11.2 الاستبعاد (Culling)
+
+تعني **الاستبعاد** في هذه الدراسة الإخراج المتعمد من قطيع التربية/الإنتاج لأن الطائر أو الزوج لم يعد يحقق معايير المزرعة الصحية أو الرفاهية أو الوراثية أو الإنتاجية. ولا يعني ذلك تلقائيًا النفوق؛ فقد تختلف الوجهة النهائية للطائر.
+
+تشمل أسبابًا محتملة مدعومة باعتبارها مخاوف إنتاجية:
+
+- ضعف إنتاج البيض،
+- تكرار عدم الخصوبة،
+- انخفاض نسبة الفقس،
+- ضعف بقاء/نمو الزغاليل،
+- ضعف الرعاية الأبوية،
+- مشكلات صحية أو جسمية مزمنة،
+- استراتيجية إدارة مرتبطة بالعمر.
+
+تؤكد المصادر إمكانية قياس هذه الصفات اقتصاديًا، لكنها **لا تثبت حد استبعاد عالميًا واحدًا** [SRC-002, SRC-006, SRC-014].
+
+## 11.3 البيع
+
+البيع تصرف تجاري. فقد يباع طائر سليم كطائر تربية أو للحوم دون أن يكون "مستبعدًا" بمعنى ضعف الأداء.
+
+## 11.4 التقاعد
+
+يعني التقاعد إخراجًا متعمدًا من التربية النشطة مع بقاء الطائر حيًا. ويحتاج استخدام المزارع المستهدفة لفئة "التقاعد" بدل البيع/الاستبعاد إلى تحقق.
+
+## 11.5 النفوق
+
+النفوق نتيجة بيولوجية غير مخططة ولا يجب دمجه مفاهيميًا مع الاستبعاد أو البيع أو التقاعد. كما يمكن أن يخلق آثارًا تشغيلية فورية على الشريك المرتبط والزغاليل المعتمدة [SRC-005].
+
+---
+
+# 12. الموسمية والبيئة
+
+## 12.1 هل الحمام موسمي التكاثر؟
+
+تصف مراجعة رئيسية الحمام بأنه **غير موسمي التكاثر (Non-seasonal Breeder)** [SRC-004]. ولذلك لا ينبغي قبول عبارة "الحمام يتوقف طبيعيًا عن وضع البيض كل صيف" كقاعدة بيولوجية عالمية.
+
+## 12.2 الإجهاد الحراري والصيف المصري
+
+وجدت دراسة مصرية أجريت تحت ظروف إجهاد حراري صيفي انخفاضًا في إنتاج البيض ووزن البيض والخصوبة ونسبة الفقس إلى جانب تأثيرات سلوكية وفسيولوجية [SRC-010]. ويدعم ذلك تفسيرًا أدق:
+
+> يمكن لظروف الصيف القاسية أن تخفض التكاثر، لكن ذلك لا يساوي توقفًا تناسليًا موسميًا إلزاميًا على مستوى النوع كله.
+
+ويُرجح أن يعتمد حجم الانخفاض على درجة الحرارة والرطوبة والتهوية والمسكن والتغذية وتوفر المياه والسلالة والتأقلم والإدارة.
+
+## 12.3 الفترة الضوئية / الإضاءة (Photoperiod)
+
+تثبت أبحاث White King المتحكم فيها أن برنامج الفترة الضوئية يمكن أن يؤثر بدرجة ملموسة في الأداء التناسلي والخصوبة [SRC-011]. وقد حسنت فترة إضاءة قصيرة في مرحلة التربية يتبعها تحفيز بإضاءة أطول في مرحلة الوضع بعض المقاييس التناسلية في ظروف الدراسة.
+
+وهذا دليل قوي على إمكانية تأثير إدارة الإضاءة في الإنتاج، لكن **لا ينبغي نسخ برنامج الإضاءة الصيني الخاص بـ White King مباشرة إلى معيار مزرعة مصرية دون تحقق**.
+
+## 12.4 التهوية والرطوبة والحرارة
+
+يؤثر التحكم البيئي في الحمل الحراري والنظافة وجودة الهواء وسلوك الأكل والشرب والأداء التناسلي. تؤكد Phase 1A أن البيئة محرك للإنتاج، لكنها لا تحدد نقاط ضبط هندسية. وتخص هذه التفاصيل أبحاث الرعاية/التصميم الفني اللاحقة، ويجب أن تراعي المناخ المحلي وشكل المسكن.
+
+## 12.5 اعتقاد الصيف — تقييم الأدلة
+
+| الادعاء | التقييم |
 |---|---|
-| “Pigeons are obligate seasonal breeders that naturally stop in summer.” | **Not supported by reviewed evidence.** |
-| “Production may fall sharply in hot summer conditions.” | **Supported.** Egyptian heat-stress evidence shows reproductive decline [SRC-010]. |
-| “Every farm should expect the same summer reduction.” | **Unsupported.** Climate, housing, breed and management differ. |
-| “Environmental management may influence continuity.” | **Supported in principle** by heat-stress and photoperiod research [SRC-010, SRC-011]. |
+| "الحمام كائن موسمي إلزامي ويتوقف طبيعيًا في الصيف." | **غير مدعوم بالأدلة التي تمت مراجعتها.** |
+| "قد ينخفض الإنتاج بشدة في ظروف الصيف الحار." | **مدعوم.** تثبت أدلة الإجهاد الحراري المصرية انخفاض الأداء التناسلي [SRC-010]. |
+| "يجب أن تتوقع كل مزرعة النسبة نفسها من الانخفاض صيفًا." | **غير مدعوم.** تختلف الظروف المناخية والمسكن والسلالة والإدارة. |
+| "قد تؤثر الإدارة البيئية في استمرارية الإنتاج." | **مدعوم من حيث المبدأ** بأبحاث الإجهاد الحراري والفترة الضوئية [SRC-010, SRC-011]. |
 
 ---
 
-# 13. Commercial Performance Benchmarks
+# 13. القيم المرجعية للأداء التجاري
 
-Performance values vary significantly by breed, housing, feeding, parent load, early-weaning practice, climate and measurement definition. The table below is a **research benchmark map**, not a target KPI specification.
+تختلف قيم الأداء بدرجة كبيرة حسب السلالة والإسكان والتغذية وحمل الرعاية الأبوية وممارسة الفطام المبكر والمناخ وتعريف القياس. والجدول التالي **خريطة قيم بحثية مرجعية** وليس مواصفة KPIs مستهدفة.
 
-| Measure | Evidence / observed range | Conditions / interpretation | Confidence |
+| المقياس | الدليل / النطاق المرصود | الظروف / التفسير | مستوى الثقة |
 |---|---|---|---|
-| Clutch size | Commonly ~2 eggs | Repeated across FAO/reviews and production studies; exceptions/management manipulations exist [SRC-001, SRC-004] | High |
-| Incubation | ~18–20 days | FAO and multiple studies/reviews [SRC-001, SRC-005, SRC-008] | High |
-| Natural weaning/market window | ~21–28 days commonly; some reports 25–32 days to leave nest | Breed/market/management dependent [SRC-001, SRC-002, SRC-005] | High for broad range; not a universal sale rule |
-| Sexual maturity | Approx. 5–7 months in reviewed sources | Breed and management dependent [SRC-003, SRC-008] | Moderate–High |
-| Squabs per pair per year | About 12 quoted for natural weaning in recent Egyptian paper; FAO example implies similar order under repeated broods | Strongly management dependent; early weaning can increase output [SRC-001, SRC-002] | Moderate |
-| Egg/reproductive cycle | ~51–53 d in some local systems; ~37–39 d in some breeds/studies; ~10–12 d reported experimentally after separation at hatch | Definition and management differ substantially [SRC-002, SRC-012] | High evidence of variability; low confidence in any single universal value |
-| 28-day body weight | ~458–465 g for parent/7-day weaning White Mirthys in one Egyptian commercial study; literature cited there describes 450–700 g depending on pigeons | Breed and feeding system highly influential [SRC-002] | Moderate for study conditions |
-| Fertility / hatchability | Often reported as percentages per eggs laid/fertile eggs; values vary by study, breed, diet, environment | Must preserve numerator/denominator definitions [SRC-006, SRC-010, SRC-014] | High that they are core measures; no universal target |
-| Squab mortality/survival | Management-sensitive; hatch-day artificial separation caused much higher mortality in one Egyptian study | Should be segmented by age and rearing method [SRC-002] | High for management sensitivity |
+| حجم البطن | غالبًا نحو بيضتين | يتكرر في FAO والمراجعات ودراسات الإنتاج، مع وجود استثناءات أو تدخلات إدارية [SRC-001, SRC-004] | مرتفع |
+| الحضانة | نحو 18–20 يومًا | FAO وعدة دراسات ومراجعات [SRC-001, SRC-005, SRC-008] | مرتفع |
+| نافذة الفطام/التسويق الطبيعي | غالبًا نحو 21–28 يومًا؛ وبعض التقارير 25–32 يومًا لمغادرة العش | تعتمد على السلالة والسوق والإدارة [SRC-001, SRC-002, SRC-005] | مرتفع للنطاق العام؛ ليست قاعدة بيع عالمية |
+| النضج الجنسي | نحو 5–7 أشهر في المصادر المراجعة | يعتمد على السلالة والإدارة [SRC-003, SRC-008] | متوسط–مرتفع |
+| الزغاليل لكل زوج سنويًا | ورد رقم يقارب 12 في ورقة مصرية حديثة للفطام الطبيعي، ويشير مثال FAO إلى مستوى مشابه مع البطون المتكررة | يعتمد بشدة على الإدارة؛ ويمكن للفطام المبكر زيادة الناتج [SRC-001, SRC-002] | متوسط |
+| دورة البيض/التكاثر | نحو 51–53 يومًا في بعض النظم المحلية؛ ونحو 37–39 يومًا في بعض السلالات/الدراسات؛ ونحو 10–12 يومًا تجريبيًا بعد الفصل عند الفقس | يختلف التعريف والإدارة بدرجة كبيرة [SRC-002, SRC-012] | دليل قوي على التباين؛ ثقة منخفضة في أي قيمة عالمية منفردة |
+| وزن الجسم عند 28 يومًا | نحو 458–465 جم لـ White Mirthys مع التربية الأبوية/الفصل عند 7 أيام في دراسة تجارية مصرية؛ وتشير أدبيات مذكورة بها إلى 450–700 جم حسب الحمام | للسلالة ونظام التغذية تأثير كبير [SRC-002] | متوسط في ظروف الدراسة |
+| الخصوبة / نسبة الفقس | غالبًا كنسب من البيض الموضوع/المخصب؛ تختلف حسب الدراسة والسلالة والعليقة والبيئة | يجب الحفاظ على تعريف البسط والمقام [SRC-006, SRC-010, SRC-014] | مرتفع باعتبارهما مقاييس أساسية؛ لا يوجد هدف عالمي |
+| نفوق/بقاء الزغاليل | حساس للإدارة؛ أدى الفصل الصناعي عند الفقس إلى نفوق أعلى بكثير في إحدى الدراسات المصرية | يجب تقسيمه حسب العمر وطريقة التربية [SRC-002] | مرتفع لحساسية الإدارة |
 
-## 13.1 Why benchmarks must be contextual
+## 13.1 لماذا يجب ربط القيم المرجعية بالسياق؟
 
-A benchmark without conditions can mislead. At minimum, later analysis should preserve context such as:
+يمكن أن تكون القيمة المرجعية مضللة بدون ظروفها. ويجب أن يحتفظ التحليل اللاحق - كحد أدنى - بسياق مثل:
 
-- breed/strain,
-- breeder age,
-- housing model,
-- natural vs artificial incubation,
-- natural vs early weaning,
-- number of squabs reared per pair,
-- feed program,
-- season/environment,
-- exact definition of fertility/hatchability/mortality,
-- market age at measurement.
+- السلالة/الخط،
+- عمر طيور التربية،
+- نظام الإسكان،
+- الحضانة الطبيعية مقابل الصناعية،
+- الفطام الطبيعي مقابل المبكر،
+- عدد الزغاليل التي يرعاها الزوج،
+- برنامج العلف،
+- الموسم/البيئة،
+- التعريف الدقيق للخصوبة/الفقس/النفوق،
+- عمر السوق عند القياس.
 
 ---
 
-# 14. Egyptian Context
+# 14. السياق المصري
 
-## 14.1 Evidence base found
+## 14.1 قاعدة الأدلة التي تم العثور عليها
 
-Phase 1A located useful Egyptian evidence from:
+عثرت Phase 1A على أدلة مصرية مفيدة من:
 
-- Animal Production Research Institute / Agricultural Research Center work in Sharqia [SRC-007].
-- Zagazig University / Egyptian Baladi pigeon research [SRC-005, SRC-015].
-- A commercial farm on the Cairo–Alexandria Desert Road using White Mirthys pigeons [SRC-002].
-- Matrouh University and Alexandria University work comparing Local Egyptian, Zagel and White Mirthys strains [SRC-012].
-- Alexandria Journal of Veterinary Sciences heat-stress work under Egyptian summer conditions [SRC-010].
+- أعمال Animal Production Research Institute / Agricultural Research Center في الشرقية [SRC-007].
+- أبحاث Zagazig University على الحمام البلدي المصري [SRC-005, SRC-015].
+- مزرعة تجارية على طريق القاهرة–الإسكندرية الصحراوي تستخدم White Mirthys [SRC-002].
+- أعمال Matrouh University وAlexandria University التي تقارن Local Egyptian وZagel وWhite Mirthys [SRC-012].
+- أعمال Alexandria Journal of Veterinary Sciences عن الإجهاد الحراري في ظروف الصيف المصري [SRC-010].
 
-## 14.2 Production systems documented in Sharqia
+## 14.2 نظم الإنتاج الموثقة في الشرقية
 
-The 2016 Sharqia survey classified rural pigeon production into:
+صنف مسح الشرقية لعام 2016 إنتاج الحمام الريفي إلى:
 
-1. Family production.
-2. Commercial production, including:
-   - mud dovecotes,
-   - wooden lofts.
+1. إنتاج أسري.
+2. إنتاج تجاري، ويشمل:
+   - أبراج حمام طينية (Mud Dovecotes)،
+   - مساكن خشبية (Wooden Lofts).
 
-Wooden-loft enterprises in the sample showed stronger economic-efficiency measures than mud-dovecote and family systems under the conditions and prices of that survey [SRC-007]. This finding is useful historically and structurally but must **not** be treated as a current 2026 profitability benchmark because prices, feed costs, labor and markets have changed.
+أظهرت مشروعات المساكن الخشبية في العينة مقاييس كفاءة اقتصادية أفضل من الأبراج الطينية والإنتاج الأسري في ظروف وأسعار ذلك المسح [SRC-007]. وتفيد هذه النتيجة تاريخيًا وهيكليًا، لكن **لا يجب التعامل معها كقيمة ربحية مرجعية لعام 2026** لأن أسعار العلف والعمالة والأسواق تغيرت.
 
-## 14.3 Egyptian breeds/strains in research
+## 14.3 السلالات/الخطوط المصرية في الأبحاث
 
-Recent Egyptian work includes:
+تشمل الأعمال المصرية الحديثة:
 
-- Local Egyptian / Baladi,
-- Zagel,
+- Local Egyptian / Baladi،
+- Zagel،
 - White Mirthys.
 
-A 2022 Egyptian study reported White Mirthys as superior in several growth traits among the three studied strains [SRC-012]. This supports breed as an important performance context variable, not a decision that White Mirthys must be the target breed.
+وأبلغت دراسة مصرية عام 2022 عن تفوق White Mirthys في عدة صفات نمو بين الخطوط الثلاثة التي تمت دراستها [SRC-012]. ويثبت ذلك أهمية السلالة كمتغير سياقي في الأداء، ولا يمثل قرارًا بأن White Mirthys يجب أن تكون السلالة المستهدفة.
 
-## 14.4 Egyptian climate
+## 14.4 المناخ المصري
 
-The heat-stress evidence makes Egyptian climate operationally significant. Summer decline should be studied as an interaction among environment, housing, nutrition, water, and management rather than encoded as a fixed seasonal shutdown [SRC-010].
+تجعل أدلة الإجهاد الحراري المناخ المصري عاملًا تشغيليًا مهمًا. ويجب دراسة انخفاض الصيف كتفاعل بين البيئة والمسكن والتغذية والمياه والإدارة، لا كتوقف موسمي ثابت يتم ترميزه مسبقًا [SRC-010].
 
-## 14.5 Evidence gap in Egypt
+## 14.5 فجوة الأدلة في مصر
 
-The reviewed Egyptian literature is useful but does not yet provide enough robust, current evidence to standardize:
+الأدبيات المصرية التي روجعت مفيدة، لكنها لا توفر حتى الآن أدلة حديثة وقوية بما يكفي لتوحيد:
 
-- national prevalence of cage vs loft vs dovecote commercial systems in 2026,
-- current typical farm size,
-- current commercial market age/weight specifications by region/customer type,
-- current record-keeping tools,
-- current adoption of individual leg bands,
-- current adoption of artificial incubation/early weaning,
-- standard pair-culling thresholds,
-- current biosecurity/vaccination protocols across commercial farms.
+- الانتشار الوطني الحالي لنظم الأقفاص مقابل اللوفت مقابل الأبراج التجارية عام 2026،
+- حجم المزرعة التجاري المعتاد حاليًا،
+- مواصفات عمر/وزن السوق الحالية حسب المنطقة ونوع العميل،
+- أدوات حفظ السجلات المستخدمة حاليًا،
+- مدى اعتماد حلقات التعريف الفردية حاليًا،
+- مدى اعتماد الحضانة الصناعية/الفطام المبكر،
+- حدود استبعاد الأزواج القياسية،
+- بروتوكولات الأمن الحيوي/التحصين الحالية في المزارع التجارية.
 
-These gaps require field validation and later targeted research.
-
----
-
-# 15. Evidence-Based Domain Findings
-
-## 15.1 Verified / Strong Evidence
-
-1. Squabs are altricial and depend on parental or artificial feeding in early life [SRC-002, SRC-003].
-2. Both male and female pigeons produce crop milk [SRC-003].
-3. Both sexes participate in incubation and parental care [SRC-001, SRC-004, SRC-005].
-4. Two eggs per clutch is the dominant pattern in the reviewed literature [SRC-001, SRC-004].
-5. Incubation is approximately 18–20 days [SRC-001, SRC-005, SRC-008].
-6. Around 3–4 weeks is a common natural squab market/weaning region [SRC-001, SRC-002].
-7. Overlap between care of existing squabs and the next clutch occurs [SRC-001, SRC-008].
-8. Double-nest arrangements support that overlap [SRC-001, SRC-002, SRC-005].
-9. Breeding-pair performance is a major unit of measurement in commercial research [SRC-002, SRC-006, SRC-014].
-10. Housing system can materially affect productivity and measurability [SRC-007, SRC-008].
-11. Heat stress can reduce reproductive performance in Egyptian summer conditions [SRC-010].
-12. Photoperiod can affect reproductive performance [SRC-011].
-13. Breed/strain affects growth and therefore market/performance expectations [SRC-012].
-14. Parent loss directly affects dependent squabs and may trigger foster/hand-rearing management [SRC-005].
-15. Individual banding and parent/location-linked record keeping are established practical identification methods [SRC-009].
-
-## 15.2 Industry / Producer Practice Requiring Validation
-
-- Exact frequency of double nests in Egyptian commercial lofts.
-- Whether Egyptian farms primarily identify birds individually or manage by pair/nest/cage.
-- Actual thresholds used to classify a pair as weak.
-- Frequency of deliberate re-pairing.
-- Whether replacement birds are selected mainly on lineage, body weight, parent output, phenotype, or farmer judgment.
-- Actual daily paper/Excel/app record workflows.
-- Current use of artificial incubation and hatch-day/early hand feeding.
+تتطلب هذه الفجوات تحققًا ميدانيًا وأبحاثًا مستهدفة لاحقة.
 
 ---
 
-# 16. Important Contradictions and Variability
+# 15. نتائج المجال المبنية على الأدلة
 
-## CON-001 — Length of the production/egg cycle
+## 15.1 حقيقة موثقة / دليل قوي (Verified / Strong Evidence)
 
-**Source pattern A:** Local Indonesian pigeon work reports around 51 days; recent Egyptian literature cites local Egyptian cycles around 52.75 days [SRC-002, SRC-013].  
-**Source pattern B:** Other breeds/systems report substantially shorter periods, e.g. around 37–39 days [SRC-002].  
-**Experimental intervention:** Hatch-day separation in White Mirthys dramatically shortened the measured egg/reproductive cycle in one 2025 experiment [SRC-002].
+1. الزغاليل غير مكتملة النمو وتعتمد على التغذية الأبوية أو الصناعية في بداية الحياة [SRC-002, SRC-003].
+2. ينتج كل من ذكر وأنثى الحمام لبن الحوصلة [SRC-003].
+3. يشارك كلا الجنسين في الحضانة والرعاية الأبوية [SRC-001, SRC-004, SRC-005].
+4. البيضتان في البطن هما النمط الغالب في الأدبيات التي تمت مراجعتها [SRC-001, SRC-004].
+5. مدة الحضانة تقارب 18–20 يومًا [SRC-001, SRC-005, SRC-008].
+6. يمثل نطاق 3–4 أسابيع منطقة شائعة للتسويق/الفطام الطبيعي [SRC-001, SRC-002].
+7. يحدث تداخل بين رعاية الزغاليل الموجودة والبطن التالية [SRC-001, SRC-008].
+8. تدعم ترتيبات العشين هذا التداخل [SRC-001, SRC-002, SRC-005].
+9. أداء زوج التربية وحدة قياس رئيسية في أبحاث الإنتاج التجاري [SRC-002, SRC-006, SRC-014].
+10. يمكن لنظام الإسكان أن يؤثر بدرجة ملموسة في الإنتاجية وقابلية القياس [SRC-007, SRC-008].
+11. يمكن للإجهاد الحراري خفض الأداء التناسلي في ظروف الصيف المصري [SRC-010].
+12. يمكن للفترة الضوئية التأثير في الأداء التناسلي [SRC-011].
+13. تؤثر السلالة/الخط في النمو وبالتالي في توقعات السوق والأداء [SRC-012].
+14. يؤثر فقد أحد الأبوين مباشرة في الزغاليل المعتمدة وقد يستدعي التحضين البديل/التغذية اليدوية [SRC-005].
+15. تمثل حلقات التعريف الفردية والسجلات المرتبطة بالأبوين/الموقع طرقًا عملية راسخة للتعريف [SRC-009].
 
-**Interpretation:** “cycle length” is a function of breed, definition, parental-care load, and management intervention.  
-**System impact later:** cycle duration must not be hard-coded as a universal constant.
+## 15.2 ممارسات الصناعة/المربين التي تتطلب تحققًا
 
-## CON-002 — Natural production vs artificial early weaning
-
-Natural parental rearing protects squab growth/survival but occupies parental resources. Early separation can increase breeder egg throughput but may increase squab mortality or reduce growth if artificial rearing is inadequate [SRC-002].
-
-**Interpretation:** higher egg throughput is not automatically higher economic or welfare performance.
-
-## CON-003 — Housing model
-
-Pair cages gave better output/economics than communal fly-pens in one historical controlled study [SRC-008], while commercial Egyptian production also exists in wooden lofts and mud dovecotes [SRC-007].
-
-**Interpretation:** no universal “correct” housing model can be selected from Phase 1A alone.
-
-## CON-004 — Summer production
-
-Review literature describes pigeons as non-seasonal breeders [SRC-004], while Egyptian heat stress research demonstrates summer reproductive depression [SRC-010].
-
-**Interpretation:** environmental suppression is not the same as an obligatory seasonal reproductive stop.
-
----
-
-# 17. Field Validation Required
-
-The following should be explicitly checked with Egyptian commercial producers / animal-production specialists:
-
-1. Which commercial housing models are actually common in the target customer segment: wooden loft, mud dovecote, colony room, pair cage/battery, mixed?
-2. Is each breeding pair normally assigned one nest or two nests in the target farms?
-3. How are overlapping clutches recognized and recorded in practice?
-4. Are breeders individually ringed, or identified only by pair/cage/nest/location?
-5. What defines a “production cycle” in the farmer’s own records?
-6. What Egyptian buyers currently consider the desired squab age and live/dressed weight?
-7. What thresholds trigger pair review, re-pairing or culling?
-8. How are replacements selected and at what stage are they admitted to breeding?
-9. How severe is summer production decline by housing type and region, and what mitigation is used?
-10. What records are actually kept today and at what granularity?
-11. Is artificial incubation or early hand feeding economically practiced in the target market, or mainly experimental/specialized?
-12. What happens operationally when one parent dies while dependent squabs are present?
+- معدل استخدام العشين فعليًا في المساكن التجارية المصرية.
+- هل تعرف المزارع المصرية الطيور فرديًا أم تديرها أساسًا برقم الزوج/العش/القفص.
+- الحدود الفعلية لتصنيف الزوج بأنه ضعيف.
+- معدل إعادة تكوين الأزواج عمدًا.
+- هل تختار طيور الإحلال أساسًا حسب النسب أم وزن الجسم أم إنتاج الأبوين أم الشكل الظاهري أم حكم المربي.
+- مسارات التسجيل اليومية الفعلية على الورق/Excel/التطبيقات.
+- الاستخدام الحالي للحضانة الصناعية والتغذية اليدوية عند الفقس/الفصل المبكر.
 
 ---
 
-# 18. Future Research Queue Candidates
+# 16. التناقضات والتباين المهم
 
-The following topics appeared during Phase 1A but should **not** be expanded here:
+## CON-001 — طول دورة الإنتاج/البيض
 
-- Detailed egg lifecycle and egg-quality management → **Phase 1B / Phase 3**.
-- Detailed squab growth/weaning management → **Phase 1B / Phase 3**.
-- Disease, vaccination, treatment, quarantine and biosecurity protocols → **Phase 4**.
-- Feed formulation, nutrient requirements and feed inventory → **Phase 4 / Phase 5**.
-- Financial unit economics and cost allocation → **Phase 5**.
-- Formal KPI definitions → **Phase 6**.
-- Software representation of pair, clutch, nest, bird identity or overlapping cycles → **Phase 7 only after domain analysis**.
-- Artificial intelligence / prediction → **Phase 8**.
+**نمط المصدر A:** تذكر أعمال على الحمام المحلي الإندونيسي نحو 51 يومًا؛ كما تشير أدبيات مصرية حديثة إلى دورات محلية مصرية حول 52.75 يومًا [SRC-002, SRC-013].  
+**نمط المصدر B:** تبلغ بعض السلالات/النظم الأخرى فترات أقصر بكثير، مثل نحو 37–39 يومًا [SRC-002].  
+**تدخل تجريبي:** خفّض الفصل في يوم الفقس لدى White Mirthys دورة البيض/التكاثر المقاسة بصورة كبيرة في تجربة عام 2025 [SRC-002].
+
+**التفسير:** "طول الدورة" دالة في السلالة والتعريف وحمل الرعاية الأبوية والتدخل الإداري.  
+**الأثر على النظام لاحقًا:** لا يجوز تثبيت مدة الدورة كقيمة عالمية ثابتة.
+
+## CON-002 — التربية الطبيعية مقابل الفطام الصناعي المبكر
+
+تحمي التربية الأبوية الطبيعية نمو الزغاليل وبقاءها، لكنها تشغل موارد الأبوين. وقد يزيد الفصل المبكر معدل إنتاج البيض لدى طيور التربية، لكنه قد يرفع نفوق الزغاليل أو يخفض النمو إذا كانت التربية الصناعية غير كافية [SRC-002].
+
+**التفسير:** ارتفاع معدل البيض لا يعني تلقائيًا أداء اقتصاديًا أو رفاهيًا أفضل.
+
+## CON-003 — نموذج الإسكان
+
+حققت أقفاص الأزواج ناتجًا/اقتصادًا أفضل من الحظائر الجماعية في دراسة تاريخية متحكم فيها [SRC-008]، بينما يوجد إنتاج تجاري مصري فعلي في المساكن الخشبية والأبراج الطينية [SRC-007].
+
+**التفسير:** لا يمكن اختيار نموذج إسكان "صحيح" عالميًا من Phase 1A وحدها.
+
+## CON-004 — الإنتاج الصيفي
+
+تصف مراجعات الحمام بأنه غير موسمي التكاثر [SRC-004]، بينما تظهر أبحاث الإجهاد الحراري المصرية انخفاضًا تناسليًا في الصيف [SRC-010].
+
+**التفسير:** تثبيط الإنتاج بسبب البيئة لا يساوي توقفًا تناسليًا موسميًا إلزاميًا.
 
 ---
 
-# 19. Source Register
+# 17. التحقق الميداني المطلوب
 
-> Access Date for all sources below: **2026-08-17**. Reliability reflects suitability for the specific information used, not a universal rating of the publication.
+يجب التحقق صراحة من النقاط التالية مع منتجين تجاريين مصريين أو متخصصي إنتاج حيواني:
+
+1. ما نظم الإسكان التجارية الشائعة فعليًا في الشريحة المستهدفة: لوفت خشبي، برج طيني، غرفة جماعية، قفص زوج/بطارية، أم نظام مختلط؟
+2. هل يخصص عادة لكل زوج عش واحد أم عشان في المزارع المستهدفة؟
+3. كيف يتم التعرف على البطون المتداخلة وتسجيلها عمليًا؟
+4. هل تركب حلقات فردية لطيور التربية، أم تعرف فقط بالزوج/القفص/العش/الموقع؟
+5. ما تعريف "دورة الإنتاج" في سجلات المربي الفعلية؟
+6. ما العمر والوزن الحي/المذبوح المطلوبان حاليًا للزغلول لدى المشترين المصريين؟
+7. ما الحدود التي تؤدي إلى مراجعة الزوج أو إعادة تكوينه أو استبعاده؟
+8. كيف يتم اختيار طيور الإحلال وفي أي مرحلة تدخل قطيع التربية؟
+9. ما شدة انخفاض الإنتاج صيفًا حسب نوع المسكن والمنطقة، وما وسائل التخفيف المستخدمة؟
+10. ما السجلات التي تحفظ فعليًا اليوم وما مستوى تفاصيلها؟
+11. هل تمارس الحضانة الصناعية أو التغذية اليدوية المبكرة اقتصاديًا في السوق المستهدف أم تظل تجريبية/متخصصة؟
+12. ماذا يحدث تشغيليًا عندما يموت أحد الأبوين مع وجود زغاليل معتمدة؟
+
+---
+
+# 18. موضوعات مرشحة لقائمة البحث المستقبلية
+
+ظهرت الموضوعات التالية أثناء Phase 1A، لكن يجب **عدم توسيعها هنا**:
+
+- دورة حياة البيضة وإدارة جودة البيض بالتفصيل → **Phase 1B / Phase 3**.
+- نمو الزغاليل والفطام بالتفصيل → **Phase 1B / Phase 3**.
+- الأمراض والتحصينات والعلاج والحجر والأمن الحيوي → **Phase 4**.
+- تركيب العلف والمتطلبات الغذائية ومخزون العلف → **Phase 4 / Phase 5**.
+- اقتصاديات الوحدة وتوزيع التكلفة → **Phase 5**.
+- التعريفات الرسمية لمؤشرات الأداء (KPIs) → **Phase 6**.
+- التمثيل البرمجي للزوج والبطن والعش وهوية الطائر وتداخل الدورات → **Phase 7 فقط بعد تحليل المجال**.
+- الذكاء الاصطناعي / التنبؤ → **Phase 8**.
+
+---
+
+# 19. سجل المصادر
+
+> **تاريخ الوصول لجميع المصادر أدناه: 2026-08-17.** يعبر تقييم الموثوقية عن ملاءمة المصدر للمعلومة المستخدمة تحديدًا، وليس حكمًا عامًا على المنشور.
 
 ### SRC-001
-- **Source:** Livestock keeping in urban areas — pigeon section
+- **المصدر:** Livestock keeping in urban areas — pigeon section
 - **URL:** https://www.fao.org/4/Y0500E/y0500e05.htm
-- **Organization / Author:** FAO
-- **Publication Date:** Not clearly stated on accessed page
-- **Reliability:** High
-- **Information Used:** maturity, incubation, two-egg clutch, parental crop milk, ~4-week collection, two-nest intensive overlap.
+- **المؤسسة / المؤلف:** FAO
+- **تاريخ النشر:** غير واضح في الصفحة التي تم الوصول إليها
+- **الموثوقية:** مرتفعة
+- **المعلومات المستخدمة:** النضج، الحضانة، بطن البيضتين، لبن الحوصلة الأبوي، التسويق نحو أربعة أسابيع، تداخل الإنتاج المكثف باستخدام عشين.
 
 ### SRC-002
-- **Source:** Early weaning in pigeons (Columba livia domestica): effects on squabs performance and reproductive performance of parents
+- **المصدر:** Early weaning in pigeons (Columba livia domestica): effects on squabs performance and reproductive performance of parents
 - **URL:** https://pmc.ncbi.nlm.nih.gov/articles/PMC11998371/
-- **Organization / Author:** Mohamed OA, Khattab IM, Elsagheer MA et al.; BMC Veterinary Research
-- **Publication Date:** 2025-04-14
-- **Reliability:** High — peer reviewed, Egyptian commercial farm
-- **Information Used:** White Mirthys commercial farm, pair cages, two nests, 28-day control, early weaning effects, cycle variability, mortality, weights, reproductive performance.
+- **المؤسسة / المؤلف:** Mohamed OA, Khattab IM, Elsagheer MA et al.; BMC Veterinary Research
+- **تاريخ النشر:** 2025-04-14
+- **الموثوقية:** مرتفعة — محكمة وفي مزرعة تجارية مصرية
+- **المعلومات المستخدمة:** مزرعة White Mirthys التجارية، أقفاص الأزواج، العشان، مجموعة 28 يومًا، آثار الفطام المبكر، تباين الدورة، النفوق، الأوزان، الأداء التناسلي.
 
 ### SRC-003
-- **Source:** Chemical composition of pigeon crop milk and factors affecting its production: a review
+- **المصدر:** Chemical composition of pigeon crop milk and factors affecting its production: a review
 - **URL:** https://pmc.ncbi.nlm.nih.gov/articles/PMC10149254/
-- **Organization / Author:** Jin C-L et al.; Poultry Science
-- **Publication Date:** 2023
-- **Reliability:** High — peer-reviewed review
-- **Information Used:** altricial development, crop milk from both parents, sexual maturity context, growth dependence on parents.
+- **المؤسسة / المؤلف:** Jin C-L et al.; Poultry Science
+- **تاريخ النشر:** 2023
+- **الموثوقية:** مرتفعة — مراجعة محكمة
+- **المعلومات المستخدمة:** طبيعة الزغاليل المعتمدة، لبن الحوصلة من الأبوين، سياق النضج الجنسي، اعتماد النمو على الأبوين.
 
 ### SRC-004
-- **Source:** Pigeon during the Breeding Cycle: Behaviors, Composition and Formation of Crop Milk, and Physiological Adaptation
+- **المصدر:** Pigeon during the Breeding Cycle: Behaviors, Composition and Formation of Crop Milk, and Physiological Adaptation
 - **URL:** https://pmc.ncbi.nlm.nih.gov/articles/PMC10533064/
-- **Organization / Author:** Life (MDPI), 2023 review
-- **Publication Date:** 2023-09
-- **Reliability:** High — peer-reviewed review
-- **Information Used:** non-seasonal breeding, pair bond, two eggs, biparental incubation/care, breeding-cycle biology and artificial production context.
+- **المؤسسة / المؤلف:** Life (MDPI), 2023 review
+- **تاريخ النشر:** 2023-09
+- **الموثوقية:** مرتفعة — مراجعة محكمة
+- **المعلومات المستخدمة:** عدم الموسمية، رابطة الزوج، البيضتان، الحضانة والرعاية المشتركة، بيولوجيا دورة التكاثر وسياق الإنتاج الصناعي.
 
 ### SRC-005
-- **Source:** Comparing the Effect of Different Management and Rearing Systems on Pigeon Squab Welfare and Performance after the Loss of One or Both Parents
+- **المصدر:** Comparing the Effect of Different Management and Rearing Systems on Pigeon Squab Welfare and Performance after the Loss of One or Both Parents
 - **URL:** https://pmc.ncbi.nlm.nih.gov/articles/PMC6523572/
-- **Organization / Author:** Abdel Fattah AF et al.; Animals
-- **Publication Date:** 2019-04-14
-- **Reliability:** High — peer reviewed; Egyptian Baladi pigeons
-- **Information Used:** Egyptian housing, two nests, parent loss, fostering, parental care, incubation and nestling period, identification.
+- **المؤسسة / المؤلف:** Abdel Fattah AF et al.; Animals
+- **تاريخ النشر:** 2019-04-14
+- **الموثوقية:** مرتفعة — محكمة؛ حمام بلدي مصري
+- **المعلومات المستخدمة:** الإسكان المصري، العشان، فقد الأبوين، التحضين البديل، الرعاية الأبوية، فترة الحضانة والتعشيش، التعريف.
 
 ### SRC-006
-- **Source:** Perspectives approaches using dietary glutamine and L-carnitine toward enhancement of reproductive performance of breeding pigeons...
+- **المصدر:** Perspectives approaches using dietary glutamine and L-carnitine toward enhancement of reproductive performance of breeding pigeons...
 - **URL:** https://pmc.ncbi.nlm.nih.gov/articles/PMC12274820/
-- **Organization / Author:** Poultry Science; Egyptian and regional university authors
-- **Publication Date:** 2025
-- **Reliability:** High
-- **Information Used:** production measurements used for breeders/squabs: feed intake, egg cycle, eggs, fertility, hatchability, squabs/pair, growth and economics.
+- **المؤسسة / المؤلف:** Poultry Science; Egyptian and regional university authors
+- **تاريخ النشر:** 2025
+- **الموثوقية:** مرتفعة
+- **المعلومات المستخدمة:** مقاييس الإنتاج لطيور التربية والزغاليل: استهلاك العلف، دورة البيض، البيض، الخصوبة، الفقس، الزغاليل/زوج، النمو والاقتصاد.
 
 ### SRC-007
-- **Source:** Socio-economic analysis of pigeon production systems in Al-Sharqia Governorate, Egypt
+- **المصدر:** Socio-economic analysis of pigeon production systems in Al-Sharqia Governorate, Egypt
 - **URL:** https://www.researchgate.net/publication/312173925_SOCIO-ECONOMIC_ANALYSIS_OF_PIGEON_PRODUCTION_SYSTEMS_IN_AL-SHARQIA_GOVERNORATE_EGYPT
-- **Organization / Author:** Omar AS et al.; Egyptian Poultry Science Journal; Animal Production Research Institute / Agricultural Research Center
-- **Publication Date:** 2016
-- **Reliability:** Medium-High — peer-reviewed journal article accessed via author-hosted copy; survey is regional/historical
-- **Information Used:** family vs commercial purpose, mud dovecotes, wooden lofts, management variation, economics and Egyptian context.
+- **المؤسسة / المؤلف:** Omar AS et al.; Egyptian Poultry Science Journal; Animal Production Research Institute / Agricultural Research Center
+- **تاريخ النشر:** 2016
+- **الموثوقية:** متوسطة–مرتفعة — مقال مجلة محكم تم الوصول إلى نسخة كاملة مستضافة؛ المسح إقليمي وتاريخي
+- **المعلومات المستخدمة:** الغرض الأسري مقابل التجاري، الأبراج الطينية، المساكن الخشبية، اختلاف الإدارة، الاقتصاد والسياق المصري.
 
 ### SRC-008
-- **Source:** Systems of Housing and Feeding of Pigeons for Squab Production
+- **المصدر:** Systems of Housing and Feeding of Pigeons for Squab Production
 - **URL:** https://www.searca.org/pubs/abstracts-theses-dissertations/database/view?absid=1043
-- **Organization / Author:** Warlito A. Baticados; University of the Philippines Los Baños / SEARCA
-- **Publication Date:** 1983
-- **Reliability:** Medium — doctoral research, historical
-- **Information Used:** cage vs communal fly-pen performance, maturity, incubation, hatch-to-next-lay interval, biparental care.
+- **المؤسسة / المؤلف:** Warlito A. Baticados; University of the Philippines Los Baños / SEARCA
+- **تاريخ النشر:** 1983
+- **الموثوقية:** متوسطة — بحث دكتوراه تاريخي
+- **المعلومات المستخدمة:** أداء الأقفاص مقابل الحظيرة الجماعية، النضج، الحضانة، الفترة من الفقس إلى الوضع التالي، الرعاية الثنائية.
 
 ### SRC-009
-- **Source:** A record-keeping system for a pigeon breeding and research colony
+- **المصدر:** A record-keeping system for a pigeon breeding and research colony
 - **URL:** https://pubmed.ncbi.nlm.nih.gov/642443/
-- **Organization / Author:** PubMed-indexed research report
-- **Publication Date:** 1978
-- **Reliability:** Medium-High — indexed but research-colony rather than commercial-farm context
-- **Information Used:** permanent leg bands, hatch date, strain, parent identity, pen, health and mortality records.
+- **المؤسسة / المؤلف:** PubMed-indexed research report
+- **تاريخ النشر:** 1978
+- **الموثوقية:** متوسطة–مرتفعة — مفهرس لكن في مستعمرة بحثية وليس مزرعة تجارية
+- **المعلومات المستخدمة:** حلقات الأرجل الدائمة، تاريخ الفقس، السلالة، الحظيرة، هوية الأبوين، سجلات الصحة والنفوق.
 
 ### SRC-010
-- **Source:** Impact of Heat Stress on Reproductive Behavior, Performance and Biochemical Parameters of Pigeon
+- **المصدر:** Impact of Heat Stress on Reproductive Behavior, Performance and Biochemical Parameters of Pigeon
 - **URL:** https://www.alexjvs.com/index.php?mno=292429
-- **Organization / Author:** El Shoukary RD, Abdel-Raheem GS, Osman AS; Alexandria Journal of Veterinary Sciences
-- **Publication Date:** 2018
-- **Reliability:** High for study conditions — peer-reviewed Egyptian summer experiment
-- **Information Used:** heat stress reduced egg production, egg weight, fertility and hatchability.
+- **المؤسسة / المؤلف:** El Shoukary RD, Abdel-Raheem GS, Osman AS; Alexandria Journal of Veterinary Sciences
+- **تاريخ النشر:** 2018
+- **الموثوقية:** مرتفعة في ظروف الدراسة — تجربة مصرية محكمة صيفية
+- **المعلومات المستخدمة:** خفض الإجهاد الحراري إنتاج البيض ووزن البيض والخصوبة ونسبة الفقس.
 
 ### SRC-011
-- **Source:** Effect of different photoperiodic programs from rearing period on the reproductive performance and hormone secretion of White King pigeons
+- **المصدر:** Effect of different photoperiodic programs from rearing period on the reproductive performance and hormone secretion of White King pigeons
 - **URL:** https://pmc.ncbi.nlm.nih.gov/articles/PMC10900098/
-- **Organization / Author:** Poultry Science
-- **Publication Date:** 2024
-- **Reliability:** High — peer reviewed
-- **Information Used:** photoperiod influences egg production/fertility and sexual maturation; environmental management matters.
+- **المؤسسة / المؤلف:** Poultry Science
+- **تاريخ النشر:** 2024
+- **الموثوقية:** مرتفعة — محكمة
+- **المعلومات المستخدمة:** تأثير الفترة الضوئية في إنتاج البيض والخصوبة والنضج؛ أهمية الإدارة البيئية.
 
 ### SRC-012
-- **Source:** Productive Performance of Three Strains of Pigeons (Columba livia domestica) Under Egyptian Conditions
+- **المصدر:** Productive Performance of Three Strains of Pigeons (Columba livia domestica) Under Egyptian Conditions
 - **URL:** https://www.researchgate.net/publication/371667245_PRODUCTIVE_PERFORMANCE_OF_THREE_STRAINS_OF_PIGEONS_COLUMBA_LIVIA_DOMESTICA_UNDER_EGYPTIAN_CONDITIONS
-- **Organization / Author:** Ahmed O, Bahie El-Deen M, Abaza IM, Abou Khadiga G; Egyptian Poultry Science Journal; Matrouh/Alexandria universities
-- **Publication Date:** 2022
-- **Reliability:** Medium-High — journal article accessed through hosted full text
-- **Information Used:** Local Egyptian, Zagel, White Mirthys growth differences under Egyptian conditions.
+- **المؤسسة / المؤلف:** Ahmed O, Bahie El-Deen M, Abaza IM, Abou Khadiga G; Egyptian Poultry Science Journal; Matrouh/Alexandria universities
+- **تاريخ النشر:** 2022
+- **الموثوقية:** متوسطة–مرتفعة — مقال مجلة تم الوصول إليه عبر نسخة كاملة مستضافة
+- **المعلومات المستخدمة:** اختلافات النمو بين Local Egyptian وZagel وWhite Mirthys تحت الظروف المصرية.
 
 ### SRC-013
-- **Source:** Productivity of Local Pigeon Fed with Cafeteria Method in Intensive Rearing
+- **المصدر:** Productivity of Local Pigeon Fed with Cafeteria Method in Intensive Rearing
 - **URL:** https://repository.ipb.ac.id/handle/123456789/76755
-- **Organization / Author:** IPB University repository; Darwati S et al.
-- **Publication Date:** 2009
-- **Reliability:** Medium
-- **Information Used:** individual-cage intensive production, egg output, fertility, hatching rate, approximately 51-day production interval and phase-based feed use.
+- **المؤسسة / المؤلف:** IPB University repository; Darwati S et al.
+- **تاريخ النشر:** 2009
+- **الموثوقية:** متوسطة
+- **المعلومات المستخدمة:** إنتاج مكثف في أقفاص فردية، إنتاج البيض، الخصوبة، نسبة الفقس، فترة إنتاج تقارب 51 يومًا، واستخدام العلف حسب المرحلة.
 
 ### SRC-014
-- **Source:** Effect of different dietary energy/protein ratios on growth performance, reproductive performance of breeding pigeons and slaughter performance, meat quality of squabs in summer
+- **المصدر:** Effect of different dietary energy/protein ratios on growth performance, reproductive performance of breeding pigeons and slaughter performance, meat quality of squabs in summer
 - **URL:** https://pmc.ncbi.nlm.nih.gov/articles/PMC10206179/
-- **Organization / Author:** Poultry Science
-- **Publication Date:** 2023
-- **Reliability:** High
-- **Information Used:** practical research measurements: breeder/squab weights, survival, feed conversion, egg-laying interval/rate, fertilization and hatching rate.
+- **المؤسسة / المؤلف:** Poultry Science
+- **تاريخ النشر:** 2023
+- **الموثوقية:** مرتفعة
+- **المعلومات المستخدمة:** قياسات بحثية عملية: أوزان طيور التربية والزغاليل، البقاء، تحويل العلف، معدل/فاصل وضع البيض، الخصوبة والفقس.
 
 ### SRC-015
-- **Source:** Effect of the number of incubated eggs and nurturing squabs on the behaviour and performance of breeding pigeons
+- **المصدر:** Effect of the number of incubated eggs and nurturing squabs on the behaviour and performance of breeding pigeons
 - **URL:** https://www.advetresearch.com/index.php/AVR/article/view/1626
-- **Organization / Author:** Journal of Advanced Veterinary Research; Zagazig University-linked authors
-- **Publication Date:** 2024
-- **Reliability:** Medium-High
-- **Information Used:** Egyptian Baladi pair response to different incubated-egg/squab loads; evidence that parental load affects behavior/performance.
+- **المؤسسة / المؤلف:** Journal of Advanced Veterinary Research; Zagazig University-linked authors
+- **تاريخ النشر:** 2024
+- **الموثوقية:** متوسطة–مرتفعة
+- **المعلومات المستخدمة:** استجابة أزواج الحمام البلدي المصري لأعداد مختلفة من البيض المحضن والزغاليل المرعية؛ دليل على تأثير الحمل الأبوي في السلوك والأداء.
 
 ---
 
-# 20. Phase 1A Research Conclusion
+# 20. استنتاج بحث Phase 1A
 
-The research establishes five domain principles that must carry forward:
+يؤسس البحث خمس مبادئ للمجال يجب حملها إلى المراحل التالية:
 
-1. **The dependent squab and biparental care are defining features of the production system.**
-2. **The breeding pair is a central operational production unit, but not the only level of management.**
-3. **Nest management—especially the possibility of two nests—is structurally important because reproductive cycles can overlap.**
-4. **Housing and production intensity change how reliably a farm can control pairing, attribute output, and keep records.**
-5. **Performance is contextual. Breed, environment, parental load, housing, and rearing strategy materially change the numbers; universal constants would be misleading.**
+1. **اعتماد الزغلول والرعاية بواسطة الأبوين من الخصائص المحددة لنظام الإنتاج.**
+2. **زوج التربية وحدة إنتاج تشغيلية مركزية، لكنه ليس المستوى الوحيد للإدارة.**
+3. **إدارة الأعشاش، وخاصة احتمال استخدام عشين، ذات أهمية بنيوية لأن دورات التكاثر يمكن أن تتداخل.**
+4. **يغير نظام الإسكان وشدة الإنتاج مدى قدرة المزرعة على التحكم في الأزواج وربط الناتج وحفظ السجلات.**
+5. **الأداء يعتمد على السياق. تؤثر السلالة والبيئة وحمل الرعاية الأبوية والإسكان واستراتيجية التربية في الأرقام بصورة ملموسة؛ ولذلك ستكون القيم العالمية الثابتة مضللة.**
 
-Phase 1A is complete for review. Detailed chronological analysis of the pigeon production lifecycle is intentionally deferred to **Phase 1B — Detailed Pigeon Production Lifecycle**.
+Phase 1A مكتملة للمراجعة. وقد أُجّل التحليل الزمني التفصيلي لدورة إنتاج الحمام عمدًا إلى **Phase 1B — Detailed Pigeon Production Lifecycle**.
