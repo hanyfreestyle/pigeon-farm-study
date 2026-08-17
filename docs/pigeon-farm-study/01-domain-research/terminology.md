@@ -1,131 +1,131 @@
-# Domain Terminology Glossary
+# قاموس مصطلحات المجال
 
-> **Phase 1C Status:** Reviewed and normalized.  
-> These are domain terms, not software entities. Preferred Arabic wording may still be refined through Egyptian field validation where noted.
+> **حالة Phase 1C:** تمت المراجعة والتوحيد.  
+> هذه مصطلحات مجال وليست كيانات برمجية. وقد تظل بعض الصياغات العربية المفضلة قابلة للتحسين بعد التحقق الميداني مع المربين المصريين حيث تمت الإشارة إلى ذلك.
 
-## Terminology Rules
+## قواعد المصطلحات
 
-- Every term has a stable ID.
-- English and preferred Arabic terms are kept together.
-- Alternative Arabic wording is preserved when producer usage may vary.
-- Definitions describe the real domain, not software structure.
-- Operational meaning explains how the term matters on a farm.
-- Ambiguous terms must always be used with their context or measurement anchor.
-- A domain term does not automatically become a database table, class, enum, or software event.
+- لكل مصطلح رقم ثابت (ID).
+- يُحفظ المصطلح العربي المعتمد والمصطلح الإنجليزي معًا.
+- تُحفظ الصياغات العربية البديلة عندما يُحتمل اختلاف استخدامها بين المربين.
+- تصف التعريفات واقع المجال ولا تصف بنية البرمجيات.
+- يوضح المعنى التشغيلي أهمية المصطلح في المزرعة.
+- يجب استخدام المصطلحات الملتبسة مع سياقها أو مرساة القياس الخاصة بها.
+- لا يتحول مصطلح المجال تلقائيًا إلى جدول قاعدة بيانات أو Class أو Enum أو حدث برمجي.
 
 ---
 
-## Normalized Terminology Index
+## فهرس المصطلحات الموحد
 
-| ID | English Term | Preferred Arabic Term | Alternative Arabic Terms | Definition | Operational Meaning | Related Terms | Evidence / Source | Notes |
+| رقم المصطلح | المصطلح العربي المعتمد | المصطلح الإنجليزي | المصطلحات العربية البديلة | التعريف | المعنى التشغيلي | المصطلحات المرتبطة | المصدر / الدليل | الملاحظات |
 |---|---|---|---|---|---|---|---|---|
-| TERM-001 | Squab | زغلول حمام | زغلول | Young dependent pigeon; in meat production commonly the young bird produced for meat before/around weaning or independent flight. | Primary commercial output in this study. | Hatch, Weaning, Market Readiness | SRC-001, 002, 003 | Market age/weight is not inherent in the word. |
-| TERM-002 | Pigeon | حمام | طائر حمام | Domestic pigeon used in the production population. | May be breeder, replacement, squab, retained young bird, etc. | Breeding Bird, Squab | Phase 1 synthesis | Do not assume one software identity model. |
-| TERM-003 | Breeding Bird | طائر تربية / طائر إنتاج | حمام أمهات/آباء حسب الجنس والسياق | Bird admitted or intended for active reproduction. | Member of breeding population before or within a productive pair. | Breeding Readiness, Breeding Pair | Phase 1 synthesis | Sex-specific local wording needs validation. |
-| TERM-004 | Breeding Pair | زوج إنتاج | زوج تربية | Male and female functioning together as a reproductive unit, typically sharing incubation and parental care. | Central production unit for natural squab production. | Pair Bond, Pairing, Clutch | SRC-002, 004, 005 | Biological and operational pair can diverge in exceptional management situations. |
-| TERM-005 | Pair Bond | رابطة الزوج | الارتباط الزوجي | Persistent social/reproductive association between a male and female pigeon. | Supports mating, nest use, incubation and parental coordination. | Pairing, Re-pairing | SRC-004 | Does not mean pair membership can never change. |
-| TERM-006 | Pairing | تكوين الزوج | التزاوج الموجّه/اختيار الزوج حسب السياق | Formation or deliberate establishment of a male–female breeding pair. | Can occur naturally or through controlled mate assignment. | Pair Bond, Controlled Pairing | SRC-004, Phase 1B | Pairing is not synonymous with one mating act. |
-| TERM-007 | Re-pairing | إعادة تكوين الزوج | إعادة التزاوج | Formation of a new productive pair after loss, separation, infertility or management decision. | May interrupt production and changes pair history. | Pair Bond, Culling, Mate Loss | Phase 1A/1B | No universal timing/threshold. |
-| TERM-008 | Clutch | بطن بيض | دفعة البيض / مجموعة البيض في دورة وضع واحدة | Eggs produced by one female as one discrete laying episode before the next laying interval. | Groups related eggs as one reproductive attempt. | Egg, Incubation, Hatch | SRC-001, 004; Phase 1B | Two eggs dominant, but one-egg clutch is possible. |
-| TERM-009 | Egg | بيضة | — | Individual pigeon egg laid during a reproductive episode. | Has its own date, condition and outcome even when part of a clutch. | Clutch, Fertility, Incubation | Phase 1B | Egg outcome ≠ clutch outcome. |
-| TERM-010 | Nest | عش | — | Physical nesting site used for laying, incubation and/or squab rearing. | Working reproductive location. | Nest Box, Double Nest | SRC-001, 005 | Pair may use more than one nest. |
-| TERM-011 | Nest Box | صندوق عش | خانة عش | Defined housing structure/compartment intended to provide a nesting site. | Makes nest location more controlled/identifiable. | Nest, Pair Cage | Phase 1A sources | Physical form varies. |
-| TERM-012 | Double Nest System | نظام العشّين | العش المزدوج | Provision of two nesting sites to a breeding pair. | Supports simultaneous older-squab rearing and a new clutch. | Overlapping Production Cycle | SRC-001, 002, 005 | Prevalence in target Egyptian farms requires validation. |
-| TERM-013 | Incubation | حضانة البيض | الرقاد على البيض | Period/behavior maintaining eggs under conditions supporting embryo development until hatch. | Both parents normally participate. | Clutch, Hatch | SRC-001, 004, 005 | Start anchor can be ambiguous. |
-| TERM-014 | Hatching / Hatch | الفقس | — | Successful emergence of a squab from an egg. | Key observable reproductive outcome. | Hatchability, Dead-in-shell | SRC-001, 005, 012 | Hatch timing depends on effective incubation anchor. |
-| TERM-015 | Brooding / Rearing | رعاية الزغاليل | التحضين/التربية بعد الفقس | Parent or substitute care of dependent squabs after hatch. | Includes warmth, feeding and protection. | Crop Milk, Fostering | SRC-003, 004, 005 | “Brooding” may be used differently across poultry contexts. |
-| TERM-016 | Crop Milk / Pigeon Milk | لبن الحوصلة | حليب الحمام | Nutrient-rich crop secretion produced by both parent pigeons for early squab feeding. | Critical early nutrition. | Squab, Parental Care | SRC-003, 004, 021 | Not mammalian milk. |
-| TERM-017 | Fertility | الخصوبة / نسبة البيض المخصب | الإخصاب حسب السياق | Proportion or condition of eggs that are fertilized. | Used to evaluate reproductive performance. | Candling, Hatchability | SRC-006, 010, 014 | Denominator must be explicit. |
-| TERM-018 | Hatchability | نسبة الفقس | قابلية الفقس | Measure of successful hatching. | Used for reproductive performance diagnosis. | Fertility, Hatch | SRC-006, 010, 014 | May be per eggs laid/set or per fertile eggs. |
-| TERM-019 | Embryonic Death | نفوق الجنين داخل البيضة | موت الجنين | Death of a previously developing embryo before successful hatch. | Distinct from infertility. | Dead-in-shell, Hatch Failure | Phase 1B / avian literature | Can occur at different stages. |
-| TERM-020 | Dead-in-shell | جنين نافق داخل القشرة | فشل فقس متأخر | Late-stage embryo dies/fails to complete hatch. | Important hatch-failure outcome. | Embryonic Death, Hatchability | Phase 1B sources | Diagnostic criteria may need veterinary context. |
-| TERM-021 | Weaning | الفطام | الاستقلال عن تغذية الأبوين | Transition toward independent feeding; research may also use it for managed separation. | Determines end/alteration of parental feeding pathway. | Early Separation, Market Readiness | SRC-002, 017 | Physiological weaning and management separation can differ. |
-| TERM-022 | Early Separation / Early Weaning | الفصل المبكر | الفطام المبكر | Deliberate removal from parents earlier than conventional natural rearing, with artificial/hand feeding as needed. | Creates an alternate intensive lifecycle. | Weaning, Artificial Feeding | SRC-002 | Not simply “selling earlier.” |
-| TERM-023 | Market Readiness | الجاهزية للتسويق | جاهز للبيع | Commercial condition satisfying buyer/farm requirements for sale. | May depend on age, weight, feathering and sale form. | Market Age, Weaning | Phase 1A/1B synthesis | Not a universal biological status. |
-| TERM-024 | Replacement Bird | طائر إحلال | بديل تربية | Bird retained/selected to replace breeding stock and enter future production. | Maintains breeder population. | Breeding Readiness, Culling | Phase 1A/1B | Admission criteria require field validation. |
-| TERM-025 | Culling | الاستبعاد من قطيع الإنتاج | استبعاد | Intentional removal from active breeding/production for health, welfare, genetic or productivity reasons. | Ends active productive role. | Sale, Retirement, Replacement | Phase 1A | Not synonymous with mortality. |
-| TERM-026 | Fostering | التربية بواسطة زوج بديل | التحضين البديل / أبوين بديلين | Transfer of an egg or dependent squab to another pair for incubation/care. | Changes caregiving responsibility and may rescue output after parent problems. | Foster Parent, Parent Loss | SRC-005, 017 | Prevalence in commercial Egypt unknown. |
-| TERM-027 | Sexual Maturity | النضج الجنسي | — | Biological stage at which reproductive capacity is developed. | Necessary but not sufficient for commercial breeding entry. | Breeding Readiness | SRC-003, 012, 017 | Broadly ~5–7+ months depending on strain/definition. |
-| TERM-028 | Operational Breeding Readiness | الجاهزية لدخول قطيع الإنتاج | الجاهزية التشغيلية للتكاثر | Farm judgment that a mature bird is sufficiently developed, healthy and suitable for active breeding. | Admission decision for replacement stock. | Sexual Maturity, Body Condition | Phase 1B synthesis | Analytical domain phrase; not standardized threshold. |
-| TERM-029 | Oviposition Interval | الفاصل بين وضع البيض | فاصل وضع البيض | Time between successive egg-laying events in a stated context. | Within-clutch interval is commonly about two days. | Egg 1, Egg 2, Clutch | SRC-016 | Must state whether within clutch or between clutches. |
-| TERM-030 | Candling | فحص البيض بالضوء | تسليط الضوء على البيضة | Non-destructive visual inspection using transmitted light to assess development. | Can support fertility/development checking. | Fertility, Embryonic Death | SRC-018 | Routine farm adoption needs validation. |
-| TERM-031 | Production Cycle | دورة الإنتاج | الدورة الإنتاجية | General farm/research phrase for repeated production activity; no single universal boundary. | Must be qualified by exact start/end anchor. | Reproductive Cycle, Clutch Cycle | Phase 1A/1B | **Ambiguous term.** |
-| TERM-032 | Reproductive Cycle | دورة التكاثر | الدورة التناسلية | Repeated reproductive sequence/interval defined by a study or farm. | May include laying, incubation, rearing and next-lay components. | Production Cycle | SRC-002, 012; Phase 1B | Anchor must be stated. |
-| TERM-033 | Egg-laying Cycle | دورة وضع البيض | دورة البيض | Interval or sequence focused specifically on repeated laying output. | Useful when studying laying-to-laying timing. | Oviposition Interval, Clutch | Phase 1B | Not equal to full squab-rearing cycle. |
-| TERM-034 | Overlapping Production Cycle | تداخل دورات الإنتاج | تداخل دورات التكاثر | Condition where a pair begins a subsequent clutch while still caring for squabs from an earlier clutch. | Core characteristic of commercial pigeon lifecycle. | Double Nest, Next Clutch | SRC-001, 002, 005, 012 | Must not be flattened into one linear timeline. |
-| TERM-035 | Loft | مسكن جماعي للحمام | لوفت / حظيرة حمام | Shared housing containing multiple birds and nesting locations. | Communal production environment. | Dovecote, Colony | SRC-007, 008 | Not one standardized physical design. |
-| TERM-036 | Dovecote | برج حمام | مسكن حمام تقليدي | Structure designed for communal pigeon housing/nesting with multiple nest openings/compartments. | Traditional/commercial housing form. | Loft, Colony | SRC-007 | Mud dovecote documented in Sharqia. |
-| TERM-037 | Colony System | نظام تربية جماعي | نظام مستعمرة / إسكان جماعي | Multiple pigeons/pairs share a housing area and nesting environment. | Pair/nest attribution may be less controlled. | Loft, Dovecote | SRC-007, 008 | Exact form varies. |
-| TERM-038 | Individual Pair Cage | قفص زوج إنتاج منفرد | بطارية/قفص زوجي حسب المزرعة | Housing where one known male–female pair occupies a controlled cage/unit. | Improves pair attribution and pair-level recording. | Breeding Pair, Nest Box | SRC-002, 005, 008 | Do not assume universally superior. |
-| TERM-039 | Parent-reared Squab | زغلول مُربّى بواسطة الأبوين | — | Squab naturally fed/cared for by its parent pair through the dependent period. | Natural baseline pathway. | Early Separation, Fostering | SRC-002, 005 | Useful comparison category. |
+| TERM-001 | زغلول حمام | Squab | زغلول | حمام صغير معتمد على الأبوين؛ وفي إنتاج اللحم يقصد به عادة الطائر الصغير المنتج للحوم قبل أو حول الفطام أو الطيران المستقل. | الناتج التجاري الأساسي في هذه الدراسة. | الفقس، الفطام، جاهزية التسويق | SRC-001, 002, 003 | عمر ووزن التسويق ليسا جزءًا ثابتًا من معنى الكلمة. |
+| TERM-002 | حمام | Pigeon | طائر حمام | الحمام الداجن المستخدم ضمن القطيع الإنتاجي. | قد يكون طائر تربية أو إحلال أو زغلولًا أو طائرًا صغيرًا محتفظًا به، وغيرها. | طائر تربية، زغلول | خلاصة Phase 1 | لا تفترض نموذج هوية برمجيًا واحدًا. |
+| TERM-003 | طائر تربية / طائر إنتاج | Breeding Bird | حمام أمهات/آباء حسب الجنس والسياق | طائر أُدخل أو يُراد إدخاله في التكاثر النشط. | عضو في قطيع التربية قبل تكوين الزوج أو أثناءه. | الجاهزية للتربية، زوج التربية | خلاصة Phase 1 | تحتاج الصياغة المحلية الخاصة بالجنس إلى تحقق ميداني. |
+| TERM-004 | زوج إنتاج | Breeding Pair | زوج تربية | ذكر وأنثى يعملان معًا كوحدة تناسلية، ويشتركان عادة في حضانة البيض والرعاية الأبوية. | وحدة إنتاج مركزية في الإنتاج الطبيعي للزغاليل. | رابطة الزوج، تكوين الزوج، بطن البيض | SRC-002, 004, 005 | قد يختلف الزوج البيولوجي عن الزوج التشغيلي في بعض الحالات الإدارية الاستثنائية. |
+| TERM-005 | رابطة الزوج | Pair Bond | الارتباط الزوجي | علاقة اجتماعية وتناسلية مستمرة بين ذكر وأنثى الحمام. | تدعم التزاوج واستخدام العش والحضانة وتنسيق الرعاية الأبوية. | تكوين الزوج، إعادة تكوين الزوج | SRC-004 | لا تعني أن عضوية الزوج لا يمكن تغييرها أبدًا. |
+| TERM-006 | تكوين الزوج | Pairing | التزاوج الموجّه/اختيار الزوج حسب السياق | تكوين أو إنشاء زوج تربية من ذكر وأنثى بصورة طبيعية أو متعمدة. | قد يحدث طبيعيًا أو من خلال إسناد شريك بشكل متحكم فيه. | رابطة الزوج، التزاوج المتحكم فيه | SRC-004, Phase 1B | تكوين الزوج ليس مرادفًا لفعل تزاوج واحد. |
+| TERM-007 | إعادة تكوين الزوج | Re-pairing | إعادة التزاوج | تكوين زوج إنتاج جديد بعد فقد شريك أو فصل أو عقم أو قرار إداري. | قد يوقف الإنتاج مؤقتًا ويغير التاريخ الإنتاجي للزوج. | رابطة الزوج، الاستبعاد، فقد الشريك | Phase 1A/1B | لا يوجد توقيت أو حد عالمي موحد. |
+| TERM-008 | بطن بيض | Clutch | دفعة البيض / مجموعة البيض في دورة وضع واحدة | البيض الذي تنتجه أنثى واحدة ضمن نوبة وضع منفصلة قبل فترة الوضع التالية. | يجمع البيض المرتبط كمحاولة تناسلية واحدة. | البيضة، الحضانة، الفقس | SRC-001, 004; Phase 1B | بيضتان هما النمط الغالب، لكن بطنًا من بيضة واحدة ممكنة. |
+| TERM-009 | بيضة | Egg | — | بيضة حمام منفردة وُضعت ضمن نوبة تناسلية. | لها تاريخ وحالة ونتيجة خاصة بها حتى عندما تكون جزءًا من بطن. | بطن البيض، الخصوبة، الحضانة | Phase 1B | نتيجة البيضة لا تساوي نتيجة البطن ككل. |
+| TERM-010 | عش | Nest | — | موقع التعشيش الفعلي المستخدم لوضع البيض والحضانة و/أو تربية الزغاليل. | موقع عمل تناسلي داخل المزرعة. | صندوق العش، نظام العشين | SRC-001, 005 | قد يستخدم الزوج أكثر من عش. |
+| TERM-011 | صندوق عش | Nest Box | خانة عش | هيكل أو حيز محدد داخل المسكن مُعد لتوفير موقع تعشيش. | يجعل موقع العش أكثر تحكمًا وقابلية للتعريف. | العش، قفص الزوج | مصادر Phase 1A | يختلف الشكل المادي حسب نظام الإسكان. |
+| TERM-012 | نظام العشين | Double Nest System | العش المزدوج | توفير موقعين للتعشيش لزوج التربية. | يدعم تربية زغاليل أكبر سنًا بالتزامن مع بطن جديدة. | تداخل دورة الإنتاج | SRC-001, 002, 005 | يحتاج مدى انتشاره في المزارع المصرية المستهدفة إلى تحقق. |
+| TERM-013 | حضانة البيض | Incubation | الرقاد على البيض | الفترة أو السلوك الذي يحافظ على البيض في ظروف تسمح بتطور الجنين حتى الفقس. | يشارك فيها الأبوان عادة. | بطن البيض، الفقس | SRC-001, 004, 005 | قد تكون مرساة البداية ملتبسة. |
+| TERM-014 | الفقس | Hatching / Hatch | — | خروج الزغلول بنجاح من البيضة. | نتيجة تناسلية يمكن ملاحظتها مباشرة. | نسبة الفقس، النفوق داخل القشرة | SRC-001, 005, 012 | توقيت الفقس يعتمد على مرساة الحضانة الفعلية. |
+| TERM-015 | رعاية الزغاليل | Brooding / Rearing | التحضين / التربية بعد الفقس | رعاية الأبوين أو البديل للزغاليل المعتمدة بعد الفقس. | تشمل الدفء والتغذية والحماية. | لبن الحوصلة، التحضين البديل | SRC-003, 004, 005 | قد يستخدم مصطلح Brooding بمعانٍ مختلفة في سياقات الدواجن. |
+| TERM-016 | لبن الحوصلة | Crop Milk / Pigeon Milk | حليب الحمام | إفراز غني بالمغذيات تنتجه حوصلة كلا الأبوين لتغذية الزغاليل في بداية العمر. | غذاء حاسم في المرحلة المبكرة. | الزغلول، الرعاية الأبوية | SRC-003, 004, 021 | ليس لبنًا بالمعنى الثديي. |
+| TERM-017 | الخصوبة / نسبة البيض المخصب | Fertility | الإخصاب حسب السياق | حالة تخصيب البيض أو النسبة التي تمثل البيض المخصب وفق تعريف القياس. | تستخدم لتقييم الأداء التناسلي. | فحص البيض بالضوء، نسبة الفقس | SRC-006, 010, 014 | يجب توضيح المقام المستخدم في الحساب. |
+| TERM-018 | نسبة الفقس | Hatchability | قابلية الفقس | مقياس نجاح الفقس. | يستخدم لتشخيص الأداء التناسلي. | الخصوبة، الفقس | SRC-006, 010, 014 | قد تُحسب من كل البيض الموضوع/المحضن أو من البيض المخصب. |
+| TERM-019 | نفوق الجنين داخل البيضة | Embryonic Death | موت الجنين | موت جنين كان قد بدأ في التطور قبل إتمام الفقس بنجاح. | يختلف عن عدم الخصوبة. | النفوق داخل القشرة، فشل الفقس | Phase 1B / الأدبيات الطيرية | يمكن أن يحدث في مراحل مختلفة. |
+| TERM-020 | جنين نافق داخل القشرة | Dead-in-shell | فشل فقس متأخر | نفوق الجنين في مرحلة متأخرة أو فشله في إتمام عملية الفقس. | نتيجة مهمة عند تحليل فشل الفقس. | النفوق الجنيني، نسبة الفقس | مصادر Phase 1B | قد تحتاج المعايير التشخيصية إلى سياق بيطري. |
+| TERM-021 | الفطام | Weaning | الاستقلال عن تغذية الأبوين | الانتقال نحو التغذية المستقلة؛ وقد تستخدم الأبحاث المصطلح كذلك للفصل الإداري. | يحدد نهاية أو تغيير مسار التغذية الأبوية. | الفصل المبكر، جاهزية التسويق | SRC-002, 017 | قد يختلف الفطام الفسيولوجي عن الفصل الإداري. |
+| TERM-022 | الفصل المبكر | Early Separation / Early Weaning | الفطام المبكر | إزالة الزغاليل عمدًا من الأبوين قبل نهاية التربية الطبيعية المعتادة مع تغذية صناعية/يدوية عند الحاجة. | ينشئ مسار دورة حياة مكثفًا بديلًا. | الفطام، التغذية الصناعية | SRC-002 | ليس مجرد "بيع في عمر أصغر". |
+| TERM-023 | الجاهزية للتسويق | Market Readiness | جاهز للبيع | الحالة التجارية التي يحقق فيها الزغلول متطلبات المشتري أو المزرعة للبيع. | قد تعتمد على العمر والوزن ونمو الريش وشكل البيع. | عمر التسويق، الفطام | خلاصة Phase 1A/1B | ليست حالة بيولوجية عالمية. |
+| TERM-024 | طائر إحلال | Replacement Bird | بديل تربية | طائر يُحتفظ به أو يُختار ليحل محل طيور التربية ويدخل الإنتاج مستقبلًا. | يحافظ على استمرارية قطيع التربية. | الجاهزية للتربية، الاستبعاد | Phase 1A/1B | تحتاج شروط الإدخال إلى تحقق ميداني. |
+| TERM-025 | الاستبعاد من قطيع الإنتاج | Culling | استبعاد | إخراج متعمد من التربية/الإنتاج النشط لأسباب صحية أو رفاهية أو وراثية أو إنتاجية. | ينهي الدور الإنتاجي النشط. | البيع، التقاعد، الإحلال | Phase 1A | ليس مرادفًا للنفوق. |
+| TERM-026 | التربية بواسطة زوج بديل | Fostering | التحضين البديل / أبوين بديلين | نقل بيضة أو زغلول معتمد إلى زوج آخر للحضانة أو الرعاية. | يغير مسؤولية الرعاية وقد ينقذ الناتج عند حدوث مشكلة للأبوين. | الأبوين البديلين، فقد الأبوين | SRC-005, 017 | مدى انتشارها تجاريًا في مصر غير معروف. |
+| TERM-027 | النضج الجنسي | Sexual Maturity | — | المرحلة البيولوجية التي تتطور عندها القدرة التناسلية. | شرط لازم لكنه غير كافٍ تلقائيًا لدخول التربية التجارية. | الجاهزية للتربية | SRC-003, 012, 017 | يقع بصورة عامة في نطاق 5–7 أشهر أو أكثر حسب السلالة والتعريف. |
+| TERM-028 | الجاهزية لدخول قطيع الإنتاج | Operational Breeding Readiness | الجاهزية التشغيلية للتكاثر | تقييم المزرعة بأن الطائر الناضج مكتمل النمو والحالة والصحة بما يكفي للدخول في التربية النشطة. | قرار إدخال طائر الإحلال إلى الإنتاج. | النضج الجنسي، حالة الجسم | خلاصة Phase 1B | مصطلح تحليلي للمجال وليس حدًا علميًا موحدًا. |
+| TERM-029 | الفاصل بين وضع البيض | Oviposition Interval | فاصل وضع البيض | الزمن بين أحداث وضع بيض متتالية في سياق محدد. | الفاصل داخل البطن الواحدة يقارب يومين عادة. | البيضة 1، البيضة 2، البطن | SRC-016 | يجب تحديد هل القياس داخل البطن أم بين البطون. |
+| TERM-030 | فحص البيض بالضوء | Candling | تسليط الضوء على البيضة | فحص بصري غير هدمي باستخدام ضوء نافذ لتقييم نمو الجنين. | يمكن أن يساعد في فحص الخصوبة والتطور. | الخصوبة، النفوق الجنيني | SRC-018 | يحتاج مدى الاستخدام الروتيني في المزارع إلى تحقق. |
+| TERM-031 | دورة الإنتاج | Production Cycle | الدورة الإنتاجية | تعبير عام في المزرعة/الأبحاث عن نشاط الإنتاج المتكرر دون حد بداية ونهاية عالمي واحد. | يجب تقييده بمرساة بداية ونهاية محددة. | دورة التكاثر، دورة بطن البيض | Phase 1A/1B | **مصطلح ملتبس.** |
+| TERM-032 | دورة التكاثر | Reproductive Cycle | الدورة التناسلية | تسلسل أو فترة تناسلية متكررة وفق تعريف الدراسة أو المزرعة. | قد تشمل الوضع والحضانة والتربية ومكونات الوضع التالي. | دورة الإنتاج | SRC-002, 012; Phase 1B | يجب تحديد مرساة القياس. |
+| TERM-033 | دورة وضع البيض | Egg-laying Cycle | دورة البيض | فترة أو تسلسل يركز على تكرار ناتج وضع البيض. | مفيدة عند دراسة الفاصل من وضع إلى الوضع التالي. | فاصل وضع البيض، البطن | Phase 1B | لا تساوي دورة تربية الزغاليل كاملة. |
+| TERM-034 | تداخل دورات الإنتاج | Overlapping Production Cycle | تداخل دورات التكاثر | حالة يبدأ فيها الزوج بطنًا لاحقة بينما لا يزال يرعى زغاليل من بطن أقدم. | خاصية أساسية في دورة حياة الإنتاج التجاري للحمام. | نظام العشين، البطن التالية | SRC-001, 002, 005, 012 | لا يجوز تبسيطها إلى خط زمني واحد غير متداخل. |
+| TERM-035 | مسكن جماعي للحمام | Loft | لوفت / حظيرة حمام | مسكن مشترك يحتوي على عدة طيور ومواقع تعشيش. | بيئة إنتاج جماعية. | برج الحمام، النظام الجماعي | SRC-007, 008 | ليس تصميمًا ماديًا واحدًا موحدًا. |
+| TERM-036 | برج حمام | Dovecote | مسكن حمام تقليدي | هيكل مصمم لإسكان وتعشيش الحمام جماعيًا مع فتحات/خانات أعشاش متعددة. | أحد أشكال الإسكان التقليدي/التجاري. | المسكن الجماعي، المستعمرة | SRC-007 | تم توثيق الأبراج الطينية في الشرقية. |
+| TERM-037 | نظام تربية جماعي | Colony System | نظام مستعمرة / إسكان جماعي | مشاركة عدة طيور أو أزواج لمساحة إسكان وبيئة تعشيش واحدة. | قد يقل فيه التحكم في ربط الإنتاج بالزوج أو العش. | Loft, Dovecote | SRC-007, 008 | يختلف الشكل الفعلي حسب المزرعة. |
+| TERM-038 | قفص زوج إنتاج منفرد | Individual Pair Cage | بطارية / قفص زوجي حسب المزرعة | وحدة إسكان يشغلها ذكر وأنثى معروفان كزوج واحد بصورة متحكم فيها. | يحسن ربط الناتج بالزوج وحفظ السجلات على مستوى الزوج. | زوج التربية، صندوق العش | SRC-002, 005, 008 | لا يُفترض أنه الأفضل عالميًا. |
+| TERM-039 | زغلول مُربّى بواسطة الأبوين | Parent-reared Squab | — | زغلول يتغذى ويحصل على الرعاية طبيعيًا من زوج أبويه خلال فترة الاعتماد. | يمثل المسار الطبيعي المرجعي للمقارنة. | الفصل المبكر، التحضين البديل | SRC-002, 005 | فئة مقارنة مفيدة عند دراسة مسارات التربية. |
 
 ---
 
-## Ambiguous Domain Terms
+## مصطلحات المجال الملتبسة (Ambiguous Domain Terms)
 
-### Production Cycle
+### دورة الإنتاج (Production Cycle)
 
-**Possible meanings:** pairing cycle, first-egg-to-next-first-egg, clutch-to-clutch, incubation period, hatch-to-next-lay, full reproduction plus rearing, or a farm-defined accounting interval.
+**المعاني المحتملة:** دورة تكوين الزوج، أو من البيضة الأولى إلى البيضة الأولى التالية، أو من بطن إلى البطن التالية، أو فترة الحضانة، أو من الفقس إلى الوضع التالي، أو التكاثر والتربية كاملين، أو فترة حسابية تعرفها المزرعة.
 
-**Context:** research papers and farms can legitimately use different anchors.
+**السياق:** يمكن أن تستخدم الدراسات والمزارع مراسي زمنية مختلفة بصورة صحيحة حسب الغرض.
 
-**Risk of misuse:** a future system could silently calculate the wrong duration, prevent overlapping cycles, or compare unlike records.
+**خطر الاستخدام الخاطئ:** قد يحسب النظام المستقبلي مدة خاطئة دون وضوح، أو يمنع تداخل الدورات، أو يقارن سجلات غير متجانسة.
 
-**Recommended wording during future analysis:** avoid the unqualified phrase in calculations. Use explicit wording such as `first egg → next first egg`, `hatch → next laying`, `clutch → next clutch`, or `rearing period`.
+**الصياغة الموصى بها مستقبلًا:** تجنب استخدام المصطلح منفردًا في الحسابات، واستخدم صياغة صريحة مثل `first egg → next first egg` أو `hatch → next laying` أو `clutch → next clutch` أو "فترة تربية الزغاليل".
 
-### Weaning
+### الفطام (Weaning)
 
-**Possible meanings:** true feeding independence; physical separation from parents; research treatment called “weaning” even when artificial feeding continues.
+**المعاني المحتملة:** الاستقلال الحقيقي في التغذية؛ الفصل المادي عن الأبوين؛ أو معاملة بحثية تسمى فطامًا رغم استمرار التغذية الصناعية.
 
-**Risk of misuse:** early separation could be mistaken for physiological independence or sale age.
+**خطر الاستخدام الخاطئ:** قد يُفهم الفصل المبكر على أنه استقلال فسيولوجي أو عمر بيع.
 
-**Recommended wording:** state `parent separation`, `independent feeding`, or `market sale` explicitly.
+**الصياغة الموصى بها:** حدد بوضوح "الفصل عن الأبوين" أو "التغذية المستقلة" أو "البيع في السوق".
 
-### Market Readiness
+### الجاهزية للتسويق (Market Readiness)
 
-**Possible meanings:** buyer-specified live age/weight, dressed-bird specification, farm-defined target, or general 3–4-week traditional reference.
+**المعاني المحتملة:** عمر/وزن حي يحدده المشتري، أو مواصفة طائر مذبوح، أو هدف تحدده المزرعة، أو مجرد المرجع التقليدي 3–4 أسابيع.
 
-**Risk of misuse:** turning research age/weight into a commercial rule.
+**خطر الاستخدام الخاطئ:** تحويل عمر أو وزن بحثي إلى قاعدة تجارية.
 
-**Recommended wording:** state customer/market, live vs dressed, age, weight and other criteria separately.
+**الصياغة الموصى بها:** حدد السوق/العميل وشكل البيع حيًا أو مذبوحًا والعمر والوزن والمعايير الأخرى منفصلة.
 
-### Fertility
+### الخصوبة (Fertility)
 
-**Possible meanings:** egg is biologically fertilized; farm percentage of fertile eggs; result inferred by candling.
+**المعاني المحتملة:** كون البيضة مخصبة بيولوجيًا؛ نسبة البيض المخصب في المزرعة؛ نتيجة مستنتجة من فحص البيض بالضوء.
 
-**Risk of misuse:** percentages become incomparable when denominators/methods differ.
+**خطر الاستخدام الخاطئ:** تصبح النسب غير قابلة للمقارنة عند اختلاف المقام أو طريقة التأكيد.
 
-**Recommended wording:** always state numerator, denominator, and confirmation method.
+**الصياغة الموصى بها:** اذكر دائمًا البسط والمقام وطريقة التأكيد.
 
-### Hatchability
+### نسبة الفقس (Hatchability)
 
-**Possible meanings:** hatched eggs / all eggs; hatched eggs / fertile eggs; eggs set rather than eggs laid.
+**المعاني المحتملة:** البيض الفاقس / كل البيض؛ البيض الفاقس / البيض المخصب؛ أو البيض المحضن بدل البيض الموضوع.
 
-**Risk of misuse:** apparently contradictory farm performance.
+**خطر الاستخدام الخاطئ:** ظهور اختلافات أداء تبدو متناقضة وهي ناتجة عن اختلاف التعريف.
 
-**Recommended wording:** use `hatchability of all eggs` or `hatchability of fertile eggs` with formula.
+**الصياغة الموصى بها:** استخدم "نسبة الفقس من كل البيض" أو "نسبة الفقس من البيض المخصب" مع المعادلة.
 
-### Breeding Readiness
+### الجاهزية للتربية (Breeding Readiness)
 
-**Possible meanings:** sexual maturity, producer decision, minimum age, minimum weight, acceptable body condition.
+**المعاني المحتملة:** النضج الجنسي، قرار المربي، حد أدنى للعمر، حد أدنى للوزن، أو حالة جسم مقبولة.
 
-**Risk of misuse:** treating biological maturity as automatic farm admission.
+**خطر الاستخدام الخاطئ:** اعتبار النضج البيولوجي دخولًا تلقائيًا للإنتاج.
 
-**Recommended wording:** keep `Sexual Maturity` and `Operational Breeding Readiness` separate.
+**الصياغة الموصى بها:** حافظ على الفصل بين `Sexual Maturity` و`Operational Breeding Readiness`.
 
 ### Loft / Dovecote / Colony
 
-**Possible meanings:** vary substantially by country and local building form.
+**المعاني المحتملة:** تختلف بدرجة كبيرة حسب البلد والشكل المحلي للمبنى.
 
-**Risk of misuse:** assuming a term defines cage layout, pair control, nesting arrangement, identification or capacity.
+**خطر الاستخدام الخاطئ:** افتراض أن الاسم وحده يحدد تخطيط الأقفاص أو التحكم في الأزواج أو الأعشاش أو التعريف أو السعة.
 
-**Recommended wording:** use the term plus an actual physical/operational description in Phase 2.
+**الصياغة الموصى بها:** استخدم المصطلح مع وصف مادي وتشغيلي حقيقي خلال Phase 2.
 
 ---
 
-## Terminology Review Result
+## نتيجة مراجعة المصطلحات
 
-- Core Phase 1 terms are normalized.
-- Ambiguous lifecycle and performance terms are explicitly flagged.
-- Arabic farm vocabulary that may vary locally remains open for field validation.
-- No terminology item has been converted into a software entity, table, enum, or business rule.
+- تم توحيد المصطلحات الأساسية التي ظهرت في Phase 1.
+- تم تحديد المصطلحات الملتبسة المتعلقة بالدورة والتربية والتسويق صراحة.
+- لا تُعد أي ترجمة عربية محلية غير مؤكدة قاعدة نهائية قبل التحقق مع المربين المصريين.
+- تبقى المصطلحات الإنجليزية المهمة إلى جوار المقابل العربي عند الحاجة لضمان الدقة وعدم فقدان المعنى العلمي.
