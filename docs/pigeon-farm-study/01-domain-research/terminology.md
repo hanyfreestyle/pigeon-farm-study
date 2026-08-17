@@ -57,11 +57,11 @@
 ### TERM-004 — Clutch
 - **English Term:** Clutch
 - **Arabic Term:** بطن بيض / دفعة البيض / مجموعة البيض في دورة وضع واحدة
-- **Definition:** The set of eggs laid as one laying episode. In domestic pigeons the dominant pattern reported in the reviewed literature is two eggs.
+- **Definition:** The set of eggs produced by one female as one discrete laying episode before the next reproductive laying interval. Two eggs are the dominant domestic-pigeon pattern, but the concept does not require two surviving eggs.
 - **Context:** Reproduction and egg production.
 - **Related Entities:** Egg, nest, incubation, hatch.
-- **Source:** FAO; Life 2023 review.
-- **Notes:** Arabic operational terminology should be validated with Egyptian producers.
+- **Source:** FAO; Life 2023 review; Phase 1B lifecycle analysis.
+- **Notes:** A naturally completed one-egg episode can still represent a one-egg clutch. Arabic operational terminology should be field-validated.
 
 ### TERM-005 — Nest
 - **English Term:** Nest
@@ -97,16 +97,16 @@
 - **Context:** Reproductive lifecycle.
 - **Related Entities:** Egg, incubation, squab, hatchability.
 - **Source:** FAO; pigeon reproduction literature.
-- **Notes:** Event definition is straightforward; timing and outcome measures are analyzed later.
+- **Notes:** Hatch timing should be tied to observed incubation context, not assumed from one universal anchor.
 
 ### TERM-009 — Incubation
 - **English Term:** Incubation
 - **Arabic Term:** حضانة البيض / الرقاد على البيض
-- **Definition:** Period during which parent pigeons, or an artificial system, maintain eggs until hatch. Natural pigeon incubation is shared by both parents.
+- **Definition:** Period during which parent pigeons, or an artificial system, maintain eggs under conditions supporting embryo development until hatch. Natural pigeon incubation is shared by both parents.
 - **Context:** Breeding cycle.
 - **Related Entities:** Egg, breeding pair, nest, hatch.
 - **Source:** FAO; Life 2023 review.
-- **Notes:** Artificial incubation is a separate production intervention and is not assumed to be standard in target farms.
+- **Notes:** The exact operational start anchor may differ from first-egg date because laying and sustained incubation are not the same event.
 
 ### TERM-010 — Crop Milk / Pigeon Milk
 - **English Term:** Crop Milk / Pigeon Milk
@@ -159,8 +159,8 @@
 - **Definition:** Management or biological formation of a new breeding pair after loss, separation or intentional change of a previous pair.
 - **Context:** Pair management.
 - **Related Entities:** Pair bond, breeder, mate loss, culling.
-- **Source:** Phase 1A domain analysis; detailed commercial rules require field validation.
-- **Notes:** No universal timing or threshold was established in Phase 1A.
+- **Source:** Phase 1A/1B domain analysis.
+- **Notes:** No universal timing or threshold was established.
 
 ### TERM-016 — Loft
 - **English Term:** Loft
@@ -186,8 +186,8 @@
 - **Definition:** Operational condition in which a breeding pair begins a subsequent clutch while it is still caring for squabs from an earlier clutch.
 - **Context:** Pigeon production lifecycle and nest management.
 - **Related Entities:** Breeding pair, clutch, nest, squab, double nest.
-- **Source:** FAO; housing/reproduction studies.
-- **Notes:** This term is descriptive; the formal boundary of a production cycle remains an open question for Phase 1B/Phase 3.
+- **Source:** FAO; housing/reproduction studies; Phase 1B lifecycle analysis.
+- **Notes:** The term describes biological/operational overlap and does not itself define a software cycle boundary.
 
 ### TERM-019 — Parent-reared Squab
 - **English Term:** Parent-reared Squab
@@ -206,3 +206,93 @@
 - **Related Entities:** Squab, breeding pair, artificial feeding, reproductive interval.
 - **Source:** BMC Veterinary Research 2025.
 - **Notes:** Can increase breeder reproductive throughput but may change growth, mortality, labor and welfare outcomes.
+
+### TERM-021 — Sexual Maturity
+- **English Term:** Sexual Maturity
+- **Arabic Term:** النضج الجنسي
+- **Definition:** Biological stage at which the pigeon has developed reproductive capacity.
+- **Context:** Entry toward breeding population.
+- **Related Entities:** Breeder, replacement bird, breeding readiness.
+- **Source:** Poultry Science crop-milk review 2023; pigeon reproduction reviews.
+- **Notes:** Not synonymous with the farm's operational decision that the bird is ready for commercial breeding.
+
+### TERM-022 — Operational Breeding Readiness
+- **English Term:** Operational Breeding Readiness
+- **Arabic Term:** الجاهزية التشغيلية للتكاثر / الجاهزية لدخول قطيع الإنتاج
+- **Definition:** Farm-management judgment that a sexually mature bird is sufficiently developed, healthy and suitable to enter active breeding.
+- **Context:** Replacement and breeder admission.
+- **Related Entities:** Sexual maturity, body condition, replacement bird.
+- **Source:** Phase 1B synthesis of maturity and Egyptian strain evidence.
+- **Notes:** This is an analytical domain phrase, not a standardized scientific threshold; criteria require field validation.
+
+### TERM-023 — Oviposition Interval
+- **English Term:** Oviposition Interval
+- **Arabic Term:** الفاصل بين وضع البيض
+- **Definition:** Time between successive eggs laid within or between laying episodes, depending on stated measurement context.
+- **Context:** Egg-laying rhythm.
+- **Related Entities:** Egg 1, Egg 2, clutch.
+- **Source:** Poultry Science 2026 breeding-pigeon study.
+- **Notes:** Within-clutch interval is commonly around two days in domestic pigeons.
+
+### TERM-024 — Candling
+- **English Term:** Candling
+- **Arabic Term:** فحص البيض بالضوء / تسليط الضوء على البيضة
+- **Definition:** Non-destructive visual inspection of an incubating egg using transmitted light to assess embryo/fertility development.
+- **Context:** Fertility and incubation monitoring.
+- **Related Entities:** Egg, fertility, embryonic development.
+- **Source:** Computers and Electronics in Agriculture pigeon-egg fertility study.
+- **Notes:** Routine farm adoption and exact timing require field validation.
+
+### TERM-025 — Embryonic Death
+- **English Term:** Embryonic Death
+- **Arabic Term:** نفوق الجنين داخل البيضة
+- **Definition:** Death of a previously developing embryo before successful hatch.
+- **Context:** Egg outcome and reproductive diagnosis.
+- **Related Entities:** Fertile egg, incubation, hatch failure.
+- **Source:** Avian incubation/candling literature and Phase 1B analysis.
+- **Notes:** Can occur at different incubation stages and should not be confused with infertility.
+
+### TERM-026 — Dead-in-shell
+- **English Term:** Dead-in-shell
+- **Arabic Term:** جنين نافق داخل القشرة / فشل الفقس بعد اكتمال متقدم
+- **Definition:** Late-stage failure where a developed embryo dies without completing successful hatch.
+- **Context:** Hatch failure investigation.
+- **Related Entities:** Embryonic death, pipping, hatchability.
+- **Source:** Hatch-failure terminology in avian/pigeon production literature.
+- **Notes:** Exact diagnostic criteria may vary by study or veterinary investigation.
+
+### TERM-027 — Foster Parent / Fostering
+- **English Term:** Foster Parent / Fostering
+- **Arabic Term:** أبوين بديلين / التحضين أو التربية بواسطة زوج بديل
+- **Definition:** Transfer of an egg or dependent squab to another breeding pair that provides incubation or parental care.
+- **Context:** Parent loss, synchronized reproduction and specialized breeding management.
+- **Related Entities:** Egg transfer, squab, breeding pair.
+- **Source:** Animals 2019 Egyptian parent-loss research; pigeon husbandry literature.
+- **Notes:** Current commercial frequency in target farms requires field validation.
+
+### TERM-028 — Market Readiness
+- **English Term:** Market Readiness
+- **Arabic Term:** الجاهزية للتسويق
+- **Definition:** Commercial condition at which a squab satisfies the farm/buyer requirements for sale; may depend on age, weight, feathering and customer specification.
+- **Context:** Meat pigeon production.
+- **Related Entities:** Squab, market age, market weight, weaning.
+- **Source:** Phase 1A/1B synthesis of production and Egyptian growth evidence.
+- **Notes:** Must not be treated as automatically identical to physiological weaning.
+
+### TERM-029 — Weaning
+- **English Term:** Weaning
+- **Arabic Term:** الفطام
+- **Definition:** Transition from dependence on parental feeding to independent feeding, or in production research the management separation used to initiate an artificial-feeding pathway.
+- **Context:** Squab rearing.
+- **Related Entities:** Parent-reared squab, early separation, market readiness.
+- **Source:** Pigeon reproduction reviews; BMC Veterinary Research 2025.
+- **Notes:** Literature may use “weaning” for separation even when artificial feeding is still required; context must be preserved.
+
+### TERM-030 — Reproductive / Egg-laying Cycle
+- **English Term:** Reproductive Cycle / Egg-laying Cycle
+- **Arabic Term:** دورة التكاثر / دورة وضع البيض
+- **Definition:** Time interval used to describe repeated reproductive output, whose exact start/end points depend on the study or farm definition.
+- **Context:** Production timing and performance analysis.
+- **Related Entities:** Clutch, hatch, next laying, overlap.
+- **Source:** Egyptian strain studies; early-weaning research; Phase 1B lifecycle analysis.
+- **Notes:** No single universal boundary is approved; later analysis must state the anchor explicitly.
