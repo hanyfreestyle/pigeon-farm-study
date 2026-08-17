@@ -1,76 +1,78 @@
-# Consistency Review
+# مراجعة الاتساق
 
-## Purpose
+## الغرض
 
 تسجيل ومراجعة التعارضات والاختلافات بين المصادر ونتائج المراحل، مع التمييز بين التعارض الحقيقي والاختلاف الناتج عن السلالة أو النظام أو التعريف أو الإدارة.
 
-## Current Status
+## الحالة الحالية
 
-- **Phase:** Phase 1C
-- **Phase 1A vs 1B Review:** Completed
-- **Conflicts / Variability Items Reviewed:** 9
-- **Irreconcilable Domain Conflicts:** 0 identified
-- **Items Remaining Context-dependent / Field-dependent:** 9
-- **Review Status:** Completed for Phase 1 — Awaiting User Review
+- **المرحلة:** Phase 1C
+- **مراجعة Phase 1A مقابل 1B:** Completed
+- **قضايا التعارض / التباين التي تمت مراجعتها:** 9
+- **تعارضات مجال غير قابلة للتوفيق:** لم يتم تحديد أي تعارض
+- **القضايا التي ما زالت تعتمد على السياق / الميدان:** 9
+- **حالة المراجعة:** Completed لـ Phase 1 — بانتظار مراجعة المستخدم
 
-## Conflict Register
+## سجل التعارضات
 
-| Conflict ID | Topic | Evidence Pattern A | Evidence Pattern B | Phase 1C Interpretation | Status | Future Action |
+| رقم التعارض | الموضوع | نمط الدليل A | نمط الدليل B | تفسير Phase 1C | الحالة | الإجراء المستقبلي |
 |---|---|---|---|---|---|---|
-| CON-001 | Egg / reproductive cycle length | ~51–53 d in some systems/references | ~37–39 d in other strains; dramatically shorter under early separation | Definitions, strain and parental-care load differ. No universal cycle duration exists. | Context-dependent — Resolved Conceptually | Phase 3 must use explicit event anchors. |
-| CON-002 | Natural parental rearing vs early artificial rearing | Natural rearing supports normal dependency/growth | Early separation can increase breeder throughput but alter growth, mortality, labor and welfare | They are different production pathways, not conflicting descriptions of one standard pathway. | Context-dependent — Resolved Conceptually | Validate prevalence before treating intensive path as target workflow. |
-| CON-003 | Housing model and commercial suitability | Egyptian mud dovecote/wooden loft commercial systems | Pair cages can improve control/output under some studies | Multiple commercial models are real. “Best system” is context-specific. | Requires Field Validation | Phase 2 must analyze actual target structures. |
-| CON-004 | Summer production / seasonality | Pigeons described as non-seasonal breeders | Egyptian heat stress depresses reproduction | Non-seasonal biology can coexist with environmentally driven summer decline. | Context-dependent — Resolved Conceptually | Phase 4/6 validate local magnitude and management. |
-| CON-005 | Sexual maturity vs breeding readiness | Reviews: broad ~5–7+ month maturity | Farm/research admission also depends on strain, weight, condition and policy | Biological capacity and operational admission are distinct concepts. | Context-dependent — Resolved Conceptually | Validate target breeder-entry criteria. |
-| CON-006 | Incubation start anchor | Sources report ~17–20 d incubation | Eggs are laid about two days apart and sustained incubation timing is not always explicitly anchored | Duration is stable enough; start timestamp is not universal. | Still Open — Definition Needed | Preserve Egg 1, Egg 2 and hatch observations; define metrics later. |
-| CON-007 | Weaning vs market age | Traditional production often places both near 3–4 weeks | Early separation can occur much earlier while artificial feeding continues | Separation, feeding independence and market sale are distinct events. | Context-dependent — Resolved Conceptually | Phase 3/5 validate local market definition. |
-| CON-008 | Hatch-to-next-lay interval | Local Egyptian/Zagel data show longer intervals | White Mirthys and early separation show shorter intervals | Strong strain/management effect controls overlap intensity. | Context-dependent — Resolved Conceptually | Use observed event dates and contextual benchmarks. |
-| CON-009 | Molt as production interruption | Annual molt exists | Breeding and molt can overlap; molt may interact with reproduction | Molt is a modifier, not an automatic universal shutdown. | Requires Field Validation | Validate commercial effect by season/housing in later husbandry work. |
+| CON-001 | طول دورة البيض / التكاثر | نحو 51–53 يومًا في بعض النظم/المراجع | نحو 37–39 يومًا في سلالات أخرى، وأقصر بكثير مع الفصل المبكر | تختلف التعريفات والسلالة وحمل الرعاية الأبوية؛ لا توجد مدة عالمية واحدة للدورة. | يعتمد على السياق — تم حله مفاهيميًا | يجب أن تستخدم Phase 3 مراسي أحداث صريحة. |
+| CON-002 | التربية الطبيعية بواسطة الأبوين مقابل التربية الصناعية المبكرة | تدعم التربية الطبيعية الاعتماد والنمو الطبيعيين | يمكن للفصل المبكر زيادة معدل إنتاج الأبوين لكنه يغير النمو والنفوق والعمالة والرفاهية | مساران إنتاجيان مختلفان وليسا وصفين متعارضين لمسار قياسي واحد. | يعتمد على السياق — تم حله مفاهيميًا | التحقق من مدى الانتشار قبل اعتبار المسار المكثف هو المسار المستهدف. |
+| CON-003 | نموذج الإسكان والملاءمة التجارية | نظم تجارية مصرية بأبراج طينية ومساكن خشبية | قد تحسن أقفاص الأزواج التحكم والناتج في بعض الدراسات | توجد عدة نماذج تجارية فعلية؛ و"أفضل نظام" يعتمد على السياق. | Requires Field Validation | يجب أن تحلل Phase 2 الهياكل الفعلية المستهدفة. |
+| CON-004 | الإنتاج الصيفي / الموسمية | يوصف الحمام بأنه غير موسمي التكاثر | يخفض الإجهاد الحراري المصري الأداء التناسلي | يمكن أن تجتمع البيولوجيا غير الموسمية مع انخفاض صيفي ناتج عن البيئة. | يعتمد على السياق — تم حله مفاهيميًا | تتحقق Phase 4/6 من حجم الأثر المحلي وإدارته. |
+| CON-005 | النضج الجنسي مقابل الجاهزية للتربية | المراجعات: نطاق عام نحو 5–7 أشهر أو أكثر | يعتمد دخول الإنتاج في المزارع/الأبحاث أيضًا على السلالة والوزن والحالة والسياسة | القدرة البيولوجية وقرار الإدخال التشغيلي مفهومان مختلفان. | يعتمد على السياق — تم حله مفاهيميًا | التحقق من معايير إدخال طيور التربية المستهدفة. |
+| CON-006 | مرساة بدء الحضانة | تذكر المصادر حضانة نحو 17–20 يومًا | يوضع البيض بفاصل يقارب يومين ولا يُحدد توقيت الحضانة المستمرة دائمًا بوضوح | المدة مستقرة بدرجة كافية؛ أما لحظة البداية فليست عالمية. | Still Open — Definition Needed | حفظ ملاحظات البيضة 1 والبيضة 2 والفقس، ثم تعريف المقاييس لاحقًا. |
+| CON-007 | الفطام مقابل عمر السوق | يضع الإنتاج التقليدي المفهومين غالبًا قرب 3–4 أسابيع | يمكن أن يحدث الفصل المبكر قبل ذلك بكثير مع استمرار التغذية الصناعية | الفصل والاستقلال في التغذية والبيع في السوق أحداث مختلفة. | يعتمد على السياق — تم حله مفاهيميًا | تتحقق Phase 3/5 من تعريف السوق المحلي. |
+| CON-008 | الفترة من الفقس إلى الوضع التالي | تظهر بيانات Local Egyptian/Zagel فترات أطول | تظهر White Mirthys والفصل المبكر فترات أقصر | تتحكم السلالة والإدارة بقوة في شدة التداخل. | يعتمد على السياق — تم حله مفاهيميًا | استخدام تواريخ الأحداث المرصودة وقيم مرجعية مرتبطة بالسياق. |
+| CON-009 | القلش كانقطاع إنتاجي | يوجد قلش سنوي | يمكن أن يتداخل التكاثر والقلش وقد يتفاعل أحدهما مع الآخر | القلش عامل مؤثر وليس توقفًا عالميًا تلقائيًا. | Requires Field Validation | التحقق من الأثر التجاري حسب الموسم والمسكن في أبحاث الرعاية اللاحقة. |
 
-## Terminology Consistency Review
+## مراجعة اتساق المصطلحات
 
-The following terms were specifically separated to prevent future semantic conflicts:
+تم الفصل صراحة بين المصطلحات التالية لمنع التعارض الدلالي مستقبلًا:
 
-- `Production Cycle` vs `Reproductive Cycle` vs `Egg-laying Cycle`.
-- `Egg laid` vs `Clutch complete` vs `Incubation started`.
-- `Early Separation` vs `Weaning` vs `Market Readiness`.
-- `Fertility` vs `Hatchability`.
-- `Sexual Maturity` vs `Operational Breeding Readiness`.
-- `Individual Identification` vs `Pair Identification` vs `Nest/Cage/Location Identification`.
-- `Culling` vs `Selling` vs `Retirement` vs `Mortality`.
+- `Production Cycle` مقابل `Reproductive Cycle` مقابل `Egg-laying Cycle`.
+- `Egg laid` مقابل `Clutch complete` مقابل `Incubation started`.
+- `Early Separation` مقابل `Weaning` مقابل `Market Readiness`.
+- `Fertility` مقابل `Hatchability`.
+- `Sexual Maturity` مقابل `Operational Breeding Readiness`.
+- `Individual Identification` مقابل `Pair Identification` مقابل `Nest/Cage/Location Identification`.
+- `Culling` مقابل `Selling` مقابل `Retirement` مقابل `Mortality`.
 
-## Lifecycle Consistency Review
+> تُستخدم هذه المصطلحات الإنجليزية هنا كVocabulary فنية ثابتة، بينما يظل الشرح والتحليل بالعربية.
 
-Phase 1A and Phase 1B are consistent on the central lifecycle finding:
+## مراجعة اتساق دورة الإنتاج
 
-**The next clutch can begin while squabs from the previous clutch remain under parental care.**
+تتفق Phase 1A وPhase 1B على النتيجة المركزية لدورة الإنتاج:
 
-Therefore a future analysis must tolerate:
+**يمكن أن تبدأ البطن التالية بينما ما تزال زغاليل البطن السابقة تحت رعاية الأبوين.**
 
-- Cycle A = squab rearing,
-- Cycle B = nest preparation / egg laying / incubation,
-- both associated with the same breeding pair at the same time.
+ولذلك يجب أن يسمح أي تحليل مستقبلي بوجود:
 
-This is now an established Domain Baseline conclusion.
+- الدورة A = تربية الزغاليل،
+- الدورة B = تجهيز العش / وضع البيض / الحضانة،
+- مع ارتباط كلتيهما بزوج التربية نفسه في الوقت نفسه.
 
-## Benchmark Consistency Rule
+وأصبحت هذه النتيجة جزءًا راسخًا من خط أساس المجال (Domain Baseline).
 
-Every future benchmark comparison must preserve at minimum:
+## قاعدة اتساق القيم المرجعية
 
-- breed/strain,
-- breeder age where relevant,
-- housing model,
-- natural vs artificial incubation,
-- natural vs early separation/rearing,
-- number of squabs/parental load,
-- feed program,
-- season/environment,
-- exact numerator/denominator,
-- exact timing/event anchor,
-- market age at measurement.
+يجب أن يحتفظ أي مقارنة مستقبلية للقيم المرجعية - كحد أدنى - بما يلي:
 
-## Final Phase 1 Consistency Conclusion
+- السلالة/الخط،
+- عمر طيور التربية عندما يكون ذا صلة،
+- نموذج الإسكان،
+- الحضانة الطبيعية مقابل الصناعية،
+- التربية الطبيعية مقابل الفصل/التربية المبكرة،
+- عدد الزغاليل / حمل الرعاية الأبوية،
+- برنامج العلف،
+- الموسم/البيئة،
+- البسط والمقام الدقيقان،
+- مرساة التوقيت/الحدث الدقيقة،
+- عمر السوق عند القياس.
 
-No major finding from Phase 1A had to be rejected because of Phase 1B. Apparent contradictions were primarily caused by **different definitions, strains, production systems, environmental conditions, or management interventions**.
+## الاستنتاج النهائي لاتساق Phase 1
 
-Phase 1 therefore has a coherent domain baseline suitable for user review and, after approval, use as input to Phase 2.
+لم تستدع Phase 1B رفض أي نتيجة رئيسية من Phase 1A. وكانت التناقضات الظاهرية ناتجة أساسًا عن **اختلاف التعريفات والسلالات ونظم الإنتاج والظروف البيئية والتدخلات الإدارية**.
+
+وبالتالي تمتلك Phase 1 خط أساس مجال متسقًا يصلح لمراجعة المستخدم، وبعد الاعتماد يمكن استخدامه كمدخل لـ Phase 2.
