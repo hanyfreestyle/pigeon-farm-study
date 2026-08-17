@@ -33,34 +33,19 @@
 
 يمكن دراسة الجوانب المشتركة مع أنماط أخرى من تربية الحمام **فقط عند الحاجة لفهم المجال الأساسي**، دون تحويل الدراسة إلى نظام عام لكل أنواع تربية الحمام.
 
-### Out of Scope — Current Study Initialization
+### Out of Scope During Domain Research
 
-في Phase 0 لا يدخل ضمن العمل:
-
-- البحث التفصيلي في تربية الحمام التجاري.
-- تحديد قيم أو معايير إنتاجية أو بيطرية.
 - تصميم Software Entities.
 - تصميم Database Tables أو Schema.
 - تنفيذ Migrations أو Models أو Resources أو Services أو Enums أو Controllers.
-- تنفيذ Filament Resources أو أي واجهات تطبيق.
+- تنفيذ Filament Resources أو واجهات تطبيق.
 - كتابة كود Laravel / PHP / SQL.
-- تعريف تفاصيل الـ MVP قبل انتهاء التحليل السابق له.
+- تعريف MVP قبل انتهاء التحليل السابق له.
 - تجميع التقرير النهائي.
 
 ## Study Methodology
 
-تسير الدراسة بالتسلسل التالي، ولا يتم القفز إلى مرحلة لاحقة إذا كانت تعتمد على فهم لم يكتمل بعد:
-
-**Research**
-→ **Domain Understanding**
-→ **Operational Analysis**
-→ **Business Analysis**
-→ **Business Rules**
-→ **Data Modeling**
-→ **System Design**
-→ **MVP Definition**
-→ **Technical Architecture**
-→ **Final Review**
+**Research** → **Domain Understanding** → **Operational Analysis** → **Business Analysis** → **Business Rules** → **Data Modeling** → **System Design** → **MVP Definition** → **Technical Architecture** → **Final Review**
 
 المبدأ الحاكم: **التحليل يولّد التصميم، وليس العكس.**
 
@@ -68,8 +53,8 @@
 
 | Phase | Name | Status | Files | Dependencies | Review Status | Notes |
 |---|---|---|---|---|---|---|
-| Phase 0 | Study Initialization | Completed | `MASTER.md`, review files, placeholders | None | Approved by transition | متطلبات التهيئة اكتملت، وبدء المستخدم Phase 1A اعتُبر إذنًا صريحًا بالانتقال للمرحلة التالية. |
-| Phase 1 | Domain Research | In Progress | `01-domain-research/*` | Phase 0 | Phase 1A Awaiting Review | Phase 1A completed; Phase 1B وPhase 1C لم يتم تنفيذهما بعد. |
+| Phase 0 | Study Initialization | Completed | `MASTER.md`, review files, placeholders | None | Approved by transition | متطلبات التهيئة اكتملت، والانتقال إلى Phase 1 تم بتعليمات صريحة. |
+| Phase 1 | Domain Research | In Progress | `01-domain-research/*` | Phase 0 | Phase 1A & 1B Awaiting Review | Phase 1A وPhase 1B مكتملتان؛ Phase 1C لم تبدأ. |
 | Phase 2 | Farm Structure & Core Domain | Pending | `02-farm-structure/*` | Phase 1 | Pending | فهم الهيكل التشغيلي ومفاهيم الحمام/السلالات/الأزواج/النسب. |
 | Phase 3 | Production Analysis | Pending | `03-production/*` | Phases 1–2 | Pending | تحليل دورة الإنتاج والتكاثر والبيض والفقس والزغاليل والأداء. |
 | Phase 4 | Health & Feed | Pending | `04-health-feed/*` | Phases 1–3 | Pending | الصحة والعلاجات والتحصينات والنفوق والتغذية. |
@@ -84,53 +69,41 @@
 | Subphase | Name | Status | Primary File | Notes |
 |---|---|---|---|---|
 | Phase 1A | Commercial Pigeon Farming Domain Research | Completed — Awaiting Review | `01-domain-research/commercial-pigeon-farming.md` | 15 tracked sources; Egyptian and international evidence; contradictions and field-validation gaps documented. |
-| Phase 1B | Detailed Pigeon Production Lifecycle | Pending | `01-domain-research/production-lifecycle.md` | Do not start without independent user instruction. |
-| Phase 1C | Domain Research Consolidation / remaining scope | Pending | To be defined by phase instruction | Phase 1 remains In Progress until remaining subphases are completed. |
+| Phase 1B | Detailed Pigeon Production Lifecycle | Completed — Awaiting Review | `01-domain-research/production-lifecycle.md` | Lifecycle timeline, overlapping cycles, failures, observable events and Egyptian timing evidence documented. |
+| Phase 1C | Domain Terminology, Evidence Consolidation & Validation Review | Pending | To be defined by Phase 1C instruction | Do not start without independent user instruction. |
 
 ## Decision Log
 
-> أي قرار مؤثر في الدراسة يجب تسجيله هنا. القرار Approved لا يتم تغييره بصمت؛ إذا استدعى الأمر تغييره، يُسجل قرار جديد يوضح سبب التعديل وتأثيره.
-
 | Decision ID | Date | Phase | Decision | Reason | Impact | Status |
 |---|---|---|---|---|---|---|
-| DEC-001 | 2026-08-17 | Phase 0 | التركيز الرئيسي للدراسة هو Commercial Meat Pigeon / Squab Production. | منع تحول المشروع إلى نظام عام لكل استخدامات الحمام والحفاظ على وضوح المجال. | يحدد اتجاه البحث والتحليل في جميع المراحل التالية. | Approved |
-| DEC-002 | 2026-08-17 | Phase 0 | لا يتم تصميم Software Entities أو Database Tables قبل فهم Domain Entities ودورة العمل. | منع التصميم المبكر القائم على افتراضات برمجية. | يؤخر Data Modeling حتى اكتمال التحليل اللازم ويجعل النموذج نتيجة للدراسة. | Approved |
-| DEC-003 | 2026-08-17 | Phase 0 | التقنية المستهدفة مبدئيًا: Laravel 12، PHP 8.2+، Filament 4، MySQL، بدون أي Technical Implementation في Phase 0. | تثبيت سياق تقني مستقبلي دون السماح له بقيادة تحليل المجال. | يستخدم لاحقًا كقيد معماري بعد اكتمال مراحل التحليل المناسبة. | Approved |
-| DEC-004 | 2026-08-17 | Phase 0 → Phase 1 | اعتبار إرسال المستخدم تعليمات Phase 1A الصريحة موافقة على اكتمال Phase 0 والانتقال إلى Domain Research. | المستخدم بدأ المرحلة التالية بعد تسليم Phase 0، ومتطلبات Phase 0 كانت مكتملة. | يسمح بتغيير Phase 0 إلى Completed وPhase 1 إلى In Progress دون تغيير أي قرار Domain/Design. | Approved |
+| DEC-001 | 2026-08-17 | Phase 0 | التركيز الرئيسي للدراسة هو Commercial Meat Pigeon / Squab Production. | منع Scope Drift. | يحدد اتجاه البحث والتحليل. | Approved |
+| DEC-002 | 2026-08-17 | Phase 0 | لا يتم تصميم Software Entities أو Database Tables قبل فهم Domain Entities ودورة العمل. | منع التصميم المبكر. | Data Modeling نتيجة للتحليل. | Approved |
+| DEC-003 | 2026-08-17 | Phase 0 | التقنية المستهدفة مبدئيًا Laravel 12 + PHP 8.2+ + Filament 4 + MySQL بدون تنفيذ تقني مبكر. | تثبيت السياق التقني دون فرضه على المجال. | يعاد تقييمه في Phase 7. | Approved |
+| DEC-004 | 2026-08-17 | Phase 0 → Phase 1 | اعتبار تعليمات Phase 1A الصريحة موافقة على اكتمال Phase 0 والانتقال إلى Domain Research. | Phase 0 كانت مستوفاة والمستخدم بدأ المرحلة التالية. | Phase 0 Completed وPhase 1 In Progress. | Approved |
 
 ## Research Evidence Policy
 
-كل معلومة Domain Knowledge مؤثرة يجب — قدر الإمكان — دعمها بمصدر موثوق، مع الفصل الصريح بين درجة المعرفة وطبيعتها.
+تصنف المعلومات المهمة إلى:
 
-### Evidence Classes
-
-**Verified Fact**  
-معلومة مدعومة بمصدر أو أكثر من مصادر جيدة وموثوقة، ويمكن استخدامها كأساس للتحليل مع تسجيل المصدر.
-
-**Industry Practice**  
-ممارسة شائعة أو نمط تشغيلي معروف، لكنها قد تختلف حسب حجم المزرعة أو البلد أو السلالة أو أسلوب الإدارة. لا تُعامل كقاعدة عامة ثابتة بدون تحقق.
-
-**Assumption**  
-افتراض مؤقت يسمح بمواصلة الدراسة عند نقص معلومة. يجب تسجيله في `09-review/assumptions.md` وربطه بطريقة تحقق. **لا يجوز تحويله إلى Fact دون دليل.**
-
-**Design Decision**  
-قرار نتخذه لبناء النظام أو الدراسة استنادًا إلى متطلبات واضحة وتحليل موثق. القرارات المهمة تسجل في Decision Log.
-
-**Open Question**  
-نقطة لا يمكن حسمها بأمان من المصادر وحدها أو تحتاج إلى تحديد من صاحب مزرعة/خبير/Stakeholder. تسجل في `09-review/open-questions.md`.
+- **Verified Fact:** مدعومة بمصادر جيدة.
+- **Strong Evidence:** أدلة قوية ومتعددة أو مباشرة.
+- **Moderate Evidence:** دعم جيد لكن محدود بالسياق أو عدد الدراسات.
+- **Industry Practice:** ممارسة شائعة قد تختلف بين المزارع.
+- **Expert/Producer Practice:** ممارسة ميدانية تحتاج تحققًا أوسع.
+- **Assumption:** افتراض مؤقت مسجل ولا يتحول إلى Fact بدون دليل.
+- **Design Decision:** قرار تصميمي لاحق مبني على تحليل موثق.
+- **Open Question / Requires Field Validation:** نقطة تحتاج صاحب مزرعة أو متخصصًا أو سياق السوق المستهدف.
 
 ### Evidence Rules
 
 - لا يتم عرض الرأي أو الممارسة الشائعة كحقيقة علمية ثابتة.
-- عند اختلاف المصادر، يسجل التعارض بدل إخفائه، ويؤجل الحسم إذا لزم.
-- المعلومات التي قد تختلف حسب السياق المحلي يجب تمييزها بوضوح.
+- عند اختلاف المصادر يسجل التعارض ولا يُخفى.
+- المعلومات التي تختلف حسب السياق المحلي تميز بوضوح.
 - الأولوية للمصادر الأكاديمية والجامعية والحكومية والبيطرية والمهنية الموثوقة.
-- Blogs وForums ومواد التسويق قد تستخدم كإشارة أو لفهم الممارسة الواقعية، لكن لا تعتمد منفردة كأساس لمعلومة مهمة.
-- عند الحاجة إلى استنتاج تحليلي من عدة مصادر، يوصف بأنه **Analysis / Inference** وليس نصًا من المصدر.
+- Blogs وForums لا تستخدم منفردة لإثبات معلومة مهمة.
+- الاستنتاجات المركبة توصف بأنها Analysis / Inference.
 
 ## Source Tracking
-
-عند استخدام مصدر مهم داخل أي ملف من ملفات الدراسة، يسجل بالصيغة الموحدة التالية:
 
 ```text
 Source ID: SRC-XXX
@@ -144,106 +117,62 @@ Information Used: <What information was used from this source>
 Notes: <Optional limitations / conflicts / context>
 ```
 
-### Source Selection Priority
-
-1. Academic research and peer-reviewed literature.
-2. Universities and agricultural extension material.
-3. Government and official veterinary/agricultural authorities.
-4. Recognized professional, veterinary, breeding, or livestock organizations.
-5. High-quality technical/professional publications.
-6. Commercial sources, blogs, forums, and informal practitioner material only as supplementary evidence where useful.
-
 ## Working Rules for All Future Phases
-
-قبل تنفيذ أي Phase مستقبلية يجب:
 
 1. قراءة `MASTER.md`.
 2. قراءة الملفات السابقة المرتبطة بالمرحلة.
 3. مراجعة `09-review/open-questions.md`.
 4. مراجعة `09-review/assumptions.md`.
-5. عدم تكرار بحث تم اعتماده سابقًا إلا عند الحاجة للتحقق أو ظهور تعارض أو معلومات أحدث.
-6. عدم تغيير قرار حالته Approved بدون تسجيل قرار جديد في Decision Log يشرح التغيير.
-7. تسجيل أي تعارض يظهر بين المصادر في الملف المناسب ومراجعته في `09-review/consistency-review.md`.
-8. تسجيل أي Assumption جديد في `09-review/assumptions.md`.
-9. تسجيل أي Open Question جديد في `09-review/open-questions.md`.
-10. تحديث حالة المرحلة في هذا الملف بعد العمل.
+5. عدم تكرار بحث معتمد إلا للتحقق/التوسع/حل تعارض.
+6. عدم تغيير قرار Approved بدون Decision Log جديد.
+7. تسجيل تعارضات المصادر.
+8. تسجيل أي Assumption جديد.
+9. تسجيل أي Open Question جديد.
+10. تحديث حالة المرحلة و`STUDY-LOG.md` بعد كل مهمة رئيسية.
 
 ## Domain-First Design Rule
 
-**لا تصمم Software Entities قبل فهم Domain Entities.**
+**لا تصمم Software Entities قبل فهم Domain Entities، ولا تصمم Database Tables قبل الانتهاء من تحليل دورة العمل ذات الصلة.**
 
-**ولا تصمم Database Tables قبل الانتهاء من تحليل دورة العمل ذات الصلة.**
-
-أسماء المجال لا تتحول تلقائيًا إلى جداول أو Classes. على سبيل المثال، لا يجوز افتراض أن:
-
-- `Pigeon = database table`
-- `Pair = database table`
-
-قبل دراسة معنى هذه المفاهيم في التشغيل الفعلي، دورة حياتها، علاقاتها، حالات التغيير، القيود، ومتطلبات التتبع والتقارير.
-
-تصميم البيانات يجب أن يكون **نتيجة للتحليل** وليس نقطة البداية.
+لا يجوز افتراض أن `Pigeon = database table` أو `Pair = database table`. أسماء المجال لا تتحول تلقائيًا إلى Classes أو جداول.
 
 ## Scope Control / Scope Creep Prevention
 
-إذا ظهر أثناء أي Phase موضوع مفيد ولكنه خارج المرحلة الحالية:
-
-- لا تتم دراسته تفصيليًا في نفس المرحلة.
-- يسجل في **Future Research Queue** أدناه.
-- يحدد سبب أهميته والمرحلة المناسبة لدراسته.
-- لا ينتقل إلى نطاق التنفيذ إلا عند بدء مرحلته أو صدور قرار واضح بذلك.
+أي موضوع مفيد خارج المرحلة الحالية يسجل في Future Research Queue ولا يُفتح تفصيليًا قبل مرحلته.
 
 ## Future Research Queue
 
 | Queue ID | Topic | Why It Matters | Recommended Phase | Status | Notes |
 |---|---|---|---|---|---|
-| FRQ-001 | Detailed chronological egg lifecycle and egg-management workflow | Egg events ظهرت أثناء Phase 1A لكن التفاصيل تحتاج lifecycle analysis منفصل. | Phase 1B / Phase 3 | Queued | لا يتم تحويلها إلى software workflow الآن. |
-| FRQ-002 | Detailed squab growth, weaning and market-readiness workflow | العمر/الوزن يتأثران بالسلالة والإدارة والمشتري. | Phase 1B / Phase 3 | Queued | يحتاج Egyptian field validation. |
-| FRQ-003 | Disease, vaccination, treatment, quarantine and biosecurity protocols | ظهرت كعوامل تشغيلية لكن خارج نطاق Phase 1A. | Phase 4 | Queued | لا توضع قواعد علاجية الآن. |
-| FRQ-004 | Feed formulation, nutrient requirements and feed strategy | التغذية تؤثر على breeder/squab performance. | Phase 4 | Queued | فصل التغذية عن inventory/finance. |
-| FRQ-005 | Feed inventory, purchasing and supplier operations | ظهر feed كتكلفة ومدخل إنتاج. | Phase 5 | Queued | لا بحث مالي تفصيلي في Phase 1A. |
-| FRQ-006 | Formal production KPI definitions and benchmark normalization | البحث كشف اختلاف denominators والظروف. | Phase 6 | Queued | يجب تعريف المؤشرات بعد اكتمال lifecycle/business analysis. |
-| FRQ-007 | Software representation of pair, nest, clutch, bird identity and overlapping cycles | Findings مهمة جدًا للتصميم لاحقًا. | Phase 7 | Queued | ممنوع البدء قبل اكتمال Domain/Operational analysis. |
-| FRQ-008 | Artificial incubation / early-weaning workflow as optional production model | يمكن أن يغير دورة الإنتاج جذريًا لكن مدى استخدامه بالسوق المصري غير محسوم. | Phase 1B / Phase 3 | Queued | Field validation أولًا. |
+| FRQ-001 | Detailed chronological egg lifecycle and egg-management workflow | تم بناء الأساس الزمني في Phase 1B؛ الإدارة التفصيلية للبيض لاحقة. | Phase 3 | Partially Researched | لا Software workflow الآن. |
+| FRQ-002 | Detailed squab growth, weaning and market-readiness workflow | Phase 1B أثبت فصل weaning عن market readiness والحاجة لسياق السوق. | Phase 3 / 5 | Partially Researched | يحتاج Egyptian field validation. |
+| FRQ-003 | Disease, vaccination, treatment, quarantine and biosecurity protocols | عوامل تشغيلية خارج نطاق Phase 1. | Phase 4 | Queued | لا قواعد علاجية الآن. |
+| FRQ-004 | Feed formulation, nutrient requirements and feed strategy | التغذية تؤثر على breeder/squab performance. | Phase 4 | Queued | — |
+| FRQ-005 | Feed inventory, purchasing and supplier operations | feed مدخل وتكلفة إنتاج. | Phase 5 | Queued | — |
+| FRQ-006 | Formal production KPI definitions and benchmark normalization | lifecycle كشف اختلاف التعريفات والـ anchors والdenominators. | Phase 6 | Queued | بعد اكتمال domain analysis. |
+| FRQ-007 | Software representation of pair, nest, clutch, bird identity and overlapping cycles | Phase 1B أكد التداخل والتعدد الزمني. | Phase 7 | Queued | ممنوع البدء الآن. |
+| FRQ-008 | Artificial incubation / early-weaning workflow as optional production model | يغير lifecycle بصورة جوهرية ومدى استخدامه المصري غير محسوم. | Phase 3 | Partially Researched | Field validation أولًا. |
+| FRQ-009 | Formal operational definition(s) of Production Cycle | Phase 1B أثبت وجود عدة anchors صحيحة حسب غرض القياس. | Phase 3 / 6 | Queued | لا تعريف Software في Phase 1. |
 
 ## Target Technology Context
-
-التقنية المتوقع استخدامها لاحقًا للتنفيذ:
 
 - Laravel 12
 - PHP 8.2+
 - Filament 4
 - MySQL
 
-هذه التقنية **سياق مستقبلي وليست نقطة انطلاق لتحليل المجال**.
+هذه التقنية سياق مستقبلي وليست نقطة انطلاق لتحليل المجال.
 
 ### Technical Prohibition During Domain Research
 
-لا يتم خلال Phase 1 إنشاء أو تنفيذ أي من التالي:
-
-- Migrations
-- Models
-- Resources
-- Services
-- Enums derived as software design
-- Controllers
-- Filament Resources
-- Database Schema / ERD
-- APIs
-- UI / Dashboard Design
-- Software Architecture
-- Application Code
-
-## Phase 0 Completion Gate
-
-Phase 0 اقتصر على تهيئة الدراسة. تم استيفاء متطلباته، وبدأ المستخدم Phase 1A بتعليمات مستقلة وصريحة بتاريخ 2026-08-17.
-
-الحالة الحالية: **Phase 0 Completed — transition to Phase 1 authorized.**
+لا يتم خلال Phase 1 إنشاء أو تنفيذ Migrations, Models, Resources, Services, Software Enums, Controllers, Filament Resources, ERD, Database Schema, APIs, UI, Dashboard Design, Software Architecture أو Application Code.
 
 ## Current Study Position
 
 - **Current Phase:** Phase 1 — Domain Research
 - **Completed Subphase:** Phase 1A — Commercial Pigeon Farming Domain Research
-- **Subphase Review:** Awaiting Review
+- **Completed Subphase:** Phase 1B — Detailed Pigeon Production Lifecycle
+- **Subphase Review:** Phase 1A & 1B Awaiting Review
 - **Phase 1 Overall Status:** In Progress
-- **Next recommended subphase:** Phase 1B — Detailed Pigeon Production Lifecycle
-- **Stop condition:** Do not start Phase 1B until independent user instruction is received.
+- **Next recommended subphase:** Phase 1C — Domain Terminology, Evidence Consolidation & Validation Review
+- **Stop condition:** Do not start Phase 1C until independent user instruction is received.
