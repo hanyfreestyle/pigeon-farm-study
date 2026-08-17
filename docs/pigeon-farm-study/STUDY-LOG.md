@@ -114,6 +114,7 @@ Phase 1C — Domain Terminology, Evidence Consolidation & Validation Review.
 ### Files Modified / Created
 - **Created:** `01-domain-research/DOMAIN-BASELINE.md`
 - **Updated:** `01-domain-research/terminology.md`
+- **Updated:** `09-review/open-questions.md`
 - **Updated:** `09-review/assumptions.md`
 - **Updated:** `09-review/risks.md`
 - **Updated:** `09-review/consistency-review.md`
@@ -122,24 +123,33 @@ Phase 1C — Domain Terminology, Evidence Consolidation & Validation Review.
 
 ### Consolidation Findings
 1. Phase 1A and 1B are materially consistent; no core finding required rejection.
-2. The strongest stable baseline covers biparental care, crop milk, pair-centered production, two-egg clutch pattern, ~17–20 d incubation and overlapping cycles.
+2. Strong baseline: biparental care, crop milk, pair-centered production, two-egg clutch pattern, ~17–20 d incubation and overlapping cycles.
 3. Housing model, market specification, breeder-entry criteria, pair rules, cycle timing and performance benchmarks remain context-dependent.
-4. Production Cycle cannot be treated as one universal linear biological sequence.
-5. Early Separation, Weaning and Market Readiness must remain separate concepts.
+4. `Production Cycle` cannot be treated as one universal linear biological sequence.
+5. Early Separation, Weaning and Market Readiness are separate concepts.
 6. Fertility and Hatchability require explicit calculation definitions.
-7. Egyptian evidence is sufficient to shape the baseline but not sufficient to standardize all current commercial practice nationally.
-8. The remaining uncertainty is mainly field-validation uncertainty rather than fundamental biological uncertainty.
+7. Egyptian evidence shapes the baseline but does not standardize all current national commercial practice.
+8. Remaining uncertainty is mainly field-validation uncertainty rather than fundamental biological uncertainty.
 
 ### Terminology Review
 - Rebuilt terminology as a normalized index.
 - Extended terms through `TERM-039`.
-- Added missing Phase 1 concepts including Pigeon, Breeding Bird, Pairing, Egg, Brooding, Production Cycle, Colony System and Individual Pair Cage.
+- Added missing concepts including Pigeon, Breeding Bird, Pairing, Egg, Brooding, Production Cycle, Colony System and Individual Pair Cage.
 - Added `Ambiguous Domain Terms` section.
 
 ### Evidence / Benchmark Review
 - Created Evidence Quality Review for SRC-001 → SRC-021.
-- Benchmarks classified as Stable Biological Range, Context-dependent Benchmark, Research-specific Observation, or Requires Egyptian Field Validation.
-- No single universal market age, market weight, production-cycle duration, fertility target or hatchability target was approved.
+- Benchmarks classified into Stable Biological Range, Context-dependent Benchmark, Research-specific Observation, and Requires Egyptian Field Validation.
+- No universal market age, market weight, production-cycle duration, fertility target or hatchability target was approved.
+
+### Open Questions Review
+- No duplicate questions were added.
+- `open-questions.md` now includes a decision horizon for every current question.
+- **Must Answer Before Farm Structure:** OQ-001, OQ-002, OQ-014, OQ-016.
+- **Must Answer Before Data Model:** OQ-003, OQ-007, OQ-008, OQ-017, OQ-018, OQ-020, OQ-021.
+- **Must Answer Before MVP:** OQ-004, OQ-006, OQ-009, OQ-010, OQ-015, OQ-019.
+- **Can Defer:** OQ-005.
+- **Optional:** OQ-011, OQ-012, OQ-013.
 
 ### Assumptions Review
 - `ASM-001`: Validated.
@@ -149,23 +159,16 @@ Phase 1C — Domain Terminology, Evidence Consolidation & Validation Review.
 - Rejected assumptions: 0.
 
 ### Risks Review
-- Knowledge-structure risks reduced: premature modeling, terminology ambiguity, linear-cycle assumptions and benchmark universalization.
-- Field-dependent risks remain active: housing prevalence, identification, local market requirements, pair/replacement rules and operational thresholds.
+- Reduced knowledge-structure risks: premature modeling, terminology ambiguity, linear-cycle assumptions and benchmark universalization.
+- Field-dependent risks remain active: housing prevalence, identification, market requirements, pair/replacement rules and operational thresholds.
 
 ### Consistency Review
 - 9 conflict/variability items reviewed.
-- Irreconcilable domain conflicts found: 0.
+- Irreconcilable domain conflicts: 0.
 - Remaining issues are contextual, definition-dependent or require field validation.
 
-### Open Questions Priority
-- **Must Answer Before Farm Structure:** OQ-001, OQ-002, OQ-014, OQ-016.
-- **Must Answer Before Data Model:** OQ-003, OQ-007, OQ-008, OQ-017, OQ-018, OQ-020, OQ-021.
-- **Must Answer Before MVP:** OQ-004, OQ-006, OQ-009, OQ-010, OQ-015, OQ-019.
-- **Can Defer:** OQ-005.
-- **Optional:** OQ-011, OQ-012, OQ-013.
-
 ### Decision
-`DEC-005` recorded: Phase 1 Domain Baseline meets exit criteria and is ready for user review; remaining local uncertainties remain explicitly tracked rather than blocking consolidation.
+`DEC-005`: Phase 1 Domain Baseline meets exit criteria and is ready for user review; remaining local uncertainties are explicitly tracked rather than blocking consolidation.
 
 ### Phase 1 Exit Criteria
 - Terminology reviewed: Yes.
