@@ -1,19 +1,19 @@
-# Risk Register
+# سجل المخاطر
 
-| Risk ID | Description | Probability | Impact | Mitigation | Related Phase | Phase 1 Review | Status |
+| رقم الخطر | الوصف | الاحتمالية | التأثير | إجراءات التخفيف | المرحلة المرتبطة | مراجعة Phase 1 | الحالة |
 |---|---|---|---|---|---|---|---|
-| RSK-001 | القفز مبكرًا إلى تصميم الجداول أو Software Entities قبل فهم المجال. | Medium | High | Domain-First rule + approved baseline before technical modeling. | Phases 1–7 | Reduced by completing Phase 1 baseline; remains relevant until Data Modeling. | Active — Reduced |
-| RSK-002 | اعتبار ممارسة مزرعة واحدة Business Rule عامة. | High | High | Keep practice/context/evidence classification and field validation. | Phases 1–6 | Phase 1 confirmed major variation by housing, breed and management. | Active |
-| RSK-003 | الاعتماد على مصادر ضعيفة أو تجارية منفردة لمعلومة مهمة. | Low-Medium | High | Evidence policy; prioritize peer-reviewed/official sources. | Phases 1–6 | Phase 1 used a strong academic/official base with source limitations documented. | Controlled — Monitor |
-| RSK-004 | Scope Creep نحو الهواية/السباق/الزينة أو مواضيع لاحقة. | Medium | Medium | Future Research Queue + phase boundaries. | All Phases | Scope stayed aligned in Phase 1. | Active — Controlled |
-| RSK-005 | تضارب المصطلحات أو استخدام نفس المصطلح بمعانٍ مختلفة. | Medium | High | Normalized terminology + Ambiguous Domain Terms section. | Phases 1–6 | Significantly reduced by Phase 1C; Production Cycle/Weaning/Hatchability still require explicit context. | Active — Reduced |
-| RSK-006 | بناء MVP كأداة تسجيل فقط قبل فهم القرارات التشغيلية. | Medium | High | Delay MVP until Domain + System Analysis and tie features to decisions. | Phases 6–8 | Not yet addressed by design; Phase 1 improves future basis. | Active |
-| RSK-007 | تمثيل Production Cycle كدورة غير متداخلة. | Medium | Very High | Phase 1B/1C established overlapping cycles as baseline; Phase 3 must define analytical anchors. | Phases 1B–7 | Domain misunderstanding substantially mitigated; software risk remains. | Active — Reduced |
-| RSK-008 | نقل intensive/industrial practices من سياق أجنبي إلى مصر باعتبارها الوضع القياسي. | High | High | Separate biology from practice; preserve Egyptian evidence and validate target farms. | Phases 1–6 | Still important; early weaning and controlled pair systems are not assumed to be universal locally. | Active |
-| RSK-009 | استخدام benchmark واحد للعمر/الوزن/الدورة/الخصوبة دون سياق. | High | High | Benchmark classification and context requirements. | Phases 1–7 | Phase 1C classified stable ranges vs context-dependent observations. | Active — Reduced |
-| RSK-010 | تفسير انخفاض الصيف كتوقف موسمي بيولوجي إلزامي. | Low-Medium | High | Treat heat/environment as modifiers and validate local magnitude. | Phases 1 / 4 / 6 | Conceptual contradiction resolved; local operational severity remains open. | Active — Reduced |
-| RSK-011 | اعتبار رقم القفص/العش هوية دائمة للطائر أو الزوج. | Medium | High | Keep individual/pair/location identification separate; validate local practice in Phase 2. | Phases 1B–2 / 7 | Phase 1 clarified the distinction; target practice remains unknown. | Active |
+| RSK-001 | القفز مبكرًا إلى تصميم الجداول أو الكيانات البرمجية (Software Entities) قبل فهم المجال. | Medium | High | تطبيق قاعدة المجال أولًا (Domain-First) واعتماد خط أساس المجال قبل النمذجة التقنية. | Phases 1–7 | انخفض الخطر بإكمال خط أساس Phase 1، لكنه يظل ذا صلة حتى مرحلة نمذجة البيانات. | Active — Reduced |
+| RSK-002 | اعتبار ممارسة مزرعة واحدة قاعدة عمل (Business Rule) عامة. | High | High | الحفاظ على تصنيف الممارسة والسياق والدليل، مع التحقق الميداني. | Phases 1–6 | أكدت Phase 1 وجود اختلافات كبيرة حسب الإسكان والسلالة والإدارة. | Active |
+| RSK-003 | الاعتماد على مصادر ضعيفة أو تجارية منفردة لإثبات معلومة مهمة. | Low-Medium | High | تطبيق سياسة الأدلة وإعطاء الأولوية للمصادر المحكمة والرسمية. | Phases 1–6 | استخدمت Phase 1 قاعدة أكاديمية/رسمية قوية مع توثيق قيود المصادر. | Controlled — Monitor |
+| RSK-004 | توسع النطاق (Scope Creep) نحو الهواية/السباق/الزينة أو موضوعات مراحل لاحقة. | Medium | Medium | استخدام قائمة البحث المستقبلي وحدود المراحل. | جميع المراحل | ظل النطاق ملتزمًا بالهدف خلال Phase 1. | Active — Controlled |
+| RSK-005 | تضارب المصطلحات أو استخدام المصطلح نفسه بمعانٍ مختلفة. | Medium | High | قاموس مصطلحات موحد + قسم المصطلحات الملتبسة. | Phases 1–6 | انخفض بدرجة كبيرة بعد Phase 1C؛ وما زالت مصطلحات مثل Production Cycle وWeaning وHatchability تحتاج سياقًا صريحًا. | Active — Reduced |
+| RSK-006 | بناء MVP كأداة تسجيل فقط قبل فهم القرارات التشغيلية. | Medium | High | تأجيل MVP حتى اكتمال تحليل المجال والنظام وربط الميزات بالقرارات. | Phases 6–8 | لم تتم معالجته تصميميًا بعد؛ لكن Phase 1 حسنت الأساس الذي سيعتمد عليه لاحقًا. | Active |
+| RSK-007 | تمثيل دورة الإنتاج (Production Cycle) كدورة غير متداخلة. | Medium | Very High | أثبتت Phase 1B/1C تداخل الدورات كجزء من خط الأساس؛ ويجب أن تحدد Phase 3 مراسي التحليل. | Phases 1B–7 | انخفض سوء الفهم على مستوى المجال بدرجة كبيرة؛ لكن الخطر البرمجي ما زال قائمًا. | Active — Reduced |
+| RSK-008 | نقل ممارسات مكثفة/صناعية من سياق أجنبي إلى مصر باعتبارها الوضع القياسي. | High | High | فصل البيولوجيا عن الممارسة، والحفاظ على الأدلة المصرية، والتحقق من المزارع المستهدفة. | Phases 1–6 | ما زال مهمًا؛ فلم يُفترض أن الفطام المبكر أو نظم الأزواج المتحكم فيها هي الوضع المحلي العالمي. | Active |
+| RSK-009 | استخدام قيمة مرجعية واحدة للعمر/الوزن/الدورة/الخصوبة دون سياق. | High | High | تصنيف القيم المرجعية وفرض حفظ السياق. | Phases 1–7 | صنفت Phase 1C النطاقات المستقرة مقابل الملاحظات المعتمدة على السياق. | Active — Reduced |
+| RSK-010 | تفسير انخفاض الصيف كتوقف تناسلي بيولوجي إلزامي. | Low-Medium | High | معاملة الحرارة والبيئة كعوامل مؤثرة والتحقق من حجم الأثر محليًا. | Phases 1 / 4 / 6 | تم حل التعارض المفاهيمي؛ لكن شدة الأثر التشغيلي المحلي ما زالت مفتوحة. | Active — Reduced |
+| RSK-011 | اعتبار رقم القفص/العش هوية دائمة للطائر أو الزوج. | Medium | High | الفصل بين تعريف الفرد والزوج والموقع، والتحقق من الممارسة المحلية في Phase 2. | Phases 1B–2 / 7 | أوضحت Phase 1 الفرق؛ لكن الممارسة المستهدفة ما زالت غير معروفة. | Active |
 
-## Phase 1 Risk Review Conclusion
+## خلاصة مراجعة مخاطر Phase 1
 
-Phase 1 reduced the largest **knowledge-structure risks**: premature modeling, cycle linearization, terminology ambiguity and benchmark universalization. The main remaining risks now depend on **field validation and later domain/system analysis**, especially housing models, local identification, market specification, pair/replacement rules and Egyptian operational practices.
+خفضت Phase 1 أكبر **مخاطر بنية المعرفة**، ومنها النمذجة المبكرة، وتبسيط الدورة إلى خط مستقيم، وغموض المصطلحات، وتعميم القيم المرجعية. أما المخاطر الأساسية المتبقية فتعتمد الآن على **التحقق الميداني والتحليل اللاحق للمجال والنظام**، خاصة فيما يتعلق بنماذج الإسكان، والتعريف المحلي، ومواصفات السوق، وقواعد الأزواج والإحلال، والممارسات التشغيلية المصرية.
