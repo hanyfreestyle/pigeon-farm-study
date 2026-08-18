@@ -1,6 +1,6 @@
 # قاموس مصطلحات المجال
 
-> **الحالة:** تمت مراجعة Phase 1 وتوسيع القاموس في Phase 2A وPhase 2B وPhase 2C.  
+> **الحالة:** تمت مراجعة Phase 1 وتوسيع القاموس في Phase 2A وPhase 2B وPhase 2C وPhase 3A.  
 > هذه مصطلحات مجال وليست كيانات برمجية. وتظل بعض الصياغات المحلية بحاجة إلى تحقق ميداني مصري.
 
 ## قواعد المصطلحات
@@ -109,6 +109,16 @@
 | TERM-089 | معامل زواج الأقارب | Inbreeding Coefficient | معامل القرابة الداخلية | مقياس احتمالي للتطابق الوراثي بسبب أصل مشترك وفق Pedigree/منهج محدد. | ميزة تحليلية مستقبلية محتملة. | Kinship | SRC-032 | يتأثر باكتمال وعمق Pedigree. |
 | TERM-090 | معامل القرابة | Kinship / Coancestry | قرابة وراثية | مقياس لاحتمال اشتراك فردين في أليلات موروثة من أصل مشترك؛ يرتبط بالتوقع الوراثي لنسلهما. | دعم تقييم القرابة بين شركاء محتملين. | Inbreeding Coefficient | SRC-032 | يحتاج بيانات نسب موثوقة. |
 | TERM-091 | زوج تجريبي | Trial Pair | زوج تحت التجربة | علاقة أو محاولة تزاوج تُدار لفترة تقييم قبل اعتمادها كزوج إنتاج مستقر. | مفيد تحليليًا في Re-pairing والانتخاب. | Pair Formation Attempt | Phase 2C | الاستخدام المصري يحتاج تحققًا. |
+| **TERM-092** | **هوية البيضة** | **Egg Identity** | هوية البيضة الفردية | تمييز البيضة نفسها عبر البطن والموقع والنقل والنتيجة. | يمنع فقد التاريخ عند تغيير العش أو مقدم الحضانة. | Egg Sequence, Clutch | Phase 3A | لا تساوي ترتيب الوضع. |
+| **TERM-093** | **ترتيب البيضة داخل البطن** | **Egg Sequence / Lay Order** | البيضة الأولى/الثانية | موضع البيضة في ترتيب الوضع داخل Clutch عند معرفته. | يساعد في تحليل التسلسل الزمني دون أن يصبح هوية. | Egg Identity | Phase 3A | قد يكون Unknown/Estimated. |
+| **TERM-094** | **مرساة الحضانة** | **Incubation Anchor** | نقطة بدء حساب الحضانة | الحدث المختار لبدء قياس/توقع الحضانة، مثل Egg 1 أو Egg 2 أو sustained incubation. | يمنع استخدام مدة بلا تعريف. | Expected Hatch | CON-006; Phase 3A | لا توجد مرساة عالمية معتمدة. |
+| **TERM-095** | **موعد الفقس المتوقع** | **Expected Hatch Date** | توقع الفقس | تاريخ متوقع ناتج عن Policy/Anchor وليس حدثًا فعليًا. | التخطيط والتنبيه مستقبلًا. | Actual Hatch, Incubation Anchor | Phase 3A | `Prediction ≠ Fact`. |
+| **TERM-096** | **الفقس الفعلي** | **Actual Hatch** | تاريخ الفقس المرصود | حدوث الفقس فعليًا كما لوحظ. | مرساة حقيقة بعد الحدث. | Expected Hatch | Phase 3A | مستقل عن التوقع. |
+| **TERM-097** | **نقل البيضة** | **Egg Transfer** | تحويل البيضة | انتقال البيضة بين عش/زوج/حاضنة مع بقاء هويتها ونسبها. | تتبع Foster/Artificial workflows. | Foster Transfer, Egg Location | Phase 3A | لا يغير Genetic Parentage. |
+| **TERM-098** | **حالة البيضة الحالية** | **Egg Current Condition** | وضع البيضة الحالي | وصف ما هو معروف عن حالة البيضة في لحظة معينة. | يختلف عن النتيجة النهائية. | Egg Outcome | Phase 3A | لا Enum نهائي. |
+| **TERM-099** | **النتيجة النهائية للبيضة** | **Egg Final Outcome** | مصير البيضة | النتيجة المعروفة بعد انتهاء سياق البيضة مثل hatch/broken/missing/infertile. | تحليل النتائج دون خلطها بالحالة الحالية. | Egg Current Condition | Phase 3A | السبب قد يحتاج مفهومًا منفصلًا. |
+| **TERM-100** | **نتيجة البطن** | **Clutch Outcome** | مصير البطن | وصف نتيجة Clutch ككل دون أن يكون سبب الفشل نفسه. | يمنع مساواة Failure Outcome بالسبب. | Failure Cause | Phase 3A | `Outcome ≠ Cause`. |
+| **TERM-101** | **نسبة الإنتاج / إسناد الإنتاج** | **Production Attribution** | لمن ينسب الناتج | تحديد الطرف/السياق الأنسب لإسناد Metric أو حدث إنتاجي. | مهم لاحقًا للـKPIs مع فصل الزوج والفرد ومقدم الرعاية. | Pair Performance, Egg | Phase 3A | الصيغ إلى Phase 6. |
 
 ---
 
@@ -165,12 +175,21 @@
 ### Inbreeding
 عدم ظهور قريب مشترك في Pedigree ناقص لا يثبت عدم القرابة. أي معامل عددي مستقبلي يجب تفسيره مع اكتمال وعمق النسب.
 
+### Egg Identity / Egg Sequence
+`Egg 1` أو `Egg 2` ترتيب داخل البطن وليس هوية دائمة للبيضة.
+
+### Incubation Anchor / Expected Hatch
+موعد الفقس المتوقع يعتمد على مرساة/Policy محددة؛ لا توجد مرساة عالمية واحدة، والتوقع لا يساوي الفقس الفعلي.
+
+### Egg Condition / Outcome
+الحالة الحالية للبيضة قد تتغير؛ النتيجة النهائية مفهوم آخر. كما أن نتيجة الفشل لا تساوي سبب الفشل.
+
 ---
 
-## نتيجة مراجعة المصطلحات بعد Phase 2C
+## نتيجة مراجعة المصطلحات بعد Phase 3A
 
-- تم الحفاظ على `TERM-001 → TERM-074` وتوسيع القاموس حتى `TERM-091`.
-- أضيفت مفاهيم الزوج التشغيلي، محاولة التكوين، القبول، تاريخ الزوج، أدوار الزوج، النسب ومقدمي الرعاية، Pedigree وثقته، Inbreeding/Kinship وTrial Pair.
-- تم تثبيت `Pedigree ≠ Pair History` و`Genetic Parentage ≠ Caregiving Responsibility`.
-- لا يُعامل Pair Code كهوية العلاقة، ولا Pair Formation كتاريخ وحيد عالمي.
-- Inbreeding Coefficient ميزة تحليلية مستقبلية مشروطة بجودة Pedigree وليست قيمة يمكن حسابها بثقة من شجرة ناقصة.
+- تم الحفاظ على `TERM-001 → TERM-091` وتوسيع القاموس حتى `TERM-101`.
+- أضيفت مفاهيم Egg Identity/Sequence وIncubation Anchor وExpected/Actual Hatch وEgg Transfer وCondition/Outcome وProduction Attribution.
+- لم يُكرر Clutch أو Egg أو Candling لأنها موجودة مسبقًا.
+- تم تثبيت `Egg Identity ≠ Egg Sequence` و`Expected Hatch ≠ Actual Hatch` و`Clutch Outcome ≠ Failure Cause`.
+- لا توجد إضافات Phase 3A تتحول تلقائيًا إلى Software Fields/Enums/Events.
