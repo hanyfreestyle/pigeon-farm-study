@@ -10,8 +10,10 @@
 - **Phase 2A Structure Alignment:** Completed.
 - **Phase 2B Bird/Breed Alignment:** Completed.
 - **Phase 2C Pair/Pedigree Alignment:** Completed.
+- **Phase 2D Cross-file Consolidation:** Completed — Awaiting Review.
 - **قضايا التعارض / التباين الأساسية من Phase 1:** 9.
 - **تعارضات مجال غير قابلة للتوفيق:** 0.
+- **Blocking Contradictions before Phase 3:** 0.
 
 ## سجل التعارضات
 
@@ -19,7 +21,7 @@
 |---|---|---|---|---|
 | CON-001 | طول دورة البيض / التكاثر | تختلف التعريفات والسلالة وحمل الرعاية؛ لا توجد مدة عالمية واحدة. | يعتمد على السياق — تم حله مفاهيميًا | Phase 3 تستخدم مراسي أحداث صريحة. |
 | CON-002 | التربية الطبيعية مقابل التربية الصناعية المبكرة | مساران إنتاجيان مختلفان لا وصفان متعارضان لمسار واحد. | يعتمد على السياق — تم حله مفاهيميًا | التحقق من الانتشار قبل اعتبار المسار المكثف ممارسة محلية شائعة. |
-| CON-003 | نموذج الإسكان والملاءمة التجارية | توجد أبراج/مساكن جماعية وأقفاص فردية. `DEC-007` حسم نموذج البداية للمشروع إلى الأزواج الفردية داخل الأقفاص/العيون، لكنه لا يثبت أنه النظام السائد في مصر. | Project Direction Resolved / Market Practice Requires Field Validation | تستمر Phase 2 في نموذج الأقفاص مع الحفاظ على نظم أخرى. |
+| CON-003 | نموذج الإسكان والملاءمة التجارية | توجد أبراج/مساكن جماعية وأقفاص فردية. `DEC-007` حسم نموذج البداية للمشروع إلى الأزواج الفردية داخل الأقفاص/العيون، لكنه لا يثبت أنه النظام السائد في مصر. | Project Direction Resolved / Market Practice Requires Field Validation | يستمر التحليل من نموذج الأقفاص مع الحفاظ على نظم أخرى. |
 | CON-004 | الإنتاج الصيفي / الموسمية | البيولوجيا غير الموسمية لا تمنع انخفاض الأداء تحت الحرارة. | يعتمد على السياق — تم حله مفاهيميًا | Phase 4/6. |
 | CON-005 | النضج الجنسي مقابل الجاهزية للتربية | القدرة البيولوجية وقرار الإدخال التشغيلي مفهومان مختلفان. | يعتمد على السياق — تم حله مفاهيميًا | التحقق من القيم المحلية. |
 | CON-006 | مرساة بدء الحضانة | مدة الحضانة مستقرة نسبيًا، لكن لحظة البداية ليست عالمية. Expected Hatch توقع وليس Fact. | **Still Open — Definition Needed** | Carry Forward إلى Phase 3؛ لا قاعدة عالمية `Egg Date + 18 days`. |
@@ -69,15 +71,15 @@
 
 ### الزوج التشغيلي مقابل Pair Bond
 
-لا يوجد تعارض بين كون الحمام ذا Pair Bond قوية وبين حاجة المزرعة إلى علاقة تشغيلية تاريخية واضحة. لذلك:
+لا يوجد تعارض بين كون الحمام ذا Pair Bond قوية وبين حاجة المزرعة إلى علاقة تشغيلية تاريخية واضحة:
 
 `Pair Bond ≠ Pair Formation Attempt ≠ Operational Pair`.
 
-مجرد وضع ذكر وأنثى معًا لا يثبت علاقة مستقرة. وتدعم الأدلة أن طريقة اختيار/تكوين الزوج قد تؤثر في الناتج [SRC-029].
+مجرد وضع ذكر وأنثى معًا لا يثبت علاقة مستقرة.
 
 ### بداية الزوج
 
-لا يوجد تعارض في وجود عدة تواريخ صحيحة تصف جوانب مختلفة:
+لا يوجد تعارض في وجود عدة أحداث صحيحة تصف جوانب مختلفة:
 
 - Date placed together؛
 - Pair acceptance؛
@@ -85,7 +87,7 @@
 - Management activation؛
 - First egg.
 
-لا تعتمد Phase 2C تاريخًا واحدًا عالميًا. هذه ليست مشكلة تناقض بل **اختلاف مرساة تشغيلية** يجب توحيده عند صياغة قواعد العمل لاحقًا.
+لا تعتمد Phase 2 تاريخًا واحدًا عالميًا. هذه **مراسي تشغيلية مختلفة** وليست تناقضًا.
 
 ### تغيير الشريك
 
@@ -93,15 +95,11 @@
 
 **تغيير أحد الطرفين = انتهاء العلاقة السابقة + علاقة جديدة**.
 
-لا يجوز إعادة كتابة Pair History أو نسبة إنتاج سابق إلى الشريك الجديد.
-
 ### Pair Identity مقابل Pair Code والموقع
 
 `Pair Identity ≠ Pair Code ≠ Location Identity`.
 
 ### Pair Existence مقابل Production Success
-
-زوج مقبول تشغيليًا قد لا يكون أنتج بيضًا بعد، لذلك:
 
 `Pair Existence ≠ Egg Production ≠ Successful Production`.
 
@@ -109,45 +107,156 @@
 
 `Pedigree = Genetic Relationship`، بينما `Pair History = Operational Breeding Relationship`.
 
-تعدد أزواج الطائر لا يغير Genetic Father/Mother.
-
 ### Genetic Parentage مقابل Caregiving
 
 `Genetic Parents ≠ Incubating Caregiver ≠ Rearing Caregiver`.
 
-وهذا متسق مع `DEC-018` و`DEC-019`.
-
 ### النسب الناقص والقرابة
-
-لا يوجد تعارض بين دعم Pedigree مفتوح العمق وبين وجود بيانات ناقصة. القاعدة:
 
 `Unknown / Partial Pedigree ≠ Invalid`.
 
-وكذلك:
-
 `No Known Relationship ≠ Proven Unrelated`.
-
-أي تحليل Inbreeding مستقبلي يجب تفسيره مع Pedigree completeness/depth؛ الأدلة العلمية نفسها تشير إلى حساسية المقارنة لاكتمال النسب [SRC-032].
 
 ### Pair Performance مقابل Individual Performance
 
-لا يتعارض ضعف زوج مع إمكانية نجاح أحد الطرفين مع شريك آخر:
-
 `Poor Pair Performance ≠ Poor Male + Poor Female`.
-
-Cross-pair historical evaluation تحمل إلى Phase 6.
 
 ---
 
-## مراجعة اتساق المصطلحات
+# مواءمة Phase 2D — Cross-file Review
+
+تمت مقارنة الملفات الخمسة الأساسية:
+
+- `farm-structure.md`
+- `pigeon-management.md`
+- `breed-management.md`
+- `pair-management.md`
+- `pedigree-management.md`
+
+ولم يظهر تعارض مفاهيمي حابس. تم تثبيت النقاط التالية داخل `PHASE-2-BASELINE.md`.
+
+## 1. Pair Start Alignment
+
+النتيجة النهائية للمرحلة الثانية:
+
+**لا يوجد Universal Pair Start Date.**
+
+يجب الاحتفاظ مفاهيميًا بالأحداث المختلفة بدل اختزالها في تاريخ واحد غامض:
+
+- Birds placed together.
+- Pair accepted.
+- Management activated.
+- First mating observed.
+- First egg.
+
+هذا لا يحدد Software Fields، بل يمنع الخلط التحليلي بين أحداث مختلفة.
+
+## 2. Same Pair Reunited
+
+إذا انتهت علاقة Male A + Female B فعليًا ثم أعيد نفس الفردين معًا لاحقًا، فالتفسير الدوميني المعتمد هو:
+
+**New Operational Relationship Episode between the same two birds.**
+
+لا يعاد فتح أو تعديل العلاقة القديمة.
+
+أما الفصل المؤقت الذي لم تُنه فيه العلاقة إداريًا فلا ينشئ Episode جديدة تلقائيًا.
+
+هذه النتيجة متسقة مع مبدأ حفظ التاريخ و`DEC-010`.
+
+## 3. Trial Pair
+
+`Trial Pair` لا يحتاج أن يكون مفهومًا إلزاميًا منفصلًا في جميع المزارع. يمكن تمثيل الواقع الدوميني حاليًا بمفهوم `Pair Formation Attempt`، بينما يظل استخدام Trial Pair كمصطلح/ممارسة مستقلة:
+
+**Optional Domain Concept / Requires Field Validation**.
+
+## 4. Farm Activity Alignment
+
+تم فصل مستويات الاستخدام:
+
+- **Meat / Fancy Production:** قد تكون Farm Activity أو Section Purpose حسب نطاق النشاط.
+- **Replacement:** أساسًا Bird/Stock Role وقد يخصص له Section Purpose.
+- **Foster:** Bird/Pair Role أو Stock Function، وقد يخصص له مكان دون أن يصبح Location Identity.
+- **Quarantine / Treatment:** Temporary Operational / Health Function وقد يرتبط بمكان مخصص.
+
+المبدأ:
+
+**Activity / Purpose / Bird Role / Pair Role / Location Identity ليست مفهومًا واحدًا.**
+
+## 5. Foster Alignment
+
+تم توحيد:
+
+- Foster Stock.
+- Foster Bird.
+- Foster Pair.
+- Planned Foster Transfer.
+- Emergency Foster Transfer.
+- Incubating Caregiver.
+- Rearing Caregiver.
+
+القواعد:
+
+`Foster Role ≠ Breed`.
+
+`Foster Role ≠ Location`.
+
+`Foster Pair ≠ Genetic Parent`.
+
+## 6. Bird Lifecycle Alignment
+
+`Egg → Hatch → Squab → Young Bird → Replacement Candidate → Breeding Ready → Active Breeder` هو **Reference Domain Lifecycle** وليس Mandatory Linear Workflow.
+
+الاستثناءات مثل Purchased Adult وImported Adult وSold then Returned وRetired then Reactivated وMissing then Found لا تكسر النموذج.
+
+## 7. Pair Lifecycle Alignment
+
+`Candidate Combination → Pair Formation Attempt → Acceptance → Operational Pair → End → Re-pairing` هو مرجع وصفي وليس Mandatory State Machine.
+
+## 8. Movement Alignment
+
+- Bird Movement لا يغير Bird Identity.
+- Pair Movement لا يغير Pair Identity.
+- Current Location لا يمحو Location History.
+- تأثير الحركة أثناء إنتاج نشط يحمل إلى Phase 3.
+
+## 9. Data Confidence Alignment
+
+الحاجة إلى `Data Confidence / Provenance` مؤكدة على مستوى المجال في:
+
+- Age.
+- Sex.
+- Breed.
+- Parentage.
+- Origin.
+- Purchased Pair History.
+
+ولا يتم بناء Enum في Phase 2.
+
+## 10. Unknown Data Strategy
+
+يجب قبول Unknown Age / Sex / Breed / Father / Mother / Pair Start / Previous Pair History / Origin.
+
+**Unknown ≠ Invalid**، والنظام المستقبلي لا يجب أن يجبر المستخدم على اختلاق قيم.
+
+## 11. History Preservation
+
+- تغيير الموقع لا يمحو التاريخ.
+- تغيير الحلقة لا ينشئ طائرًا جديدًا.
+- تغيير الشريك لا يعيد كتابة الزوج السابق.
+- البيع لا يمحو الإنتاج السابق.
+- النفوق لا يمحو السجل.
+- تصحيح النسب يجب أن يكون قابلًا للتتبع.
+- تغيير الغرض من القفص لا يغير هوية الموقع.
+- Same Pair Reunited بعد نهاية فعلية = Episode تشغيلية جديدة.
+
+---
+
+## مراجعة اتساق المصطلحات TERM-040 → TERM-091
+
+تمت مراجعة الإضافات التي قدمتها Phase 2A/2B/2C ولم يظهر تكرار حابس أو استخدام لنفس المصطلح بمعنيين متناقضين.
 
 يجب استمرار الفصل بين:
 
-- `Production Cycle` / `Reproductive Cycle` / `Egg-laying Cycle`.
-- `Egg laid` / `Clutch complete` / `Incubation started`.
-- `Early Separation` / `Weaning` / `Market Readiness`.
-- `Genetic Parentage` / `Foster / Rearing Parentage`.
-- `Planned Foster Transfer` / `Emergency Foster Transfer`.
 - `Farm` / `Farm Site`.
 - `Physical Section` / `Functional Section`.
 - `Bird Identity` / `External Identifier`.
@@ -160,10 +269,24 @@ Cross-pair historical evaluation تحمل إلى Phase 6.
 - `Genetic Parents` / `Incubating Caregiver` / `Rearing Caregiver`.
 - `Known Close Relationship` / `No Known Relationship in available data`.
 
+لا حاجة لإعادة بناء القاموس في Phase 2D.
+
 ---
 
-## الاستنتاج
+## Open Questions Review
 
-لم تستدع Phase 2C رفض أو تعديل أي نتيجة علمية رئيسية من Phase 1 أو Phase 2A/2B. بل أضافت فصلًا تاريخيًا مهمًا بين **العلاقة الزوجية والنسب والرعاية والإنتاج**.
+لم يظهر سؤال جديد يستحق OQ ID لأنه لا توجد نقطة جديدة حابسة للمرحلة التالية.
 
-تبقى `CON-006` مفتوحة إلى Phase 3 كما هي. أما نقاط Pair Start وSame Pair Reunited وTrial Pair فهي **قضايا تعريف/تحقق تشغيلي** وليست تعارضات علمية جديدة، وتحمل إلى Phase 2D/المراحل المناسبة دون تصميم تقني مبكر.
+الأسئلة الحالية التي تحتاج تحققًا ميدانيًا تبقى كما هي، ويُجمع تحقق Phase 2 داخل `PHASE-2-BASELINE.md` حسب: Farm Structure / Bird / Breed / Pair / Pedigree / Foster.
+
+---
+
+## الاستنتاج النهائي للاتساق في Phase 2
+
+- لا توجد تعارضات مجال غير قابلة للتوفيق.
+- لا يوجد Blocking Contradiction يمنع Phase 3 بعد اعتماد المستخدم.
+- `CON-006` تظل مفتوحة عمدًا إلى Phase 3.
+- Pair Start حُسم كمبدأ متعدد الأحداث دون مرساة واحدة عالمية.
+- Same Pair Reunited حُسم كـ Episode تشغيلية جديدة إذا كانت العلاقة القديمة قد انتهت فعلًا.
+- Trial Pair يبقى Optional / Requires Field Validation.
+- Phase 2 متماسكة وجاهزة لمراجعة واعتماد المستخدم من خلال `02-farm-structure/PHASE-2-BASELINE.md`.
