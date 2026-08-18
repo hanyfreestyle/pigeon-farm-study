@@ -1,6 +1,6 @@
 # نظام إدارة مزارع الحمام — سجل الدراسة
 
-> سجل زمني لما تم تنفيذه في كل مرحلة أو مهمة رئيسية. التفاصيل البحثية الكاملة تبقى في ملفات الدراسة المتخصصة، بينما يسجل هذا الملف النطاق والنتائج والقرارات والحالة التالية.
+> سجل زمني لما تم تنفيذه في كل مرحلة أو مهمة رئيسية. التفاصيل البحثية الكاملة تبقى في الملفات المتخصصة.
 
 ---
 
@@ -10,7 +10,7 @@
 - **الحالة:** Completed
 - **العمل:** نماذج الإنتاج والإسكان، تركيب القطيع، زوج التربية، Pair Bond، الأعشاش، Double Nest، تداخل الدورات، السجلات والتعريف، الإحلال والاستبعاد، البيئة والسياق المصري.
 - **الأدلة:** 15 مصدرًا أساسيًا.
-- **النواتج:** إضافة OQ-014 → OQ-021 وRSK-007 → RSK-011.
+- **النواتج:** OQ-014 → OQ-021 وRSK-007 → RSK-011.
 - **أهم نتيجة:** زوج التربية وحدة مركزية، والزغاليل تعتمد على الأبوين، والدورات قد تتداخل.
 
 ---
@@ -19,8 +19,8 @@
 
 - **التاريخ:** 2026-08-17
 - **الحالة:** Completed
-- **العمل:** النضج والجاهزية، تكوين الأزواج، البيض والبطون، الحضانة، Candling، الفقس، نمو الزغاليل، الفطام، السوق، فشل الدورات، فقد الأبوين، القلش، والتداخل.
-- **المصادر:** إعادة استخدام SRC-001 → SRC-015 وإضافة/توسيع SRC-016 → SRC-021.
+- **العمل:** النضج والجاهزية، تكوين الأزواج، البيض والبطون، الحضانة، Candling، الفقس، نمو الزغاليل، الفطام، السوق، فشل الدورات، فقد الأبوين، القلش والتداخل.
+- **المصادر:** SRC-001 → SRC-021.
 - **أهم نتيجة:** `Egg Laid ≠ Clutch Complete ≠ Incubation Started` و`Production Cycle` ليس لها تعريف زمني عالمي واحد.
 
 ---
@@ -30,8 +30,7 @@
 - **التاريخ:** 2026-08-17
 - **الحالة:** Completed
 - **العمل:** إنشاء `DOMAIN-BASELINE.md`، توحيد القاموس حتى TERM-039، مراجعة الأدلة والقيم المرجعية والأسئلة والافتراضات والمخاطر والاتساق.
-- **القرار:** DEC-005 — خط أساس Phase 1 جاهز للمراجعة، مع إبقاء عدم اليقين المحلي كتحقق ميداني.
-- **الحالة وقتها:** Phase 1 = Completed — Awaiting Review.
+- **القرار:** DEC-005.
 
 ---
 
@@ -39,9 +38,8 @@
 
 - **التاريخ:** 2026-08-17
 - **الحالة:** Completed
-- **النطاق:** مراجعة جميع ملفات `docs/pigeon-farm-study/` وجعل العربية اللغة الأساسية.
-- **القرار:** DEC-006 — العربية لغة التوثيق الأساسية، مع الحفاظ على المصطلحات الفنية والعناصر الثابتة.
-- **الأثر:** لم يتغير أي معنى علمي أو مستوى ثقة.
+- **القرار:** DEC-006 — العربية لغة التوثيق الأساسية.
+- **الأثر:** لم يتغير معنى علمي أو مستوى ثقة.
 
 ---
 
@@ -49,10 +47,9 @@
 
 - **التاريخ:** 2026-08-18
 - **الحالة:** Completed
-- **النطاق:** تحديث OQ-001 → OQ-020 من إجابات صاحب المشروع دون بحث جديد.
+- **النطاق:** OQ-001 → OQ-020.
 - **القرارات:** DEC-007 → DEC-018.
-- **أهم الأثر:** اعتماد نموذج البداية، التتبع متعدد المستويات، تاريخ الأزواج، Pedigree، مرونة الأعشاش، Online First، تأجيل AI، وفصل Genetic Parentage عن Foster / Rearing Parentage.
-- **الأسئلة الجزئية:** OQ-005, OQ-009, OQ-015, OQ-019, OQ-020 بقي فيها تحقق محلي/سوقي.
+- **أهم الأثر:** نموذج البداية، التتبع متعدد المستويات، تاريخ الأزواج، Pedigree، مرونة الأعشاش، Online First، تأجيل AI، وفصل Genetic Parentage عن Foster / Rearing Parentage.
 
 ---
 
@@ -61,115 +58,166 @@
 - **التاريخ:** 2026-08-18
 - **الحالة:** Completed
 - **القرار:** DEC-019.
-- **المبدأ:** فقد أحد الأبوين أثناء وجود بيض/زغاليل هو **مسار رعاية طارئ (Emergency Rearing Workflow)** متعدد النتائج، ولا يوجد إجراء واحد ثابت.
-- **المسارات:** استمرار الوالد الباقي، Foster / Rearing Pair، Artificial Incubation أو Hand Feeding عند توفرها، أو فشل الدورة/فقد الناتج.
+- **المبدأ:** فقد أحد الأبوين أثناء وجود بيض/زغاليل هو Emergency Rearing Workflow متعدد النتائج.
 - **قاعدة النسب:** `Genetic Parentage ≠ Foster / Rearing Parentage`.
-- **التمييز:** Planned Foster Transfer مقابل Emergency Foster Transfer.
-- **الحالة:** Open Questions Resolution Round 1 مكتملة على مستوى اتجاهات المجال/المشروع، وليس على مستوى Field Validation.
 
 ---
 
 ## LOG-007 — Phase 1 Final Alignment & Approval Readiness
 
 - **التاريخ:** 2026-08-18
-- **الحالة:** Completed — Awaiting Final User Approval
-- **النوع:** مهمة مواءمة وتوثيق، وليست Phase 1D وليست Research جديدًا.
+- **الحالة:** Completed
+- **النوع:** مهمة مواءمة وتوثيق وليست Research جديدًا.
+- **العمل:** مواءمة `DOMAIN-BASELINE.md` مع OQ-001 → OQ-021 وDEC-007 → DEC-019، مراجعة CON-003/006/009، إنشاء `domain-to-system-boundaries.md`، تحديث Future Research Queue وExit Criteria.
+- **النتيجة:** Phase 1 = Ready for Final User Approval.
 
-### الملفات التي تمت مراجعتها
+---
+
+## LOG-008 — الاعتماد النهائي لـ Phase 1
+
+- **التاريخ:** 2026-08-18
+- **الحالة:** Approved
+- **القرار:** `DEC-020`.
+- **سبب الاعتماد:** تعليمات صاحب المشروع ببدء Phase 2A نصت صراحة على اعتماد Phase 1 رسميًا قبل البدء.
+- **الأثر:** Phase 1 أصبحت `Approved`، وسمح ببدء Phase 2A فقط.
+- **ما لم يتم فعله في هذا الإدخال:** لم يبدأ تصميم قاعدة بيانات أو Architecture أو MVP أو Coding.
+
+---
+
+## LOG-009 — Phase 2A: تحليل الهيكل التشغيلي لمزرعة الحمام
+
+- **التاريخ:** 2026-08-18
+- **الحالة:** Completed — Awaiting Review
+- **النطاق:** فهم تنظيم المزرعة مكانيًا وتشغيليًا، والوحدات التي تتكون منها، وعلاقة الطيور والأزواج والأعشاش بالمواقع، دون تصميم تقني.
+
+### Research performed
+
+أجري بحث محدود وموجه فقط إلى Farm Structure، مع إعادة استخدام مصادر Phase 1 وإضافة شاهدين بحثيين جديدين:
+
+- `SRC-022` — نظام أقفاص حمام لحم متعدد الطبقات مع زوج لكل قفص.
+- `SRC-023` — منشأة حمام كبيرة ذات صفوف/طبقات من الأقفاص داخل loft.
+
+كما أعيد استخدام:
+
+- `SRC-002` للأقفاص الفردية المرقمة في مزرعة مصرية.
+- `SRC-007` لنظم الأبراج الطينية والمساكن الخشبية المصرية.
+- `SRC-008` للأقفاص مقابل الإسكان الجماعي.
+
+### Files reviewed
 
 - `MASTER.md`
 - `01-domain-research/DOMAIN-BASELINE.md`
+- `01-domain-research/commercial-pigeon-farming.md`
+- `01-domain-research/production-lifecycle.md`
+- `01-domain-research/terminology.md`
 - `09-review/open-questions.md`
 - `09-review/assumptions.md`
 - `09-review/risks.md`
 - `09-review/consistency-review.md`
-- `STUDY-LOG.md`
-- `FINAL-STUDY.md`
-- بيانات `SRC-016` في `production-lifecycle.md`
-
-### الملفات التي تمت مواءمتها / تحديثها
-
-- `MASTER.md`
-- `01-domain-research/DOMAIN-BASELINE.md`
-- `09-review/consistency-review.md`
-- `FINAL-STUDY.md`
-- `STUDY-LOG.md`
-
-### ملف جديد
-
 - `09-review/domain-to-system-boundaries.md`
+- `STUDY-LOG.md`
+- `02-farm-structure/farm-structure.md`
 
-### OQ Alignment
+### Files updated
 
-- لم تعد `OQ-001`, `OQ-002`, `OQ-014`, `OQ-016`, `OQ-021` Blocking Questions لـ Phase 2 بعد الاعتماد النهائي.
-- تمت مزامنة حالة الأسئلة المحسومة والجزئية والمؤجلة والتحقق الميداني في `DOMAIN-BASELINE.md` و`MASTER.md`.
-- لم تتغير إجابات Round 1.
+- `02-farm-structure/farm-structure.md`
+- `01-domain-research/terminology.md`
+- `09-review/risks.md`
+- `MASTER.md`
+- `STUDY-LOG.md`
 
-### DEC Alignment
+### Recommended Operational Hierarchy
 
-- تمت مزامنة `DEC-007 → DEC-019` داخل `DOMAIN-BASELINE.md` كتوجهات مشروع معتمدة.
-- لم تتحول القرارات إلى Assumptions.
-- بقي الفصل: `Decision ≠ Assumption ≠ Verified Fact`.
+`Owner/Organization → Farm → Farm Site? → Pigeon House/Barn → Section? → Cage Group/Row/Rack? → Cage/Production Eye → Nest(s)`
 
-### CON Alignment
+المستويات التي تحمل `?` اختيارية وليست إلزامية لكل مزرعة.
 
-- `CON-003`: **Project Direction Resolved / Market Practice Requires Field Validation**. نموذج البداية أقفاص/عيون أزواج فردية، وانتشاره المصري ليس Fact معتمدًا.
-- `CON-006`: **Still Open — Definition Needed** ويحمل إلى Phase 3. Expected Hatch = Prediction وليس Biological Fact، ولا قاعدة عالمية `Egg Date + 18 days`.
-- `CON-009`: **Context-dependent / Requires Field Validation**؛ القلش ليس توقفًا إنتاجيًا عالميًا.
+### أهم النتائج
 
-### Future Research Queue
+1. `Location Identity ≠ Occupant Identity`.
+2. `Location Identity ≠ Operational Purpose`.
+3. Farm وFarm Site قد يتطابقان في المزرعة ذات الموقع الواحد، ويفترقان عند تعدد المواقع.
+4. المصطلح العام الموصى به للوحدة الرئيسية هو عنبر/بيت حمام (Pigeon House)، مع عدم اعتبار Loft/Dovecote/Barn مترادفات تامة.
+5. Physical Section يختلف عن Functional Section، ووظيفة القسم قد تتغير مع الوقت.
+6. لم يثبت أن Battery مصطلح معياري خاص بالحمام؛ تستخدم المراجع نظم طبقات/صفوف أقفاص، ولذلك يبقى اللفظ المحلي بحاجة إلى تحقق.
+7. القفص/العين موقع مستقل نسبيًا عن الشاغل والغرض؛ قد يصبح فارغًا أو يتغير استخدامه.
+8. العش لا يساوي القفص، وعدد الأعشاش مرن.
+9. `Physical Capacity ≠ Recommended Capacity ≠ Current Occupancy`.
+10. نقل الطائر لا يغير هويته، ونقل الزوج لا يمحو تاريخ الزوج.
+11. Foster Stock قد يكون قسمًا مخصصًا أو مجموعة أقفاص أو دورًا مؤقتًا.
+12. الهيكل نجح في وصف سيناريو مزرعة مختلطة بها لحم وزينة وحاضن وإحلال وحجر وعلاج دون فرض مبانٍ مستقلة لكل نشاط.
 
-تم تثبيت/رفع موضوعات:
+### New terminology
 
-- Phase 4: التغذية، الصحة، الرفاهية الحيوانية (Animal Welfare).
-- Phase 5: الاقتصاد والمالية في السياق المصري.
-- Parallel Track: Field Interviews / Farm Validation.
-- Field Validation: التسجيل الحالي، السوق، Double Nest، Foster System، Artificial Incubation، Early Separation، Hand Feeding، Summer Performance، Identification Practices.
+تم توسيع القاموس من `TERM-039` إلى `TERM-055`، وإضافة:
 
-### SRC-016 Verification
+- Farm / Farm Site.
+- Pigeon House.
+- Physical Section / Functional Section.
+- Cage Group / Row / Rack.
+- Cage / Production Eye.
+- Location Identity.
+- Operational Purpose.
+- Physical / Recommended Capacity.
+- Current Occupancy.
+- Bird Movement.
+- Foster Stock.
+- Planned / Emergency Foster Transfer.
 
-تمت مراجعة التوثيق الحالي فقط دون بحث جديد. البيانات المسجلة متسقة داخليًا:
+### Decisions
 
-- العنوان: `Age-related dynamics of reproductive performance and egg quality in breeding pigeons`
-- Poultry Science
-- سنة 2026
-- رابط ScienceDirect المسجل
-- تاريخ وصول المصادر الجديدة في Phase 1B: 2026-08-17
+- لا توجد قرارات مشروع جديدة في Phase 2A غير `DEC-020` الخاص باعتماد Phase 1.
+- نتائج الهيكل الحالية توصيات وتحليل مجال وتحتاج مراجعة المستخدم قبل تحويل أي منها إلى قرارات إضافية.
 
-لم يتم تعديل SRC-016.
+### Open questions
 
-### domain-to-system-boundaries
+- **New OQ IDs: 0.**
+- نقاط عدم اليقين الحالية Field Validation غير حابسة، لذلك سجلت داخل ملف Phase 2A بدل إنشاء أسئلة جديدة غير ضرورية.
 
-تم إنشاء المرجع الجديد بالقواعد:
+### Assumptions
 
-- Domain Entity ≠ Database Table.
-- Domain Event ≠ Software Event.
-- Information Requirement ≠ Database Field.
-- Project Decision ≠ Verified Fact.
-- Field Validation Required ≠ No Direction.
-- Benchmark ≠ Constant.
-- Domain Status ≠ Software Enum.
+- **New assumptions: 0.**
+- ASM-001/002 Validated وASM-003/004 Provisional دون تغيير.
 
-### FINAL-STUDY
+### Risks
 
-تمت إضافة ملاحظة توضح أن الملف مخصص للتجميع النهائي بعد اكتمال واعتماد المراحل، دون بدء التجميع الآن.
+أضيف:
+
+- `RSK-012` — خطر فرض Hierarchy مكانية جامدة على كل المزارع رغم أن بعض المستويات اختيارية.
+
+كما خُفض `RSK-011` بعد تثبيت الفصل بين هوية الموقع والشاغل.
+
+### Field validation
+
+- المصطلحات المحلية لـ Pigeon House/Barn/Loft.
+- معنى Battery إن كان مستخدمًا.
+- استخدام لفظ العين الإنتاجية.
+- ترقيم المواقع والأقفاص والأعشاش.
+- التقسيمات المادية والوظيفية.
+- Double Nest usage.
+- Foster Stock location/usage.
+- أنظمة الزينة المختلطة.
+- الحجر والعلاج والعزل.
+- الحاجة العملية لفصل Farm عن Farm Site.
+
+### Carry-forward
+
+**Phase 2B:** هوية الطائر، فئات القطيع، الموقع الحالي، الحركة، السلالات.  
+**Phase 2C:** تاريخ الزوج، موقع الزوج، Foster Pair، Pedigree vs Caregiver.  
+**Phase 3:** نقل البيض/الزغاليل، حركة الزوج أثناء دورة نشطة، Double Nest، Foster Transfers، `CON-006`.  
+**Phase 4:** الحجر والعلاج والرفاهية والسعة التشغيلية المناسبة.
 
 ### Exit Criteria
 
-تمت إضافة معايير خروج عامة عالية المستوى لـ Phase 2 → Phase 8 في `MASTER.md`، على أن تفصل داخل تعليمات كل مرحلة.
+تم تحقيق جميع معايير خروج Phase 2A المحددة في التعليمات.
 
-### Final Readiness
+### الحالة الحالية
 
-**Phase 1 = Ready for Final User Approval.**
+- Phase 1: Approved.
+- Phase 2: In Progress.
+- Phase 2A: Completed — Awaiting Review.
+- Phase 2B: Pending.
 
-حالة Phase 1 أصبحت:
+### Stop condition
 
-`Completed — Awaiting Final User Approval`
-
-Phase 2 ما زالت:
-
-`Pending`
-
-### شرط التوقف
-
-لم يبدأ Phase 2، ولم يبدأ Farm Structure Analysis أو Pigeon Management Analysis أو Research جديد أو Database Design أو Architecture أو MVP أو Coding.
+توقف العمل عند نهاية Phase 2A. لم يبدأ Phase 2B أو Pair Management أو Pedigree Analysis أو Production Analysis أو Database Design أو ERD أو Architecture أو MVP أو Coding.
