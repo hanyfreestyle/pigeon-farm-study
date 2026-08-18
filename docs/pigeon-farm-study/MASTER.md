@@ -58,7 +58,7 @@
 | Phase 0 | تهيئة الدراسة | Completed | لا يوجد | مكتملة. |
 | Phase 1 | بحث المجال | **Approved** | Phase 0 | معتمدة. |
 | Phase 2 | هيكل المزرعة وإدارة الحمام | **Approved** | Phase 1 | اعتمدها المستخدم نهائيًا في 2026-08-18. |
-| Phase 3 | تحليل الإنتاج | **In Progress** | Phases 1–2 | Phase 3A مكتملة بانتظار المراجعة. |
+| Phase 3 | تحليل الإنتاج | **In Progress** | Phases 1–2 | Phase 3A Approved؛ Phase 3B مكتملة بانتظار المراجعة. |
 | Phase 4 | الصحة والتغذية | Pending | Phases 1–3 | الصحة والعلاجات والنفوق والتغذية والرفاهية. |
 | Phase 5 | العمليات والمالية | Pending | Phases 1–4 | المخزون والمشتريات والمبيعات والاقتصاد والماليات. |
 | Phase 6 | تحليل النظام | Pending | Phases 1–5 | KPIs والتقارير والتنبيهات والأدوار والقواعد. |
@@ -91,8 +91,8 @@
 
 | المرحلة الفرعية | الاسم | الحالة | الملف الأساسي |
 |---|---|---|---|
-| Phase 3A | دورة التربية وإدارة البيض | **Completed — Awaiting Review** | `03-production/breeding-cycle.md`, `egg-management.md` |
-| Phase 3B | الحضانة والفقس | Pending | `03-production/hatching.md` |
+| Phase 3A | دورة التربية وإدارة البيض | **Approved** | `03-production/breeding-cycle.md`, `egg-management.md` |
+| Phase 3B | الحضانة والفقس | **Completed — Awaiting Review** | `03-production/hatching.md` |
 | Phase 3C | إدارة الزغاليل | Pending | `03-production/squab-management.md` |
 | Phase 3D | الأداء وتجميع Phase 3 | Pending | `03-production/performance-management.md` + baseline لاحقًا |
 
@@ -128,9 +128,12 @@
 | DEC-024 | 2026-08-18 | Phase 2D | بداية الزوج لا تختزل في تاريخ عالمي واحد. | Approved |
 | DEC-025 | 2026-08-18 | Phase 2D | Same Pair Reunited بعد نهاية فعلية = Operational Episode جديدة. | Approved |
 | DEC-026 | 2026-08-18 | Phase 2D | Trial Pair اختياري ويحتاج تحققًا ميدانيًا. | Approved |
-| **DEC-027** | **2026-08-18** | **Phase 2 Final Approval** | **تعليمات صاحب المشروع الحالية تعتمد Phase 2 نهائيًا وتسمح ببدء Phase 3A فقط.** | **Approved** |
-| **DEC-028** | **2026-08-18** | **Phase 3A** | **الإنتاج يحلل من خلال Clutch/Egg/events؛ الزوج الواحد قد يحمل أكثر من Clutch متزامنة، و`Egg Identity ≠ Egg Sequence`.** | **Approved** |
-| **DEC-029** | **2026-08-18** | **Phase 3A** | **`Expected Hatch = Prediction ≠ Actual Hatch`; مرساة الحضانة لا تُفرض عالميًا وتبقى Policy/Definition Choice إلى Phase 3B.** | **Approved** |
+| DEC-027 | 2026-08-18 | Phase 2 Final Approval | تعليمات صاحب المشروع اعتمدت Phase 2 نهائيًا وسمحت ببدء Phase 3A فقط. | Approved |
+| DEC-028 | 2026-08-18 | Phase 3A | الإنتاج يحلل من خلال Clutch/Egg/events؛ الزوج الواحد قد يحمل أكثر من Clutch متزامنة، و`Egg Identity ≠ Egg Sequence`. | Approved |
+| DEC-029 | 2026-08-18 | Phase 3A | `Expected Hatch = Prediction ≠ Actual Hatch`; مرساة الحضانة لا تُفرض عالميًا وتبقى Policy/Definition Choice إلى Phase 3B. | Approved |
+| **DEC-030** | **2026-08-18** | **Phase 3A Approval** | **تعليمات صاحب المشروع الحالية تعتمد Phase 3A رسميًا وتسمح ببدء Phase 3B فقط.** | **Approved** |
+| **DEC-031** | **2026-08-18** | **Phase 3B** | **`CON-006` تحل كـConfigurable Domain Policy: لا Universal Biological Incubation Anchor، ويولد Expected Hatch من Policy/Anchor معلنة قابلة للمراجعة مع بقاء الأحداث البيولوجية مستقلة.** | **Approved** |
+| **DEC-032** | **2026-08-18** | **Phase 3B** | **نتائج الحضانة والفقس تُحفظ على مستوى البيضة أولًا، ومع الفقس الناجح يجب الحفاظ على `Hatched Egg → Specific Squab` مع فصل Genetic Parentage عن Incubation Responsibility.** | **Approved** |
 
 > **قاعدة حوكمة:** `Decision ≠ Assumption ≠ Verified Fact`.
 
@@ -178,9 +181,9 @@
 
 - `OQ-005` — المتطلبات المحلية والتنظيمية والبيطرية.
 
-### Phase 3A
+### Phase 3B
 
-لم تضف Phase 3A OQ جديدة. `CON-006` حللت بعمق لكنها ليست Blocking OQ؛ تحمل إلى Phase 3B كتعريف/Policy Choice.
+لم تضف Phase 3B OQ جديدة. `CON-006` أصبحت **Resolved as Configurable Domain Policy** ولا تمنع المراحل التالية. Candling/Artificial/Foster/Assisted Hatch practices تبقى Field Validation غير حابسة.
 
 ---
 
@@ -188,8 +191,8 @@
 
 | ID | الموضوع | المرحلة | الحالة / الغرض |
 |---|---|---|---|
-| FRQ-001 | إدارة البيض بالتفصيل | Phase 3 | **Phase 3A Completed; hatching details continue in 3B.** |
-| FRQ-002 | نمو الزغاليل والفطام والتسويق | Phase 3 / 5 | Market Validation. |
+| FRQ-001 | إدارة البيض والحضانة والفقس | Phase 3 | **Phase 3A/3B Completed؛ أداء الإنتاج يجمع في 3D.** |
+| FRQ-002 | نمو الزغاليل والفطام والتسويق | Phase 3 / 5 | Phase 3C + Market Validation. |
 | FRQ-003 | الأمراض والعلاجات والتحصينات والحجر والنفوق | Phase 4 | High Priority. |
 | FRQ-004 | التغذية | Phase 4 | High Priority. |
 | FRQ-005 | المخزون والمشتريات والموردون | Phase 5 | Queued. |
@@ -203,7 +206,8 @@
 | FRQ-013 | Farm Structure Field Validation | Parallel | Non-blocking. |
 | FRQ-014 | Bird & Breed Field Validation | Parallel | Non-blocking. |
 | FRQ-015 | Pair & Pedigree Field Validation | Parallel | Non-blocking. |
-| **FRQ-016** | **Egg Production Field Validation:** Egg 1/2 recording، Clutch completion، egg marking، Double Nest، Candling timing، prediction anchor، Foster Egg Transfer، Artificial Incubation، Pair movement during egg stage | **Phase 3 / Parallel Track** | **Added in Phase 3A — Non-blocking.** |
+| FRQ-016 | Egg Production Field Validation: Egg 1/2 recording، Clutch completion، egg marking، Double Nest، Candling timing، prediction anchor، Foster Egg Transfer، Artificial Incubation، Pair movement | Phase 3 / Parallel | Added in Phase 3A — Non-blocking. |
+| **FRQ-017** | **Incubation & Hatch Field Validation:** Expected Hatch policy/revision، repeated Candling، Fertility/Embryonic Loss classification، post-failure examination، Pip/Hatch observation precision، Late Hatch، Hatchability definitions، Foster/Artificial/Assisted Hatch، Parent Loss | **Phase 3 / Parallel Track** | **Added in Phase 3B — Non-blocking.** |
 
 ---
 
@@ -227,15 +231,32 @@
 - Extra Egg لا يُفسر سببها دون دليل.
 - `Genetic Parentage ≠ Incubating Caregiver` عند نقل البيضة.
 - Egg Transfer يحفظ الهوية والنسب والتاريخ.
-- Planned وEmergency Foster Transfer مساران مختلفان في السبب والسياق.
+- Planned وEmergency Foster Transfer مساران مختلفان.
 - Artificial Incubation مسار ممكن لكنه يحتاج Field Validation مصريًا.
 - `Current Egg Condition ≠ Final Egg Outcome`.
 - `Clutch Outcome ≠ Failure Cause`.
-- Fertility قد تكون Unknown حتى يتم تقييمها؛ Candling ليس إجراءً/توقيتًا عالميًا.
-- `CON-006`: Analyzed — Definition/Policy Choice Still Open إلى Phase 3B.
 - `Expected Hatch = Prediction ≠ Actual Hatch`.
-- Pair End/Parent Loss لا يمحوان Egg/Clutch/Genetic History.
-- Production Attribution تختلف حسب Metric؛ الصيغ إلى Phase 6.
+
+---
+
+# ملخص نتائج Phase 3B
+
+- `Incubation ≠ Single Start Date`؛ تم فصل behavior / sustained incubation / responsibility / period / observation.
+- `CON-006 = Resolved as Configurable Domain Policy` دون Universal Anchor.
+- Expected Hatch يعتمد على Policy/Anchor واضحة ويمكن إجراء Prediction Revision.
+- `Egg Exists ≠ Fertility Known ≠ Embryonic Viability ≠ Hatch Success`.
+- `Candling Performed ≠ Observation ≠ Interpretation ≠ Confirmed Diagnosis`.
+- Multiple Candling observations صحيحة وتحفظ كتاريخ ملاحظات على مستوى المجال.
+- `Infertility ≠ Embryonic Death ≠ Dead-in-shell`.
+- Early/Late Embryonic Loss مفاهيم مفيدة، لكن حدود الأيام Context-dependent.
+- Actual Hatch يمثل حدثًا فعليًا مستقلًا عن Expected Hatch.
+- `Expected Date Passed ≠ Failure Confirmed`.
+- `Hatch Failure ≠ Failure Cause`، وUnknown Cause حالة صحيحة.
+- `Egg Outcome ≠ Clutch Outcome`.
+- Fertility/Hatchability تحتاج Numerator/Denominator صريحين.
+- Caregiver يمكن أن يتغير خلال حضانة البيضة، مع ثبات Genetic Parentage.
+- Artificial/Foster Incubation مسارات ممكنة؛ Assisted Hatch استثنائي ويحتاج Expert/Veterinary Validation.
+- `Hatched Egg → Specific Squab` قاعدة continuity إلى Phase 3C.
 
 ---
 
@@ -245,57 +266,60 @@
 - `ASM-002`: Validated.
 - `ASM-003`: Provisional.
 - `ASM-004`: Provisional.
-- **افتراضات جديدة في Phase 3A: 0.**
+- افتراضات جديدة في Phase 3A: 0.
+- **افتراضات جديدة في Phase 3B: 0.**
 
 ---
 
 # المخاطر
 
-- `RSK-007`: Active — Materially Reduced after Phase 3A.
-- `RSK-009`: Active — Reduced after Phase 3A.
-- `RSK-017`: Egg Identity Confusion — Active.
-- `RSK-018`: Clutch Overlap Misattribution — Active.
-- `RSK-019`: Foster Transfer Parentage Error — Active — Reduced by Principle.
-- `RSK-020`: Prediction-as-Fact Risk — Active.
+- `RSK-007`: Active — Materially Reduced.
+- `RSK-009`: Active — Materially Reduced after Phase 3B.
+- `RSK-017`: Egg Identity Confusion — Active — Materially Reduced.
+- `RSK-018`: Clutch Overlap Misattribution — Active — Reduced.
+- `RSK-019`: Foster Transfer Parentage Error — Active — Materially Reduced.
+- `RSK-020`: Prediction-as-Fact Risk — Active — Materially Reduced.
+- `RSK-021`: Fertility/Hatchability Definition Risk — Active.
+- `RSK-022`: Egg-to-Squab Link Loss — Active — Reduced by Principle.
+- `RSK-023`: Hatch Failure Misclassification — Active.
+- `RSK-024`: Caregiver Attribution Error — Active — Reduced by Principle.
 
 ---
 
 # قضايا الاتساق المحمولة
 
 - `CON-003`: Project Direction Resolved / Market Practice Requires Field Validation.
-- `CON-006`: **Analyzed — Definition/Policy Choice Still Open → Phase 3B.**
+- `CON-006`: **Resolved as Configurable Domain Policy.**
 - `CON-009`: Context-dependent / Requires Field Validation.
-- Blocking Contradictions after Phase 3A: **0**.
+- Blocking Contradictions after Phase 3B: **0**.
 
 ---
 
 # Carry Forward
 
-## Phase 3B
-
-- Fertility confirmation / Candling interpretation.
-- Incubation Anchor policy.
-- Expected vs Actual Hatch.
-- Embryonic development and hatch outcomes.
-- Hatch failures.
-
 ## Phase 3C
 
-- Egg→Squab continuity.
-- Rearing caregiver / Foster squab.
-- Parent loss after hatch.
-- Growth / weaning.
+- Hatched Egg → Squab Identity continuity.
+- Rearing Caregiver after hatch.
+- Fostered Squab.
+- Parent Loss after hatch.
+- Early post-hatch dependency.
+- Crop Milk.
+- Growth / Weaning / Early Separation.
 
 ## Phase 3D
 
-- Production performance consolidation.
-- Pair vs individual attribution.
+- Fertility/Hatchability metric definitions.
+- Egg vs Clutch performance.
+- Genetic Pair vs Incubating Caregiver attribution.
+- Embryonic mortality/failure reporting.
+- Hatch timing/window metrics where useful.
 - Failed production classification.
 - Phase 3 baseline/consistency.
 
 ## Phase 4
 
-Health / Quarantine / Treatment / Mortality / Welfare.
+Health / Quarantine / Treatment / Mortality / Welfare / Veterinary confirmation.
 
 ## Phase 5
 
@@ -303,7 +327,11 @@ Purchase / Sale / Ownership / Financial attribution.
 
 ## Phase 6
 
-Pair KPIs / cross-pair performance / Breed performance / alerts / confidence reporting.
+Pair KPIs / cross-pair performance / Breed performance / alerts / confidence reporting / Configurable incubation prediction rules.
+
+## Phase 7
+
+تحويل المبادئ إلى Data Model/History/Audit دون كسر Egg/Clutch/Caregiver continuity.
 
 ## Phase 8
 
@@ -315,8 +343,8 @@ Advanced Pedigree/Inbreeding/Pair recommendation/Genetic analytics.
 
 | المرحلة | معايير الخروج العامة |
 |---|---|
-| Phase 2 | **Approved.** |
-| Phase 3 | تحليل الإنتاج والأحداث والاستثناءات مكتمل؛ CON-006 معرف تحليليًا؛ مراجعة المستخدم مطلوبة. |
+| Phase 2 | Approved. |
+| Phase 3 | تحليل الإنتاج والأحداث والاستثناءات مكتمل؛ CON-006 معرف ومحلول تحليليًا؛ مراجعة المستخدم مطلوبة. |
 | Phase 4 | بحث الصحة والتغذية والرفاهية مكتمل؛ مراجعة المستخدم مطلوبة. |
 | Phase 5 | العمليات والمالية محللة والسياق المصري المالي موثق؛ مراجعة المستخدم مطلوبة. |
 | Phase 6 | KPIs والتقارير والتنبيهات والأدوار وقواعد العمل محللة؛ مراجعة المستخدم مطلوبة. |
@@ -330,17 +358,18 @@ Advanced Pedigree/Inbreeding/Pair recommendation/Genetic analytics.
 - **Phase 1: Approved.**
 - **Phase 2: Approved.**
 - **Phase 3: In Progress.**
-- **Phase 3A: Completed — Awaiting Review.**
-- **Phase 3B: Pending.**
+- **Phase 3A: Approved.**
+- **Phase 3B: Completed — Awaiting Review.**
+- **Phase 3C: Pending.**
 
 ## القرار الموصى به
 
-**Phase 3A is ready for user approval.**
+**Phase 3B is ready for user approval.**
 
 ## الخطوة التالية — بعد مراجعة المستخدم فقط
 
-**Phase 3B — Incubation & Hatching Domain Analysis**
+**Phase 3C — Squab Management Domain Analysis**
 
 ## شرط التوقف
 
-لا تبدأ Phase 3B أو Hatching Analysis أو Squab Management أو Performance Management أو Phase 4 أو Database Design أو ERD أو Architecture أو MVP أو Coding قبل اعتماد المستخدم.
+لا تبدأ Phase 3C أو Squab Growth أو Weaning أو Performance Management أو Phase 4 أو Database Design أو ERD أو Architecture أو MVP أو Coding قبل اعتماد المستخدم.
