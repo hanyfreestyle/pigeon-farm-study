@@ -7,7 +7,8 @@
 ## الحالة الحالية
 
 - **Phase 1 Consistency Review:** Completed.
-- **Phase 2A Structure Alignment:** Completed.
+- **Phase 2A Structure Alignment:** Completed / Approved.
+- **Phase 2B Bird & Breed Alignment:** Completed.
 - **قضايا التعارض / التباين الأساسية:** 9.
 - **تعارضات مجال غير قابلة للتوفيق:** 0.
 
@@ -17,7 +18,7 @@
 |---|---|---|---|---|
 | CON-001 | طول دورة البيض / التكاثر | تختلف التعريفات والسلالة وحمل الرعاية؛ لا توجد مدة عالمية واحدة. | يعتمد على السياق — تم حله مفاهيميًا | Phase 3 تستخدم مراسي أحداث صريحة. |
 | CON-002 | التربية الطبيعية مقابل التربية الصناعية المبكرة | مساران إنتاجيان مختلفان لا وصفان متعارضان لمسار واحد. | يعتمد على السياق — تم حله مفاهيميًا | التحقق من الانتشار قبل اعتبار المسار المكثف ممارسة محلية شائعة. |
-| CON-003 | نموذج الإسكان والملاءمة التجارية | توجد أبراج/مساكن جماعية وأقفاص فردية. `DEC-007` حسم نموذج البداية للمشروع إلى الأزواج الفردية داخل الأقفاص/العيون، لكنه لا يثبت أنه النظام السائد في مصر. **Phase 2A دعمت هذا الفصل وأظهرت أن التسلسل المكاني نفسه يجب أن يكون مرنًا.** | Project Direction Resolved / Market Practice Requires Field Validation | تستمر Phase 2 في نموذج الأقفاص مع الحفاظ على Loft/Dovecote/Colony/Mixed Systems. |
+| CON-003 | نموذج الإسكان والملاءمة التجارية | توجد أبراج/مساكن جماعية وأقفاص فردية. `DEC-007` حسم نموذج البداية للمشروع، ولا يثبت أنه السائد في مصر. Phase 2A دعمت مرونة التسلسل المكاني. | Project Direction Resolved / Market Practice Requires Field Validation | تستمر Phase 2 في النموذج المعتمد مع الحفاظ على البدائل. |
 | CON-004 | الإنتاج الصيفي / الموسمية | البيولوجيا غير الموسمية لا تمنع انخفاض الأداء تحت الحرارة. | يعتمد على السياق — تم حله مفاهيميًا | Phase 4/6. |
 | CON-005 | النضج الجنسي مقابل الجاهزية للتربية | القدرة البيولوجية وقرار الإدخال التشغيلي مفهومان مختلفان. | يعتمد على السياق — تم حله مفاهيميًا | التحقق من القيم المحلية. |
 | CON-006 | مرساة بدء الحضانة | مدة الحضانة مستقرة نسبيًا، لكن لحظة البداية ليست عالمية. Expected Hatch توقع وليس Fact. | **Still Open — Definition Needed** | Carry Forward إلى Phase 3؛ لا قاعدة عالمية `Egg Date + 18 days`. |
@@ -29,29 +30,87 @@
 
 ### هوية الموقع مقابل الشاغل
 
-أكدت Phase 2A عدم وجود تعارض بين التتبع متعدد المستويات ومرونة الحركة:
-
 `Location Identity ≠ Occupant Identity ≠ Operational Purpose`.
-
-هذا متسق مع `DEC-008`, `DEC-010`, `DEC-013` ولا يغير أي حقيقة من Phase 1.
 
 ### الهيكل المكاني
 
-التسلسل المقترح:
-
 `Farm → Farm Site? → Pigeon House → Section? → Cage Group? → Cage → Nest(s)`
 
-هو **Operational Hierarchy مرنة** وليس قاعدة وجود لكل مستوى. لذلك لا يعتبر غياب Section أو Cage Group في مزرعة صغيرة تعارضًا.
+هو **Operational Hierarchy مرنة** وليس قاعدة وجود لكل مستوى.
 
 ### Battery
 
-عدم العثور على استخدام معياري واضح لكلمة Battery في مصادر الحمام لا يمثل تعارضًا في الأدلة؛ بل **فجوة مصطلحية محلية**. تم استخدام `Cage Group / Row / Rack` كمفهوم محايد، مع إبقاء Battery كـ Requires Field Validation.
+عدم وجود استخدام معياري واضح للكلمة في مصادر الحمام يمثل فجوة مصطلحية محلية لا تعارضًا، ولذلك يظل `Battery` بحاجة إلى Field Validation.
 
 ### Foster Structure
 
-لا يوجد تعارض بين `DEC-018/019` وبين الهيكل؛ فقد يكون Foster Stock قسمًا مخصصًا أو مجموعة أقفاص أو دورًا مؤقتًا لزوج داخل قسم عادي. لذلك:
-
 `Foster Role ≠ Dedicated Physical Section`.
+
+---
+
+## مواءمة Phase 2B
+
+### هوية الطائر مقابل المعرف
+
+Phase 2B عززت `DEC-013` وأثبتت اتساقه مع أدلة السجلات الفردية:
+
+`Bird Identity ≠ External Identifier ≠ Pair Identity ≠ Location Identity`.
+
+فقد الحلقة أو استبدالها لا يعني تغير الفرد نفسه.
+
+### الجنس ومصدر المعرفة
+
+لا يوجد تعارض بين وجود قيمة للجنس وبين عدم اليقين في طريقة معرفته. يمكن أن يكون الجنس مؤكدًا أو مقدرًا أو غير معروف، وتوضح الأدلة الجزيئية أن التأكيد التقني ممكن دون أن يعني ذلك استخدامه روتينيًا في المزارع المصرية.
+
+القاعدة:
+
+`Sex Value ≠ Sex Confidence ≠ Determination Method`.
+
+### العمر
+
+`Known Hatch Date ≠ Estimated Age`.
+
+ولا يجوز تحويل عمر تقريبي لطائر مشترى إلى تاريخ فقس مؤكد.
+
+### الأصل والمصدر
+
+`Birth Origin ≠ Acquisition Source ≠ Genetic Origin`.
+
+وهذا متسق مع الفصل السابق بين `Genetic Parentage` و`Foster / Rearing Parentage`.
+
+### Status مقابل Role
+
+الأوصاف مثل Replacement أو Foster أو Breeding هي أدوار/فئات إدارة في سياقات معينة، بينما Quarantine/Sick/Treatment قد تصف حالة أو سياقًا مؤقتًا. لذلك:
+
+`Bird Status ≠ Bird Role`.
+
+### Breed / Strain / Line
+
+استخدام المصادر المصرية والدولية لمصطلحات Breed وStrain وLine لا يثبت وجود Taxonomy واحدة عالمية. لا يوجد تعارض في أن دراسة مصرية تسمي Local Egyptian/Zagel/White Mirthys “strains” بينما دراسات جينومية أخرى تستخدم “breeds” لمجموعات لحم؛ الاختلاف في مستوى التصنيف والاستعمال.
+
+القاعدة:
+
+`Breed ≠ Strain ≠ Line` تلقائيًا.
+
+ويجب ألا يتحول اسم السلالة إلى إثبات للنقاء أو أداء الفرد.
+
+### بيانات غير مكتملة
+
+Unknown Age / Unknown Parentage / Unknown Breed ليست تناقضات أو أخطاء بالضرورة، بل حالات معرفة صحيحة. Phase 2B أضافت الحاجة إلى `Data Confidence / Provenance` عندما يكون مصدر المعلومة مهمًا.
+
+### Crossbreeding
+
+وجود admixture أو نسب مختلط في مجموعات الحمام لا يتعارض مع استخدام أسماء Breed/Strain في التربية؛ لذلك يجب السماح مفاهيميًا بـ Crossbred/Mixed Lineage دون الدخول في Genetics Modeling الآن.
+
+### الخروج من القطيع
+
+يظل الفصل التالي ضروريًا:
+
+`Culling ≠ Sale ≠ Retirement ≠ Death ≠ Missing`.
+
+Death حدث بيولوجي نهائي، بينما Missing مصير غير مؤكد وقد يعود الطائر.
+
+---
 
 ## مراجعة اتساق المصطلحات
 
@@ -66,7 +125,13 @@
 - `Physical Section` / `Functional Section`.
 - `Location Identity` / `Occupant Identity` / `Operational Purpose`.
 - `Physical Capacity` / `Recommended Capacity` / `Current Occupancy`.
+- `Bird Identity` / `External Identifier`.
+- `Known Hatch Date` / `Estimated Age`.
+- `Bird Status` / `Bird Role`.
+- `Breed` / `Strain` / `Breeding Line` / `Variety`.
+- `Breed Trait` / `Individual Bird Trait`.
+- `Culling` / `Sale` / `Retirement` / `Death` / `Missing`.
 
 ## الاستنتاج
 
-لم تستدع Phase 2A رفض أو تعديل أي نتيجة علمية رئيسية من Phase 1. أضافت المرحلة **تفصيلًا تشغيليًا للهيكل** مع الحفاظ على الفصل بين قرار المشروع والواقع السوقي والتحقق الميداني.
+لم تستدع Phase 2B رفض أو تعديل أي نتيجة رئيسية من Phase 1 أو Phase 2A. أضافت المرحلة **طبقة عدم اليقين ومصدر البيانات** إلى إدارة الفرد، وفصلت تصنيف السلالة عن النقاء الوراثي وأداء الطائر الفردي. تبقى التفاصيل المحلية للحلقات والجنس والسلالات والإحلال Field Validation غير حابسة.
