@@ -1,6 +1,6 @@
 # قاموس مصطلحات المجال
 
-> **الحالة:** تمت مراجعة Phase 1 وتوسيع القاموس في Phase 2A وPhase 2B وPhase 2C وPhase 3A.  
+> **الحالة:** تمت مراجعة Phase 1 وتوسيع القاموس في Phase 2A وPhase 2B وPhase 2C وPhase 3A وPhase 3B.  
 > هذه مصطلحات مجال وليست كيانات برمجية. وتظل بعض الصياغات المحلية بحاجة إلى تحقق ميداني مصري.
 
 ## قواعد المصطلحات
@@ -30,14 +30,14 @@
 | TERM-010 | عش | Nest | — | موقع التعشيش الفعلي. | يستخدم للوضع والحضانة/الرعاية. | Nest Box | SRC-001, 005 | قد يستخدم الزوج أكثر من عش. |
 | TERM-011 | صندوق عش | Nest Box | خانة عش | حيز/هيكل يوفر موقع تعشيش. | يجعل الموقع أكثر تحديدًا. | Nest | Phase 1A | الشكل يختلف. |
 | TERM-012 | نظام العشين | Double Nest System | العش المزدوج | توفير موقعين للتعشيش لزوج. | يدعم تداخل الدورات. | Overlapping Cycle | SRC-001, 002, 005 | الانتشار المصري يحتاج تحققًا. |
-| TERM-013 | حضانة البيض | Incubation | الرقاد على البيض | السلوك/الفترة اللازمة لتطور الجنين. | يشارك فيها الأبوان غالبًا. | Hatch | SRC-001, 004, 005 | مرساة البداية ملتبسة. |
+| TERM-013 | حضانة البيض | Incubation | الرقاد على البيض | السلوك/الفترة اللازمة لتطور الجنين. | يشارك فيها الأبوان غالبًا. | Hatch | SRC-001, 004, 005 | مرساة البداية ليست عالمية. |
 | TERM-014 | الفقس | Hatching / Hatch | — | خروج الزغلول من البيضة. | نتيجة فعلية قابلة للملاحظة. | Hatchability | SRC-001, 005, 012 | Actual Hatch حدث. |
 | TERM-015 | رعاية الزغاليل | Brooding / Rearing | التحضين / التربية | رعاية الزغاليل بعد الفقس. | تشمل الدفء والتغذية والحماية. | Crop Milk, Fostering | SRC-003, 004, 005 | Brooding قد يكون ملتبسًا. |
 | TERM-016 | لبن الحوصلة | Crop Milk / Pigeon Milk | حليب الحمام | إفراز غذائي من حوصلة الأبوين. | غذاء مبكر أساسي للزغلول. | Squab | SRC-003, 004, 021 | ليس لبنًا ثدييًا. |
-| TERM-017 | الخصوبة / نسبة البيض المخصب | Fertility | الإخصاب | حالة/نسبة تخصيب البيض. | تقييم تناسلي. | Candling | SRC-006, 010, 014 | يجب تحديد المقام. |
-| TERM-018 | نسبة الفقس | Hatchability | قابلية الفقس | مقياس نجاح الفقس. | مؤشر أداء تناسلي. | Fertility | SRC-006, 010, 014 | طريقة الحساب تختلف. |
+| TERM-017 | الخصوبة / نسبة البيض المخصب | Fertility | الإخصاب | حالة أو Metric تخصيب البيض وفق تعريف صريح. | تقييم تناسلي. | Candling | SRC-006, 010, 014 | يجب تحديد المقام وطريقة التقييم. |
+| TERM-018 | نسبة الفقس | Hatchability | قابلية الفقس | Metric لنجاح الفقس وفق بسط ومقام معرفين. | مؤشر أداء تناسلي. | Fertility | SRC-006, 010, 014 | ليست Formula واحدة عالميًا. |
 | TERM-019 | نفوق الجنين داخل البيضة | Embryonic Death | موت الجنين | موت جنين بدأ في التطور قبل الفقس. | يختلف عن عدم الخصوبة. | Dead-in-shell | Phase 1B | قد يحتاج تشخيصًا. |
-| TERM-020 | جنين نافق داخل القشرة | Dead-in-shell | فشل فقس متأخر | فشل/نفوق متأخر قبل إتمام الفقس. | نتيجة فشل مهمة. | Embryonic Death | Phase 1B | يحتاج سياقًا بيطريًا. |
+| TERM-020 | جنين نافق داخل القشرة | Dead-in-shell | فشل فقس متأخر | فشل/نفوق متأخر قبل إتمام الفقس. | نتيجة فشل مهمة. | Embryonic Death | Phase 1B / 3B | السبب قد يبقى مجهولًا. |
 | TERM-021 | الفطام | Weaning | الاستقلال عن تغذية الأبوين | الانتقال نحو التغذية المستقلة. | تغيير مسار الرعاية. | Early Separation | SRC-002, 017 | قد يختلف عن الفصل الإداري. |
 | TERM-022 | الفصل المبكر | Early Separation / Early Weaning | الفطام المبكر | فصل الزغاليل قبل نهاية التربية الطبيعية. | مسار مكثف بديل. | Weaning | SRC-002 | ليس مجرد بيع مبكر. |
 | TERM-023 | الجاهزية للتسويق | Market Readiness | جاهز للبيع | تحقيق مواصفة السوق/المشتري. | معيار تجاري. | Weaning | Phase 1 | ليست حالة بيولوجية عالمية. |
@@ -47,7 +47,7 @@
 | TERM-027 | النضج الجنسي | Sexual Maturity | — | تطور القدرة التناسلية. | شرط بيولوجي لا يكفي وحده للدخول للإنتاج. | Breeding Readiness | SRC-003, 012, 017 | يعتمد على السياق. |
 | TERM-028 | الجاهزية لدخول قطيع الإنتاج | Operational Breeding Readiness | الجاهزية التشغيلية | تقييم ملاءمة الطائر للدخول في التربية. | قرار إدارة. | Sexual Maturity | Phase 1B | ليس حدًا عالميًا. |
 | TERM-029 | الفاصل بين وضع البيض | Oviposition Interval | فاصل وضع البيض | الزمن بين أحداث وضع متتالية. | قياس زمني. | Egg, Clutch | SRC-016 | يجب تحديد السياق. |
-| TERM-030 | فحص البيض بالضوء | Candling | تسليط الضوء | فحص بصري للبيضة بالضوء. | يساعد في تقييم التطور. | Fertility | SRC-018 | الانتشار المحلي يحتاج تحققًا. |
+| TERM-030 | فحص البيض بالضوء | Candling | تسليط الضوء | فحص بصري للبيضة بالضوء. | يساعد في تقييم التطور. | Fertility | SRC-018; Phase 3B | التوقيت والتفسير يعتمدان على البروتوكول. |
 | TERM-031 | دورة الإنتاج | Production Cycle | الدورة الإنتاجية | تعبير عام لدورة نشاط متكرر. | يجب تحديد مرساة البداية والنهاية. | Reproductive Cycle | Phase 1 | مصطلح ملتبس. |
 | TERM-032 | دورة التكاثر | Reproductive Cycle | الدورة التناسلية | فترة تناسلية متكررة وفق تعريف محدد. | تحليل التكاثر. | Production Cycle | Phase 1B | يجب تحديد المرساة. |
 | TERM-033 | دورة وضع البيض | Egg-laying Cycle | دورة البيض | فترة تركز على تكرار وضع البيض. | قياس وضع إلى وضع. | Clutch | Phase 1B | لا تساوي دورة تربية كاملة. |
@@ -100,7 +100,7 @@
 | TERM-080 | سبب إنهاء الزوج | Pair End Reason | سبب فك الزوج | السبب الذي أنهى العلاقة الزوجية النشطة. | يفسر تاريخ العلاقة بصورة مستقلة عن سبب خروج الطائر. | Bird Exit Reason | Phase 2C | قد يكون Death/Sale/Strategy وغيرها. |
 | TERM-081 | كود الزوج | Pair Code | رقم الزوج | رمز يستخدم للتعرف التشغيلي على العلاقة. | وسيلة تعريف خارجية للزوج. | Operational Pair | Phase 2C | `Pair Code ≠ Pair Identity`. |
 | TERM-082 | النسب الوراثي | Genetic Parentage | الأبوة/الأمومة الوراثية | علاقة الطائر بأبيه وأمه الوراثيين. | أساس Pedigree ولا يتغير بالحضانة البديلة. | Genetic Father, Genetic Mother | DEC-018; Phase 2C | يختلف عن caregiving. |
-| TERM-083 | مقدم الحضانة | Incubating Caregiver | الزوج الحاضن | الطرف الذي قام فعليًا بحضانة البيضة. | قد يكون Genetic Pair أو Foster Pair أو لا يوجد زوج عند الحضانة الصناعية. | Genetic Parentage | Phase 2C | لا يغير النسب. |
+| TERM-083 | مقدم الحضانة | Incubating Caregiver | الزوج الحاضن | الطرف الذي قام فعليًا بحضانة البيضة. | قد يكون Genetic Pair أو Foster Pair أو لا يوجد زوج عند الحضانة الصناعية. | Genetic Parentage | Phase 2C / 3B | قد يتغير عبر الزمن لنفس البيضة. |
 | TERM-084 | مقدم التربية | Rearing Caregiver | الزوج المربي / مقدم الرعاية | الطرف الذي قام فعليًا بتربية الزغلول. | قد يكون الأبوين أو Foster Pair أو أحد الأبوين أو Hand Feeding. | Incubating Caregiver | Phase 2C | قد يختلف عن الحاضن. |
 | TERM-085 | شجرة النسب | Pedigree | نسب / شجرة عائلة | سلسلة العلاقات الوراثية بالأب والأم عبر أجيال معروفة. | دعم الانتخاب وفهم القرابة. | Genetic Parentage | DEC-011; Phase 2C | العمق غير ثابت. |
 | TERM-086 | نسب جزئي | Partial Pedigree | نسب غير مكتمل | Pedigree يحتوي على جزء معلوم وجزء مجهول. | يسمح بالتعامل مع السجلات الواقعية الناقصة. | Pedigree Confidence | Phase 2C | Unknown لا يعني Invalid. |
@@ -109,16 +109,29 @@
 | TERM-089 | معامل زواج الأقارب | Inbreeding Coefficient | معامل القرابة الداخلية | مقياس احتمالي للتطابق الوراثي بسبب أصل مشترك وفق Pedigree/منهج محدد. | ميزة تحليلية مستقبلية محتملة. | Kinship | SRC-032 | يتأثر باكتمال وعمق Pedigree. |
 | TERM-090 | معامل القرابة | Kinship / Coancestry | قرابة وراثية | مقياس لاحتمال اشتراك فردين في أليلات موروثة من أصل مشترك؛ يرتبط بالتوقع الوراثي لنسلهما. | دعم تقييم القرابة بين شركاء محتملين. | Inbreeding Coefficient | SRC-032 | يحتاج بيانات نسب موثوقة. |
 | TERM-091 | زوج تجريبي | Trial Pair | زوج تحت التجربة | علاقة أو محاولة تزاوج تُدار لفترة تقييم قبل اعتمادها كزوج إنتاج مستقر. | مفيد تحليليًا في Re-pairing والانتخاب. | Pair Formation Attempt | Phase 2C | الاستخدام المصري يحتاج تحققًا. |
-| **TERM-092** | **هوية البيضة** | **Egg Identity** | هوية البيضة الفردية | تمييز البيضة نفسها عبر البطن والموقع والنقل والنتيجة. | يمنع فقد التاريخ عند تغيير العش أو مقدم الحضانة. | Egg Sequence, Clutch | Phase 3A | لا تساوي ترتيب الوضع. |
-| **TERM-093** | **ترتيب البيضة داخل البطن** | **Egg Sequence / Lay Order** | البيضة الأولى/الثانية | موضع البيضة في ترتيب الوضع داخل Clutch عند معرفته. | يساعد في تحليل التسلسل الزمني دون أن يصبح هوية. | Egg Identity | Phase 3A | قد يكون Unknown/Estimated. |
-| **TERM-094** | **مرساة الحضانة** | **Incubation Anchor** | نقطة بدء حساب الحضانة | الحدث المختار لبدء قياس/توقع الحضانة، مثل Egg 1 أو Egg 2 أو sustained incubation. | يمنع استخدام مدة بلا تعريف. | Expected Hatch | CON-006; Phase 3A | لا توجد مرساة عالمية معتمدة. |
-| **TERM-095** | **موعد الفقس المتوقع** | **Expected Hatch Date** | توقع الفقس | تاريخ متوقع ناتج عن Policy/Anchor وليس حدثًا فعليًا. | التخطيط والتنبيه مستقبلًا. | Actual Hatch, Incubation Anchor | Phase 3A | `Prediction ≠ Fact`. |
-| **TERM-096** | **الفقس الفعلي** | **Actual Hatch** | تاريخ الفقس المرصود | حدوث الفقس فعليًا كما لوحظ. | مرساة حقيقة بعد الحدث. | Expected Hatch | Phase 3A | مستقل عن التوقع. |
-| **TERM-097** | **نقل البيضة** | **Egg Transfer** | تحويل البيضة | انتقال البيضة بين عش/زوج/حاضنة مع بقاء هويتها ونسبها. | تتبع Foster/Artificial workflows. | Foster Transfer, Egg Location | Phase 3A | لا يغير Genetic Parentage. |
-| **TERM-098** | **حالة البيضة الحالية** | **Egg Current Condition** | وضع البيضة الحالي | وصف ما هو معروف عن حالة البيضة في لحظة معينة. | يختلف عن النتيجة النهائية. | Egg Outcome | Phase 3A | لا Enum نهائي. |
-| **TERM-099** | **النتيجة النهائية للبيضة** | **Egg Final Outcome** | مصير البيضة | النتيجة المعروفة بعد انتهاء سياق البيضة مثل hatch/broken/missing/infertile. | تحليل النتائج دون خلطها بالحالة الحالية. | Egg Current Condition | Phase 3A | السبب قد يحتاج مفهومًا منفصلًا. |
-| **TERM-100** | **نتيجة البطن** | **Clutch Outcome** | مصير البطن | وصف نتيجة Clutch ككل دون أن يكون سبب الفشل نفسه. | يمنع مساواة Failure Outcome بالسبب. | Failure Cause | Phase 3A | `Outcome ≠ Cause`. |
-| **TERM-101** | **نسبة الإنتاج / إسناد الإنتاج** | **Production Attribution** | لمن ينسب الناتج | تحديد الطرف/السياق الأنسب لإسناد Metric أو حدث إنتاجي. | مهم لاحقًا للـKPIs مع فصل الزوج والفرد ومقدم الرعاية. | Pair Performance, Egg | Phase 3A | الصيغ إلى Phase 6. |
+| TERM-092 | هوية البيضة | Egg Identity | هوية البيضة الفردية | تمييز البيضة نفسها عبر البطن والموقع والنقل والنتيجة. | يمنع فقد التاريخ عند تغيير العش أو مقدم الحضانة. | Egg Sequence, Clutch | Phase 3A | لا تساوي ترتيب الوضع. |
+| TERM-093 | ترتيب البيضة داخل البطن | Egg Sequence / Lay Order | البيضة الأولى/الثانية | موضع البيضة في ترتيب الوضع داخل Clutch عند معرفته. | يساعد في تحليل التسلسل الزمني دون أن يصبح هوية. | Egg Identity | Phase 3A | قد يكون Unknown/Estimated. |
+| TERM-094 | مرساة الحضانة | Incubation Anchor | نقطة بدء حساب/توقع الحضانة | الحدث المختار لبدء Prediction أو Metric للحضانة. | يمنع استخدام مدة بلا تعريف. | Expected Hatch | CON-006; Phase 3A/3B | أصبح اختيارها Configurable Domain Policy. |
+| TERM-095 | موعد الفقس المتوقع | Expected Hatch Date | توقع الفقس | تاريخ متوقع ناتج عن Policy/Anchor وليس حدثًا فعليًا. | التخطيط والتنبيه مستقبلًا. | Actual Hatch, Incubation Anchor | Phase 3A/3B | Prediction قابل للمراجعة. |
+| TERM-096 | الفقس الفعلي | Actual Hatch | تاريخ الفقس المرصود | اكتمال خروج الزغلول من البيضة فعليًا وفق مستوى دقة الملاحظة. | مرساة حقيقة بعد الحدث. | Expected Hatch | Phase 3A/3B | مستقل عن التوقع. |
+| TERM-097 | نقل البيضة | Egg Transfer | تحويل البيضة | انتقال البيضة بين عش/زوج/حاضنة مع بقاء هويتها ونسبها. | تتبع Foster/Artificial workflows. | Foster Transfer, Egg Location | Phase 3A | لا يغير Genetic Parentage. |
+| TERM-098 | حالة البيضة الحالية | Egg Current Condition | وضع البيضة الحالي | وصف ما هو معروف عن حالة البيضة في لحظة معينة. | يختلف عن النتيجة النهائية. | Egg Outcome | Phase 3A | لا Enum نهائي. |
+| TERM-099 | النتيجة النهائية للبيضة | Egg Final Outcome | مصير البيضة | النتيجة المعروفة بعد انتهاء سياق البيضة مثل Hatch/Failure/Broken/Missing. | تحليل النتائج دون خلطها بالحالة الحالية. | Egg Current Condition | Phase 3A/3B | السبب قد يكون منفصلًا أو مجهولًا. |
+| TERM-100 | نتيجة البطن | Clutch Outcome | مصير البطن | وصف نتيجة Clutch ككل دون أن يكون سبب الفشل نفسه. | يمنع مساواة Failure Outcome بالسبب. | Failure Cause | Phase 3A | يشتق لاحقًا دون فقد نتائج البيض. |
+| TERM-101 | نسبة الإنتاج / إسناد الإنتاج | Production Attribution | لمن ينسب الناتج | تحديد الطرف/السياق الأنسب لإسناد Metric أو حدث إنتاجي. | مهم لاحقًا للـKPIs مع فصل الزوج والفرد ومقدم الرعاية. | Pair Performance, Egg | Phase 3A | الصيغ إلى Phase 6. |
+| **TERM-102** | **الحضانة المستمرة المرصودة** | **Sustained Incubation** | حضانة فعلية مستمرة | نمط حضانة مرصود ومستمر بدرجة تجعله مرساة ملاحظة ذات معنى. | خيار ممكن لـPrediction Anchor دون اعتباره عالميًا. | Incubation Anchor | Phase 3B | يعتمد على قدرة المزرعة على الملاحظة. |
+| **TERM-103** | **مسؤولية الحضانة** | **Incubation Responsibility** | مسؤول الحضانة | الطرف الذي تولى فعليًا مسؤولية الحضانة خلال فترة معينة. | يسمح بتاريخ Caregiver متغير للبيضة. | Incubating Caregiver | Phase 3B | لا يساوي الموقع أو النسب. |
+| **TERM-104** | **ملاحظة الفحص بالضوء** | **Candling Observation** | نتيجة مشاهدة البيضة | ما تمت ملاحظته عند إجراء Candling في وقت محدد. | يبني تاريخ تقييم دون مساواة الملاحظة بالتشخيص. | Candling, Fertility Assessment | Phase 3B; SRC-035-037 | قد تتكرر الملاحظات. |
+| **TERM-105** | **تقييم الخصوبة** | **Fertility Assessment** | تقدير/تأكيد الخصوبة | تقييم حالة Fertility وفق ملاحظة ومصدر وثقة محددين. | يفصل الحالة عن طريقة معرفتها. | Candling Observation | Phase 3B | Unknown/Suspected/Observed ممكنة. |
+| **TERM-106** | **فقد جنيني مبكر** | **Early Embryonic Loss** | نفوق جنيني مبكر | توقف تطور جنيني في مرحلة مبكرة وفق تعريف البروتوكول المستخدم. | يختلف عن Infertility. | Embryonic Death | Phase 3B; SRC-035 | حدود الأيام ليست عالمية. |
+| **TERM-107** | **فقد جنيني متأخر** | **Late Embryonic Loss** | نفوق جنيني متأخر | توقف تطور جنيني في مرحلة متقدمة قبل الفقس وفق تعريف السياق. | يساعد في تصنيف الفشل. | Dead-in-shell | Phase 3B; SRC-035 | حدود الأيام تعتمد على الدراسة/البروتوكول. |
+| **TERM-108** | **بدء النقر / كسر القشرة** | **Pip** | نقر القشرة | علامة على بدء مرحلة خروج الجنين من البيضة. | Observation اختيارية في تحليل Hatch Process. | Hatch Started | Phase 3B | لا يلزم تسجيلها في كل مزرعة. |
+| **TERM-109** | **تأخر الفقس** | **Late Hatch** | فقس متأخر عن المتوقع | استمرار البيضة دون فقس بعد الموعد المتوقع دون إثبات الفشل بعد. | يمنع تحويل Prediction إلى Failure. | Expected Hatch | Phase 3B | لا Threshold عالمي. |
+| **TERM-110** | **فشل الفقس** | **Hatch Failure** | عدم اكتمال الفقس | نتيجة عدم وصول البيضة إلى Hatch ناجح، مع سبب قد يكون معروفًا أو مجهولًا. | يفصل Outcome عن Failure Cause. | Dead-in-shell, Embryonic Death | Phase 3B | `Failure ≠ Cause`. |
+| **TERM-111** | **تزامن الفقس** | **Hatch Synchrony / Asynchrony** | تقارب/اختلاف توقيت الفقس | وصف العلاقة الزمنية بين فقس بيض Clutch واحدة. | مهم عند تحليل Hatch Window والتداخل. | Egg Sequence | Phase 3B | لا فرق زمني عالمي معتمد. |
+| **TERM-112** | **فقس بمساعدة** | **Assisted Hatching** | تدخل للمساعدة في الفقس | تدخل استثنائي لمساعدة جنين على إكمال الفقس عند الحاجة وتحت خبرة مناسبة. | Workflow اختياري/استثنائي. | Natural Hatch | SRC-038; Phase 3B | يحتاج Expert/Veterinary Validation. |
+| **TERM-113** | **استمرارية البيضة إلى الزغلول** | **Egg-to-Squab Continuity** | ربط البيضة بالزغلول الناتج | الحفاظ على العلاقة المفاهيمية بين البيضة التي فقست والزغلول المحدد الناتج عنها. | يحفظ النسب وClutch/Caregiver history بعد الفقس. | Egg Identity, Squab | Phase 3B | لا يعني تصميم Relationship برمجي الآن. |
+| **TERM-114** | **مراجعة توقع الفقس** | **Prediction Revision** | تحديث التوقع | تعديل Expected Hatch عند ظهور معلومات أفضل مع الحفاظ على أن التوقع السابق كان Prediction في وقته. | دعم التخطيط التاريخي دون تغيير الأحداث الأصلية. | Expected Hatch | Phase 3B | لا يغير Actual biological events. |
 
 ---
 
@@ -134,7 +147,7 @@
 معيار تجاري يعتمد على العميل والسوق والعمر والوزن وشكل البيع، وليس حالة بيولوجية عالمية.
 
 ### الخصوبة (Fertility) ونسبة الفقس (Hatchability)
-يجب توضيح المقام وطريقة التأكيد/الحساب عند المقارنة.
+يجب توضيح البسط والمقام وطريقة التأكيد/الملاحظة عند المقارنة. Fertility/Hatchability ليستا Formula واحدة تلقائيًا.
 
 ### الجاهزية للتربية (Breeding Readiness)
 يجب الفصل بين `Sexual Maturity` و`Operational Breeding Readiness`.
@@ -179,17 +192,30 @@
 `Egg 1` أو `Egg 2` ترتيب داخل البطن وليس هوية دائمة للبيضة.
 
 ### Incubation Anchor / Expected Hatch
-موعد الفقس المتوقع يعتمد على مرساة/Policy محددة؛ لا توجد مرساة عالمية واحدة، والتوقع لا يساوي الفقس الفعلي.
+لا توجد مرساة بيولوجية عالمية واحدة. Expected Hatch يعتمد على **Configurable Domain Policy** ذات Anchor صريحة، ويمكن مراجعة Prediction عند ظهور معلومات أفضل، بينما Actual Hatch يبقى Observation مستقلة.
+
+### Incubation Behavior / Responsibility
+رؤية طائر فوق البيضة أو وجود البيضة في عش معين لا يساوي تلقائيًا تحديد كامل مسؤولية الحضانة أو النسب الوراثي.
+
+### Candling Observation / Interpretation
+إجراء Candling، وما يراه المربي، وتفسير ما يراه، والتشخيص المؤكد مفاهيم مختلفة. يمكن تكرار الفحص ولا يوجد يوم عالمي واحد.
+
+### Infertility / Embryonic Death / Dead-in-shell
+عدم الخصوبة، فقد الجنين بعد بدء التطور، والفشل المتأخر داخل القشرة نتائج/تصنيفات مختلفة، وقد تبقى درجة الثقة أو السبب غير مؤكدة.
+
+### Hatch Failure / Failure Cause
+فشل الفقس Outcome، والسبب تفسير منفصل قد يكون Unknown أو Suspected أو Confirmed.
 
 ### Egg Condition / Outcome
 الحالة الحالية للبيضة قد تتغير؛ النتيجة النهائية مفهوم آخر. كما أن نتيجة الفشل لا تساوي سبب الفشل.
 
 ---
 
-## نتيجة مراجعة المصطلحات بعد Phase 3A
+## نتيجة مراجعة المصطلحات بعد Phase 3B
 
-- تم الحفاظ على `TERM-001 → TERM-091` وتوسيع القاموس حتى `TERM-101`.
-- أضيفت مفاهيم Egg Identity/Sequence وIncubation Anchor وExpected/Actual Hatch وEgg Transfer وCondition/Outcome وProduction Attribution.
-- لم يُكرر Clutch أو Egg أو Candling لأنها موجودة مسبقًا.
-- تم تثبيت `Egg Identity ≠ Egg Sequence` و`Expected Hatch ≠ Actual Hatch` و`Clutch Outcome ≠ Failure Cause`.
-- لا توجد إضافات Phase 3A تتحول تلقائيًا إلى Software Fields/Enums/Events.
+- تم الحفاظ على `TERM-001 → TERM-101` وتوسيع القاموس حتى `TERM-114`.
+- أضيفت Sustained Incubation وIncubation Responsibility وCandling Observation وFertility Assessment وEarly/Late Embryonic Loss وPip وLate Hatch وHatch Failure وHatch Synchrony وAssisted Hatching وEgg-to-Squab Continuity وPrediction Revision.
+- تم تحديث معنى Incubation Anchor بعد حسم `CON-006` كـConfigurable Domain Policy.
+- تم تثبيت `Candling Performed ≠ Observation ≠ Interpretation ≠ Confirmed Diagnosis`.
+- تم تثبيت `Infertility ≠ Embryonic Death ≠ Dead-in-shell` و`Hatch Failure ≠ Failure Cause`.
+- لا تتحول مصطلحات Phase 3B تلقائيًا إلى Software Fields/Enums/Events.
