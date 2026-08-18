@@ -57,8 +57,8 @@
 |---|---|---|---|---|
 | Phase 0 | تهيئة الدراسة | Completed | لا يوجد | مكتملة. |
 | Phase 1 | بحث المجال | **Approved** | Phase 0 | معتمدة. |
-| Phase 2 | هيكل المزرعة وإدارة الحمام | **In Progress** | Phase 1 | Phase 2A و2B Approved، وPhase 2C مكتملة بانتظار المراجعة. |
-| Phase 3 | تحليل الإنتاج | Pending | Phases 1–2 | البيض والفقس والزغاليل والأداء والدورات. |
+| Phase 2 | هيكل المزرعة وإدارة الحمام | **Completed — Awaiting Review** | Phase 1 | Phase 2A/2B/2C Approved، وPhase 2D مكتملة بانتظار مراجعة المستخدم. |
+| Phase 3 | تحليل الإنتاج | Pending | Phases 1–2 | لا تبدأ قبل اعتماد Phase 2. |
 | Phase 4 | الصحة والتغذية | Pending | Phases 1–3 | الصحة والعلاجات والنفوق والتغذية والرفاهية. |
 | Phase 5 | العمليات والمالية | Pending | Phases 1–4 | المخزون والمشتريات والمبيعات والاقتصاد والماليات. |
 | Phase 6 | تحليل النظام | Pending | Phases 1–5 | KPIs والتقارير والتنبيهات والأدوار والقواعد. |
@@ -84,8 +84,8 @@
 |---|---|---|---|
 | Phase 2A | تحليل الهيكل التشغيلي لمزرعة الحمام | **Approved** | `02-farm-structure/farm-structure.md` |
 | Phase 2B | إدارة الطائر والسلالات | **Approved** | `02-farm-structure/pigeon-management.md`, `breed-management.md` |
-| Phase 2C | إدارة الأزواج والنسب | **Completed — Awaiting Review** | `02-farm-structure/pair-management.md`, `pedigree-management.md` |
-| Phase 2D | تجميع ومراجعة Phase 2 | Pending | يحدد عند بدء المرحلة. |
+| Phase 2C | إدارة الأزواج والنسب | **Approved** | `02-farm-structure/pair-management.md`, `pedigree-management.md` |
+| Phase 2D | تجميع ومراجعة Phase 2 | **Completed — Awaiting Review** | `02-farm-structure/PHASE-2-BASELINE.md` |
 
 ---
 
@@ -114,7 +114,11 @@
 | DEC-019 | 2026-08-18 | Resolve OQ-021 | فقد أحد الأبوين أثناء وجود بيض/زغاليل هو Emergency Rearing Workflow متعدد النتائج. | Approved |
 | DEC-020 | 2026-08-18 | Phase 1 Final Approval | تعليمات صاحب المشروع اعتمدت Phase 1 رسميًا وسمحت ببدء Phase 2A. | Approved |
 | DEC-021 | 2026-08-18 | Phase 2A Approval | تعليمات صاحب المشروع اعتمدت Phase 2A رسميًا وسمحت ببدء Phase 2B فقط. | Approved |
-| **DEC-022** | **2026-08-18** | **Phase 2B Approval** | **تعليمات صاحب المشروع الحالية تعتمد Phase 2B رسميًا وتسمح ببدء Phase 2C فقط.** | **Approved** |
+| DEC-022 | 2026-08-18 | Phase 2B Approval | تعليمات صاحب المشروع اعتمدت Phase 2B رسميًا وسمحت ببدء Phase 2C فقط. | Approved |
+| **DEC-023** | **2026-08-18** | **Phase 2C Approval** | **تعليمات صاحب المشروع الحالية تعتمد Phase 2C رسميًا وتسمح ببدء Phase 2D فقط.** | **Approved** |
+| **DEC-024** | **2026-08-18** | **Phase 2D Alignment** | **بداية الزوج لا تختزل في تاريخ عالمي واحد؛ الجمع والقبول والتفعيل الإداري وأول تزاوج وأول بيضة أحداث مختلفة يجب الحفاظ على تمييزها تحليليًا.** | **Approved** |
+| **DEC-025** | **2026-08-18** | **Phase 2D Alignment** | **إذا انتهت علاقة زوج فعليًا ثم عاد نفس الفردين لاحقًا، تبدأ علاقة/حلقة تشغيلية جديدة بينهما؛ الفصل المؤقت دون إنهاء العلاقة لا ينشئ علاقة جديدة تلقائيًا.** | **Approved** |
+| **DEC-026** | **2026-08-18** | **Phase 2D Alignment** | **Trial Pair مفهوم اختياري يحتاج تحققًا ميدانيًا، ولا يُفرض كمفهوم مستقل إلزامي ما دام Pair Formation Attempt يصف الحاجة الدومينية الأساسية.** | **Approved** |
 
 > **قاعدة حوكمة:** `Decision ≠ Assumption ≠ Verified Fact`.
 
@@ -171,9 +175,11 @@
 
 - `OQ-005` — المتطلبات المحلية والتنظيمية والبيطرية.
 
-### Phase 2A / 2B / 2C
+### Phase 2 Final Review
 
-لم تضف Phase 2A أو Phase 2B أو Phase 2C أرقام OQ جديدة. نقاط مثل Pair Start، Trial Pair، Same Pair Reunited، مستوى حفظ Pedigree وInbreeding awareness موثقة كـ **Field Validation / Phase 2D Alignment Items غير حابسة**.
+لم تضف Phase 2A/2B/2C/2D أرقام OQ جديدة. Pair Start وSame Pair Reunited تم حسم اتجاههما في `DEC-024/025`، بينما Trial Pair بقي Optional / Field Validation وفق `DEC-026`.
+
+لا يوجد حاليًا **Blocking Open Question** يمنع Phase 3 بعد اعتماد Phase 2 من المستخدم.
 
 ---
 
@@ -195,7 +201,7 @@
 | FRQ-012 | Field Interviews / Farm Validation | Parallel Track | تحقق محلي موازٍ. |
 | FRQ-013 | Farm Structure Field Validation: المصطلحات المحلية، Battery، العين الإنتاجية، ترقيم المواقع، الأقسام، Double Nest، Foster Stock، الحجر | Phase 2 / Parallel Track | Non-blocking validation. |
 | FRQ-014 | Bird & Breed Field Validation: الحلقات والترقيم، تحديد الجنس، العمر/النسب عند الشراء، Breed/Strain/Line المحلية، Crossbreeding، معايير الإحلال، Retirement والملكية | Phase 2 / Parallel Track | Non-blocking validation. |
-| **FRQ-015** | **Pair & Pedigree Field Validation:** إعلان الزوج رسميًا، Pair Start، طرق/مدة التكوين، Re-pairing، Trial Pair، Purchased Established Pair، Pair Coding، مستوى Pedigree، Foster Pair practices، Inbreeding awareness وBreeding Strategy | **Phase 2 / Parallel Track** | **Added in Phase 2C — Non-blocking validation.** |
+| FRQ-015 | Pair & Pedigree Field Validation: إعلان الزوج رسميًا، Pair Start، طرق/مدة التكوين، Re-pairing، Trial Pair، Purchased Established Pair، Pair Coding، مستوى Pedigree، Foster Pair practices، Inbreeding awareness وBreeding Strategy | Phase 2 / Parallel Track | Non-blocking validation; consolidated in Phase 2D. |
 
 ---
 
@@ -230,7 +236,7 @@
 - `Breed ≠ Strain ≠ Line` تلقائيًا.
 - Crossbred / Mixed Lineage حالة مشروعة.
 - `Breed Trait ≠ Individual Bird Trait`.
-- `Genetic Parentage ≠ Foster / Rearing Parentage` مستمرة كقاعدة حاكمة.
+- `Genetic Parentage ≠ Foster / Rearing Parentage` قاعدة حاكمة.
 
 ---
 
@@ -238,7 +244,6 @@
 
 - `Operational Pair ≠ Pair Formation Attempt ≠ Pair Bond`.
 - Pair Formation ليست مجرد جمع الطائرين في مكان واحد.
-- لا يوجد تاريخ واحد عالمي لبداية الزوج؛ يجب الفصل بين الجمع والقبول وأول تزاوج والتفعيل الإداري وأول بيضة.
 - `Pair Identity ≠ Pair Code ≠ Location Identity`.
 - `Pair Existence ≠ Production Success`.
 - تغيير الشريك ينهي العلاقة السابقة ويبدأ علاقة جديدة وفق `DEC-010`.
@@ -250,7 +255,27 @@
 - Pedigree يحتاج Confidence / Provenance ويمكن تصحيحه مع الحفاظ على تاريخ التصحيح.
 - `No Known Relationship ≠ Proven Unrelated` عند نقص Pedigree.
 - Inbreeding Coefficient ميزة تحليلية مستقبلية محتملة، مشروطة بعمق واكتمال النسب.
-- `Poor Pair Performance ≠ Poor Male + Poor Female`؛ تقييم الفرد عبر عدة شركاء يحمل إلى Phase 6.
+- `Poor Pair Performance ≠ Poor Male + Poor Female`.
+
+---
+
+# ملخص نتائج Phase 2D
+
+المرجع التجميعي:
+
+`02-farm-structure/PHASE-2-BASELINE.md`
+
+نتائج المواءمة النهائية:
+
+- لا يوجد Universal Pair Start Date؛ الأحداث المختلفة تبقى منفصلة تحليليًا (`DEC-024`).
+- Same Pair Reunited بعد انتهاء فعلي للعلاقة = Operational Episode جديدة (`DEC-025`).
+- Temporary Separation دون إنهاء العلاقة لا ينشئ Episode جديدة تلقائيًا.
+- Trial Pair Optional / Requires Field Validation ولا يفرض كمفهوم مستقل إلزامي (`DEC-026`).
+- Foster Role ليس Breed ولا Location، وFoster Pair ليس Genetic Parent.
+- Bird/Pair Lifecycles نماذج وصفية وليست Mandatory State Machines.
+- Unknown Data Strategy وحفظ Provenance مبدآن معتمدان.
+- History Preservation تم تجميعه عبر الموقع والطائر والزوج والنسب.
+- Cross-file Consistency Review لم يجد Blocking Contradictions.
 
 ---
 
@@ -262,28 +287,80 @@
 - `ASM-004`: Provisional.
 - افتراضات جديدة في Phase 2A: 0.
 - افتراضات جديدة في Phase 2B: 0.
-- **افتراضات جديدة في Phase 2C: 0.**
+- افتراضات جديدة في Phase 2C: 0.
+- **افتراضات جديدة في Phase 2D: 0.**
 
 ---
 
 # المخاطر
 
-تم تحديث `09-review/risks.md`، وتضم المخاطر المضافة في Phase 2:
+تم تحديث `09-review/risks.md` ومراجعة `RSK-012 → RSK-016`.
 
-- `RSK-012` — فرض Hierarchy مكانية جامدة.
-- `RSK-013` — تحويل بيانات غير مؤكدة إلى حقائق.
-- `RSK-014` — الخلط بين Breed/Strain/Line أو فرض Pure Breed.
-- `RSK-015` — إعادة كتابة Pair History عند تغيير الشريك/الكود.
-- `RSK-016` — الثقة الزائفة في عدم القرابة عند Pedigree ناقص أو تفسير Inbreeding دون اكتمال كافٍ.
+- `RSK-012` — Active — Reduced؛ يحمل إلى Phase 7.
+- `RSK-013` — Active — Reduced؛ يحمل إلى Phase 6/7.
+- `RSK-014` — Active — Reduced؛ يحمل إلى Phase 6/7.
+- `RSK-015` — Active — Materially Reduced؛ يحمل إلى Phase 6/7.
+- `RSK-016` — Active؛ يحمل إلى Phase 6/8 لأن جودة التحليل تعتمد على اكتمال Pedigree.
 
 ---
 
 # قضايا الاتساق المحمولة
 
 - `CON-003`: Project Direction Resolved / Market Practice Requires Field Validation.
-- `CON-006`: Still Open — Definition Needed → Carry Forward إلى Phase 3.
+- `CON-006`: **Still Open — Definition Needed → Carry Forward إلى Phase 3.**
 - `CON-009`: Context-dependent / Requires Field Validation.
-- Phase 2C أضافت قواعد اتساق: `Pedigree ≠ Pair History`، و`Pair Code ≠ Pair Identity`، و`No Known Relationship ≠ Proven Unrelated`.
+- Phase 2D: Blocking Contradictions = 0.
+
+---
+
+# Carry Forward إلى المراحل التالية
+
+## Phase 3 — Production
+
+- Pair → Multiple Clutches.
+- Overlapping Cycles.
+- Egg Identity / Egg 1 / Egg 2.
+- Nest 1 / Nest 2.
+- `CON-006` Incubation Anchor.
+- Genetic Parents / Incubating / Rearing Caregiver.
+- Planned / Emergency Foster Transfer.
+- Parent Loss.
+- Squab continuity.
+- Pair movement during active production.
+- Production attribution.
+- Failed production scenarios.
+
+## Phase 4
+
+- Quarantine / Sick / Treatment.
+- Mortality / Body Condition.
+- Health Effects on Production.
+- Welfare / Recommended Capacity.
+
+## Phase 5
+
+- Purchase / Acquisition / Supplier.
+- Sale / Buyer / Value.
+- Bird Ownership / Custody.
+- Financial attribution.
+
+## Phase 6
+
+- Pair KPIs.
+- Individual vs Pair Performance.
+- Cross-pair comparison.
+- Breed Performance.
+- Inbreeding/Kinship warnings.
+- Data Confidence reporting.
+- Low-performance alerts.
+
+## Phase 8
+
+- Advanced Pedigree Visualization.
+- Inbreeding Coefficient.
+- Pair Recommendation / Pairing Warnings.
+- Genetic Analytics.
+- Advanced Breed Analytics.
 
 ---
 
@@ -291,7 +368,7 @@
 
 | المرحلة | معايير الخروج العامة |
 |---|---|
-| Phase 2 | الملفات المطلوبة مكتملة؛ أسئلة الهيكل/إدارة الحمام راجعت؛ الافتراضات والمخاطر والاتساق محدثة؛ لا Blocking Question غير مسجل؛ مراجعة المستخدم مطلوبة. |
+| Phase 2 | Phase 2A/2B/2C Approved؛ `PHASE-2-BASELINE.md` مكتمل؛ الاتساق والمبادئ والمصطلحات والمخاطر والتحقق الميداني وCarry Forward مراجعة؛ لا Blocking Contradictions؛ مراجعة المستخدم مطلوبة. |
 | Phase 3 | تحليل الإنتاج والأحداث والاستثناءات مكتمل؛ CON-006 معرف تحليليًا؛ مراجعة المستخدم مطلوبة. |
 | Phase 4 | بحث الصحة والتغذية والرفاهية المطلوب مكتمل؛ الممارسات مصنفة حسب الدليل والسياق؛ مراجعة المستخدم مطلوبة. |
 | Phase 5 | العمليات والمخزون والمشتريات والمبيعات والاقتصاد والماليات محللة؛ السياق المصري المالي موثق؛ مراجعة المستخدم مطلوبة. |
@@ -304,16 +381,21 @@
 # الحالة الحالية
 
 - **Phase 1: Approved.**
-- **Phase 2: In Progress.**
+- **Phase 2: Completed — Awaiting Review.**
 - **Phase 2A: Approved.**
 - **Phase 2B: Approved.**
-- **Phase 2C: Completed — Awaiting Review.**
-- **Phase 2D: Pending.**
+- **Phase 2C: Approved.**
+- **Phase 2D: Completed — Awaiting Review.**
+- **Phase 3: Pending.**
 
-## الخطوة التالية — بعد مراجعة المستخدم فقط
+## القرار الموصى به
 
-**Phase 2D — Phase 2 Consolidation & Review**
+**Phase 2 is ready for user approval.**
+
+## الخطوة التالية — بعد اعتماد المستخدم فقط
+
+**Phase 3 — Production Domain Analysis**
 
 ## شرط التوقف
 
-لا تبدأ Phase 2D أو Production Analysis أو Database Design أو ERD أو Architecture أو MVP أو Coding قبل تعليمات المستخدم.
+لا تبدأ Phase 3 أو Egg Management أو Hatch Analysis أو Squab Management أو Database Design أو ERD أو Architecture أو MVP أو Coding قبل اعتماد المستخدم النهائي لـPhase 2.
